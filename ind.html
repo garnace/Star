@@ -1,0 +1,694 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"/>
+
+
+<!--CS3210-->
+<!--Aiken Van Spyk-->
+<!--ID:0099364-->
+
+<!--Project: Star Advisor-->
+
+
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>star</title>
+
+<style type="text/css">
+.testcent
+{
+//	margin-left:auto;
+//	margin-right:auto;
+}
+
+.centleft
+{
+	float:left;
+	width:200px;
+}
+.centright
+{
+	float:left;
+	width:200px;
+}
+
+
+
+</style>
+<link href="css/style.css" rel="stylesheet" type="text/css" title="starA">
+<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.23.custom.css" rel="stylesheet" title="starA">
+<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="css/jasny-bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="css/jasny-bootstrap-responsive.min.css" rel="stylesheet">
+
+
+<script type="text/javascript" src="scripts/jquery.tools.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/script.js"></script>
+
+
+  <!--style>img{ height: 100px; float: left; }</style  -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="scripts/jquery.tools.min.js"></script>
+<!--   -------------------------------------------->
+<!--   -------------Make tabs------>
+
+<script type="text/javascript" src="scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui-1.8.23.custom.min.js"></script>
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/jasny-bootstrap.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+    $("#tabs").tabs();
+
+});
+
+
+</script>
+
+
+
+<!--   -->
+<!--link type="text/css" href="css/ui-lightness/jquery-ui-1.8.23.custom.css" rel="stylesheet" />
+<script type="text/javascript" src="scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui-1.8.23.custom.min.js"></script-->
+<!--script type="text/javascript">
+$(function(){
+
+    $("#tabs").tabs();
+
+});
+
+
+</script-->
+<!--style type="text/css">
+  body{ font: 62.5% "Trebuchet MS", sans-serif; margin: 50px;}
+
+</style-->
+
+
+
+<!------------------------------------------------>
+</head>
+<body onload="load();">
+
+<!--div class="container" style="text-align:center"-->
+<div class="container" >
+<div class="hero-unit span8">
+
+<div class="row-fluid">
+        <div class="offset4 span8">
+
+<form class="form-horizontal"  >
+<div  class="control-group"  >
+
+<label class="control-label" for="yourname"> Your Name:</label> 
+<div class="controls">
+  <input id="yourname" type="text"   placeholder="Your Name:" />
+</div><!--controls-->
+
+</div><!--control-group-->
+
+
+</form>
+</div>
+</div>
+
+</div>
+
+
+
+
+<script language="JavaScript" type="text/javascript">
+<!------------------------------------------->
+<!--http://www.go4expert.com/articles/form-validation-php-javascript-t438/-->
+function valUser(oForm)
+{
+    var dat= "1234";
+    var usr= oForm.elements['yourname'].value;
+/*	    alert ("error");
+    oForm.onsubmit=function(){
+	if (usr != dat)
+	    alert ("error2");
+    }
+hello ther vi*/
+}
+
+
+
+
+<!------------------------------------------->
+
+
+/*
+//$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+  {
+    tags: "galaxy",
+    tagmode: "any",
+    format: "json"
+  },
+  function(data) {
+    $.each(data.items, function(i,item){
+      $("<img/>").attr("src", item.media.m).attr("title",item.title).appendTo("#images");
+      if ( i == 3 ) return false;
+    });
+  });
+*/
+setRPic(0);
+
+
+$('.butdelc').live('click',function(){
+//$(".butdelc").click(function(){
+
+//$(this).parent().parent().remove();
+$(this).parent().parent().slideUp("slow");
+
+}
+
+
+);
+
+//setPic("nebula");
+</script>
+
+
+
+
+<div id="head" style="text-align: center;" >Star Advisor<br>
+<!--div id="head" style="text-align: center;"><big style="color: rgb(204, 0, 0);"><big><big>Star Advisor</big></big></big><br-->
+</div>
+
+
+<div class="navbar navbar-inverse" >
+  <!--div class="navbar-inner nav-collapese" style="height: auto;"-->
+    <div class="container">
+    <ul class="nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li ><a href="#">FFirst</a></li>
+      <li ><a href="#">Second</a></li>
+      <li ><a href="#">Second</a></li>
+      <li ><a href="#">Second</a></li>
+    </ul>
+</div>
+<!--/div-->
+</div>
+
+
+
+
+<div id="begin">
+<br><big><big><span style="color: rgb(255, 255, 255);">
+Table of Contents</span></big></big><br>
+
+
+<br>
+<br>
+<div id="tabs"  style="width: 600px;">
+  <ul>
+    <li> <a href="#tabs-1">First</a></li>
+    <li> <a href="#tabs-2">Second</a></li>
+    <li> <a href="#tabs-3">Third</a></li>
+    <li> <a href="#tabs-4">Fourth</a></li>
+    
+  </ul>
+  <div id="tabs-1">First tab space container</div>
+  <div id="tabs-2">Second  tab space container</div>
+  <div id="tabs-3">Third tab space container</div>
+  <div id="tabs-4">Fourth tab space container</div>
+
+
+</div>
+
+
+<table id="tableB" style="text-align: left; width: 592px; height: 79px;" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    
+    
+    <tr>
+      <td style="vertical-align: top; color: rgb(255, 255, 255); font-size:24px;" onclick="load(0);">Home<br>
+
+      </td>
+      <td style="vertical-align: top; color: rgb(255, 255, 255); cursor:pointer;font-size:24px;" onclick="getSFeedTerm(0);">Use<br>LookUP&nbsp;RSS&nbsp;&nbsp;<br>
+
+      </td>
+      <td style="vertical-align: top; color: rgb(255, 255, 255);font-size:26px;" onclick="listSites(0);">Sites<br>on Server<br>
+
+      </td>
+      <td style="vertical-align: top; color: rgb(255, 255, 255);font-size:26px;" onclick="listSites(0);">Test<br>on Server<br>
+
+      </td>
+      
+      
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+</div><!---begin-->
+<table id="tableO" style="text-align: left; width: 880px; height: 620px;" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><br>
+      <table style="text-align: left; width: 245px; height: 380px;" border="1" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr style="color: rgb(255, 102, 0);">
+            <td style="vertical-align: top;font-size:35px" id="tabBut1" onclick="getSFeedTerm('nebula');">Blog&nbsp;Feeds<br>
+             </td>
+          </tr>
+          <tr style="color: rgb(255, 102, 0);">
+            <!--td style="vertical-align: top;" id="tabBut2" onclick="getMatchJ(document.getElementById('sbox').value);"><big><big><big><big>News<br>
+            </big></big></big></big></td -->
+            <td style="vertical-align: top;font-size:35px" id="tabBut2" onclick="getSectionO(0);">News<br>
+            <!--td style="vertical-align: top;" id="tabBut2" onclick="getSectionO(0);getMatchJ('ature');"><big><big><big><big>News<br-->
+            </td>
+
+
+          </tr>
+          <tr style="color: rgb(255, 102, 0);">
+            <td style="vertical-align: top;font-size:35px" id="tabBut3" onclick="getSectionSky(0);">Sky&nbsp;Maps<br>
+            </td>
+          </tr>
+          <tr style="color: rgb(255, 102, 0);">
+            <td style="vertical-align: top;font-size:37px;"><div id="searchbutton"><button style="padding:8px 0 4px 0;"onclick="getSectionO(0);">Search Cornell</button></div><br>
+            </td>
+          </tr>
+          <tr style="color: rgb(255, 102, 0);">
+            <td style="vertical-align: top;font-size:37px"><div id="searchbutton" class="sbtn"><button style="padding:8px 0 4px 0;" onclick="getSectionBlog(0);">Search Blogs</button></div><br>
+            </td>
+          </tr>
+          <tr style="color: rgb(255, 102, 0);">
+            <td style="vertical-align: top;font-size:37px"><div id="searchbutton" class="sbtn"><button style="padding:8px 0 4px 0;" onclick="getSectionInsertDB(0);">Insert DB</button></div><br>
+            </td>
+          </tr>
+<!-------------add button---------------------------------->
+          <tr style="color: rgb(255, 102, 0);">
+            <td style="vertical-align: top;font-size:37px;"><div id="searchbutton" class="sbtn"><button style="padding:8px 0 4px 0;" onclick="getSectionDBB(0);">Search DB</button></div><br>
+            </td>
+          </tr>
+
+
+
+<!------------------------------------------------>
+
+
+
+          <!--tr style="color: rgb(255, 102, 0);">
+            <td style="vertical-align: top;"><big><big><big><big><div id="searchbutton"><button style="padding:8px 0 4px 0;" onclick="getSectionDB(0);">Search DB</button></div><br>
+            </big></big></big></big></td>
+          </tr-->
+
+
+        </tbody>
+      </table>
+      <br>
+<div id="imdiv">
+<button id="fb1" style="padding:5px 0 8px 0;"onclick="setRPic(0);">Flikr Random!</button>
+<div id="images">
+
+
+
+<!-- p>
+<b>
+
+<font color=#eeffcc>NOTHINGYETssssss&nbsp;sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</font>
+<b>
+<p-->
+
+</div>
+</div>
+
+
+
+      </td><td style="vertical-align: top; background-color:#888888;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <!--br>
+      <br>
+      <br>
+      <br>
+      <br-->
+<!-- div id="images">
+
+<p>
+<b>
+
+<font color=#eeffcc>NOTHINGYETssssss&nbsp;sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</font>
+<b>
+<p>
+
+</div -->
+
+
+
+      <div id="pageBar">
+<!--p>
+<b>
+
+<font color=#eeffcc>NOTHINGYETssssss&nbsp;sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</font>
+<b>
+<p-->
+
+	</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <!--img style="width: 269px; height: 399px;" alt="cralt" src="crup.jpg"-->
+<div id="journ">
+
+</div>
+<div id="son">
+
+  <!--div id="loadson" style="display:none" size="width:200px; height=200px;"-->
+  <!--img src="../images/loading.gif" width="200px" height="200px"/-->
+  <!--/div-->
+
+
+
+</div><!-- END id = son -->
+
+  <div id="loadson" style="display :none;"  >
+  <img src="images/loading.gif" height="200px"  width="200px" />
+  </div><!--loadson-->
+
+
+<!--dbTable start-->
+
+<div id="dbTable" >
+
+<!--table id="tableB" style="text-align: left; width: 592px; height: 79px;" border="1" cellpadding="2" cellspacing="2"-->
+<table id="tableDB" cellpadding="6" cellspacing ="2" style="text-align: left; width: 92px; height: 79px; color:rgb(255,255,255);" border="1" cellpadding="2" cellspacing="2">
+  <thead>
+    <tr>
+      <th>First</th>
+      <th>Last</th>
+      <th>Phone</th>
+      <th>Moobile</th>
+      <th>Row Deletion</th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+    
+    
+    <tr>
+      <!-- FIRST, LAST fields -->
+      <td style="vertical-align: top; color: rgb(255, 255, 255);" onclick="load(0);">First
+
+      </td>
+
+      <td style="vertical-align: top; color: rgb(255, 255, 255); cursor:pointer;" >Last&nbsp;RSS
+      </td>
+      <!--End  FIRST, LAST fields -->
+      <td style="vertical-align: top; color: rgb(255, 255, 255); cursor:pointer;" >Phone&nbsp;RSS
+      </td>
+
+      <td style="vertical-align: top; color: rgb(255, 255, 255); cursor:pointer;" >Mobile&nbsp;RSS
+      </td>
+      <td style="vertical-align: top; color: rgb(255, 255, 255); cursor:pointer;" ><button class="butdelc">Delete</button>
+      </td>
+
+
+
+    </tr>
+    <!--End HEADERS-------------------->
+
+    <!--Start ROWS--------------------->
+
+    <tr>
+
+      <td style="vertical-align: top; color: rgb(255, 255, 255);" >&nbsp
+
+      </td>
+      <td style="vertical-align: top; color: rgb(255, 255, 255); cursor:pointer;" >&nbsp;
+      </td>
+
+      <td style="vertical-align: top; color: rgb(255, 255, 255);" >&nbsp
+
+      </td>
+      <td style="vertical-align: top; color: rgb(255, 255, 255); cursor:pointer;" >&nbsp;
+      </td>
+      <td style="vertical-align: top; color: rgb(255, 255, 255); cursor:pointer;" ><button class="butdelc">Delete</button>&nbsp;
+      </td>
+
+
+
+    </tr>
+<!-- Second row------------->
+    <tr>
+
+      <td style="vertical-align: top; color: rgb(255, 255, 255);" >&nbsp
+
+      </td>
+      <td style="vertical-align: top; color: rgb(255, 255, 255); cursor:pointer;" >&nbsp;
+      </td>
+
+      <td style="vertical-align: top; color: rgb(255, 255, 255);" >&nbsp
+
+      </td>
+      <td style="vertical-align: top; color: rgb(255, 255, 255); cursor:pointer;" >&nbsp;
+      </td>
+      <td style="vertical-align: top; color: rgb(255, 255, 255); cursor:pointer;" ><button class="butdelc">Delete</button>&nbsp;
+      </td>
+
+
+
+    </tr>
+
+
+<!--End Second row------------->
+
+      </tbody>
+</table>
+
+<!--dbTable END-->
+  
+</div>
+
+<div id="imagesky"> 
+
+<!--img  alt="cralt" src="http://localhost:8280/ss/YourskyGuelph_files/Yoursky.gif" alt="aa" title="titles" /-->
+
+</div>
+
+<!--div id="dbBox">
+<form action="displayDB.php" method="post" name="db_check">
+
+<input type="submit" value="show DB"/>
+</form>
+</div-->
+
+
+
+<div id="fbox">
+<!--FORM O: the first form------------------->
+
+<div id="formo" style="display:none">
+<!--form action="myform.php" method="post" name="user_checkb" -->
+<form action="initf.php" method="post" name="user_checkb" >
+<p>Your Name: <input type="text" name="yournameb" /><br />
+E-mail: <input type="text" name="emailb" /></p>
+
+<p>Do you like this website?
+<input type="radio" name="likeit" value="Yes" checked="checked" /> Yes
+<input type="radio" name="likeit" value="No" /> No
+<input type="radio" name="likeit" value="Not sure" /> Not sure</p>
+
+<p>Your comments:<br />
+<textarea name="comments" rows="10" cols="40"></textarea></p>
+
+<p>
+<!--input type="submit" value="Send it!" onclick=" valUser(document.forms["user_check"]) ;"-->
+<!--input type="submit" value="Send it!" onclick=" valUser(document.forms["user_check"]) ;"-->
+<input type="submit" value="Create it!" >
+<input type="submit" value="Display it!" >
+
+</p>
+</form>
+</div>
+<!--End FORM O  first form END-------------------------------->
+
+
+<!--Form C----------------->
+
+
+<!--Form C-----END------------>
+
+
+<!--FORM A------------------->
+<div id="formtest">
+
+<div id="cl">
+<form class="centleft testcent" action="insert.php" method="post" name="user_checkcent" >
+
+
+<label style="display:inline;" for="yourna"> Nameleft:</label> 
+
+  <input id="yourname" type="text"  name="yourna" placeholder="Your Name:" />
+
+</form>
+</div><!--cl-->
+
+<div id="cr">
+<form class="centright testcent" action="insert.php" method="post" name="user_checkcentr" >
+
+
+<label style="display:inline;" for="yournar"> Nameright:</label> 
+
+  <input style="display:inline;" id="yourname" type="text"  name="yournar" placeholder="Your Name:" />
+
+</form>
+</div><!--cr-->
+
+<br/>
+<br/>
+
+</div>
+<br/>
+<hr/>
+<br/>
+
+<div id="forma">
+<form class="form-horizontal" action="insert.php" method="post" name="user_check" >
+
+<div  class="control-group"  >
+<label class="control-label" for="yourname"> Your Namehor:</label> 
+<div class="controls">
+  <input id="yourname" type="text"  name="yourname" placeholder="Your Name:" />
+</div><!--controls-->
+
+</div><!--control-group-->
+
+
+<div  class="control-group"  >
+<label class="control-label" for="first"> First:</label> 
+<div class="controls">
+
+ <input type="text" name="first" id="first" placeholder="First"/>
+</div><!--controls-->
+
+</div><!--control-group-->
+
+
+<div  class="control-group"  >
+<label class="control-label" for="last"> Last:</label> 
+<div class="controls">
+
+ <input type="text" id="last" name="last" placeholder="last"/>
+</div><!--controls-->
+
+</div><!--control-group-->
+
+<div  class="control-group"  >
+<label class="control-label" for="email"> Email:</label> 
+<div class="controls">
+
+ <input id="email" type="text" name="email" />
+
+</div><!--controls-->
+</div><!--control-group-->
+
+<div  class="control-group"  >
+<label class="control-label" for="phone">Phone:</label> 
+<div class="controls">
+
+ <input id="phone" type="text" name="phone"/>
+</div><!--controls-->
+</div><!--control-group-->
+
+<div  class="control-group"  >
+<label class="control-label" for="mobile"> Mobile:</label> 
+<div class="controls">
+
+ <input id="mobile" type="text" name="mobile"/>
+</div><!--controls-->
+</div><!--control-group-->
+
+
+<div  class="control-group"  >
+<label class="control-label" for="fax"> fax</label> 
+<div class="controls">
+
+ <input id="fax" type="text" name="fax"/>
+</div><!--controls-->
+</div><!--control-group-->
+
+<div  class="control-group"  >
+<label class="control-label" for="web"> web</label> 
+<div class="controls">
+
+WEB <input id="web" type="text" name="web"/>
+
+</div><!--controls-->
+</div><!--control-group-->
+  
+
+
+<div  class="control-group"  >
+<label class="control-label" for="comments"> comments</label> 
+<div class="controls">
+
+Your comments:
+<textarea id="comments" name="comments" rows="10" cols="40"></textarea>
+</div><!--controls-->
+</div><!--control-group-->
+
+<p>
+<!--input type="submit" value="Send it!" onclick=" valUser(document.forms["user_check"]) ;"-->
+<!--input type="submit" value="Send it!" onclick=" valUser(document.forms["user_check"]) ;"-->
+
+<div  class="control-group"  >
+
+<div class="controls">
+
+<input class="btn" type="submit" value="Submit!" >
+<input class="btn"  value="Display it!" onclick="getListDBB(0);">
+
+
+</div><!--controls-->
+</div><!--control-group-->
+
+</p>
+
+
+
+
+</form>
+
+</div> <!--end forma div-->
+
+<!--*** END form a FBOX?  END ***************************-->
+<div id="formb">
+
+
+<!--******************************-->
+
+
+<script language="JavaScript" type="text/javascript">
+  new valUser(document.forms["user_check"]);
+</script>
+
+  <!--form method="post" name="msgform">
+
+    <input type="submit" onclick="return checkForm();">
+
+  </form-->
+
+</div> <!-- end form b -->
+
+</div>  <!--end fbox-->
+
+<br>
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<div id="foot">
+
+</div>
+
+
+</div>
+<!--container-->
+</body></html>

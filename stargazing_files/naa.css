@@ -1,0 +1,541 @@
+/*CSS for naperastro.org*/
+body {
+background-color: #787878;
+font-size: medium;
+}
+a:link {
+color: #DDDDDD;
+}
+a:link.cal {
+color: #000000;
+}
+
+a:link.marg {
+color: #445590;
+}
+a:link.vol {
+color: #EE6600;
+font-weight: bold;
+}
+a:link.scout {
+color: Purple;
+}
+a:link.pub {
+color: #008800;
+}
+a:link.exo {
+color: #445590;
+}
+a:visited {
+color: #DDDDDD;
+}
+a:visited.cal {
+color: #000000;
+}
+a:visited.marg {
+color: #445590;
+}
+a:visited.vol {
+color: #FF7800;
+font-weight: bold;
+}
+a:visited.scout {
+color: Purple;
+}
+a:visited.pub {
+color: #008800;
+}
+a:visited.exo {
+color: #445590;
+}
+a:hover {
+color: #EEEE66;
+}
+a:hover.cal {
+color: #EEEE66;
+}
+a:hover.vol {
+color: #EEEE66;
+}
+a:hover.pub {
+color: #EEEE66;
+}
+a:hover.scout {
+color: #EEEE66;
+}
+a:hover.exo {
+color: #EEEE66;
+}
+h1 {
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 1.3em;
+color: #D4D4D4;
+letter-spacing: .3em;
+text-decoration: underline;
+text-align: center;
+}
+h2 {
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 1.1em;
+color: #D4D4D4;
+letter-spacing: .2em;
+text-decoration: underline;
+text-align: center;
+}
+h3 {
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 1em;
+color: #445590;
+text-align: center;
+}
+h4 {
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 1.1em;
+color: #D4D4D4;
+text-align: left;
+}
+p {
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 1em;
+color: #D4D4D4;
+text-align: justify;
+}
+p.large {
+font-size: 1.2em;
+}
+p.cal {
+font-size: .7em;
+color: #445590;
+text-align: left;
+}
+p.tiny {
+font-size: .1em;
+color: #C4C4C4;
+}
+p.fill {
+font-size: 10px;
+color: #C4C4C4;
+}
+p.tinyblue {
+font-size: .1em;
+color: #445590;
+}
+p.dir {
+font-size: .7em;
+color: #445590;
+text-align: left;
+}
+p.marg {
+font-size: 1em;
+color: #445590;
+text-align: center;
+}
+p.alert {
+font-size: 1.2em;
+color: #FF7800;
+text-align: center;
+}
+p.cap {
+font-size: .7em;
+text-align: center;
+}
+p.feedTitle {
+font-size: 1.1em;
+}
+p.form {
+font-size: .8em;
+text-align: right;
+}
+p.menu {
+font-size: 1em;
+text-align: left;
+}
+ul { 
+list-style: circle;
+line-height: 2em; 
+}
+ul.pagelink { 
+list-style: circle inside url(graphics/good.gif);
+line-height: 2em; 
+}
+ul.ad { 
+list-style: circle;
+line-height: 1.5em; 
+}
+li {
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 1.1em;
+color: #D4D4D4;
+font-weight: normal;
+text-align: left;
+}
+/* Kurt's styles
+
+table.cal {
+background-color: #C4C4C4;
+width: 100%;
+border: outset 2pt;
+border-collapse: collapse;
+}
+table.ythgroup {
+	color: #D4D4D4;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: 1em;
+}
+th.cal {
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: .7em;
+color: #445590;
+}
+td.cal {
+width: 14%;
+border: inset 2px;
+vertical-align: top;
+height: 118px;
+}
+table.cal tr.daynames th.cal {
+	color: #666;
+	font-weight: normal;
+	font-size: 10px;
+}
+td.cal img {
+	float: right;
+	margin: 50px 10px 5px 0;
+}
+table.cal td.oldmonth {
+	background-color: #cfcfcf;
+}
+
+td.new {
+	background: url(graphics/moon/new-moon.gif) 95% 11% no-repeat;
+}
+td.first {
+	background: url(graphics/moon/first-quarter.gif) 95% 11% no-repeat;
+}
+td.full {
+	background: url(graphics/moon/full-moon.gif) 95% 11% no-repeat;
+}
+td.last {
+	background: url(graphics/moon/last-quarter.gif) 95% 11% no-repeat;
+}
+
+}*/
+table.cal {
+background-color: #cfcfcf;
+width: 100%;
+border: outset 2pt;
+border-collapse: collapse;
+}
+table.ythgroup {
+	color: #D4D4D4;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: 1em;
+}
+th.cal {
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: .7em;
+color: #445590;
+}
+tr.cal {
+height: 70px;
+}
+td.cal {
+width: 14%;
+border: inset 2px;
+vertical-align: top;
+}
+hr {
+width: 14%;
+height: 4px;
+}
+hr.news {
+width: 100%;
+height: 7px;
+color: #9EA3E8;
+}
+
+
+/*Kurt's Styles */
+table.cal tr.daynames th.cal {
+	color: #666;
+	font-weight: normal;
+	font-size: 10px;
+	background-color: #c4c4c4;
+}
+table.cal td.cal {
+	height: 118px;
+}
+td.cal img {
+	float: right;
+	margin: 50px 10px 5px 0;
+}
+table.cal td.oldmonth {
+	background-color: #c4c4c4;
+}
+td.new {
+	background: url(graphics/moon/new-moon.gif) 95% 11% no-repeat;
+}
+td.first {
+	background: url(graphics/moon/first-quarter.gif) 95% 11% no-repeat;
+}
+td.full {
+	background: url(graphics/moon/full-moon.gif) 95% 11% no-repeat;
+}
+td.last {
+	background: url(graphics/moon/last-quarter.gif) 95% 11% no-repeat;
+}
+
+
+/* Scroll Box Stuff */
+#marqueecontainer{
+	position: relative;
+	width: 270px; /*marquee width */
+	height: 107px; /*marquee height */
+	background-color: #C4C4C4;
+	overflow: hidden;
+	/*border: 3px solid orange;*/
+	padding: 2px;
+	padding-left: 4px;
+}
+
+#marqueecontainer a{
+	text-decoration: none;
+}
+
+#pscroller1{
+	width: 100%;
+	height: 50px;
+	/* border: 1px solid #C4C4C4; */
+	border-color: #5970A6;
+	border-style: inset;
+	padding: 5px;
+	background-color: #5970A6; /* 445590 */
+	color: white;
+	font-family: helvetica;
+	font-size: 125%;
+}
+
+#pscroller1 a{
+	text-decoration: none;
+	color: white;
+}
+
+#pscroller1 a:hover{
+	text-decoration: none;
+	color: yellow;
+}
+
+#pscroller2{
+	width: 100%;
+	height: 20px;
+	border: 1px solid black;
+	padding: 3px;
+}
+
+#pscroller2 a{
+	text-decoration: none;
+}
+
+/* place holder for now */
+.pscrollerclass {
+}
+
+/* IYA Page Styles - Kurt 09-01-09 --------------------------------------------- */
+#pscroller1 {
+	margin-bottom: 20px;
+}
+
+#iya_banner {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: normal;
+	margin: 0 auto 20px auto;
+	padding: 0;
+	width: 728px;
+}
+
+#iya_banner a {
+	display: block;
+	width: 728px;
+	height: 90px;
+	background: url(iya/banner-ad.jpg) top left no-repeat;
+}
+
+#iya_banner a:hover {
+	background-position: bottom left;
+}
+
+#iya_banner span {
+	visibility: hidden;
+	position: absolute;
+}
+
+#iya {
+	vertical-align: top;
+}
+
+#iya h1 {
+	font-size: 18px;
+	line-height: 24px;
+	letter-spacing: normal;
+	font-weight: normal;
+	text-decoration: none;
+	height: 100px;
+	margin: 0 0 20px 0;
+	padding: 16px 0 4px 0;
+	background: url(iya/header-bg.jpg) top left no-repeat;
+	text-align: left;
+	color: #fff;
+}
+
+#iya h1 strong {
+	display: block;
+	font-size: 42px;
+	line-height: 42px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #ffc;
+}
+
+#iya p {
+	font-size: 14px;
+	line-height: 20px;
+	margin: 0 0 20px 0;
+	text-align: left;
+	color: #eee;
+}
+
+#iya h2 {
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0 0 5px 0;
+	padding: 2px 10px;
+	font-size: 20px;
+	line-height: 24px;
+	letter-spacing: normal;
+	color: #fff;
+	text-align: left;
+}
+
+#iya h2 em {
+	float: right;
+	text-align: right;
+	width: 250px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #ccc;
+}
+
+#iya #details {
+	width: 280px;
+	float: left;
+	display: inline;
+	margin: 0 30px 30px 0;
+	border: solid 1px #ffc;
+	background: #56669b;
+}
+
+#iya #details *, #iya #naa * {
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	line-height: 18px;
+	text-align: left;
+	letter-spacing: normal;
+	color: #eee;
+}
+
+#iya #details h2 {
+	background: #ffc;
+	color: #445590;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0 0 5px 0;
+	padding: 2px 10px;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+#iya #details p {
+	font-size: 13px;
+	line-height: 18px;
+	margin: 0 10px 10px 10px;
+}
+
+#iya #details ul {
+	list-style: disc;
+	margin: 0 10px 10px 24px;
+	color: #eee;
+}
+
+#iya #details ul li {
+	margin: 0 0 8px 0;
+}
+
+#iya #details ul em, #iya #details p em {
+	font-size: 10px;
+	display: block;
+}
+
+#iya #naa {
+	clear: left;
+	border: solid 1px #999;
+	padding: 4px 10px;
+	margin: 0 0 20px 0;
+	background: #333;
+}
+
+#iya img.iya_logo {
+	float: right;
+	display: inline;
+	margin: 0 0 14px 24px;
+}
+
+#agenda {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	margin: 0 0 20px 0;
+	text-align: left;
+	color: #eee;
+	border: 1px #ccc;
+	border-style: solid none solid solid;
+	background: #56669b;
+}
+
+#agenda td, #agenda th {
+	vertical-align: top;
+	padding: 6px 8px;
+}
+
+#agenda th {
+	background: #ffc;
+	color: #445590;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 18px;
+	padding: 2px 8px;
+}
+
+#agenda td {
+	font-size: 12px;
+	line-height: 18px;
+	border: 1px #ffc;
+	border-style: none solid solid none;
+	padding-bottom: 12px;
+}
+
+#agenda td strong {
+	display: block;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #ffc;
+}
+
+#agenda td em {
+	display: block;
+	margin-bottom: 6px;
+}
+

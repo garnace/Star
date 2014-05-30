@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.testcent
+{
+
+//	display:inline;
+}
+.centnext
+{
+	width:700px;
+//	margin-left:auto;
+//	margin-right:auto;
+	margin: 0 auto;
+}
+.centleft
+{
+	width:300px;
+	
+	float:left;
+//	position:absolute;
+//	margin:0 50% 0 auto;
+	margin-left:20%;
+//	margin-right:auto;
+	display:inline;
+//width:250px;
+}
+
+.centright
+{
+	width:310px;
+	float:left;
+//	margin:0 auto 0 50%;
+//	position:absolute;
+	margin-right:auto;
+//	display:inline;
+	//width:200px;
+}
+.centright input
+{
+	display:inline;
+}
+
+
+
+#grad1
+{
+height:200px;
+background: -webkit-linear-gradient(left top, red , blue); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(bottom right, red, blue); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(bottom right, red, blue); /* For Firefox 3.6 to 15 */
+background: linear-gradient(to bottom right, red , blue); /* Standard syntax (must be last) */
+}
+</style>
+</head>
+<body>
+
+<h3>Linear Gradient - Diagonal</h3>
+<p>This linear gradient starts at top left. It starts red, transitioning to blue:</p>
+
+<!--div id="formtest"-->
+
+<div class="centleft testcent" id="cl">
+<form   >
+
+
+<label  for="yourna"> Nameleft:</label> 
+
+  <input id="yourna" type="text"  name="yourna" placeholder="Your Name:" />
+
+</form>
+</div><!--cl-->
+
+<div class="centright testcent" id="cr">
+<form   >
+
+
+<label  for="yournar"> Nameright:</label> 
+
+  <input  id="yournar" type="text"  name="yournar" placeholder="Your Name:" />
+
+</form>
+</div><!--cr-->
+
+<br/>
+<br/>
+
+<!--/div-->
+<br/>
+
+<div class="centnext " id="cc">
+<form   >
+
+
+<label  for="yournac"> Nameright:</label> 
+
+  <input  id="yournac" type="text"  name="yournac" placeholder="Your Name:" />
+
+</form>
+</div><!--cr-->
+
+
+
+<hr/>
+<br/>
+
+
+
+
+<div id="grad1"></div>
+
+<p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support gradients.</p>
+
+</body>
+</html>
+

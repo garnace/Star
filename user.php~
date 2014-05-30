@@ -1,0 +1,7 @@
+<?php # User.php
+
+//Defines user class
+
+class User {
+
+}

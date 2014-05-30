@@ -1,0 +1,24 @@
+/* Global vars
+*/
+
+var calDay;
+var calMonth;
+var calYear;
+var calStartMD;
+
+/*
+@param {Object} --date object
+*/
+function calendar(d){
+	var day;
+
+	if (d ==null)
+		day = new Date();
+	
+	calDay = day.getDate();
+	calMonth = day.getMonth();
+	calYear = day.getFullYear();
+	
+	var curMonth = new Date(calYear,calMonth,1);
+	
+}

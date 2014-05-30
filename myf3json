@@ -1,0 +1,82 @@
+<?php
+
+header('Content-type: application/json');
+/********
+
+$yourname=check_input($_POST["yourname"],"Write name");
+$first=check_input($_POST["yourname"],"name");
+$last=check_input($_POST["yourname"],"name");
+$phone=check_input($_POST["phone"],"write phone");
+$mobile=check_input($_POST["mobile"],"mobile");
+$fax=check_input($_POST["fax"],"fdiiidax");
+
+$email=check_input($_POST["email"],"write emaail address");
+$likeit=check_input($_POST["likeit"]);
+$comments=check_input($_POST["comments"],"write a comment");
+$unsecure=$_POST["yourname"];
+
+*********/
+
+$sam="STRING";
+//database
+
+
+//$user="mysql";
+$user="root";
+
+$password="Spasskydb8";
+$database="mysql";
+mysql_connect(localhost,$user,$password);
+@mysql_select_db($database) or die( "Unable to select database");
+//$query="INSERT INTO contacts VALUES ('','$first' ,'$last' ,'$phone' ,'$mobile' ,'$fax' ,'$email' ,'$web')";
+//$query="SELECT * FROM contacts" ;
+$query="SELECT * FROM contacts WHERE first='ff'" ;
+
+
+//hi
+
+/************************
+
+$query="INSERT INTO contacts VALUES ('','$first' ,'$last' ,'$phone' ,'$mobile' ,'$fax' ,'$email' ,'$web')";
+
+
+$query = "INSERT INTO contacts VALUES ('','John','Candy','01233 567890','30112 334455','01234 567891','johnsmith@gowansnet.com','http://www.gowansnet.com')";
+
+$query = "INSERT INTO contacts VALUES ('','John','Candy','01233 567890','30112 334455','01234 567891','johnsmith@gowansnet.com','http://www.gowansnet.com')";
+$query="INSERT INTO contacts (1,$first varchar(15) NOT NULL,last varchar(15) NOT NULL,phone varchar(20) NOT NULL,mobile varchar(20) NOT NULL,fax varchar(20) NOT NULL,email varchar(30) NOT NULL,web varchar(30) NOT NULL,PRIMARY KEY (id),UNIQUE id (id),KEY id_2 (id))";
+
+***********************************/
+
+
+//mysql_query($query);
+
+$result=mysql_query($query);
+$num=mysql_numrows($result);
+$iA= array();
+$row;
+$i=0;
+
+
+
+$row=mysql_fetch_assoc($result);      
+/*
+while ( $i<$num)
+{
+      $row=mysql_fetch_assoc($result);      
+      array_push($iA,$row );
+
+      $i++;
+}
+
+*/
+
+mysql_close();
+
+//$jsonData=json_encode($iA);
+$jsonData=json_encode($row);
+echo $jsonData;
+
+
+//database
+?>
+

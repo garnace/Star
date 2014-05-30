@@ -1,0 +1,18 @@
+<div  class="control-group span3" style="display:hide;" >
+
+<label class="control-label" for="yourws" > Web Site:</label> 
+<div class="controls">
+  <input id="yourws" class="span12" type="text"  name="yourws" placeholder="web" />
+</div><!--controls-->
+
+</div><!--control-group-->
+
+
+
+<div  class="control-group span3" style="display:hide;" >
+<label class="control-label" for="yourcom"> comments</label> 
+<div class="controls">
+<textarea id="yourcom"  name="yourcom" rows="3" cols="40"></textarea>
+</div><!--controls-->
+</div><!--control-group-->
+
