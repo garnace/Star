@@ -1,0 +1,694 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Login</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
+
+
+<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.23.custom.css" rel="stylesheet" title="starA">
+
+
+
+
+<script type="text/javascript" src="scripts/jquery.tools.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.js"></script>
+
+
+
+
+  <!--style>img{ height: 100px; float: left; }</style  -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="scripts/jquery.tools.min.js"></script>
+
+<script type="text/javascript" src="scripts/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui-1.8.23.custom.min.js"></script>
+
+<!--script type="text/javascript"  src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.js" ></script-->
+<script type="text/javascript" src="scripts/bootstrap.js"></script>
+<!--script type="text/javascript" src="scripts/jasny-bootstrap.min.js"></script-->
+<!--   -------------------------------------------->
+<!--   -------------Make random flickr pics------>
+
+<script>
+
+var $= jQuery.noConflict();
+$(document).ready(function(){
+     //setCarousel(0);
+//     setRPic(0);
+//$(".quickflip-wrapper3").quickFlip();
+ 
+ 
+
+});
+
+</script>
+
+<!--   -------------------------------------------->
+<!--   -------------Make tabs------>
+
+<script type="text/javascript">
+$(function(){
+$("#tabs").tabs();
+//$(".quickflip-wrapper2").quickFlip();
+//$(".quickflip-wrapper").quickFlip();
+
+});
+</script>
+
+
+
+<!--Validate input as well as handle table events with jquery (like deletes)-->
+<script type="text/javascript" src="scripts/jquery.quickflip.min.js"></script>
+
+<script type="text/javascript" src="scripts/jquery.flippy.js"></script>
+
+<script type="text/javascript">
+//$(".quickflip-wrapper3").quickFlip();
+</script>
+<script type="text/javascript" src="scripts/script.js"></script>
+<script type="text/javascript" src="scripts/valu.js"></script>
+
+
+
+<script type="text/javascript" language="JavaScript">
+//alert("hello");
+
+</script>
+
+</head>
+
+<body>
+
+
+<body onload="load();"  >
+
+
+  <div class='container'>
+    <!--TWITTER BOOTSTRAP TUTORIAL</h1-->
+<div id="head" style="text-align: center;" >Star Advisor<br>
+<!--div id="head" style="text-align: center;"><big style="color: rgb(204, 0, 0);"><big><big>Star Advisor</big></big></big><br-->
+</div>
+
+<!--twitter bootstrap top menu followed by bootstrap containers-->
+
+    <div class='navbar navbar-inverse'>
+      <!--div class='navbar-inner nav-collapse' style="height: auto;"-->
+      <div class='navbar-inner nav-collapse' style="height:auto;" >
+        <ul class="nav">
+          <li class="active"><a href="#" onclick="load(0);"><i class="icon-user icon-whit"></i> Hoome</a></li>
+          <li><a href="#pageBar" onclick="getSFeedTerm(0);">Use LookUP</a></li>
+          <li><a href="#pageBar" onclick="listSites(0);"><i class="icon-leaf icon-white"> </i> Sites on Server</a></li>
+          <li><a href="#pageBar" onclick="listSites(0);">Page Two</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id='content' class='row-fluid'>
+      <div class='span9 main'>
+        <h2>Main Content Section</h2>
+
+<p>
+
+
+
+<div id="hero" class="hero-unit" >
+<h1>Flickr</h1>
+
+
+<div id="yCarousel" >
+
+</div><!--yCar-->
+
+
+<p>hi</p>
+
+
+
+
+<div id="imdiv">
+	<div class="quickflip-wrapper">
+	<div ><a href="#" class="quickFlipCta"><img src="images/Yoursky.gif" /></a></div>
+	<div ><a href="#" class="quickFlipCta"> <img src="images/ss036.gif" /></a>  </div>
+	</div>
+<img src="images/Yoursky.gif" width="50" height="50"/>
+
+</br>
+<div id="images">
+</div><!--imdiv images-->
+
+</div><!--imdiv-->
+
+<div id="imdivp">
+
+
+<div id="imagesp">
+</div><!--imdiv images-->
+
+</div><!--imdiv-->
+
+
+
+
+<a id="fb2" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="setRPic(0);">Fickr Random!!!!!</a>
+<a class="btn btn-large btn-success" onclick="setTim(0);">Start</a>
+
+
+
+</div> <!--hero-->
+
+
+
+	<!--div id="tabs" style="width: 600px;"-->
+	<div id="tabs" >
+	<ul>
+		<li><a href="#tabs-1">First</a></li>
+		<li><a href="#tabs-2">First</a></li>
+		<li><a href="#tabs-3">First</a></li>
+	</ul>
+
+	<div id="tabs-1">First container
+
+<!--dbTable start-->
+
+<div id="dbTable" >
+
+<BR/>
+<BR/>
+<h3>DATA</h3>
+<table id="tableDB" cellpadding="2" cellspacing="2" style="text-align: left;  color:rgb(5,5,5);" border="1" cellpadding="2" cellspacing="2">
+
+  <thead>
+    <tr>
+      <th>First</th>
+      <th>Last&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Phone</th>
+      <th>Moobile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>Row Deletion</th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+    
+    
+    <tr>
+      <!-- FIRST, LAST fields -->
+      <td >First
+
+      </td>
+
+      <td >Last&nbsp;RSS
+      </td>
+      <!--End  FIRST, LAST fields -->
+      <td >Phone&nbsp;RSS
+      </td>
+
+      <td >Mobile&nbsp;RSS
+      </td>
+      <td ><button id="dbR1" class="butdelc">Delete</button>
+      </td>
+
+
+
+    </tr>
+    <!--End HEADERS-------------------->
+
+    <!--Start ROWS--------------------->
+
+    <tr>
+
+      <td >&nbsp;
+
+      </td>
+      <td >&nbsp;
+      </td>
+
+      <td >&nbsp;
+
+      </td>
+      <td >&nbsp;
+      </td>
+      <td ><button id="dbR2" class="butdelc">Delete</button>&nbsp;
+      </td>
+
+
+
+    </tr>
+<!-- Second row------------->
+    <tr>
+
+      <td >&nbsp;
+
+      </td>
+      <td >&nbsp;
+      </td>
+
+      <td >&nbsp;
+
+      </td>
+      <td >&nbsp;
+      </td>
+      <td ><button id="dbR3" class="butdelc">Delete</button>&nbsp;
+      </td>
+
+
+
+    </tr>
+
+
+<!--End Second row------------->
+
+      </tbody>
+</table>
+
+
+  
+
+
+
+
+<!--img  alt="cralt" src="http://localhost:8280/ss/YourskyGuelph_files/Yoursky.gif" alt="aa" title="titles" /-->
+
+</div>
+<!--dbTable END-->
+
+
+<!---***********************Initialize*******************-->
+<div id="formstarini">
+<form class="form-inline" action="initfo.php" method="post" name="userChecki">
+
+<div class="controls-row">
+
+
+<!--input type="submit" value="Send it!" onclick=" valUser(document.forms["user_check"]) ;"-->
+
+<div  class="control-group span3"  >
+
+<div class="controls">
+
+<input class="btn btn-large btn-success" type="submit" value="Init!" />
+
+
+
+</div><!--controls-->
+</div><!--control-group-->
+
+<div  class="control-group span3"  >
+
+<div class="controls">
+
+<!--input class="btn btn-large btn-err" type="submit" value="Init it!" -->
+
+<input class="btn btn-success span12"  value="Display it!" onclick="getListDBB(0);"/>
+
+
+</div><!--controls-->
+</div><!--control-group-->
+
+
+
+
+</div><!--row-->
+
+
+</form>
+</div>
+<!--*****************END formstarini ****************-->
+
+
+
+<!--end first tab-->
+
+	</div>
+	<div id="tabs-2">First container
+
+<img src="images/Yoursky.gif" width="50" height="50"/>
+
+</div>
+	<div id="tabs-3">First container</div>
+	</div><!--divtabs-->
+
+
+
+
+<div id="pageBar" >
+
+
+</div><!--pagebar-->
+</p>
+
+<div id="journ">
+
+</div><!--journ-->
+
+
+<div id="son">
+</div><!--son-->
+
+<div id="loadson" style="display:none;">
+<img src="images/loading.gif" height="200px" width="200px"/>
+
+</div><!--loadson-->
+
+
+
+<div id="imagesky">
+
+</div> <!--imagesky-->
+
+
+
+<div id="formreg" style="display:none;">
+<form class="form-horizontal" action="insertfo.php" method="post" name="regform">
+
+
+<div class="control-group">
+<label class="control-label" for="yourhan">User name:(your email)</label>
+<div class="controls">
+	<input id="yourhan" type="text" name="yourhan" />
+</div><!--controls-->
+
+</div><!--control-group-->
+
+
+
+
+</form>
+</div><!--formreg-->
+
+<!--***************************init email and pass************-->
+<div id="formstarinipa">
+<form class="form-inline" action="initpa.php" method="post" name="user_checkp">
+
+<div class="controls-row">
+
+
+
+
+<div  class="control-group"  >
+
+<div class="controls">
+
+<input class="btn btn-large btn-success" type="submit" value="Init pass!" >
+
+
+
+</div><!--controls-->
+</div><!--control-group-->
+
+
+
+
+
+</div><!--row-->
+
+
+</form>
+</div>
+
+
+<!--***************************END init email and pass************-->
+
+
+<!--************************formstar starform****************************-->
+<div id="formstar" name="formstar">
+
+<form id="user_check" class="form-inline" action="test.php" method="post" name="starform" onsubmit="return valUserLog(this);">
+
+
+<fieldset>
+<legend>Names <?php  if ($uzer){echo $uzer->getFirst();}?></legend>
+
+
+
+<div id="rw3"  class="controls-row"  >
+
+<!------------------password row-------------------------------------------->
+<div  class="control-group span3"  >
+
+<label class="control-label" for="youre"> Your Email:<span id="espanEmail" class="espan" ></span></label> 
+<div class="controls">
+  <input id="youre" class="span12" type="text"  name="youre" placeholder="Your Email" />
+</div><!--controls-->
+
+</div><!--control-group-->
+
+<div class="control-group span3">
+<label class="control-label" for="yourpw">Enter Password<span id="espanPass" class="espan" ></span></label>
+<div class="controls">
+	<input id="yourpw" class="span12" type="password" name="yourpw" />
+</div><!--controls-->
+
+</div><!--control-group-->
+
+
+
+
+
+
+<!----------------------end password row-------------------------------->
+
+</div><!--row-->
+<div class="controls-row">
+
+
+
+
+<div  class="control-group span3"  >
+
+<div class="controls">
+
+<input class="btn btn-large btn-success" type="submit" value="Submit!" id="subM" >
+
+
+
+
+</div><!--controls-->
+</div><!--control-group-->
+
+
+<div  class="control-group span3"  >
+
+<div class="controls">
+
+<!--input class="btn btn-large btn-success" type="submit" value="Submit!" -->
+<input class="btn btn-large btn-success span12" value="Display it!" onclick="getListDBB(0);">
+<!--input class="btn btn-large btn-success"  value="Check it!" onclick="getListDBB(0);"-->
+
+
+</div><!--controls-->
+</div><!--control-group-->
+
+
+<div  class="control-group span3"  >
+
+<div class="controls">
+
+
+
+<input class="btn btn-large btn-success span12" value="Check it!" onclick="writeDBB(0);">
+
+
+</div><!--controls-->
+</div><!--control-group-->
+
+
+
+</div><!--row-->
+
+
+
+
+
+
+</fieldset>
+</form>
+</div>
+<!-----------*********END formstar starform********************---------------------->
+
+
+
+<!--*******************forma****************************-->
+<div id="forma" >
+<!--div id="forma" -->
+
+<!--form class="form-horizontal" action="insertfos.php" method="post" name="user_check" -->
+<form class="form-inline" action="insertfos.php" method="post" name="userCheckaa" >
+<!-- div class="controls-row "-->
+<!--div id="q1" class="span3"-->
+<fieldset>
+<legend>Picture Info</legend>
+
+
+
+
+<div id="arw-1" class="controls-row">
+
+
+<div  class="control-group span3"  >
+
+<label class="control-label" for="skyEvent">Sky Area(north,north-east..):</label> 
+<div class="controls">
+
+ <input id="skyEvent" class="span12" type="text" name="skyEvent" />
+
+</div><!--controls-->
+
+</div><!--control-group-->
+
+<div  class="control-group span3"  >
+
+<label class="control-label" for="picDate">Date:</label> 
+<div class="controls">
+
+ <input id="picDate" class="span12" type="text" name="picDate"/>
+</div><!--controls-->
+
+</div><!--control-group-->
+
+
+<div  class="control-group span3"  >
+
+<label class="control-label" for="picEvent"> Event(eclipse, etc.)</label> 
+<div class="controls">
+
+ <input id="picEvent" class="span12" type="text" name="picEvent"/>
+</div><!--controls-->
+
+</div><!--control-group-->
+
+
+
+
+</div><!--arw-1-->
+
+
+
+
+
+<div id="arw-2" class="controls-row">
+<div  class="control-group span3"  >
+
+<label class="control-label" for="picName"> Picture Name:</label> 
+<div class="controls ">
+  <input id="picName" class="span12" type="text"  name="picName" placeholder="Pic Name:" />
+</div><!--controls-->
+
+</div><!--control-group-->
+
+
+<div  class="control-group span3">
+<label  class="control-label" for="picLoc"> Location taken(City):</label> 
+<div class="controls ">
+
+ <input  type="text" class="span12" name="picLoc" id="picLoc" placeholder="Location"/>
+</div><!--controls-->
+
+</div><!--control-group-->
+
+
+
+
+<div  class="control-group span3"  >
+<label class="control-label" for="skyArea"> Sky Area(north,north-east..):</label> 
+<div class="controls">
+
+ <input type="text" class="span12" id="skyArea" name="skyArea" placeholder="sky area"/>
+</div><!--controls-->
+
+</div><!--control-group-->
+
+</div><!--arw-2-->
+
+
+
+
+
+
+
+
+
+
+<div id="arw-3" class="controls-row">
+
+<div class="control-group span3">
+<label class="control-label" for="picCom">Comments(put comments in here):</label>
+<div class="controls">
+Your comments:
+<textarea id="picCom" class="span12" name="picCom" rows="10" cols="40"></textarea>
+</div><!--controls-->
+</div><!--control-group-->
+
+<p>
+<!--input type="submit" value="Send it!" onclick=" valUser(document.forms["user_check"]) ;"-->
+<!--input type="submit" value="Send it!" onclick=" valUser(document.forms["user_check"]) ;"-->
+
+<div  class="control-group span3"  >
+
+<div class="controls">
+
+<input class="btn span12" type="submit" value="Submit!" >
+<!--input class="btn"  value="Display it!" onclick="getListDBB(0);"-->
+
+
+</div><!--controls-->
+</div><!--control-group-->
+
+
+<div  class="control-group span3"  >
+
+<div class="controls">
+
+<!--input class="btn span12" type="submit" value="Submit!" -->
+<input class="btn span12"  value="Display it!" onclick="getListDBB(0);">
+
+
+</div><!--controls-->
+</div><!--control-group-->
+
+</div><!--arw-3-->
+
+</p>
+
+
+
+</fieldset>
+</form>
+</div><!--div forma-->
+
+
+
+
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.<p> 
+<p id="dis">disapear</p>
+        <p>Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+      </div><!--**************** END container ***********************-->
+      <div class='span3 sidebar'>
+        <h2>Sidebar</h2>
+        <ul class="nav nav-tabs nav-stacked">
+          <li><a href='#' onclick="load(0);">Home</a></li>
+          <li><a href='#pageBar' onclick="getSFeedTerm('nebula');">Use LookUP</a></li>
+          <li><a href='#' onclick="getSectionO(0);">News</a></li>
+          <li><a href='#' onclick="getSectionSky(0);">Sky Maps</a></li>
+          <li><a href='#pageBar' onclick="getSectionO(0);">Search Cornell</a></li>
+          <li><a href='#pageBar' onclick="getSectionBlog(0);">Search Blogs</a></li>
+          <li><a href='#' onclick="getSectionInsertDB(0);">Insert DB</a></li>
+          <li><a href='#' onclick="getSectionDBB(0);">Search DB</a></li>
+          <li><a href='#' onclick="getSectionLogin(0);">Login</a></li>
+        </ul>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+<!--script language="JavaScript">
+new valUser(document.forms['starform']);
+<//--script-->
+
+
+</body>
+</html>

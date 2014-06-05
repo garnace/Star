@@ -2016,6 +2016,37 @@ function getListDel(dbId)
 	function(data){
 	});
 }
+function loadDBB(dbId)
+{
+	$.getJSON("http://localhost:8280/StarAdvisor/read.php?emaild="+dbId+"&callback=?",
+	function(data){
+	});
+
+
+}
+function writeDBB(dbId)
+{
+	var errLabel;
+
+	alert("write");
+	$(document).ready(function(){
+	$.getJSON("http://localhost:8280/StarAdvisor/write.php?emaild="+dbId+"&callback=?",
+	function(data){
+$("#espanEmail").append("item.message");	
+		$.each(data.users,function(i,item){//should only show error item
+			$("#espanEmail").append(item.message);
+		
+		});
+
+			
+
+
+
+	});
+
+	});//document ready
+}
+
 function getListDBB(dbId)
 {
 				//table cells
