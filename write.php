@@ -4,6 +4,7 @@ header('Content-type: application/json');
 //header('Access-Control-Allow-Origin: *');
 $queryp="SELECT contacts.* FROM contacts JOIN uaccount USING (email)  WHERE contacts.email=:email AND uaccount.accountpass=:pass ";
 $queryl="LOAD DATA INFILE './con.cvs' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'";
+$querylU="LOAD DATA INFILE './con.cvs' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'";
 //$queryi="SELECT * FROM contacts INTO OUTFILE '/var/www/htdocs/StarAdvisor/con.cvs' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
 $queryi="SELECT * FROM contacts INTO OUTFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/con.cvs' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
 $queryiU="SELECT * FROM uaccount INTO OUTFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/ac.cvs' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
@@ -47,12 +48,12 @@ try {
     $rp=$stmt->execute();
    
 $iB=array();
-$iB['users']=array("message"=>"database saved");
+$iB['users']=array(array("message"=>"database saved"));
 unset($pdo);
 //mysql_close();
 }catch (PDOException $e){
     $err="Couldnt save database to file.".$e->getMessage();
-    $iB['users']=array("message"=>$err);
+    $iB['users']=array(array("message"=>$err));
 /*	echo "<html>";
 	echo "<body>";
 	echo "<p>ERROR DB".$e->getMessage()."</p>";

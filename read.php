@@ -1,23 +1,29 @@
 <?php
 
 header('Content-type: application/json');
-//header('Access-Control-Allow-Origin: *');
 
-/********
+$queryl="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/con.cvs' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'";
+$querylU="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/ac.cvs' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'";
 
-$yourname=check_input($_POST["yourname"],"Write name");
-$first=check_input($_POST["yourname"],"name");
-$last=check_input($_POST["yourname"],"name");
-$phone=check_input($_POST["phone"],"write phone");
-$mobile=check_input($_POST["mobile"],"mobile");
-$fax=check_input($_POST["fax"],"fdiiidax");
 
-$email=check_input($_POST["email"],"write emaail address");
-$likeit=check_input($_POST["likeit"]);
-$comments=check_input($_POST["comments"],"write a comment");
-$unsecure=$_POST["yourname"];
 
-*********/
+
+$querydP="DROP TABLE uaccount";
+
+$queryP=" CREATE TABLE contacts (id int(6) NOT NULL auto_increment,first varchar(15) NOT NULL,last varchar(15) NOT NULL,phone varchar(20) NOT NULL,mobile varchar(20) NOT NULL,fax varchar(20) NOT NULL,email varchar(30) NOT NULL,web varchar(30) NOT NULL,PRIMARY KEY (id, email),UNIQUE id (id),KEY id_2 (id))";
+
+
+$queryPassP=" CREATE TABLE uaccount (id int(6) NOT NULL auto_increment ,accounthandle varchar(30) NOT NULL,email varchar(30) NOT NULL,accountpass varchar(30) NOT NULL,PRIMARY KEY (email),UNIQUE id_e (accounthandle),KEY id_2 (id))";
+
+
+$queryshowP= "SELECT * FROM uaccount";
+
+//--------end uaccount start contacts---
+
+$queryd="DROP TABLE contacts";
+
+$query=" CREATE TABLE contacts (id int(6) NOT NULL auto_increment,first varchar(30) NOT NULL,last varchar(30) NOT NULL,phone varchar(20) NOT NULL,mobile varchar(20) NOT NULL,fax varchar(20) NOT NULL,email varchar(30) NOT NULL,web varchar(30) NOT NULL,PRIMARY KEY (id),UNIQUE id (id),KEY id_2 (id),FOREIGN KEY (email) REFERENCES uaccount(email) ON DELETE CASCADE)";
+
 
 $delElement= (empty($_GET["emaild"])) ? '' : $_GET["emaild"];
 
@@ -26,62 +32,54 @@ $sam="STRING";
 
 
 //$user="mysql";
-$user="root";
+/*$user="root";
 
 $password="Spasskydb8080";
 $database="mysql";
 mysql_connect(localhost,$user,$password);
 @mysql_select_db($database) or die( "Unable to select database");
-//$query="INSERT INTO contacts VALUES ('','$first' ,'$last' ,'$phone' ,'$mobile' ,'$fax' ,'$email' ,'$web')";
+
 $query="SELECT * FROM contacts" ;
-//$query="SELECT * FROM contacts WHERE first='ff'" ;
 
 
-//hi
 
-//++++Change
-//$delquery="DELETE FROM contacts WHERE (email='$delElement')";
-$delquery="DELETE FROM uaccount WHERE (email='$delElement')";
-/************************
-
-$query="INSERT INTO contacts VALUES ('','$first' ,'$last' ,'$phone' ,'$mobile' ,'$fax' ,'$email' ,'$web')";
-
-
-$query = "INSERT INTO contacts VALUES ('','John','Candy','01233 567890','30112 334455','01234 567891','johnsmith@gowansnet.com','http://www.gowansnet.com')";
-
-$query = "INSERT INTO contacts VALUES ('','John','Candy','01233 567890','30112 334455','01234 567891','johnsmith@gowansnet.com','http://www.gowansnet.com')";
-$query="INSERT INTO contacts (1,$first varchar(15) NOT NULL,last varchar(15) NOT NULL,phone varchar(20) NOT NULL,mobile varchar(20) NOT NULL,fax varchar(20) NOT NULL,email varchar(30) NOT NULL,web varchar(30) NOT NULL,PRIMARY KEY (id),UNIQUE id (id),KEY id_2 (id))";
-
-***********************************/
-
-
-//mysql_query($query);
-
-//$result=mysql_query($query);
 $result=mysql_query($delquery);
-/*$num=mysql_numrows($result);
-$iA= array();
-$row;
-$i=0;
 */
+try{
+    $pdo= new PDO('mysql:dbname=mysql;host=localhost','root','Spasskydb8080');
+    $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+    $pdo->query($queryd);
+    $pdo->query($querydP);
 
 
-//$row=mysql_fetch_assoc($result);      
-/*
-while ( $i<$num)
-{
-      $row=mysql_fetch_assoc($result);      
-      array_push($iA,$row );
+    $pdo->query($queryPassP);
+    $pdo->query($query);
 
-      $i++;
-}
-*/
+
+
+    $stmt=$pdo->prepare($queryl);
+    $rp=$stmt->execute();
+    $stmt=$pdo->prepare($querylU);
+    $rp=$stmt->execute();
+
+
 $iB=array();
-$iB['users']=array(0);
+$iB['users']=array(array("message"=>"DataBase loaded"));
 /*$iB['users']=$iA;*/
 
-mysql_close();
 
+unset ($pdo);
+//mysql_close();
+
+
+}catch(PDOException $e)
+{
+    $err="Couldn't load DB".$e->getMessage();
+    $iB['users']=(array(array('message'=>$err)));
+
+
+}
 //$jsonData=json_encode($iA);
 
 $callback = (empty($_GET["callback"])) ? 'callback' : $_GET["callback"];

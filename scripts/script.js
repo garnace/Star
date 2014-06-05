@@ -2032,8 +2032,9 @@ function writeDBB(dbId)
 	$(document).ready(function(){
 	$.getJSON("http://localhost:8280/StarAdvisor/write.php?emaild="+dbId+"&callback=?",
 	function(data){
-$("#espanEmail").append("item.message");	
+//$("#espanEmail").append("item.message");	
 		$.each(data.users,function(i,item){//should only show error item
+//			$("#espanEmail").append(item.message);
 			$("#espanEmail").append(item.message);
 		
 		});
