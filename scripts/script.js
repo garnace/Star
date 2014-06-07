@@ -2020,7 +2020,10 @@ function loadDBB(dbId)
 {
 	$.getJSON("http://localhost:8280/StarAdvisor/read.php?emaild="+dbId+"&callback=?",
 	function(data){
-	});
+		$.each(data.users ,function(i,item){
+			$("#espanEmail").html(item.message);
+		});//each
+	});//json
 
 
 }
@@ -2035,7 +2038,8 @@ function writeDBB(dbId)
 //$("#espanEmail").append("item.message");	
 		$.each(data.users,function(i,item){//should only show error item
 //			$("#espanEmail").append(item.message);
-			$("#espanEmail").append(item.message);
+//			$("#espanEmail").append(item.message);
+			$("#espanEmail").html(item.message);
 		
 		});
 

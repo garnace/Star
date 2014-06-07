@@ -2,8 +2,8 @@
 
 header('Content-type: application/json');
 
-$queryl="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/con.cvs' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'";
-$querylU="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/ac.cvs' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'";
+$queryl="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/con.cvs' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
+$querylU="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/ac.cvs' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
 
 
 
@@ -58,9 +58,9 @@ try{
 
 
 
+    $stmtP=$pdo->prepare($querylU);
+    $rpP=$stmtP->execute();
     $stmt=$pdo->prepare($queryl);
-    $rp=$stmt->execute();
-    $stmt=$pdo->prepare($querylU);
     $rp=$stmt->execute();
 
 
