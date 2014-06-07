@@ -8,7 +8,7 @@ $querylU="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/ac.cvs' IN
 
 
 
-$querydP="DROP TABLE uaccount";
+$querydP="DROP TABLE IF EXISTS uaccount";
 
 $queryP=" CREATE TABLE contacts (id int(6) NOT NULL auto_increment,first varchar(15) NOT NULL,last varchar(15) NOT NULL,phone varchar(20) NOT NULL,mobile varchar(20) NOT NULL,fax varchar(20) NOT NULL,email varchar(30) NOT NULL,web varchar(30) NOT NULL,PRIMARY KEY (id, email),UNIQUE id (id),KEY id_2 (id))";
 
@@ -20,7 +20,7 @@ $queryshowP= "SELECT * FROM uaccount";
 
 //--------end uaccount start contacts---
 
-$queryd="DROP TABLE contacts";
+$queryd="DROP TABLE IF EXISTS contacts";
 
 $query=" CREATE TABLE contacts (id int(6) NOT NULL auto_increment,first varchar(30) NOT NULL,last varchar(30) NOT NULL,phone varchar(20) NOT NULL,mobile varchar(20) NOT NULL,fax varchar(20) NOT NULL,email varchar(30) NOT NULL,web varchar(30) NOT NULL,PRIMARY KEY (id),UNIQUE id (id),KEY id_2 (id),FOREIGN KEY (email) REFERENCES uaccount(email) ON DELETE CASCADE)";
 
