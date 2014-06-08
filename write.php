@@ -6,8 +6,11 @@ $queryp="SELECT contacts.* FROM contacts JOIN uaccount USING (email)  WHERE cont
 $queryl="LOAD DATA INFILE './con.cvs' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'";
 $querylU="LOAD DATA INFILE './con.cvs' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'";
 //$queryi="SELECT * FROM contacts INTO OUTFILE '/var/www/htdocs/StarAdvisor/con.cvs' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
-$queryi="SELECT * FROM contacts INTO OUTFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/co.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
-$queryiU="SELECT * FROM uaccount INTO OUTFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/ac.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
+$queryi="SELECT * FROM contacts INTO OUTFILE 'C:/StarGit/Star/coo.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
+$queryiU="SELECT * FROM uaccount INTO OUTFILE 'C:/StarGit/Star/acc.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
+
+//$queryi="SELECT * FROM contacts INTO OUTFILE '".$_SERVER['DOCUMENT_ROOT']."/co.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
+//$queryiU="SELECT * FROM uaccount INTO OUTFILE '".$_SERVER['DOCUMENT_ROOT']."/ac.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
 
 
 $delElement= (empty($_GET["emaild"])) ? '' : $_GET["emaild"];

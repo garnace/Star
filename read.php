@@ -2,10 +2,11 @@
 
 header('Content-type: application/json');
 
-$queryl="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/co.txt' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
-$querylU="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/ac.txt' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
+$queryl="LOAD DATA INFILE 'C:/StarGit/Star/co.txt' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
+$querylU="LOAD DATA INFILE 'C:/StarGit/Star/ac.txt' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
 
-
+//$queryl="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/co.txt' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
+//$querylU="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/ac.txt' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
 
 
 $querydP="DROP TABLE IF EXISTS uaccount";
