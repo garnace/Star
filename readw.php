@@ -2,21 +2,11 @@
 
 header('Content-type: application/json');
 
-//--------------------------windows read
+$queryl="LOAD DATA INFILE 'C:/StarGit/Star/co.txt' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
+$querylU="LOAD DATA INFILE 'C:/StarGit/Star/ac.txt' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
 
-//$queryl="LOAD DATA INFILE 'C:/StarGit/Star/co.txt' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
-//$querylU="LOAD DATA INFILE 'C:/StarGit/Star/ac.txt' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
-
-//--------------------------linux read
-//$queryl="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/co.txt' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
-//$querylU="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/ac.txt' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
-
-//--------------------------does windows and linux read
-$linQueryl="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/co.txt' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
-$linQuerylU="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/ac.txt' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
-$winQueryl="LOAD DATA INFILE 'C:/StarGit/Star/co.txtco.txt' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
-$winQuerylU="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/ac.txt' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
-
+//$queryl="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/co.txt' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
+//$querylU="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/ac.txt' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
 
 
 $querydP="DROP TABLE IF EXISTS uaccount";
@@ -67,20 +57,13 @@ try{
     $pdo->query($queryPassP);
     $pdo->query($query);
 
-    //check if on windows
-    if (strtoupper(substr(PHP_OS,0,3)) === 'WIN')
-        {
-            $stmtP=$pdo->prepare($winQuerylU);
-            $rpP=$stmtP->execute();
-            $stmt=$pdo->prepare($winQqueryl);
-            $rp=$stmt->execute();
-        }
-        else{
-            $stmtP=$pdo->prepare($linQuerylU);
-            $rpP=$stmtP->execute();
-            $stmt=$pdo->prepare($linQueryl);
-            $rp=$stmt->execute();
-        }
+
+
+    $stmtP=$pdo->prepare($querylU);
+    $rpP=$stmtP->execute();
+    $stmt=$pdo->prepare($queryl);
+    $rp=$stmt->execute();
+
 
 $iB=array();
 $iB['users']=array(array("message"=>"DataBase loaded"));
