@@ -14,8 +14,8 @@ header('Content-type: application/json');
 //--------------------------does windows and linux read
 $linQueryl="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/co.txt' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
 $linQuerylU="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/ac.txt' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
-$winQueryl="LOAD DATA INFILE 'C:/StarGit/Star/co.txtco.txt' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
-$winQuerylU="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/ac.txt' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
+$winQueryl="LOAD DATA INFILE 'C:/StarGit/Star/co.txt' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
+$winQuerylU="LOAD DATA INFILE 'C:/StarGit/Star/ac.txt' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
 
 
 
