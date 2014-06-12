@@ -6,21 +6,11 @@ $queryp="SELECT contacts.* FROM contacts JOIN uaccount USING (email)  WHERE cont
 $queryl="LOAD DATA INFILE './con.cvs' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'";
 $querylU="LOAD DATA INFILE './con.cvs' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'";
 //$queryi="SELECT * FROM contacts INTO OUTFILE '/var/www/htdocs/StarAdvisor/con.cvs' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
-//-----------------------------windows write
-//$queryi="SELECT * FROM contacts INTO OUTFILE 'C:/StarGit/Star/coo.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
-//$queryiU="SELECT * FROM uaccount INTO OUTFILE 'C:/StarGit/Star/acc.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
-//------------------------------linux write
-$queryi="SELECT * FROM contacts INTO OUTFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/co.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
-$queryiU="SELECT * FROM uaccount INTO OUTFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/ac.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
+$queryi="SELECT * FROM contacts INTO OUTFILE 'C:/StarGit/Star/coo.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
+$queryiU="SELECT * FROM uaccount INTO OUTFILE 'C:/StarGit/Star/acc.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
 
-
-//------------------------------both windows &linux write
-$linQueryi="SELECT * FROM contacts INTO OUTFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/co.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
-$linQueryiu="SELECT * FROM uaccount INTO OUTFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/ac.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
-
-
-$winQueryi="SELECT * FROM contacts INTO OUTFILE 'C:/StarGit/Star/coo.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
-$winQueryiu="SELECT * FROM uaccount INTO OUTFILE 'C:/StarGit/Star/acc.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
+//$queryi="SELECT * FROM contacts INTO OUTFILE '".$_SERVER['DOCUMENT_ROOT']."/co.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
+//$queryiU="SELECT * FROM uaccount INTO OUTFILE '".$_SERVER['DOCUMENT_ROOT']."/ac.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
 
 
 $delElement= (empty($_GET["emaild"])) ? '' : $_GET["emaild"];
@@ -55,23 +45,11 @@ try {
 
     $pdo=new  PDO('mysql:dbname=mysql;host=localhost','root','Spasskydb8080');
     $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-
-    //check if on windows server
-    if (strtoupper(substr(PHP_OS,0,3)) === 'WIN')
-        {
-    $stmt=$pdo->prepare($winQueryi);
+    $stmt=$pdo->prepare($queryi);
     $rp=$stmt->execute();
-    $stmt=$pdo->prepare($winQueryiu);
+    $stmt=$pdo->prepare($queryiU);
     $rp=$stmt->execute();
-        }
-    else
-        {
-    $stmt=$pdo->prepare($linQueryi);
-    $rp=$stmt->execute();
-    $stmt=$pdo->prepare($linQueryiu);
-    $rp=$stmt->execute();
-
-        }
+   
 $iB=array();
 $iB['users']=array(array("message"=>"database saved"));
 unset($pdo);
