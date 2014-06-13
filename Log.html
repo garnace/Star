@@ -418,7 +418,7 @@ $("#tabs").tabs();
 
 
 <fieldset>
-<legend>Names <?php  if ($uzer){echo $uzer->getFirst();}?></legend>
+<legend>Names <?php  if ($uzer){?> First:<?php echo $uzer->getFirst();  ?> Last <?php echo $uzer->getLast();} ?> </legend>
 
 
 

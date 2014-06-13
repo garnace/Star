@@ -122,6 +122,8 @@ catch(PDOException $e){
 else
 {
 include("Log.html");	
+//include("Log.html#user_check");	
+//header("Location: http://".$_SERVER[HTTP_HOST]."/StarAdvisor/Log.html#user_check");
 }
 
 //+++++++++++++++++++++++++++++++++++
