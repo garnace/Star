@@ -399,6 +399,21 @@ background-image:url('../images/ss054.gif');
     opacity:1;
 }
 
+#cal table {
+//    width:392px;
+//    height:392px;
+ //   font-size:12px;
+	font-color:#ff0000;
+	background-color:#ff0000;
+	color:#5577ff;
+    font-size:15px;
+    border:0 0 40px 0;
+    margin:0 0 80px 0;
+
+    z-index:4;
+    opacity:1;
+}
+
 
 #tableO {
 //    width:600px;
