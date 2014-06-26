@@ -34,6 +34,9 @@ function calendarInit(d){
 */
 	var curMonthStart = new Date(calYear,calMonth,1);
 	var curMonthStartDay = curMonthStart.getDay();
+	var monthName;
+	var dayName=day.toDateString().split(" ").slice(0,1);
+
 //	calStartMD = curMonthStart.getDay();
 	alert("calSD"+curMonthStartDay+"::"+curMonthStart.toDateString());	
 //	$("#cal").append("<table id=\"tabCal\" style=\"width:200;height:100;color:#3344ff;\" border=\"1\" cellspacing=\"2\" cellpadding=\"2\" >");
@@ -42,11 +45,14 @@ function calendarInit(d){
 	$('<table id="tabCal"  style="color:#3344ff; border:1px solid black;" cellspacing="2" cellpadding="2" ></table>').appendTo('#cal');
 	$('<thead><tr></tr></thead> ').appendTo('#cal table');
 
-	$('<th sytle="border: 1px solid white;">&lt;</th><th colspan="5" >Sun</th><th>&gt;</th>').appendTo("#cal table thead tr");
+//	$('<th sytle="border: 1px solid white;">&lt;</th><th colspan="5" >'+day.toDateString().split(" ").slice(1,2)+'Sun</th><th>&gt;</th>').appendTo("#cal table thead tr");
+	$('<th sytle="border: 1px solid white;">&lt;</th><th colspan="5" >'+day.toDateString().split(" ").slice(1,2)+dayName+'Sun</th><th>&gt;</th>').appendTo("#cal table thead tr");
 
-	$('<thead><tr></tr></thead> ').appendTo('#cal table');
+//	$('<thead><tr></tr></thead> ').appendTo('#cal table');
+	$('<tr></tr>').appendTo('#cal table thead');
 
-	$('<th >Sun</th><th>Mon</th><th>Tues</th><th>Wed</th><th>Thur</th><th>Fri</th><th>Sat</th> ').appendTo("#cal table thead:eq(1) tr");
+//	$('<th >Sun</th><th>Mon</th><th>Tues</th><th>Wed</th><th>Thur</th><th>Fri</th><th>Sat</th> ').appendTo("#cal table thead:eq(1) tr");
+	$('<th >Sun</th><th>Mon</th><th>Tues</th><th>Wed</th><th>Thur</th><th>Fri</th><th>Sat</th> ').appendTo("#cal table thead tr:eq(1)");
 //	$append('</tr></thead><tbody></tbody>').appendTo('#cal');
 	$('<tbody style="border:1px solid blue;"></tbody>').appendTo('#cal table');
 	var startMCount=0;

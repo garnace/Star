@@ -382,7 +382,11 @@ background-image:url('../images/ss054.gif');
 #cal table tbody tr td{
 	border:1px solid #eedd00;
 }
-#cal table thead th{
+//#cal table thead th td{
+//	border:1px solid #eedddd;
+//}
+
+#cal table thead tr:first-child th{
 	border:1px solid #ee0000;
 }
 
