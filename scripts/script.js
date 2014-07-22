@@ -415,11 +415,19 @@ $.each(pAA, function (i,item){
 	if(i==4){
 //	if(i%5==0){
 //	alert ("id:"+iD.attr("class"));	
-	var ele= $(iD.children()[0]).children().children();
+
+	//element is 2nd child represented by the hierarchy of :
+	//(1st wrapper div)->anchor->image
+//	var ele= $(iD.children()[0]).children().children();
+	var ele= $(iD.children()[0]).children();
+
+
 //	alert ("id:"+ ele[1].nodeName);	
 //good	alert ("id:"+ $(ele[1]).attr("class"));	
 //	iD=$("<br style=\"clear:both;\"/>");
-	alert ("id:"+ $(ele[0]).attr("src"));	
+//	alert ("id:"+ $(ele[0]).attr("src"));	
+	alert ("id:"+$(ele[0]).attr("class"));	
+//	alert ("id:"+ $(ele[0]).html());	
 //	alert ("id:"+iD.children().attr("class"));	
 //	alert ("id:"+iD.children().length);	
 	}
@@ -811,6 +819,9 @@ function checkPic(event,data)
 //	else
 //	{	
 //	alert("shouldnt wrk" + ch);
+	
+	//turn down if pic already faced up; then exit with notheing further
+
 	if (data.pId.hasClass("headp"))
 	{
 		data.pId.removeClass("headp");	
@@ -818,8 +829,10 @@ function checkPic(event,data)
 		exit();
 	}
 
-
+	//tag pic as faced up if not already
 	data.pId.addClass("headp");
+
+
 //	$("#imdivp #imagesp img .head").addClass("head");
 //	$("#imdivp #imagesp img .head").addClass("head");
 
@@ -852,6 +865,9 @@ function checkPic(event,data)
 
 //			if (headsv.slice(0).attr("src") == headsv.slice(1).attr("src"))
 //switch child			if ($($(headsv.slice(0).children()[1]).children().children()).attr("src") == $($(headsv.slice(1).children()[1]).children().children()).attr("src"))
+			
+			//compare images of child wrapper nodes
+
 			if ($($(headsv.slice(0).children()[1]).children().children()).attr("src") == $($(headsv.slice(1).children()[1]).children().children()).attr("src"))
 			{
 //				alert("match");

@@ -187,7 +187,7 @@ background-image:url('../images/ss054.gif');
 //}
 
 #imdiv #images{
-    border:5px solid #021a90  ;
+    border:5px solid #021a90;
     padding-top:10px;
     padding-bottom:10px;
     margin-bottom:10px;
@@ -414,9 +414,9 @@ background-image:url('../images/ss054.gif');
 //    width:392px;
 //    height:392px;
  //   font-size:12px;
-	font-color:#ff0000;
+    font-color:#ff0000;
 //	background-color:#ff0000;
-	color:#5577ff;
+    color:#5577ff;
     font-size:15px;
     border:0 0 40px 0;
     margin:0 0 80px 0;
@@ -441,7 +441,7 @@ background-image:url('../images/ss054.gif');
 //    padding-left:20px;
 }
 #searchSki #skbutton{
-    padding-left:347px;
+   padding-left:347px;
    padding-top:0px;
    border-radius:4px;
 //   width:190px;
