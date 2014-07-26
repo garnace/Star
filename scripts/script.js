@@ -499,10 +499,12 @@ $.each(pAA, function (i,item){
 		//    iE.trigger("click",checkPic,{pId:iE.attr("src")});
 //	$('.'+iD.attr("src")).quickFlip();
 
-}).complete(
-//alert("done");
+});
+//.always(
+
+//alert("done comp");
 //function(){$('.quickflip-wrapper3').quickFlipper();}
-);
+//);
 
 
 /*
@@ -1277,23 +1279,30 @@ function setSFeed(pId)
 
 	   //	         $("<img/>").attr("src", item.media.m).attr("title",item.title).appendTo("#images");
 
+	window.console.log("doneaae");
 
-
+/*
              for(var i = 0; i < data.items.length && i < 3; i += 1)
 		 $('#son').append('<li>' + '<h5>' + '<a href="' + data.items[i].alternate.href + '">' + data.items[i].title + '</a>' + '</h5>' + '<br />' + data.items[i].content);
              $('#son').append('<li>' + '<a href="http://www.google.com/reader/shared/yourusername">Subscribe to my Google Reader shared items &raquo;</a>' + '</li>');
              $('#son').wrapInner('<ul></ul>');
+*/
 	     //             $('#grJSON').before("<h4>Articles I\'m Reading</h4>\n<br />");
-         }).complete(function()
+	window.console.log("doneaae");
+
+         }).always(function()
 {
-    document.getElementById("loadson").style.display="none";
-    document.getElementById("fbox").style.display="none";
+	alert("com ");
+	window.console.log("donee");
+//    document.getElementById("loadson").style.display="none";
+  //  document.getElementById("fbox").style.display="none";
 }
 );
-}).complete(function()
-{
-    document.getElementById("loadson").style.display="none";
-    document.getElementById("fbox").style.display="none";
+		//document.ready
+//}).complete(function()
+//{
+    //document.getElementById("loadson").style.display="none";
+    //document.getElementById("fbox").style.display="none";
 }
 );
 
