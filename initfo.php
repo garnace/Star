@@ -1,4 +1,12 @@
-<?php
+<?php #initfo.php
+/**
+ *-----------------initfo.php 
+ *
+ *Script to init form data base by creating uaccount and contacts
+ *uaccount having email and passwords
+ *contacts having user contact info
+ *
+ */
 //$yourname=check_input($_POST["yournamef"],"Write name");
 //$email=check_input($_POST["youre"],"write emaail address");
 //$likeit=check_input($_POST["likeit"]);
@@ -17,57 +25,43 @@ $database="mysql";
 //mysql_connect(localhost,$user,$password);
 //@mysql_select_db($database) or die( "Unable to select database");
 //--------------------initpass account------------
-
+$queryd="DROP TABLE IF EXISTS contacts";
 $querydP="DROP TABLE IF EXISTS uaccount";
 
-$queryP=" CREATE TABLE contacts (id int(6) NOT NULL auto_increment,first varchar(15) NOT NULL,last varchar(15) NOT NULL,phone varchar(20) NOT NULL,mobile varchar(20) NOT NULL,fax varchar(20) NOT NULL,email varchar(30) NOT NULL,web varchar(30) NOT NULL,PRIMARY KEY (id, email),UNIQUE id (id),KEY id_2 (id))";
-
-
-//$queryPass=" CREATE TABLE account (accounthandle varchar(30) NOT NULL,email varchar(30) NOT NULL,accountpass varchar(30) NOT NULL,PRIMARY KEY (email),,UNIQUE id_e (email),KEY id_2 (email),FOREIGN KEY email REFERNCES contacts)";
-
-
-//$queryPass=" CREATE TABLE account (accounthandle varchar(30) NOT NULL,email varchar(30) NOT NULL,accountpass varchar(30) NOT NULL,PRIMARY KEY (accounthandle),UNIQUE id_e (accounthandle),KEY id_2 (accounthandle),FOREIGN KEY (email) REFERENCES contacts)";
-//$queryPass=" CREATE TABLE account (accounthandle varchar(30) NOT NULL,email varchar(30) NOT NULL,accountpass varchar(30) NOT NULL,PRIMARY KEY (accounthandle),UNIQUE id_e (accounthandle),KEY id_2 (accounthandle),FOREIGN KEY email (email) REFERENCES contacts(email))";
-//$queryPass=" CREATE TABLE account (id int(6) NOT NULL ,accounthandle varchar(30) NOT NULL,email varchar(30) NOT NULL,accountpass varchar(30) NOT NULL,PRIMARY KEY (accounthandle),UNIQUE id_e (accounthandle),KEY id_2 (accounthandle),FOREIGN KEY (id,email) REFERENCES contacts (id,email))";
 
 
 $queryPassP=" CREATE TABLE uaccount (id int(6) NOT NULL auto_increment ,accounthandle varchar(30) NOT NULL,email varchar(30) NOT NULL,accountpass varchar(30) NOT NULL,PRIMARY KEY (email),UNIQUE id_e (accounthandle),KEY id_2 (id))";
 
+$query=" CREATE TABLE contacts (id int(6) NOT NULL auto_increment,first varchar(30) NOT NULL,last varchar(30) NOT NULL,phone varchar(20) NOT NULL,mobile varchar(20) NOT NULL,fax varchar(20) NOT NULL,email varchar(30) NOT NULL,web varchar(30) NOT NULL,PRIMARY KEY (id),UNIQUE id (id),KEY id_2 (id),FOREIGN KEY (email) REFERENCES uaccount(email) ON DELETE CASCADE)";
 
-//$querysP = "INSERT INTO uaccount VALUES ('','jsoolffe','johnsmith@gowansnet.com',password('smith1234'))";
-//$querysP = "INSERT INTO uaccount (id,accounthandle,email,accountpass) VALUES ('','jsoolffe','johnsmith@gowansnet.com',password('smith1234'))";
-$querysP = "INSERT INTO uaccount (id,accounthandle,email,accountpass) VALUES ('','jsoolffe','johnsmith@gowansnet.com','smith1234')";
+
 
 $queryshowP= "SELECT * FROM uaccount";
 
 //--------end uaccount start contacts---
 
-$queryd="DROP TABLE IF EXISTS contacts";
-
-$query=" CREATE TABLE contacts (id int(6) NOT NULL auto_increment,first varchar(30) NOT NULL,last varchar(30) NOT NULL,phone varchar(20) NOT NULL,mobile varchar(20) NOT NULL,fax varchar(20) NOT NULL,email varchar(30) NOT NULL,web varchar(30) NOT NULL,PRIMARY KEY (id),UNIQUE id (id),KEY id_2 (id),FOREIGN KEY (email) REFERENCES uaccount(email) ON DELETE CASCADE)";
 
 
-//$query=" CREATE TABLE contacts (id int(6) NOT NULL auto_increment,first varchar(30) NOT NULL,last varchar(30) NOT NULL,phone varchar(20) NOT NULL,mobile varchar(20) NOT NULL,fax varchar(20) NOT NULL,email varchar(30) NOT NULL,web varchar(30) NOT NULL,PRIMARY KEY (id),UNIQUE id (id),KEY id_2 (id))";
-
-$querys = "INSERT INTO contacts (id,first,last,phone,mobile,fax,email,web) VALUES ('','BooffC','Candy','01233 567890','30112 334455','01234 567891','johnsmith@gowansnet.com','http://www.gowansnet.com')";
 
 
-//mysql_query($queryd);
-//mysql_query($query);
-//mysql_query($querys);
 
-$querypas="INSERT INTO uaccount (id,accounthandle,email,accountpass) VALUES(:cindx,:handle,:email,:pass)";
 
 
 try {
 
 $pdo= new PDO('mysql:dbname=mysql;host=localhost','root','Spasskydb8080');
 $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+//delete contacts first
 $pdo->query($queryd);
+
+//then delete uaccount
 $pdo->query($querydP);
 
-
+//create uaccount first
 $pdo->query($queryPassP);
+
+//then contacts
 $pdo->query($query);
 
 $pdo->exec("INSERT INTO uaccount (id,accounthandle,email,accountpass) VALUES (NULL,'jsoolffe','johnsmith@gowansnet.com','smith1234')");
@@ -92,43 +86,17 @@ while ($vP < $numP)
 
 
 
-//prep $stmtp=$pdo->prepare($querypas);
-//prep $rp= $stmtp->execute(array(':cindx'=>'',':handle'=>$handle,':email'=>$email,':pass'=>$pass));
-/*{
-	echo "<p>Errorstmt</p>";
-}else
-{
-	echo "<p>stmt</p>";
-}
-
-*/
 
 
 
-
-
-//prep $stmt=$pdo->prepare($query);
-
-
-//prep $r= $stmt->execute(array(':indx'=>'',':first'=>$first,':last'=>$last,':phone'=>$phone,':mobile'=>$mobile,':fax'=>$fax,':email'=>$email,':web'=>$web));
-/*{
-	echo "<p>Errorstmt</p>";
-}else
-{
-	echo "<p>stmt</p>";
-}
-*/
-
-
-//mysql_query($querypas);
-//mysql_query($query);
-
-//mysql_close();
-
+//destroy
 unset($pdo);
 
+//set header back to index.html
 header("Location: http://localhost:8280/StarAdvisor/index.html#user_check");
 //header("Location: http://".$_SERVER[HTTP_HOST]."/StarAdvisor/index.html#user_check");
+
+
 exit();
 
 }

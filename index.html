@@ -322,12 +322,12 @@ $("#tabs").tabs();
 <!--end first tab-->
 
 	</div>
-	<div id="tabs-2">First container
+	<div id="tabs-2">Second container
 
 <img src="images/Yoursky.gif" width="50" height="50"/>
 
 </div>
-	<div id="tabs-3">First container</div>
+	<div id="tabs-3">Third container</div>
 	</div><!--divtabs-->
 
 
@@ -360,12 +360,13 @@ $("#tabs").tabs();
 
 
 
-<div id="formreg" style="display:none;">
+<div id="formreg" >
 <form class="form-horizontal" action="insertfo.php" method="post" name="regform">
 
 
 <div class="control-group">
 <label class="control-label" for="yourhan">User name:(your email)</label>
+
 <div class="controls">
 	<input id="yourhan" type="text" name="yourhan" />
 </div><!--controls-->
@@ -375,11 +376,11 @@ $("#tabs").tabs();
 
 
 
-</form>
+</form><!--regform-->
 </div><!--formreg-->
 
 <!--***************************init email and pass************-->
-<div id="formstarinipa">
+<div id="formstarinipa" style="display:none;">
 <form class="form-inline" action="initpa.php" method="post" name="user_checkp">
 
 <div class="controls-row">
@@ -405,8 +406,8 @@ $("#tabs").tabs();
 </div><!--row-->
 
 
-</form>
-</div>
+</form><!--user_checkp formstarinitpa-->
+</div><!--formstarinitpa-->
 
 
 <!--***************************END init email and pass************-->

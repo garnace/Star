@@ -11,7 +11,8 @@
 
 include("classes/user.php");
 
-//@var class
+//@var string $email
+//@var class $uzer
 
 $uzer=null;
 
@@ -32,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 if (!isset($_POST["youre"]))
 {
-	//@var string
+
 
 	$email=null;
 }else

@@ -39,18 +39,6 @@ htReal[3]="http://www.fourmilab.ch/yoursky";
 
 
 
-/*function valUser(oForm)
-{
-    var dat= "1234";
-    var usr= oForm.elements['yourname'].value;
-	    alert ("error");
-    oForm.onsubmit=function(){
-	if (usr != dat)
-	    alert ("error2");
-    }
-
-}
-*/
 
 function setMap(mapId)
 {
@@ -59,21 +47,23 @@ var htmap="<img alt=\"cralt\" src=\"http:localhost:8280/StarServer/YourskyGuelph
 
 }
 
+
+/** ************* #setCarousel
+*
+*   Function to set caousel pictures
+*
+*
+**/
+
 function setCarousel(pId)
 {
-//if (pId == 0)
-  //  pId = "telescope";
-
 
 var csl= "<div id=\"myCarousel\" class=\"carousel slide\">";
 csl +="<div class=\"carousel-inner\">";
  
 csl+= "<div class=\"active item\">";
 csl += "<img src=\"images/Yoursky.gif\" width=\"200px\" height=\"200px\" alt=\"sky scape\"/>";
-//csl +="<div class=\"carousel-caption\">";
-//csl +="  <h4>Project</h4>";
-//csl += " <p>b </p>";
-//csl +="</div>";
+
 csl +="</div>";
 csl +="</div>";
 
@@ -87,10 +77,7 @@ csl +="</div>";
 
 var csm= "<div class=\"item\">";
 csm += "<img src=\"images/Yoursky.gif\"  alt=\"sky scape\"/>";
-	//csl +="<div class=\"carousel-caption\">";
-//csl +="  <h4>Project</h4>";
-//csl += " <p>br br br </p>";
-//csl +="</div>";
+
 csm +="</div>";
 
 
@@ -104,9 +91,6 @@ csm +="</div>";
 //------------------
 
 
-
-    //    document.getElementById("#images").innerHTML="";
-//$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
 $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
   {
     tags: pId,
@@ -114,55 +98,56 @@ $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?
     format: "json"
  },
   function(data) {
-//      $("#images").html("");
-//alert("HII");
 
-$("#yCarousel").html(csl);      
-//$(csm).appendTo("#yCarousel #myCarousel .carousel-inner");
+      $("#yCarousel").html(csl);      
+
 
       $.each(data.items, function(i,item){
 
       $("<img/>").attr("src", item.media.m).attr("title",item.title).appendTo("#yCarousel #myCarousel .carousel-inner");
 
 
-	/*  var anch=("<a></a>").attr("href",item.media.m);
-	 $("<img/>").attr("src", item.media.m).attr("title",item.title).wrap($anch).appendTo("#images");
-*/
-//	  imAp.parent().attr("href",item.media.m).appendTo("#images");
-//      if ( i == 8 ) return false;
-//	  var  currentImage = $(this);
-//	  currentImage.wrap("<a href='" + currentImage.attr("src") + "' </a>");
-//	  $(this).parent().attr("href", this.src);
-//	  $(this).parent().attr("href", this.src);
       if ( i == 8 ) 
-	  {
-//        $(".carousel-inner> img .carim").each(function()
-//        $("#yCarousel #myCarousel .carousel-inner .item > img").each(function()
-        $("#yCarousel #myCarousel .carousel-inner > img").each(function()
-		{
-//		    alert ("IIimage:"+this.src);
-		    var iE=$(this);
-		//    iE.wrap("<a href=' "+iE.attr("src")+"' </a>");
-//		    iE.wrap("<a href=\" "+iE.attr("src")+"\"> </a>");
-		    iE.wrap("<div class=\"item\"><a href=\" "+iE.attr("src")+"\"> </a></div>");
-//		    iE.wrap("<div class=\"item\"></div>");
-		});
+      {
 
-$("#myCarousel").carousel({interval:false});
-	  return false;
-          }
-    });
-  });
+     	 $("#yCarousel #myCarousel .carousel-inner > img").each(function()
+	 {
+
+		    var iE=$(this);
+
+		    iE.wrap("<div class=\"item\"><a href=\" "+iE.attr("src")+"\"> </a></div>");
+
+	});//each img
+
+	//set carousel to not rotate: false
+
+	$("#myCarousel").carousel({interval:false});
+
+	//return from json site
+	return false;
+     }//i==8
+
+    });//each
+  });//json
 
 
 
 
 }
-//---------------------
+//----end setCarousel-----------------
 
+
+
+/**  #setCarPic
+*Function to set caousel pictures
+*
+*
+**/
 function setCarPic(pId)
 {
 
+
+$(document).ready(function(){
 //-------------------------
 
 //Flikr Example taken from
@@ -171,13 +156,6 @@ function setCarPic(pId)
 
 //------------------
 
-
-
-    //    document.getElementById("#images").innerHTML="";
-//$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
-
-$(document).ready(function(){
-//$('.carousel').carousel();
 
 $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
   {
@@ -190,21 +168,7 @@ $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?
       $.each(data.items, function(i,item){
 //alert ("ho");
       $("<img/>").attr("src", item.media.m).attr("title",item.title).appendTo("#images");
-//      $("<img/>").attr("src", item.media.m).attr("title",item.title).appendTo("#images");
-// var imAp=$("<img/>").attr("src", item.media.m).attr("title",item.title);
-//	  var $anchor = $("<a></a>").attr("href",imAp.attr("src")).attr("target","_blank");
-	//j  var $anchor = $("<a></a>").attr("href","http://www.google.com").attr("target","_blank");
-	  //imAp.wrap($anchor).appendTo("#images");
-//	  imAp.wrap("<a href=\""+imAp.attr("src")+"\" </a>").appendTo("#images");
-	/*  var anch=("<a></a>").attr("href",item.media.m);
-	 $("<img/>").attr("src", item.media.m).attr("title",item.title).wrap($anch).appendTo("#images");
-*/
-//	  imAp.parent().attr("href",item.media.m).appendTo("#images");
-//      if ( i == 8 ) return false;
-//	  var  currentImage = $(this);
-//	  currentImage.wrap("<a href='" + currentImage.attr("src") + "' </a>");
-//	  $(this).parent().attr("href", this.src);
-//	  $(this).parent().attr("href", this.src);
+
       if ( i == 8 ) 
 	  {
         $("#images> img").each(function()
@@ -223,28 +187,16 @@ $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?
 });//document.ready
 
 }
+//-----end setCarPic----------------------
 
 
-//---------------------------
 
-/*function load()
-{
-		document.getElementById("imagesky").style.display="none";
-	document.getElementById("pageBar").style.display="none";
-	document.getElementById("journ").style.display="none";
-	document.getElementById("son").style.display="none";
-
-	document.getElementById("imagesky").innerHTML="";
-	document.getElementById("pageBar").innerHTML="";
-	document.getElementById("journ").innerHTML="";
-	document.getElementById("son").innerHTML="";
-
-}
-*/
-
-//---------------------------
-
-
+/**  #setPic
+*Function to set #images flickr pictures
+*
+*@param array pR
+*@param integer randY
+**/
 function setPic(pId,pR,randY)
 {
 
@@ -260,18 +212,6 @@ var pRay=new Array();
 pRay=pR;
 
 
-//nonflickr
-//boardToubler(0);
-//exit();
-
-
-
-    //    document.getElementById("#images").innerHTML="";
-//$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
-
-//$(document).ready(function(){
-
-//$('.carousel').carousel();
 
 $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
   {
@@ -282,54 +222,40 @@ $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?
   function(data) {
       $("#images").html("");
       $.each(data.items, function(i,item){
-//alert ("ho");
-	pRay.push(item);
-//	alert("doing"+pRay);
-      $("<img/>").attr("src", pRay[i].media.m).attr("title",pRay[i].title).appendTo("#images");
-//      $("<img/>").attr("src", item.media.m).attr("title",item.title).appendTo("#images");
-// var imAp=$("<img/>").attr("src", item.media.m).attr("title",item.title);
-//	  var $anchor = $("<a></a>").attr("href",imAp.attr("src")).attr("target","_blank");
-	//j  var $anchor = $("<a></a>").attr("href","http://www.google.com").attr("target","_blank");
-	  //imAp.wrap($anchor).appendTo("#images");
-//	  imAp.wrap("<a href=\""+imAp.attr("src")+"\" </a>").appendTo("#images");
-	/*  var anch=("<a></a>").attr("href",item.media.m);
-	 $("<img/>").attr("src", item.media.m).attr("title",item.title).wrap($anch).appendTo("#images");
-*/
-//	  imAp.parent().attr("href",item.media.m).appendTo("#images");
-//      if ( i == 8 ) return false;
-//	  var  currentImage = $(this);
-//	  currentImage.wrap("<a href='" + currentImage.attr("src") + "' </a>");
-//	  $(this).parent().attr("href", this.src);
-//	  $(this).parent().attr("href", this.src);
-      if ( i == 8 ) 
-	  {
-        $("#images> img").each(function()
-		{
-		  //  alert ("IIimage:"+this.src);
-		    var iE=$(this);
-		//    iE.wrap("<a href=' "+iE.attr("src")+"' </a>");
-		    iE.wrap("<a href=\" "+iE.attr("src")+"\"> </a>");
-		});
 
-//	alert("+"+pRay);
-//    setPicP(arrPic[randY],pRay);
+      pRay.push(item);
+
+      $("<img/>").attr("src", pRay[i].media.m).attr("title",pRay[i].title).appendTo("#images");
+      if ( i == 8 ) 
+
+      {
+	   $("#images> img").each(function()
+	   {
+		  //  alert ("IIimage:"+this.src);
+
+		    var iE=$(this);
+	
+
+		    iE.wrap("<a href=\" "+iE.attr("src")+"\"> </a>");
+	    });
+
+
 	boardDoubler(pRay);
 	  return false;
-          }
-    });
-  });
-
-//$('#yCarousel #myCarousel .carousel-inner .item img').live('hover',(function(){
-//$(this).css('opacity','0.9');
-//});
-
-
-
-
-//});
-//document.ready
+     }
+    });//$.each
+  });//json
 
 }
+
+/**  #boardDoubler
+*Function to double number of images on board
+*
+*@param array pI
+*
+**/
+
+
 function boardDoubler(pI)
 {
 	var rAA = new Array();
@@ -387,105 +313,38 @@ function boardDoubler(pI)
 			
 		}
 
-	});
-//flipq		$('.quickflip-wrapper3').quickFlip();
-$.each(pAA, function (i,item){
-//	for (i=0;i<pI.length;i++){
-//      $("<img/>").attr("src", pAA[i].media.m).attr("title",pAA[i].title).appendTo("#imagesp");
-//	if (i == 4)
+	});//each randomizer
+
+	$.each(pAA, function (i,item){
+
+
 	        var iiD=$("<br style=\"clear:both;\"/>");
-//	if (i==0)
+
+
+		//card element
 		var iD="<div class=\"quickflip-wrapper3 qw"+i+"\" style=\"float:left;display:inline;\">";
-//	else
-//		var iD="<div class=\"flipbox-container qw"+i+"\" style=\"float:left;display:inline;\">";
 
 
-//		var iD="<div class=\"quickflip-wrapper3\" >";
-//	iD=iD+"<div ><a href=\"#\" class=\"quickFlipCta\"><img src=\""+pAA[i].media.m+"\" title=\""+pAA[i].title+"\" width=\"50px\" height=\"50px\"/></a></div>";
-	iD=iD+"<div class=\"di1\"><a href=\"#\" class=\"quickFlipCta\"> <img src=\"images/Yoursky.gif\"  /></a>  </div>";
-	iD=iD+"<div class=\"di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\""+pAA[i].media.m+"\" title=\""+pAA[i].title+"\" /></a></div>";
-//	iD=iD+"<div class=\"flipbox di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\""+pAA[i].media.m+"\" title=\""+pAA[i].title+"\" /></a></div>";
+		iD=iD+"<div class=\"di1\"><a href=\"#\" class=\"quickFlipCta\"> <img src=\"images/Yoursky.gif\"  /></a>  </div>";
+		iD=iD+"<div class=\"di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\""+pAA[i].media.m+"\" title=\""+pAA[i].title+"\" /></a></div>";
 
-//	iD=iD+"<div class=\"flipbox di1\"><a href=\"#\" id=\""+pAA[i].media.m+"\"> <img src=\"images/Yoursky.gif\"  /></a>  </div>";
-//	iD=iD+"<div class=\"flipbox di1\"><a href=\"#\" id=\"images/Yoursky.gif\"> <img src=\"images/Yoursky.gif\"  /></a>  </div>";
+		iD=iD+"</div>";
+		iD=$(iD);
 
-//	iD=iD+"<div ><a href=\"#\" class=\"quickFlipCta\"> <img src=\"images/ss036.gif\" /></a>  </div>";
-	iD=iD+"</div>";
-	iD=$(iD);
-	if(i==4){
-//	if(i%5==0){
-//	alert ("id:"+iD.attr("class"));	
-
-	//element is 2nd child represented by the hierarchy of :
-	//(1st wrapper div)->anchor->image
-//	var ele= $(iD.children()[0]).children().children();
-	var ele= $(iD.children()[0]).children();
+		//testing
+		if(i==4){
+		var ele= $(iD.children()[0]).children();
 
 
-//	alert ("id:"+ ele[1].nodeName);	
-//good	alert ("id:"+ $(ele[1]).attr("class"));	
-//	iD=$("<br style=\"clear:both;\"/>");
-//	alert ("id:"+ $(ele[0]).attr("src"));	
-	alert ("id:"+$(ele[0]).attr("class"));	
-//	alert ("id:"+ $(ele[0]).html());	
-//	alert ("id:"+iD.children().attr("class"));	
-//	alert ("id:"+iD.children().length);	
-	}
+		//(1st wrapper div)->anchor->image
+		//	var ele= $(iD.children()[0]).children().children();
+		alert ("id:"+$(ele[0]).attr("class"));	
+		}
 
-//	alert ("id:"+iD);	
-//---------replace img iE with string iD
-
-//      var iE=$("<img/>").attr("src", pAA[i].media.m).attr("title",pAA[i].title);
-
-
-//	}
-		//    iE.wrap("<a href=' "+iE.attr("src")+"' </a>");
-//		    iE.wrap("<a href=\""+iE.attr("src")+"\"> </a>");
-//		    iE.wrap("<p></p>");
-
-//__switch		   iE=iE.wrap($("<div id=\"headp\"> </div>"));
-//		   iE=iE.wrap($("<div id=\"hea\"> </div>"));
-
-//			iE.wrap("<p></p>");		    
-							//change to img
-//		    iE=iE.wrap($("<a href=\" "+iE.attr("src")+"\" />"));
-
-//not used		    iE.bind("click",{pId:iE.attr("src")},clickPic);
-
-
-//++++++++++++++++++was used for iE
-//		    iE.bind("click",{pId:iE},clickPic);
-//			iE=iE.wrap
-
-
-
-//insetead of--     iE.wrap("<a href=\""+iE.attr("src")+"\"   />");
-//			iE.wrap("<div id=\"head\"></div>");
-
-//comment out green on top
-//			iE.after($("<div id=\"tailp\"></div>"))
-
-//		    iE.bind("click",{pId:"src"},checkPic);
-//		    iD.bind("quickflip",{pId:"src"},checkPic);
-//______________compete click________________
-//		    iD.bind("click",{pId:iD)},checkPic);
-//--switch to div		iE.parent().appendTo("#imagesp");
-//			($("<div id=\"tailp\"></div>")).appendTo('#imagesp");
-
-//++++++++++++++replace with iD
-//		iE.appendTo("#imagesp");
-//		document.getElementById("imagesp").append(iD);
-//		$("#imagesp").append(iD);
-//		$("#imdiv").append(iD);
-
-//______________compete click________________
-//try to remove click flip		iD.quickFlip();
-//		iD.quickFlipper({panelWidth:60,panelHeight:60});
-//		iD.quickFlipper();
 		iD.quickFlip();
 //		    iD.bind("quickFlip",{pId:"src"},checkPic);
 //working		    iD.bind("click",{pId:iD},clickPic);
-		    iD.bind("click",{pId:iD},clickPicQF);
+	        iD.bind("click",{pId:iD},clickPicQF);
 
 		if (i%4==0 && i!=0){		//break lines but not the first
 
@@ -493,27 +352,10 @@ $.each(pAA, function (i,item){
 		}
 
 		iD.appendTo("#imagesp");
-//		$("<div id=\"headp\"></div>").append(iE.parent()).appendTo("#imagesp");
-//		$("<div id=\"headp\"></div>").appendTo("#imagesp");
-//		$("<div id=\"tailp\"></div>").appendTo("#imagesp");
-		//    iE.trigger("click",checkPic,{pId:iE.attr("src")});
+
 //	$('.'+iD.attr("src")).quickFlip();
 
-});
-//.always(
-
-//alert("done comp");
-//function(){$('.quickflip-wrapper3').quickFlipper();}
-//);
-
-
-/*
-$("#imagesp> img").each(function(i,item){
-	$(this).wrap("<a href=\" "+ $(this).attr("src") +"\" </a>");
-
-});
-*/
-//$('.quickflip-wrapper3').quickFlipper();
+	});//each flipper wrapper
 
 }
 
@@ -781,6 +623,8 @@ function clickPicQF(event){
 //	}
 //	else
 //	{
+
+		//triggers check event
 		$(document).trigger("checkEv",{pId: event.data.pId});
 //	}
 //	alert("done");
@@ -812,6 +656,14 @@ function setTim()
 	setTimeout(matchAlert,5000);
 }
 
+/**
+
+checkPic 
+
+Function to check 2 picture cards
+with helper functions for match events
+*/
+
 function checkPic(event,data)
 {
 //	alert("bind"+data.pId);
@@ -822,7 +674,7 @@ function checkPic(event,data)
 //	{	
 //	alert("shouldnt wrk" + ch);
 	
-	//turn down if pic already faced up; then exit with notheing further
+	//turn down if pic already faced up; then exit with nothing further
 
 	if (data.pId.hasClass("headp"))
 	{
@@ -858,9 +710,12 @@ function checkPic(event,data)
 
 
 //falert		setTimeout(function(){alert("found"+total+"VIS"+headsv.length);},1000);
+
+	//go through upturned cards
 	$("#imdivp #imagesp .headp").each(function (i,item){
 //	data.pId.each(function (i,item){
 
+		//check if only 2 turned up cards
 		if (headsv.length==2)
 		{
 //			alert ("two"+heads.slice(0).attr("src"));
@@ -882,6 +737,7 @@ function checkPic(event,data)
 				var z=0;
 //				setTimeout(function(){matchAlert(z);},3000);
 				setTimeout(function(){matchAlert(headsv);},3000);
+				
 				exit();
 //				return false;
 			}
@@ -926,10 +782,14 @@ function matchAlert(pId)
 	alert("found match"+pId);
 //	$(pId[0]).hide(2000);
 //	$(pId[1]).hide(2000);
+
+	//first remove headp class
+
 	$(pId[0]).removeClass("headp");
 //	alert("no");
 	$(pId[1]).removeClass("headp");
 
+	//next add hidy class to  hide by css
 	$(pId[0]).addClass("hidy");
 	$(pId[1]).addClass("hidy");
 
@@ -945,6 +805,7 @@ function noMatch(pId)
 //	pId.slice(0).trigger("click",{pId:pId.slice(0)});
 //	pId.slice(1).trigger("click",{pId:pId.slice(1)});
 
+	//remove headp class
 	$(pId[0]).removeClass("headp");
 //	alert("no");
 	$(pId[1]).removeClass("headp");
@@ -959,9 +820,11 @@ function noMatch(pId)
 
 
 	//check make sure not child as in raasch example for quickflip
+	//http://dev.jonraasch.com/quickflip/examples/hover-quickflips
 //	if (!pId.slice(0).hasClass("quickflip-wrapper3"))
 	if (!$(pId[0]).hasClass("quickflip-wrapper3"))
 	{
+		//flip back parent
 		$($(pId[0]).parent()).quickFlipper();
 
 //		alert("noclass");
@@ -974,6 +837,7 @@ function noMatch(pId)
 	}
 	else
 	{
+		//flip back element
 		$(pId[0]).quickFlipper();		
 
 //		alert("class"+$(pId[0]).attr("class"));
@@ -988,6 +852,7 @@ function noMatch(pId)
 	//check make sure not child as in raasch example for quickflip
 	if (!$(pId[1]).hasClass("quickflip-wrapper3"))
 	{
+		//flip parent
 		$($(pId[1]).parent()).quickFlipper();
 
 //		alert("noclass");
@@ -1000,6 +865,7 @@ function noMatch(pId)
 	}
 	else
 	{
+		//flip 2nd pic element
 		$(pId[1]).quickFlipper();		
 
 //		alert("class"+$(pId[1]).attr("class"));
@@ -1024,6 +890,8 @@ function noMatch(pId)
 function setRPic(pId)
 {
 $(document).ready(function(){
+
+	//bind events for match and check picture events
 
 	$(document).bind("checkEv",checkPic);
 	$(document).bind("matchEv",matchAlert);

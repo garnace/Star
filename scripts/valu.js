@@ -1,3 +1,9 @@
+//-----valUser-----------------------
+/**
+	Function to validate login input
+	@param object oForm form object from index/Log.html
+	@returns boolean 
+**/
 
 function valUser(oForm)
 {
@@ -11,8 +17,15 @@ function valUser(oForm)
     var usrp= oForm.elements['yourp'].value;
     var usrpw= oForm.elements['yourpw'].value;
     var usrpwa= oForm.elements['yourpwa'].value;
+
+	//   email reg
+
     var regm=/^[0-9]@[A-Za-z]+[\.][A-Za-z]{3}$/;
+
+	//  mobile/phone reg
+
     var regmp=/^(\([0-9]{3}\)-|[0-9]{3}[-])?[0-9]{3}-[0-9]{4}$/;
+
 //    var regmp=/^([0-9]{3}-)?[0-9]{3}-[0-9]{4}$/;
 //     if (el.value.match(regm))
 
@@ -29,7 +42,7 @@ function valUser(oForm)
 		window.document.getElementById("espanLast").innerHTML="";
 
 	}
-//alert("Errl"+showErr);	
+
 	if ( usrf=="")
 	    {
 //	        window.document.starform.yournamel.value="lastVal";
@@ -44,7 +57,7 @@ function valUser(oForm)
 		window.document.getElementById("espanFirst").innerHTML="";
 
 	}
-//alert("Errf"+showErr);	
+
 	if (!regmp.test(usrp) || usrp=="")
 	    {
 //	        window.document.starform.yournamel.value="lastVal";
@@ -58,7 +71,7 @@ function valUser(oForm)
 		window.document.getElementById("espanPhone").innerHTML="";
 
 	}
-//alert("Errph"+showErr);	
+
 	if (!regmp.test(usrm) || usrm=="")
 	    {
 
@@ -138,9 +151,15 @@ alert("Err"+showErr);
 
 
 }
+//-----end valUser
+
 
 //-----valUserLog-----------------------
-
+/**
+	Function to validate login input
+	@param object oForm form object form Log.html
+	@returns boolean 
+**/
 function valUserLog(oForm)
 {
     var dat= "1234";
@@ -149,14 +168,10 @@ function valUserLog(oForm)
     var usr= oForm.elements['youre'].value;
 
     var usrpw= oForm.elements['yourpw'].value;
-
+	//email reg
     var regm=/^[0-9]@[A-Za-z]+[\.][A-Za-z]{3}$/;
+	//mobile phone or phone reg
     var regmp=/^(\([0-9]{3}\)-|[0-9]{3}[-])?[0-9]{3}-[0-9]{4}$/;
-//    var regmp=/^([0-9]{3}-)?[0-9]{3}-[0-9]{4}$/;
-//     if (el.value.match(regm))
-
-
-//alert("Errf"+showErr);	
 
 //	if (usr != dat)
 	if (!regm.test(usr) || usr=="")
@@ -172,9 +187,9 @@ function valUserLog(oForm)
 		window.document.getElementById("espanEmail").innerHTML="";
 
 	}
-//alert("Errm"+showErr);	
 
-alert("Errpw"+showErr);	
+
+
 	if (usrpw=="")
 	    {
 
@@ -189,37 +204,41 @@ alert("Errpw"+showErr);
 		window.document.getElementById("espanPass").innerHTML="";
 
 	}
-alert("Err"+showErr);	
+//alert("Err"+showErr);	
 
 	//If there's any errors then return false
 
 	if (showErr==1)
 	{
-
+		//do not proceed to Log.php
         	return false;
 	}
 
-
+		//else proceed to Log.php
         	return true;
 
 
 
 
 }
+//------end valUserLog
 
 
-
-
-
+/**
+------------valNum function----------
+	function to validate number input
+	@param object el form element object name
+	@param string msgg error message string  
+*/
 function valNum(el,msgg)
 {
-     var regm=/^[0-9]$/;
+     var regm=/^[0-9]+$/;
      if (el.value.match(regm))
-     {
+        {
 
 	return true;
 	
-     }else
+        }else
 	{
 		alert(msgg);
 		el.focus();
@@ -228,51 +247,26 @@ function valNum(el,msgg)
      
 }
 
+//----end valNum function---------------
 
 
 
+/**
+*-----------JQuery handlers 
+*--> quickflip wrappers
+*--> table deletion
+*--> carousel mouse hover effecting picture opacity 
+*
+**/
 
-
-
-/*
-//$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
-$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
-  {
-    tags: "galaxy",
-    tagmode: "any",
-    format: "json"
-  },
-  function(data) {
-    $.each(data.items, function(i,item){
-      $("<img/>").attr("src", item.media.m).attr("title",item.title).appendTo("#images");
-      if ( i == 3 ) return false;
-    });
-  });
-*/
-
-
-
-//Table Delete jsond
 $(function(){
-/*	var headc=0;
-for (var i=0;i < $.quickFlip.wrappers.length;i++)
-{
-	
-for (var j=0;j < $.quickFlip.wrappers.length;j++)
-{
-	var current= $.quickFlip.wrappers[i];
-	$(current.wrapper).click(function(){
-		
-	});
-}
-}
-*/
 $('.quickflip-wrapper').quickFlip();
 $('.quickflip-wrapper2').quickFlip();
 //$('.quickflip-wrapper3').quickFlip();
 
 $('.butdelc').live('click',function(){
 
+//delete parent row containing button selected
 
 $(this).parent().parent().remove();
 
@@ -280,11 +274,18 @@ $(this).parent().parent().remove();
 
 
 alert($(this).parent().parent().find("td:eq(1)").text());
+
+//call json function getListDel to handle database delete
+//of first name text
+
 getListDel($(this).parent().parent().find("td:eq(0)").text());
 
+//display in last name in red if table row not removed
 
 $(this).parent().parent().find("td:eq(1)").css('background-color','red');
 });
+
+//attempt to gracefully slide table row:--doesnt seem to work
 
 $('#dis').live('click',function(){
 $(this).slideUp("slow");
@@ -320,16 +321,5 @@ $('#yCarousel #myCarousel .carousel-inner .item img').live('mouseleave',function
 $(this).css({opacity:0.4});
 
 });
-
-
-
-
-
-
-
-
-
-
-
 
 });
