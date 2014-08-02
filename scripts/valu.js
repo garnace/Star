@@ -13,9 +13,13 @@ function valUser(oForm)
     var usr= oForm.elements['youre'].value;
     var usrf= oForm.elements['yournamef'].value;
     var usrl= oForm.elements['yournamel'].value;
+	//mobile phone
     var usrm= oForm.elements['yourmp'].value;
+	//phone
     var usrp= oForm.elements['yourp'].value;
+	//password
     var usrpw= oForm.elements['yourpw'].value;
+	//password confirm/authenticate
     var usrpwa= oForm.elements['yourpwa'].value;
 
 	//   email reg
@@ -119,7 +123,7 @@ function valUser(oForm)
 		window.document.getElementById("espanPassa").innerHTML="";
 
 	}
-alert("Errpw"+showErr);	
+//alert("Errpw"+showErr);	
 	if (usrpw=="")
 	    {
 
@@ -134,12 +138,13 @@ alert("Errpw"+showErr);
 		window.document.getElementById("espanPass").innerHTML="";
 
 	}
-alert("Err"+showErr);	
+//alert("Err"+showErr);	
 
 	//If there's any errors then return false
 
 	if (showErr==1)
 	{
+		//alert("Err"+showErr);	
 
         	return false;
 	}
@@ -260,6 +265,8 @@ function valNum(el,msgg)
 **/
 
 $(function(){
+$('#tabs').tabs();
+
 $('.quickflip-wrapper').quickFlip();
 $('.quickflip-wrapper2').quickFlip();
 //$('.quickflip-wrapper3').quickFlip();
@@ -285,7 +292,7 @@ getListDel($(this).parent().parent().find("td:eq(0)").text());
 $(this).parent().parent().find("td:eq(1)").css('background-color','red');
 });
 
-//attempt to gracefully slide table row:--doesnt seem to work
+//attempt to gracefully slide div#dis row:--doesnt seem to work for table
 
 $('#dis').live('click',function(){
 $(this).slideUp("slow");
