@@ -165,6 +165,7 @@ $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?
  },
   function(data) {
       $("#images").html("");
+
       $.each(data.items, function(i,item){
 //alert ("ho");
       $("<img/>").attr("src", item.media.m).attr("title",item.title).appendTo("#images");
@@ -797,26 +798,11 @@ function matchAlert(pId)
 
 function noMatch(pId)
 {
-//	alert("no match"+pId);
-//	pId.slice(0).trigger("click");
-//	pId.slice(1).trigger("click");
-//	alert("wok");
-
-//	pId.slice(0).trigger("click",{pId:pId.slice(0)});
-//	pId.slice(1).trigger("click",{pId:pId.slice(1)});
 
 	//remove headp class
 	$(pId[0]).removeClass("headp");
 //	alert("no");
 	$(pId[1]).removeClass("headp");
-
-//------probably not individually removed
-//	pId.slice(0).removeClass("headp");
-//	pId.slice(1).removeClass("headp");
-
-
-//	pId.slice(0).quickFlipper({refresh:true});
-//	pId.slice(1).quickFlipper({refresh:true});
 
 
 	//check make sure not child as in raasch example for quickflip
@@ -829,9 +815,6 @@ function noMatch(pId)
 
 //		alert("noclass");
 
-//		$($(pId[1]).parent()).quickFlipper();
-//		$(pId.slice(0).parent()).quickFlipper();
-//		$(pId.slice(1).parent()).quickFlipper();
 
 
 	}
@@ -842,10 +825,6 @@ function noMatch(pId)
 
 //		alert("class"+$(pId[0]).attr("class"));
 
-//		$(pId[1]).quickFlipper();		
-//		$(pId).slice(0).quickFlipper();
-//		$(pId.slice(0)).quickFlipper();
-//		$(pId.slice(1)).quickFlipper();
 	}
 
 	//again for the 2nd pic
@@ -855,11 +834,6 @@ function noMatch(pId)
 		//flip parent
 		$($(pId[1]).parent()).quickFlipper();
 
-//		alert("noclass");
-//		$($(pId[0]).parent()).quickFlipper();
-
-//		$(pId.slice(0).parent()).quickFlipper();
-//		$(pId.slice(1).parent()).quickFlipper();
 
 
 	}
@@ -868,20 +842,10 @@ function noMatch(pId)
 		//flip 2nd pic element
 		$(pId[1]).quickFlipper();		
 
-//		alert("class"+$(pId[1]).attr("class"));
-//		$(pId[0]).quickFlipper();		
-
-
-
-//		$(pId).slice(0).quickFlipper();
-//		$(pId.slice(0)).quickFlipper();
-//		$(pId.slice(1)).quickFlipper();
 	}
 
 
 
-//	pId.slice(0).quickFlipper();
-//	pId.slice(1).quickFlipper();
 
 }
 
@@ -907,35 +871,6 @@ $(document).ready(function(){
     setCarousel(arrPic[randI]);
 });
 
-//--------------------------------------
-
-//$("#yCarousel #myCarousel .carousel-inner .item img").hover( function(){
-//$("#yCarousel #myCarousel .carousel-inner .item img").css({opacity:"0.7"});
-//alert ("hi");
-//});
-//});
-
-//$(document).ready(function(){
-//setCarousel(0);
-//setRPic(0);
-
-//$('.carousel').carousel();
-//$("#myCarousel").carousel({interval:3000,cycle:true});
-
-//put in script
-//$("#myCarousel").carousel({interval:false});
-//$("#yCarousel #myCarousel a").hover( function(){
-//$("#yCarousel #myCarousel .carousel-inner .item img").css({"opacity","0.4"});
-//});
-
-//$("#yCarousel #myCarousel .carousel-inner .item img").hover( function(){
-//$("#yCarousel #myCarousel .carousel-inner .item img").css("opacity","0.8");
-//alert ("hi");
-//});
-
-
-//});
-
 
 
 }
@@ -952,32 +887,6 @@ function setRPicP(pId)
 
 //--------------------------------------
 
-//$("#yCarousel #myCarousel .carousel-inner .item img").hover( function(){
-//$("#yCarousel #myCarousel .carousel-inner .item img").css({opacity:"0.7"});
-//alert ("hi");
-//});
-//});
-
-//$(document).ready(function(){
-//setCarousel(0);
-//setRPic(0);
-
-//$('.carousel').carousel();
-//$("#myCarousel").carousel({interval:3000,cycle:true});
-
-//put in script
-//$("#myCarousel").carousel({interval:false});
-//$("#yCarousel #myCarousel a").hover( function(){
-//$("#yCarousel #myCarousel .carousel-inner .item img").css({"opacity","0.4"});
-//});
-
-//$("#yCarousel #myCarousel .carousel-inner .item img").hover( function(){
-//$("#yCarousel #myCarousel .carousel-inner .item img").css("opacity","0.8");
-//alert ("hi");
-//});
-
-
-//});
 
 
 
@@ -1022,24 +931,7 @@ List sites being used on cache as well as listing the cached locations.
 */
 
 
-    /*    var htSarr=[];
-    var htReal=[];
-	 var siteCount=0;
-	var arrCount = 0;
 
-	 htSarr=new Array();
-
-
-
-	 htSarr[0]=serverLoc+cornell;
-	 htSarr[1]=serverLoc+blog1;
-	 htSarr[2]=serverLoc+starg;
-	 
-	 htReal[0]="http://astro.cornell.edu/journals-and-newsletters.html";
-
-	 htReal[1]="http://www.strudel.org.uk/spacebuzz/blogs.html";
-    htReal[2]="http://www.stargazing.net/naa/sotw.htm";
-    */
 
 	//	 alert("higain");
     var htsamp="<BR><p><b><font color=#00ee22 size=\"4\" >Cached on Server:</b></p></font><BR>";
@@ -1149,12 +1041,6 @@ function setSFeed(pId)
 
 	window.console.log("doneaae");
 
-/*
-             for(var i = 0; i < data.items.length && i < 3; i += 1)
-		 $('#son').append('<li>' + '<h5>' + '<a href="' + data.items[i].alternate.href + '">' + data.items[i].title + '</a>' + '</h5>' + '<br />' + data.items[i].content);
-             $('#son').append('<li>' + '<a href="http://www.google.com/reader/shared/yourusername">Subscribe to my Google Reader shared items &raquo;</a>' + '</li>');
-             $('#son').wrapInner('<ul></ul>');
-*/
 	     //             $('#grJSON').before("<h4>Articles I\'m Reading</h4>\n<br />");
 	window.console.log("doneaae");
 
@@ -1177,20 +1063,6 @@ function setSFeed(pId)
 
 
 //$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
-/*$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
-  {
-    tags: pId,
-    tagmode: "any",
-    format: "json"
-  },
-  function(data) {
-    $.each(data.items, function(i,item){
-      $("<img/>").attr("src", item.media.m).attr("title",item.title).appendTo("#images");
-      if ( i == 3 ) return false;
-    });
-  });
-
-*/
 
 
 

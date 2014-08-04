@@ -7,6 +7,7 @@
  *contacts having user contact info
  *
  */
+
 //$yourname=check_input($_POST["yournamef"],"Write name");
 //$email=check_input($_POST["youre"],"write emaail address");
 //$likeit=check_input($_POST["likeit"]);
@@ -117,41 +118,6 @@ catch(PDOException $e){
 //---------end contacts----------
 
 
-//change to pdo->query
-
-//mysql_query($queryd);
-//mysql_query($querydP);
-
-
-//mysql_query($queryPassP);
-//mysql_query($query);
-
-//mysql_query($querysP);
-//mysql_query($querys);
-
-
-//$resultP=mysql_query($queryshowP);
-//$numP = mysql_numrows($resultP);
-//$numc = 3;
-//dont use this -mysql_num_fields($result);
-
-
-//header("Location:".$_SERVER[HTTP_HOST]."index.html");
-//exit();
-
-
-
-
-
-
-//-----------------------------------------------
-
-
-
-//mysql_close();
-
-//header("Location:".$_SERVER[HTTP_HOST]."index.html");
-//exit();
 
 //database
 ?>

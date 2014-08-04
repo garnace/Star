@@ -17,12 +17,6 @@ $querydP="DROP TABLE uaccount";
 $queryP=" CREATE TABLE contacts (id int(6) NOT NULL auto_increment,first varchar(15) NOT NULL,last varchar(15) NOT NULL,phone varchar(20) NOT NULL,mobile varchar(20) NOT NULL,fax varchar(20) NOT NULL,email varchar(30) NOT NULL,web varchar(30) NOT NULL,PRIMARY KEY (id, email),UNIQUE id (id),KEY id_2 (id))";
 
 
-//$queryPass=" CREATE TABLE account (accounthandle varchar(30) NOT NULL,email varchar(30) NOT NULL,accountpass varchar(30) NOT NULL,PRIMARY KEY (email),,UNIQUE id_e (email),KEY id_2 (email),FOREIGN KEY email REFERNCES contacts)";
-
-
-//$queryPass=" CREATE TABLE account (accounthandle varchar(30) NOT NULL,email varchar(30) NOT NULL,accountpass varchar(30) NOT NULL,PRIMARY KEY (accounthandle),UNIQUE id_e (accounthandle),KEY id_2 (accounthandle),FOREIGN KEY (email) REFERENCES contacts)";
-//$queryPass=" CREATE TABLE account (accounthandle varchar(30) NOT NULL,email varchar(30) NOT NULL,accountpass varchar(30) NOT NULL,PRIMARY KEY (accounthandle),UNIQUE id_e (accounthandle),KEY id_2 (accounthandle),FOREIGN KEY email (email) REFERENCES contacts(email))";
-//$queryPass=" CREATE TABLE account (id int(6) NOT NULL ,accounthandle varchar(30) NOT NULL,email varchar(30) NOT NULL,accountpass varchar(30) NOT NULL,PRIMARY KEY (accounthandle),UNIQUE id_e (accounthandle),KEY id_2 (accounthandle),FOREIGN KEY (id,email) REFERENCES contacts (id,email))";
 
 
 $queryPassP=" CREATE TABLE uaccount (id int(6) NOT NULL auto_increment ,accounthandle varchar(30) NOT NULL,email varchar(30) NOT NULL,accountpass varchar(30) NOT NULL,PRIMARY KEY (email),UNIQUE id_e (accounthandle),KEY id_2 (id))";
