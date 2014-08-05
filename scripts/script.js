@@ -40,12 +40,6 @@ htReal[3]="http://www.fourmilab.ch/yoursky";
 
 
 
-function setMap(mapId)
-{
-
-var htmap="<img alt=\"cralt\" src=\"http:localhost:8280/StarServer/YourskyGuelph_files/Yoursky.gif\" title=\"titles\" />";
-
-}
 
 
 /** ************* #setCarousel
@@ -874,6 +868,8 @@ $(document).ready(function(){
 
 
 }
+
+
 function setRPicP(pId)
 {
 
@@ -1724,22 +1720,21 @@ function getSectionO(dId)
     document.getElementById("journ").style.display="none";
     document.getElementById("imagesky").style.display="none";
     
-    //    document.getElementById("pageBar").innerHTML = "<p><b><font color =#ffee22> BUTTON PRESSSSSSSSEdddddddddddddddddddddddddddbbbb dddddddddddddddddddddddddd ddddddddddddddddddddddddddddddddddddddddddddddD</font></b></p>";
-//getElementByID.
+
 
 }
-/********************************
-getSectionDB(dbId)
+//-----End getSectionO
 
-display data base contents
+
+
+/**************getSectionDB(dbId)**********
+
+Gets blog entries from search terms
+
 
 ********************************/
 function getSectionDB(dbId)
 {
-//-----------------------------------
-//Gets blog entries from search terms
-//
-//-----------------------------------
 
     document.getElementById("pageBar").style.display="";
     document.getElementById("imagesky").innerHTML="";
@@ -1761,18 +1756,19 @@ function getSectionDB(dbId)
     document.getElementById("journ").style.display="none";
     document.getElementById("imagesky").style.display="none";
     
-    //    document.getElementById("pageBar").innerHTML = "<p><b><font color =#ffee22> BUTTON PRESSSSSSSSEdddddddddddddddddddddddddddbbbb dddddddddddddddddddddddddd ddddddddddddddddddddddddddddddddddddddddddddddD</font></b></p>";
-//getElementByID.
+
+
 
 
 }
-//----------------------------------------------
-//Original function
-/*
 
 
-*/
-//----------------------------------------------
+/*************getListDel
+*Function to delete database contact entry by way of
+*json helper file del.php using email
+*
+**/
+
 function getListDel(dbId)
 {
 
@@ -1781,6 +1777,16 @@ function getListDel(dbId)
 	function(data){
 	});
 }
+//--End getListDel
+
+
+
+/*************getListDel
+*Function to delete database contact entry by way of
+*json helper file del.php using email
+*
+**/
+
 function loadDBB(dbId)
 {
 	$.getJSON("http://localhost:8280/StarAdvisor/read.php?emaild="+dbId+"&callback=?",
@@ -1792,6 +1798,17 @@ function loadDBB(dbId)
 
 
 }
+//--End loadDBB---------------------
+
+
+
+/*************writeDBB
+*Function to delete database contact entry by way of
+*json helper file del.php using email
+*
+**/
+
+
 function writeDBB(dbId)
 {
 	var errLabel;
@@ -1800,10 +1817,10 @@ function writeDBB(dbId)
 	$(document).ready(function(){
 	$.getJSON("http://localhost:8280/StarAdvisor/write.php?emaild="+dbId+"&callback=?",
 	function(data){
-//$("#espanEmail").append("item.message");	
+
 		$.each(data.users,function(i,item){//should only show error item
-//			$("#espanEmail").append(item.message);
-//			$("#espanEmail").append(item.message);
+
+
 			$("#espanEmail").html(item.message);
 		
 		});
@@ -1816,6 +1833,8 @@ function writeDBB(dbId)
 
 	});//document ready
 }
+//--End writeDBB---------------------------
+
 
 function getListDBB(dbId)
 {
@@ -1953,18 +1972,6 @@ function(data){
 	}
 //	$pending=0;
 	}  //tabP length
-
-//	$("<tr><td>"+item.first+" </td><td> "+item.last+"</td> <td>"+item.phone+"</td><td>"+item.mobile+"</td> </tr>").appendTo("#dbTable tbody");
-/*	if ($("#dbTable tbody tr:eq("+i+") td:eq(0)").contains(item.first))
-	{alert (item.first);
-	$("#dbTable tbody tr:eq("+i+") td:eq(0)").html(item.first);
-	$("#dbTable tbody tr:eq("+i+") td:eq(1)").html(item.last);
-	$("#dbTable tbody tr:eq("+i+") td:eq(2)").html(item.phone);
-	$("#dbTable tbody tr:eq("+i+") td:eq(3)").html(item.mobile);
-		
-	}else
-	{
-*/	
 	if (pending == 1)
 	{	//alert ("pendLine:"+$tabP);
 	$("<tr><td>"+item[6]+" </td><td> "+item[2]+"</td> <td>"+item[3]+"</td><td>"+item[4]+"</td><td><button class=\"butdelc\">Delete</button></td> </tr>").appendTo("#dbTable tbody");
@@ -1981,14 +1988,7 @@ function(data){
 	}//pending==0
 
 
-//	}
 
-
-//		return false;
-
-
-
-//	    }  i>=3
 
 
 
@@ -2000,42 +2000,20 @@ function(data){
 });//doc.ready
 }//end of getListDBB
 
-//************  Start SectionDBB
+//---End--getListDBB--------------------------------------
+
+
+
+/**************getSectionDBB*************************
+*
+*Function to set up database search by user name
+*
+**/
+
 function getSectionDBB(dbId)
 {
-//-----------------------------------
-//Gets blog entries from search terms
-//
 
 
-/*$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
-  {
-    tags: pId,
-    tagmode: "any",
-    format: "json"
- },
-  function(data) {
-      $("#images").html("");
-      $.each(data.items, function(i,item){
-      $("<img/>").attr("src", item.media.m).attr("title",item.title).appendTo("#images");
-      if ( i == 8 ) 
-	  {
-        $("#images> img").each(function()
-		{
-		  //  alert ("IIimage:"+this.src);
-		    var iE=$(this);
-		//    iE.wrap("<a href=' "+iE.attr("src")+"' </a>");
-		    iE.wrap("<a href=\" "+iE.attr("src")+"\"> </a>");
-		});
-	  return false;
-          }
-    });
-  });
-
-
-
-
-*/
 
 //-----------------------------------
 
@@ -2059,13 +2037,14 @@ function getSectionDBB(dbId)
     document.getElementById("journ").style.display="none";
     document.getElementById("imagesky").style.display="none";
     
-    //    document.getElementById("pageBar").innerHTML = "<p><b><font color =#ffee22> BUTTON PRESSSSSSSSEdddddddddddddddddddddddddddbbbb dddddddddddddddddddddddddd ddddddddddddddddddddddddddddddddddddddddddddddD</font></b></p>";
-//getElementByID.
-
 
 }
-//-------------End SectionLogin---------------
-//-------------SectionLogin-----------------
+//-------------End SectionDBB---------------
+
+
+/********************SectionLogin()-----------------
+*
+**/
 function getSectionLogin(dbId)
 {
 
@@ -2078,16 +2057,7 @@ function getSectionLogin(dbId)
     document.getElementById("son").before="";
     document.getElementById("son").style.display="none";
 
-  //  document.getElementById("fbox").style.display="";
 
-
-    //    hpb=hpb+"<div id=\"sbutton\"> <button onclick=\"getMatchJ(document.getElementById(\"sbox\").value)\">Search Now</button>";
-
-
-
-
-    //    alert("pageBar");
-//    document.getElementById("pageBar").innerHTML=hpb;
     document.getElementById("journ").innerHTML="";
     document.getElementById("imagesky").innerHTML="";
     document.getElementById("hero").style.display="none";
@@ -2098,44 +2068,18 @@ function getSectionLogin(dbId)
 
 }
 
+//---End SectionLogin
 
-//--------------End SectionLogin
-//-------------SectionInsertDB--------------
+
+
+/*******************SectionInsertDB()--------------
+*
+*Gets blog entries from search terms
+*
+**/
+
 function getSectionInsertDB(dbId)
 {
-//-----------------------------------
-//Gets blog entries from search terms
-//
-
-
-/*$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
-  {
-    tags: pId,
-    tagmode: "any",
-    format: "json"
- },
-  function(data) {
-      $("#images").html("");
-      $.each(data.items, function(i,item){
-      $("<img/>").attr("src", item.media.m).attr("title",item.title).appendTo("#images");
-      if ( i == 8 ) 
-	  {
-        $("#images> img").each(function()
-		{
-		  //  alert ("IIimage:"+this.src);
-		    var iE=$(this);
-		//    iE.wrap("<a href=' "+iE.attr("src")+"' </a>");
-		    iE.wrap("<a href=\" "+iE.attr("src")+"\"> </a>");
-		});
-	  return false;
-          }
-    });
-  });
-
-
-
-
-*/
 
 //-----------------------------------
 
@@ -2159,25 +2103,20 @@ function getSectionInsertDB(dbId)
     document.getElementById("journ").style.display="none";
     document.getElementById("imagesky").style.display="none";
     
-    //    document.getElementById("pageBar").innerHTML = "<p><b><font color =#ffee22> BUTTON PRESSSSSSSSEdddddddddddddddddddddddddddbbbb dddddddddddddddddddddddddd ddddddddddddddddddddddddddddddddddddddddddddddD</font></b></p>";
-//getElementByID.
-
-
 }
 
 
 
-//-------------End SectionInsertDB-------
+//--End SectionInsertDB-------
 
 
+/*********************getSectionBlog()------------------
+*Gets blog entries from search terms
+*
+**/
 
-//--------------------------------------------
 function getSectionBlog(dId)
 {
-//-----------------------------------
-//Gets blog entries from search terms
-//
-//-----------------------------------
 
     document.getElementById("pageBar").style.display="";
     document.getElementById("imagesky").innerHTML="";
@@ -2197,21 +2136,20 @@ function getSectionBlog(dId)
     document.getElementById("journ").style.display="none";
     document.getElementById("imagesky").style.display="none";
     
-    //    document.getElementById("pageBar").innerHTML = "<p><b><font color =#ffee22> BUTTON PRESSSSSSSSEdddddddddddddddddddddddddddbbbb dddddddddddddddddddddddddd ddddddddddddddddddddddddddddddddddddddddddddddD</font></b></p>";
-//getElementByID.
 
 }
+//--End getSectionBlog---------------------------
 
 
-    function load()
+/*********************load()---------------
+*Function to set-up page elements on load
+*initializing divs and json requests
+*
+*
+**/
+function load()
     {
-//	document.getElementById("imagesky").style.display="none";
-//	document.getElementById("pageBar").style.display="none";
-//	document.getElementById("journ").style.display="none";
-//	document.getElementById("son").style.display="none";
-//	document.getElementById("fbox").style.display="none";
 
-//	document.getElementById("loadson").style.display="";
 
     document.getElementById("pageBar").style.display="";
     document.getElementById("formstar").style.display="";
@@ -2226,35 +2164,37 @@ function getSectionBlog(dId)
     document.getElementById("imagesky").style.display="";
 
 
-	document.getElementById("imagesky").innerHTML="";
-	document.getElementById("pageBar").innerHTML="";
-	document.getElementById("journ").innerHTML="";
-	document.getElementById("son").innerHTML="";
+    document.getElementById("imagesky").innerHTML="";
+    document.getElementById("pageBar").innerHTML="";
+    document.getElementById("journ").innerHTML="";
+    document.getElementById("son").innerHTML="";
+
+    setRPic(0);
 
 
 
-//	document.getElementById("fbox").innerHTML="";
-//P	document.getElementById("loadson").innerHTML="";
-	setMap();
-	
-//	$('.quickflip-wrapper3').quickFlip();
-	setRPic(0);
+}
+//--end  load()---------------
 
 
+/*********************getSectionSky()---------------
+*Function to set up div to handle sky by city search
+*
+*
+**/
 
-    }
 function getSectionSky(dId)
 {
 
     document.getElementById("pageBar").style.display="";
-//    document.getElementById("pageBar").innerHTML="ddddd";
+
 
 
     document.getElementById("imagesky").innerHTML="";
     document.getElementById("son").innerHTML="";
-//    document.getElementById("son").before="";
+
     document.getElementById("son").style.display="";
-   // document.getElementById("fbox").style.display="none";
+
     document.getElementById("pageBar").innerHTML="";
 
     document.getElementById("imagesky").innerHTML="";
@@ -2262,19 +2202,16 @@ function getSectionSky(dId)
     hpb="<div id=\"searchSki\" ><p>Enter Capitalized city name (Canadian cities work best):Degree sign may show up as question mark.</p>  <input type=\"text\" id=\"skbox\"  onkeypress=\"handleKeyPressSki(event,this.form)\" />";
     hpb=hpb+"<div id=\"skbutton\"> <button onclick=\"getMatchSky(document.getElementById('skbox').value)\">dSearch Now</button>";
     hpb=hpb+"</div></div>";
-    //    alert("pageBar");
-    
 
-
-//    document.getElementById("pageBar").innerHTML=hpb;
     $(hpb).appendTo("#content .main #pageBar");
 
     document.getElementById("imagesky").style.display="";
 
-    //    document.getElementById("pageBar").innerHTML = "<p><b><font color =#ffee22> BUTTON PRESSSSSSSSEdddddddddddddddddddddddddddbbbb dddddddddddddddddddddddddd ddddddddddddddddddddddddddddddddddddddddddddddD</font></b></p>";
-//getElementByID.
+
 
 }
+//---end getSectionSky--------------------
+
 
 /*****************************************
 Function: getMatchSky:
