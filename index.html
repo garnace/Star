@@ -101,7 +101,7 @@ $(document).ready(function(){
 
 <div id="yCarousel" >
 
-</div><!--yCar-->
+</div><!--yCarousel-->
 
 
 <p>hi</p>
@@ -126,7 +126,7 @@ $(document).ready(function(){
 
 
 <div id="imagesp">
-</div><!--imdiv images-->
+</div><!--imdiv imagesp-->
 
 </div><!--imdiv-->
 
@@ -142,15 +142,15 @@ $(document).ready(function(){
 
 
 
-	<!--div id="tabs" style="width: 600px;"-->
-	<div id="tabs" >
-	<ul>
-		<li><a href="#tabs-1">First</a></li>
-		<li><a href="#tabs-2">First</a></li>
-		<li><a href="#tabs-3">First</a></li>
-	</ul>
+<!-- ############# TABS ############################-->
+<div id="tabs" >
+<ul>
+	<li><a href="#tabs-1">First</a></li>
+	<li><a href="#tabs-2">First</a></li>
+	<li><a href="#tabs-3">First</a></li>
+</ul>
 
-	<div id="tabs-1">First container
+<div id="tabs-1">First container
 
 <!--dbTable start-->
 
@@ -293,26 +293,53 @@ $(document).ready(function(){
 
 
 </div><!--row-->
+<!--row rw db-->
 
+<div class="controls-row">
+<div  class="control-group span3"  >
+
+<div class="controls">
+
+<!--input class="btn btn-large btn-success" type="submit" value="Submit!" -->
+<input class="btn btn-large btn-success span12" value="readDB !" onclick="readDBB(0);">
+<!--input class="btn btn-large btn-success"  value="Check it!" onclick="getListDBB(0);"-->
+
+
+</div><!--controls-->
+</div><!--control-group-->
+
+
+<div  class="control-group span3"  >
+
+<div class="controls">
+
+<!--input class="btn btn-large btn-success" type="submit" value="Submit!" -->
+<!--input class="btn btn-large btn-success"  value="Display it!" onclick="getListDBB(0);"-->
+<input class="btn btn-large btn-success span12" value="WriteDB!" onclick="writeDBB(0);">
+
+
+</div><!--controls-->
+</div><!--control-group-->
+</div><!--row-->
 
 </form>
 </div>
 <!--*****************END formstarini ****************-->
 
 
-
+</div>
 <!--end first tab-->
 
-	</div>
-	<div id="tabs-2">Second container
+<div id="tabs-2">Second container
 
 <img src="images/Yoursky.gif" width="50" height="50"/>
 
 </div>
-	<div id="tabs-3">Third container</div>
+<div id="tabs-3">Third container
+</div>
 
 </div><!--divtabs-->
-
+<!-- ############# END TABS ############################-->
 
 
 
@@ -532,11 +559,14 @@ $(document).ready(function(){
 
 <div class="controls">
 
-<!--input class="btn btn-large btn-success" type="submit" value="Submit!" -->
-<!--input class="btn btn-large btn-success"  value="Display it!" onclick="getListDBB(0);"-->
-<input class="btn btn-large btn-success span12" value="Check it!" onclick="getListDBB(0);">
 
 
+<!--input class="btn btn-large btn-success span12" value="Check it!" onclick="getListDBB(0);"-->
+<select name="orientationx" id="orientationx" style="width:80px;">
+<option value="oM">male</option>
+<option value="oF">female</option>
+<option value="oO">other</option>
+</select>
 </div><!--controls-->
 </div><!--control-group-->
 

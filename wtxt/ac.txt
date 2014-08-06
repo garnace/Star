@@ -1,4 +1,3 @@
-"4","2@goe.net","2@goe.net","Squiggle"
 "2","2@net.net","2@net.net","Squiggle"
 "3","2@zed.nez","2@zed.nez","Squiggle"
 "1","jsoolffe","johnsmith@gowansnet.com","smith1234"
