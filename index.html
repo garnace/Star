@@ -51,7 +51,7 @@ $(document).ready(function(){
 <!--Validate input as well as handle table events with jquery (like deletes)-->
 <script type="text/javascript" src="scripts/jquery.quickflip.min.js"></script>
 
-<script type="text/javascript" src="scripts/jquery.flippy.js"></script>
+<!--script type="text/javascript" src="scripts/jquery.flippy.js"></script-->
 
 
 <script type="text/javascript" src="scripts/script.js"></script>
@@ -518,7 +518,21 @@ $(document).ready(function(){
 
 </div><!--control-group-->
 
+<div  class="control-group span3"  >
+<label class="control-label" for="orientationx">Gender</label>
+<div class="controls">
 
+<select name="orientationx" id="orientationx" style="width:80px;">
+<option value="oM">male</option>
+<option value="oF">female</option>
+<option value="oO">other</option>
+</select>
+
+
+
+<!--input class="btn btn-large btn-success span12" value="Check it!" onclick="getListDBB(0);"-->
+</div><!--controls-->
+</div><!--control-group-->
 
 
 <!----------------------end password row-------------------------------->
@@ -562,11 +576,6 @@ $(document).ready(function(){
 
 
 <!--input class="btn btn-large btn-success span12" value="Check it!" onclick="getListDBB(0);"-->
-<select name="orientationx" id="orientationx" style="width:80px;">
-<option value="oM">male</option>
-<option value="oF">female</option>
-<option value="oO">other</option>
-</select>
 </div><!--controls-->
 </div><!--control-group-->
 

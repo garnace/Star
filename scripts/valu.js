@@ -21,7 +21,7 @@ function valUser(oForm)
     var usrpw= oForm.elements['yourpw'].value;
 	//password confirm/authenticate
     var usrpwa= oForm.elements['yourpwa'].value;
-
+    var usrgen=oForm.elements['orientationx'].selectedIndex;
 	//   email reg
 
     var regm=/^[0-9]@[A-Za-z]+[\.][A-Za-z]{3}$/;
