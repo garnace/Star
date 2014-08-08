@@ -155,7 +155,7 @@ background-image:url('../images/ss054.gif');
 	font-size:22px;
 }
 #imdivp #imagesp{
-    border:5px solid #021a90  ;
+    border:5px solid #721a90  ;
 //    padding-top:10px;
     padding-bottom:0px;
     margin-bottom:0px;
@@ -632,9 +632,16 @@ background-image:url('../images/ss054.gif');
 //	vertical-align:bottom;
 //}
 
+.control-label .mem
+{
+	display:inline;
+}
+
+
 .controls-row .control-group .control-label
 {
 	vertical-align:bottom;
+//	vertical-align:top;
 }
 //input 
 //{
@@ -652,8 +659,9 @@ background-image:url('../images/ss054.gif');
 }
 .control-group .controls 
 {
-	display:table-cell;
-	vertical-align:bottom;
+//	display:table-cell;
+//	vertical-align:bottom;
+//------------------------------
 //	margin-bottom:50px;
 //	height:50px;
 
