@@ -351,7 +351,18 @@ background-image:url('../images/ss054.gif');
      type:square;
 
 }
-
+p
+{
+	color:#005500;
+	font-size:100%;
+	font-weight:bold;
+}
+p label
+{
+	vertical-align:bottom;
+	font-size:120%;
+	text-align:bottom;
+}
 #son ul li p{
 //    color:blue;
 //    color:blue;
@@ -634,13 +645,14 @@ background-image:url('../images/ss054.gif');
 
 .control-label .mem
 {
-	display:inline;
+	vertical-align:bottom;
+//	display:inline;
 }
 
 
 .controls-row .control-group .control-label
 {
-	vertical-align:bottom;
+//	vertical-align:bottom;
 //	vertical-align:top;
 }
 //input 
@@ -652,7 +664,10 @@ background-image:url('../images/ss054.gif');
 .control-group label
 {
 //	width:140px;
-	height:35px;
+//	height:35px;
+	display:block;
+	text-align:centre;
+	height:45px;
 //	height:100%;
 	whitespace:normal;
 	overflow:hidden;
@@ -680,6 +695,26 @@ background-image:url('../images/ss054.gif');
 //	vertical-align:bottom;
 
 }
+.control-group .controls input[type="checkbox"]
+{
+	margin:0 20px 0 0;
+
+}
+input[type="checkbox"]
+{
+	margin:0 20px 0 0;
+	padding:0 20px 0 0;
+	visibility:hidden;
+}
+#formreg:after
+{
+	content:"";
+	height:0;
+	visibility:hidden;
+	display:block;
+	clear:both;
+}
+
 .control-group .controls input
 {
 	width:100%;
@@ -688,4 +723,6 @@ background-image:url('../images/ss054.gif');
 	margin-bottom:20px;
 	bottom:0px;
 //	margin: 0 0 40% 0;
+	color:#770000;
 }
+
