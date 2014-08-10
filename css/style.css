@@ -695,16 +695,17 @@ p label
 //	vertical-align:bottom;
 
 }
-.control-group .controls input[type="checkbox"]
+.controls-group .controls input[type="checkbox"]
+
 {
 	margin:0 20px 0 0;
-
+	visibility:hidden;
 }
 input[type="checkbox"]
 {
 	margin:0 20px 0 0;
 	padding:0 20px 0 0;
-	visibility:hidden;
+//	visibility:hidden;
 }
 #formreg:after
 {

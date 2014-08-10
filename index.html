@@ -152,7 +152,7 @@ $(document).ready(function(){
 
 <div id="tabs-1">First container
 
-<!--dbTable start-->
+<!-- # dbTable start-->
 
 <div id="dbTable" >
 
@@ -374,18 +374,15 @@ $(document).ready(function(){
 <form  action="insertfo.php" method="post" id="regform" name="regform">
 
 
-<div >
+<div id="fr0">
 <label  for="yourhan" style="display:inline-block;vertical-align:centre;margin:0 0 0 20px;">User name:(your email)</label>
 
 
 	<!--input id="yourhan" type="text" name="yourhan" style="width:100px;" /-->
 	<input id="yourhan" type="text" name="yourhan" style="display:inline;width:100px;" />
 
-
-
-
+<input type="checkbox" id="regCh0" name="regCxBlack" >
 </div>
-
 
 </form><!--regform-->
 </div><!--formreg-->
@@ -403,7 +400,7 @@ $(document).ready(function(){
 
 <div class="controls">
 
-<input class="btn btn-large btn-success" type="submit" value="Init pass!" >
+<input class="btn btn-large btn-success" type="submit" value="Init pass!" />
 
 
 
@@ -548,7 +545,7 @@ $(document).ready(function(){
 
 <div class="controls-group">
 <div class="controls">
-<input  type="checkbox" name="membChk[]" id="chk0">
+<input  type="checkbox" name="membChk[]" id="chk0"/>
 <label class="control-label mem" for="chk0">Trial</label>
 </div><!--controls-->
 
@@ -557,19 +554,19 @@ $(document).ready(function(){
 
 <p>
 
-<input  type="checkbox" name="membChk[]" id="chk1">
+<input  type="checkbox" name="membChk[]" id="chk1"/>
 
 
-<label class="mem" for="chk1">Trial</label>
+<label class="mem" for="chk1">Classic</label>
 </p>
 
 
 
-<div class="controls-group">
+<div class="control-group">
 <!--div class="controls form-inline"-->
 <div class="controls form-inline">
 <input  type="checkbox" name="membChk[]" id="chk2">
-<label class="control-label mem" for="chk2">5 Year</label>
+<label class="control-label mem" for="chk2">Ultimate</label>
 </div><!--controls-->
 
 
