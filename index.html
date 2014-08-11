@@ -374,15 +374,52 @@ $(document).ready(function(){
 <form  action="insertfo.php" method="post" id="regform" name="regform">
 
 
-<div id="fr0">
-<label  for="yourhan" style="display:inline-block;vertical-align:centre;margin:0 0 0 20px;">User name:(your email)</label>
+<div id="field0">
+	<fieldset>
+	<legend>Details</legend>
+
+	<label  for="yourhan" style="display:inline;vertical-align:centre;margin:0 0 0 20px;">User name:(your email)</label>
 
 
-	<!--input id="yourhan" type="text" name="yourhan" style="width:100px;" /-->
-	<input id="yourhan" type="text" name="yourhan" style="display:inline;width:100px;" />
+	<input id="yourhan" type="text" name="yourhan" style="width:100px;" />
 
-<input type="checkbox" id="regCh0" name="regCxBlack" >
-</div>
+
+	<div class="regChex0">
+
+		<input type="checkbox" id="regCh0" name="regCxInterest[]" value="binoculars" checked="checked" />
+		<label for="regCh0" style="display:inline;">Binoculars</label>
+
+		<input type="checkbox" id="regCh1" name="regCxInterest[]" value="telescop" />
+		<label for="regCh1">Telescope</label>
+
+	</div><!-- .regChex0-->
+
+
+
+	</fieldset>
+</div> <!--field0-->
+
+<div id="field1">
+	<fieldset>
+	<legend>Colors</legend>
+
+	<div class="regRadx0">
+
+		<input type="radio" id="regRad0" name="regColor" value="black" checked="checked" />
+		<label for="regRad0" style="display:inline;">Black</label>
+
+
+		<input type="radio" id="regRad1" name="regColor" value="white" />
+		<label for="regRad1" style="display:inline;">white</label>
+
+	</div><!-- .regRadx0-->
+
+
+
+	</fieldset>
+</div> <!--field1-->
+
+
 
 </form><!--regform-->
 </div><!--formreg-->
