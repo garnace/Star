@@ -261,66 +261,65 @@ $(document).ready(function(){
 <div id="formstarini">
 <form class="form-inline" action="initfo.php" method="post" name="userChecki">
 
-<div class="controls-row">
+	<div class="controls-row">
 
 
-<!--input type="submit" value="Send it!" onclick=" valUser(document.forms["user_check"]) ;"-->
+	<!--input type="submit" value="Send it!" onclick=" valUser(document.forms["user_check"]) ;"-->
 
-<div  class="control-group span3"  >
+	<div  class="control-group span3"  >
 
-<div class="controls">
+		<div class="controls">
 
-<input class="btn btn-large btn-success" type="submit" value="Init!" />
-
-
-
-</div><!--controls-->
-</div><!--control-group-->
-
-<div  class="control-group span3"  >
-
-<div class="controls">
-
-<!--input class="btn btn-large btn-err" type="submit" value="Init it!" -->
-
-<input class="btn btn-success span12"  value="Display it!" onclick="getListDBB(0);"/>
-
-
-</div><!--controls-->
-</div><!--control-group-->
+		<input class="btn btn-large btn-success" type="submit" value="Init!" />
 
 
 
+		</div><!--controls-->
+	</div><!--control-group-->
 
-</div><!--row-->
-<!--row rw db-->
+	<div  class="control-group span3"  >
 
-<div class="controls-row">
-<div  class="control-group span3"  >
+		<div class="controls">
 
-<div class="controls">
+		<!--input class="btn btn-large btn-err" type="submit" value="Init it!" -->
 
-<!--input class="btn btn-large btn-success" type="submit" value="Submit!" -->
-<input class="btn btn-large btn-success span12" value="readDB !" onclick="readDBB(0);">
-<!--input class="btn btn-large btn-success"  value="Check it!" onclick="getListDBB(0);"-->
+		<input class="btn btn-success span12"  value="Display it!" onclick="getListDBB(0);"/>
 
 
-</div><!--controls-->
-</div><!--control-group-->
+		</div><!--controls-->
+	</div><!--control-group-->
 
 
-<div  class="control-group span3"  >
-
-<div class="controls">
-
-<!--input class="btn btn-large btn-success" type="submit" value="Submit!" -->
-<!--input class="btn btn-large btn-success"  value="Display it!" onclick="getListDBB(0);"-->
-<input class="btn btn-large btn-success span12" value="WriteDB!" onclick="writeDBB(0);">
+	</div><!--row-->
+	<!--row rw db-->
+	<div class="controls-row">
 
 
-</div><!--controls-->
-</div><!--control-group-->
-</div><!--row-->
+	<div  class="control-group span3"  >
+
+		<div class="controls">
+
+		<!--input class="btn btn-large btn-success" type="submit" value="Submit!" -->
+		<input class="btn btn-large btn-success span12" value="readDB !" onclick="readDBB(0);">
+		<!--input class="btn btn-large btn-success"  value="Check it!" onclick="getListDBB(0);"-->
+
+
+		</div><!--controls-->
+	</div><!--control-group-->
+
+
+	<div  class="control-group span3"  >
+
+		<div class="controls">
+
+		<!--input class="btn btn-large btn-success" type="submit" value="Submit!" -->
+		<!--input class="btn btn-large btn-success"  value="Display it!" onclick="getListDBB(0);"-->
+		<input class="btn btn-large btn-success span12" value="WriteDB!" onclick="writeDBB(0);">
+
+
+		</div><!--controls-->
+	</div><!--control-group-->
+	</div><!--row-->
 
 </form>
 </div>
@@ -335,10 +334,13 @@ $(document).ready(function(){
 <img src="images/Yoursky.gif" width="50" height="50"/>
 
 </div>
+<!--end second tab-->
 <div id="tabs-3">Third container
 </div>
+<!--end third tab-->
 
 </div><!--divtabs-->
+
 <!-- ############# END TABS ############################-->
 
 
@@ -371,7 +373,7 @@ $(document).ready(function(){
 
 
 <div id="formreg" >
-<form  action="insertfo.php" method="post" id="regform" name="regform">
+<form  action="insertreg.php" method="post" id="regform" name="regform">
 
 
 <div id="field0">
@@ -464,205 +466,207 @@ $(document).ready(function(){
 <form id="user_check" class="form-inline" action="insertfo.php" method="post" name="starform" onsubmit="return valUser(this);">
 
 
-<fieldset>
-<legend>Names</legend>
-<div id="rw1"  class="controls-row"  >
-<div  class="control-group span3"  >
+	<fieldset>
+	<legend>Names</legend>
+	<div id="rw1"  class="controls-row"  >
+	<div  class="control-group span3"  >
 
-<label class="control-label" for="yournamef"> First Name:<span class="espan" id="espanFirst"></span> </label> 
-<div class="controls">
-  <input id="yournamef" class="span12" type="text"  name="yournamef" placeholder="Your Name:" />
-</div><!--controls-->
+		<label class="control-label" for="yournamef"> First Name:<span class="espan" id="espanFirst"></span> </label> 
+		<div class="controls">
+		<input id="yournamef" class="span12" type="text"  name="yournamef" placeholder="Your Name:" />
+		</div><!--controls-->
 
-</div><!--control-group-->
+	</div><!--control-group-->
 
-<div  class="control-group span3"  >
+	<div  class="control-group span3"  >
 
-<label class="control-label" for="yournamel"> Last Name:<span class="espan" id="espanLast"></span> </label> 
-<div class="controls">
-  <input id="yournamel" class="span12" type="text"  name="yournamel" placeholder="Your Name:" />
-</div><!--controls-->
+		<label class="control-label" for="yournamel"> Last Name:<span class="espan" id="espanLast"></span> </label> 
+		<div class="controls">
+		<input id="yournamel" class="span12" type="text"  name="yournamel" placeholder="Your Name:" />
+		</div><!--controls-->
 
-</div><!--control-group-->
-
-
-<div  class="control-group span3"  >
-
-<label class="control-label" for="yourp"> Phone:<span id="espanPhone" class="espan" ></span> </label> 
-<div class="controls">
-  <input id="yourp" class="span12" type="text"  name="yourp" placeholder="Phone:" />
-</div><!--controls-->
-
-</div><!--control-group-->
+	</div><!--control-group-->
 
 
-</div><!--row-->
+	<div  class="control-group span3"  >
 
-<div id="rw2"  class="controls-row"  >
-<div  class="control-group span3"  >
+		<label class="control-label" for="yourp"> Phone:<span id="espanPhone" class="espan" ></span> </label> 
+		<div class="controls">
+		<input id="yourp" class="span12" type="text"  name="yourp" placeholder="Phone:" />
+		</div><!--controls-->
 
-<label class="control-label" for="youre"> Your Email:<span id="espanEmail" class="espan" ></span></label> 
-<div class="controls">
-  <input id="youre" class="span12" type="text"  name="youre" placeholder="Your Email" />
-</div><!--controls-->
-
-</div><!--control-group-->
-
-<div  class="control-group span3"  >
-
-<label class="control-label" for="yourmp"> Mobile Phone:<span id="espanMobile" class="espan" ></span> </label> 
-<div class="controls">
-  <input id="yourmp" class="span12" type="text"  name="yourmp" placeholder="Mobile" />
-</div><!--controls-->
-
-</div><!--control-group-->
+	</div><!--control-group-->
 
 
-<div  class="control-group span3"  >
+	</div><!--row-->
 
-<label class="control-label" for="yourx"> Fax:<span id="espanFax" class="espan" ></span></label> 
-<div class="controls">
-  <input id="yourx" class="span12" type="text"  name="yourx" placeholder="Your Fax:" />
-</div><!--controls-->
-
-</div><!--control-group-->
+	<div id="rw2"  class="controls-row"  >
 
 
-</div><!--row-->
+	<div  class="control-group span3"  >
+
+		<label class="control-label" for="youre"> Your Email:<span id="espanEmail" class="espan" ></span></label> 
+		<div class="controls">
+		<input id="youre" class="span12" type="text"  name="youre" placeholder="Your Email" />
+		</div><!--controls-->
+
+	</div><!--control-group-->
+
+	<div  class="control-group span3"  >
+
+		<label class="control-label" for="yourmp"> Mobile Phone:<span id="espanMobile" class="espan" ></span> </label> 
+		<div class="controls">
+		<input id="yourmp" class="span12" type="text"  name="yourmp" placeholder="Mobile" />
+		</div><!--controls-->
+
+	</div><!--control-group-->
 
 
-<div id="rw3"  class="controls-row"  >
+	<div  class="control-group span3"  >
+
+		<label class="control-label" for="yourx"> Fax:<span id="espanFax" class="espan" ></span></label> 
+		<div class="controls">
+		<input id="yourx" class="span12" type="text"  name="yourx" placeholder="Your Fax:" />
+		</div><!--controls-->
+
+	</div><!--control-group-->
+
+
+	</div><!--row-->
+
+
+	<div id="rw3"  class="controls-row"  >
 
 <!------------------password row-------------------------------------------->
 
-<div class="control-group span3">
-<label class="control-label" for="yourpw">Enter Password<span id="espanPass" class="espan" ></span></label>
-<div class="controls">
-	<input id="yourpw" class="span12" type="password" name="yourpw" />
-</div><!--controls-->
+	<div class="control-group span3">
+		<label class="control-label" for="yourpw">Enter Password<span id="espanPass" class="espan" ></span></label>
+		<div class="controls">
+		<input id="yourpw" class="span12" type="password" name="yourpw" />
+		</div><!--controls-->
 
-</div><!--control-group-->
+	</div><!--control-group-->
 
 
 
-<div class="control-group span3">
-<label class="control-label" for="yourpwa">Re-enter Pass <span id="espanPassa" class="espan" ></span></label>
-<div class="controls">
-	<input id="yourpwa" class="span12" type="password" name="yourpwa" />
-</div><!--controls-->
+	<div class="control-group span3">
+		<label class="control-label" for="yourpwa">Re-enter Pass <span id="espanPassa" class="espan" ></span></label>
+		<div class="controls">
+		<input id="yourpwa" class="span12" type="password" name="yourpwa" />
+		</div><!--controls-->
 
-</div><!--control-group-->
+	</div><!--control-group-->
 
-<div  class="control-group span3"  >
-<label class="control-label" for="countryx">Gender</label>
-<div class="controls">
+	<div  class="control-group span3"  >
+		<label class="control-label" for="countryx">Country</label>
+		<div class="controls">
 
-<select name="countryx" id="countryx" style="width:80px;">
-<option value="oC">Canada</option>
-<option value="oA">United States</option>
-<option value="oS">South America</option>
-<option value="oB">United Kingdom</option>
-<option value="oO">Asia</option>
-
-</select>
+		<select name="countryx" id="countryx"  style="width:120px;">
+			<option value="oC">Canada</option>
+			<option value="oA" selected="selected">United States</option>
+			<option value="oS">South America</option>
+			<option value="oB">United Kingdom</option>
+			<option value="oO">Asia</option>
+		</select>
 
 
 
 <!--input class="btn btn-large btn-success span12" value="Check it!" onclick="getListDBB(0);"-->
-</div><!--controls-->
-</div><!--control-group-->
+		</div><!--controls-->
+	</div><!--control-group-->
 
 
 <!----------------------end password row-------------------------------->
 
-</div><!--row-->
-<div class="controls-row">
-<p>Membership:</p>
+	</div><!--row-->
+
+<!----------# Extra Row ##################################-Extra row------->
+
+	<div class="controls-row">
+	<p>Membership:</p>
 
 
-<div class="controls-group">
-<div class="controls">
-<input  type="checkbox" name="membChk[]" id="chk0"/>
-<label class="control-label mem" for="chk0">Trial</label>
-</div><!--controls-->
+	<div class="controls-group">
+		<div class="controls">
+		<input  type="checkbox" name="membChk[]" id="chk0"/>
+		<label class="control-label mem" for="chk0">Trial</label>
+		</div><!--controls-->
 
 
-</div><!--group-->
+	</div><!--group-->
 
-<p>
+	<p>
 
-<input  type="checkbox" name="membChk[]" id="chk1"/>
-
-
-<label class="mem" for="chk1">Classic</label>
-</p>
+		<input  type="checkbox" name="membChk[]" id="chk1"/>
 
 
-
-<div class="control-group">
-<!--div class="controls form-inline"-->
-<div class="controls form-inline">
-<input  type="checkbox" name="membChk[]" id="chk2">
-<label class="control-label mem" for="chk2">Ultimate</label>
-</div><!--controls-->
-
-
-</div><!--group-->
-
-
-</div><!--row-->
-
-<div class="controls-row">
+		<label class="mem" for="chk1">Classic</label>
+	</p>
 
 
 
+	<div class="control-group">
+	<!--div class="controls form-inline"-->
+		<div class="controls form-inline">
+		<input  type="checkbox" name="membChk[]" id="chk2">
+		<label class="control-label mem" for="chk2">Ultimate</label>
+		</div><!--controls-->
 
-<div  class="control-group span3"  >
 
-<div class="controls">
+	</div><!--group-->
 
-<input class="btn btn-large btn-success" type="submit" value="Submit!" id="subM" >
+
+	</div><!--row-->
+
+	<div class="controls-row">
 
 
 
 
-</div><!--controls-->
-</div><!--control-group-->
+	<div  class="control-group span3"  >
 
+		<div class="controls">
 
-<div  class="control-group span3"  >
-
-<div class="controls">
-
-<!--input class="btn btn-large btn-success" type="submit" value="Submit!" -->
-<input class="btn btn-large btn-success span12" value="Display it!" onclick="getListDBB(0);">
-<!--input class="btn btn-large btn-success"  value="Check it!" onclick="getListDBB(0);"-->
-
-
-</div><!--controls-->
-</div><!--control-group-->
-
-
-<div  class="control-group span3"  >
-
-<div class="controls">
-
-
-
-<!--input class="btn btn-large btn-success span12" value="Check it!" onclick="getListDBB(0);"-->
-</div><!--controls-->
-</div><!--control-group-->
-
-
-
-</div><!--row-->
+		<input class="btn btn-large btn-success" type="submit" value="Submit!" id="subM" >
 
 
 
 
+		</div><!--controls-->
+	</div><!--control-group-->
 
 
-</fieldset>
+	<div  class="control-group span3"  >
+
+		<div class="controls">
+
+		<!--input class="btn btn-large btn-success" type="submit" value="Submit!" -->
+		<input class="btn btn-large btn-success span12" value="Display it!" onclick="getListDBB(0);">
+		<!--input class="btn btn-large btn-success"  value="Check it!" onclick="getListDBB(0);"-->
+
+
+		</div><!--controls-->
+	</div><!--control-group-->
+
+
+	<div  class="control-group span3"  >
+
+		<div class="controls">
+
+		<!--input class="btn btn-large btn-success span12" value="Check it!" onclick="getListDBB(0);"-->
+		</div><!--controls-->
+	</div><!--control-group-->
+
+
+
+	</div><!--row-->
+
+
+
+
+
+
+	</fieldset>
 </form>
 </div>
 <!-----------*********END formstar starform********************---------------------->
