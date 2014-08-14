@@ -154,6 +154,28 @@ background-image:url('../images/ss054.gif');
 	position:absolute;
 	font-size:22px;
 }
+.regRadx0
+{
+	float:left;
+	display:inline;
+	width:200px;
+	background-color:blue;
+//	margin: 0 5px 5px 20px;
+	margin: 0 auto 0 10%;
+
+}
+.regRadx1
+{
+	float:left;
+	display:inline;
+	width:200px;
+	background-color:yellow;
+//	margin: 0 5px 5px 20px;
+//	margin: 0 20% 0 auto;
+
+}
+
+
 #imdivp #imagesp{
     border:5px solid #721a90  ;
 //    padding-top:10px;
@@ -360,8 +382,8 @@ p
 p label
 {
 	vertical-align:bottom;
-	font-size:120%;
-	text-align:bottom;
+//	font-size:120%;
+//	text-align:bottom;
 }
 #son ul li p{
 //    color:blue;

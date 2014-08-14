@@ -7,7 +7,11 @@
 <head>
 <title>StarAdvisor</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" title="starA">
-<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
+<!--link href="b320/css/bootstrap.css" rel="stylesheet" type="text/css" -->
+
+<!--link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet"-->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" rel="stylesheet">
+<!--link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet"-->
 
 
 <link type="text/css" href="css/ui-lightness/jquery-ui-1.8.23.custom.css" rel="stylesheet" title="starA">
@@ -22,8 +26,9 @@
 <script type="text/javascript" src="scripts/jquery-ui-1.8.23.custom.min.js"></script>
 
 
-<script type="text/javascript" src="scripts/bootstrap.js"></script>
-
+<!--script type="text/javascript" src="b320/js/bootstrap.js"></script-->
+<!--script type="text/javascript" src="scripts/bootstrap.js"></script-->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script>
 <!--   -------------------------------------------->
 <!--   -------------Make random flickr pics------>
 
@@ -66,7 +71,7 @@ $(document).ready(function(){
 <body onload="load();"  >
 
 
-  <div class='container'>
+
     <!--TWITTER BOOTSTRAP TUTORIAL</h1-->
 <div id="head" style="text-align: center;" >Star Advisor 2<br>
 
@@ -74,21 +79,30 @@ $(document).ready(function(){
 
 <!--twitter bootstrap top menu followed by bootstrap containers-->
 
-    <div class='navbar navbar-inverse'>
-      <!--div class='navbar-inner nav-collapse' style="height: auto;"-->
-      <div class='navbar-inner nav-collapse' style="height:auto;" >
-        <ul class="nav">
+    <div class='navbar fixed-top navbar-inverse' role="navigation">
+      <div class='container' >
+      <div class='navbar-header' >
+       
+          <a href="#" onclick="load(0);" class="navbar-brand"><i class="icon-user icon-whit"></i> Hoome</a><
+       
+      </div><!--head-->
+      <div class='collapse navbar-collapse' >
+        <ul class="nav navbar-nav">
           <li class="active"><a href="#" onclick="load(0);"><i class="icon-user icon-whit"></i> Hoome</a></li>
           <li><a href="#pageBar" onclick="getSFeedTerm(0);">Use LookUP</a></li>
           <li><a href="#pageBar" onclick="listSites(0);"><i class="icon-leaf icon-white"> </i> Sites on Server</a></li>
           <li><a href="#pageBar" onclick="listSites(0);">Page Two</a></li>
         </ul>
-      </div>
-    </div>
+      </div><!--nav-collapse-->
 
+    </div><!--container-->
+    </div>
+  <div class='container'>
+  <!--div class='container'-->
 <!-- #content div -->
-    <div id='content' class='row-fluid'>
-      <div class='span9 main'>
+    <!--div id='content' class='row-fluid'-->
+    <div id='content' class='row row-offcanvas row-offcanvas-right'>
+      <div class='col-sm-9 main'>
         <h2>Main Content Section</h2>
 
 <p>
@@ -110,10 +124,10 @@ $(document).ready(function(){
 
 
 <div id="imdiv">
-	<div class="quickflip-wrapper">
-	<div ><a href="#" class="quickFlipCta"><img src="images/Yoursky.gif" /></a></div>
-	<div ><a href="#" class="quickFlipCta"> <img src="images/ss036.gif" /></a>  </div>
-	</div>
+	<!--div class="quickflip-wrapper"-->
+	<!--div ><a href="#" class="quickFlipCta"><img src="images/Yoursky.gif" /></a></div-->
+	<!--div ><a href="#" class="quickFlipCta"> <img src="images/ss036.gif" /></a>  </div-->
+	<!--/div-->
 <img src="images/Yoursky.gif" width="50" height="50"/>
 
 </br>
@@ -266,7 +280,7 @@ $(document).ready(function(){
 
 	<!--input type="submit" value="Send it!" onclick=" valUser(document.forms["user_check"]) ;"-->
 
-	<div  class="control-group span3"  >
+	<div  class="control-group col-sm-3"  >
 
 		<div class="controls">
 
@@ -277,13 +291,13 @@ $(document).ready(function(){
 		</div><!--controls-->
 	</div><!--control-group-->
 
-	<div  class="control-group span3"  >
+	<div  class="control-group col-sm-3"  >
 
 		<div class="controls">
 
 		<!--input class="btn btn-large btn-err" type="submit" value="Init it!" -->
 
-		<input class="btn btn-success span12"  value="Display it!" onclick="getListDBB(0);"/>
+		<input class="btn btn-success col-sm-12"  value="Display it!" onclick="getListDBB(0);"/>
 
 
 		</div><!--controls-->
@@ -295,12 +309,12 @@ $(document).ready(function(){
 	<div class="controls-row">
 
 
-	<div  class="control-group span3"  >
+	<div  class="control-group col-sm-3"  >
 
 		<div class="controls">
 
 		<!--input class="btn btn-large btn-success" type="submit" value="Submit!" -->
-		<input class="btn btn-large btn-success span12" value="readDB !" onclick="readDBB(0);">
+		<input class="btn btn-large btn-success col-sm-12" value="readDB !" onclick="readDBB(0);">
 		<!--input class="btn btn-large btn-success"  value="Check it!" onclick="getListDBB(0);"-->
 
 
@@ -308,13 +322,13 @@ $(document).ready(function(){
 	</div><!--control-group-->
 
 
-	<div  class="control-group span3"  >
+	<div  class="control-group col-sm-3"  >
 
 		<div class="controls">
 
 		<!--input class="btn btn-large btn-success" type="submit" value="Submit!" -->
 		<!--input class="btn btn-large btn-success"  value="Display it!" onclick="getListDBB(0);"-->
-		<input class="btn btn-large btn-success span12" value="WriteDB!" onclick="writeDBB(0);">
+		<input class="btn btn-large btn-success col-sm-12" value="WriteDB!" onclick="writeDBB(0);">
 
 
 		</div><!--controls-->
@@ -322,6 +336,7 @@ $(document).ready(function(){
 	</div><!--row-->
 
 </form>
+	</br>
 </div>
 <!--*****************END formstarini ****************-->
 
@@ -380,20 +395,22 @@ $(document).ready(function(){
 	<fieldset>
 	<legend>Details</legend>
 
-	<label  for="yourhan" style="display:inline;vertical-align:centre;margin:0 0 0 20px;">User name:(your email)</label>
+	<label  for="reghan" style="display:inline;vertical-align:centre;margin:0 0 0 20px;">User name:(your email)</label>
 
 
-	<input id="yourhan" type="text" name="yourhan" style="width:100px;" />
+	<input id="reghan" type="text" name="reghan" style="width:100px;" />
 
 
 	<div class="regChex0">
 
+		<p>
 		<input type="checkbox" id="regCh0" name="regCxInterest[]" value="binoculars" checked="checked" />
 		<label for="regCh0" style="display:inline;">Binoculars</label>
-
-		<input type="checkbox" id="regCh1" name="regCxInterest[]" value="telescop" />
-		<label for="regCh1">Telescope</label>
-
+		</p>
+		<p>
+		<input type="checkbox" id="regCh1" name="regCxInterest[]" value="telescope" />
+		<label for="regCh1" style="display:inline;" >Telescope</label>
+		</p>
 	</div><!-- .regChex0-->
 
 
@@ -414,13 +431,63 @@ $(document).ready(function(){
 		<input type="radio" id="regRad1" name="regColor" value="white" />
 		<label for="regRad1" style="display:inline;">white</label>
 
+		<br/>
+		<input type="text" id="regRad2" name="regColor" value="grey" style="width:80px;" />
+		<label for="regRad2" style="display:inline;">grey</label>
+
+
+		<input type="text" id="regRad3" name="regColor" value="beige" style="width:80px;" />
+		<label for="regRad3" style="display:inline;">beige</label>
+
+
+
+
 	</div><!-- .regRadx0-->
+	<div class="regRadx1">
+
+		<input type="radio" id="regRad4" name="regColor" value="yellow"  />
+		<label for="regRad4" style="display:inline;">yellow</label>
+
+
+		<input type="radio" id="regRad5" name="regColor" value="orange" />
+		<label for="regRad5" style="display:inline;">orange</label>
+
+		<br/>
+		<input type="text" id="regRad6" name="regColor" value="blue"  />
+		<label for="regRad6" style="display:inline;">blue</label>
+
+
+		<input type="text" id="regRad7" name="regColor" value="green" />
+		<label for="regRad7" style="display:inline;">green</label>
+
+
+	</div><!-- .regRadx1-->
 
 
 
 	</fieldset>
 </div> <!--field1-->
+	<br/>
 
+	<div class="controls-row">
+
+
+
+
+	<div  class="control-group col-sm-3"  >
+
+		<div class="controls">
+
+		<!--input class="btn btn-large btn-success" type="submit" value="Submit!" id="subR" -->
+		<input class="btn btn-large btn-success" type="button" value="Submit!" id="subR" onclick="return getReg();" >
+
+
+
+
+		</div><!--controls-->
+	</div><!--control-group-->
+
+	</div><!--row-->
 
 
 </form><!--regform-->
@@ -469,30 +536,30 @@ $(document).ready(function(){
 	<fieldset>
 	<legend>Names</legend>
 	<div id="rw1"  class="controls-row"  >
-	<div  class="control-group span3"  >
+	<div  class="control-group col-sm-3"  >
 
 		<label class="control-label" for="yournamef"> First Name:<span class="espan" id="espanFirst"></span> </label> 
 		<div class="controls">
-		<input id="yournamef" class="span12" type="text"  name="yournamef" placeholder="Your Name:" />
+		<input id="yournamef" class="col-sm-12" type="text"  name="yournamef" placeholder="Your Name:" />
 		</div><!--controls-->
 
 	</div><!--control-group-->
 
-	<div  class="control-group span3"  >
+	<div  class="control-group col-sm-3"  >
 
 		<label class="control-label" for="yournamel"> Last Name:<span class="espan" id="espanLast"></span> </label> 
 		<div class="controls">
-		<input id="yournamel" class="span12" type="text"  name="yournamel" placeholder="Your Name:" />
+		<input id="yournamel" class="col-sm-12" type="text"  name="yournamel" placeholder="Your Name:" />
 		</div><!--controls-->
 
 	</div><!--control-group-->
 
 
-	<div  class="control-group span3"  >
+	<div  class="control-group col-sm-3"  >
 
 		<label class="control-label" for="yourp"> Phone:<span id="espanPhone" class="espan" ></span> </label> 
 		<div class="controls">
-		<input id="yourp" class="span12" type="text"  name="yourp" placeholder="Phone:" />
+		<input id="yourp" class="col-sm-12" type="text"  name="yourp" placeholder="Phone:" />
 		</div><!--controls-->
 
 	</div><!--control-group-->
@@ -503,30 +570,30 @@ $(document).ready(function(){
 	<div id="rw2"  class="controls-row"  >
 
 
-	<div  class="control-group span3"  >
+	<div  class="control-group col-sm-3"  >
 
 		<label class="control-label" for="youre"> Your Email:<span id="espanEmail" class="espan" ></span></label> 
 		<div class="controls">
-		<input id="youre" class="span12" type="text"  name="youre" placeholder="Your Email" />
+		<input id="youre" class="col-sm-12" type="text"  name="youre" placeholder="Your Email" />
 		</div><!--controls-->
 
 	</div><!--control-group-->
 
-	<div  class="control-group span3"  >
+	<div  class="control-group col-sm-3"  >
 
 		<label class="control-label" for="yourmp"> Mobile Phone:<span id="espanMobile" class="espan" ></span> </label> 
 		<div class="controls">
-		<input id="yourmp" class="span12" type="text"  name="yourmp" placeholder="Mobile" />
+		<input id="yourmp" class="col-sm-12" type="text"  name="yourmp" placeholder="Mobile" />
 		</div><!--controls-->
 
 	</div><!--control-group-->
 
 
-	<div  class="control-group span3"  >
+	<div  class="control-group col-sm-3"  >
 
 		<label class="control-label" for="yourx"> Fax:<span id="espanFax" class="espan" ></span></label> 
 		<div class="controls">
-		<input id="yourx" class="span12" type="text"  name="yourx" placeholder="Your Fax:" />
+		<input id="yourx" class="col-sm-12" type="text"  name="yourx" placeholder="Your Fax:" />
 		</div><!--controls-->
 
 	</div><!--control-group-->
@@ -539,25 +606,25 @@ $(document).ready(function(){
 
 <!------------------password row-------------------------------------------->
 
-	<div class="control-group span3">
+	<div class="control-group col-sm-3">
 		<label class="control-label" for="yourpw">Enter Password<span id="espanPass" class="espan" ></span></label>
 		<div class="controls">
-		<input id="yourpw" class="span12" type="password" name="yourpw" />
+		<input id="yourpw" class="col-sm-12" type="password" name="yourpw" />
 		</div><!--controls-->
 
 	</div><!--control-group-->
 
 
 
-	<div class="control-group span3">
+	<div class="control-group col-sm-3">
 		<label class="control-label" for="yourpwa">Re-enter Pass <span id="espanPassa" class="espan" ></span></label>
 		<div class="controls">
-		<input id="yourpwa" class="span12" type="password" name="yourpwa" />
+		<input id="yourpwa" class="col-sm-12" type="password" name="yourpwa" />
 		</div><!--controls-->
 
 	</div><!--control-group-->
 
-	<div  class="control-group span3"  >
+	<div  class="control-group col-sm-3"  >
 		<label class="control-label" for="countryx">Country</label>
 		<div class="controls">
 
@@ -571,7 +638,7 @@ $(document).ready(function(){
 
 
 
-<!--input class="btn btn-large btn-success span12" value="Check it!" onclick="getListDBB(0);"-->
+<!--input class="btn btn-large btn-success col-sm-12" value="Check it!" onclick="getListDBB(0);"-->
 		</div><!--controls-->
 	</div><!--control-group-->
 
@@ -623,7 +690,7 @@ $(document).ready(function(){
 
 
 
-	<div  class="control-group span3"  >
+	<div  class="control-group col-sm-3"  >
 
 		<div class="controls">
 
@@ -636,12 +703,12 @@ $(document).ready(function(){
 	</div><!--control-group-->
 
 
-	<div  class="control-group span3"  >
+	<div  class="control-group col-sm-3"  >
 
 		<div class="controls">
 
 		<!--input class="btn btn-large btn-success" type="submit" value="Submit!" -->
-		<input class="btn btn-large btn-success span12" value="Display it!" onclick="getListDBB(0);">
+		<input class="btn btn-large btn-success col-sm-12" value="Display it!" onclick="getListDBB(0);">
 		<!--input class="btn btn-large btn-success"  value="Check it!" onclick="getListDBB(0);"-->
 
 
@@ -649,11 +716,11 @@ $(document).ready(function(){
 	</div><!--control-group-->
 
 
-	<div  class="control-group span3"  >
+	<div  class="control-group col-sm-3"  >
 
 		<div class="controls">
 
-		<!--input class="btn btn-large btn-success span12" value="Check it!" onclick="getListDBB(0);"-->
+		<!--input class="btn btn-large btn-success col-sm-12" value="Check it!" onclick="getListDBB(0);"-->
 		</div><!--controls-->
 	</div><!--control-group-->
 
@@ -680,7 +747,7 @@ $(document).ready(function(){
 <!--form class="form-horizontal" action="insertfos.php" method="post" name="user_check" -->
 <form class="form-inline" action="insertfos.php" method="post" name="userCheckaa" >
 <!-- div class="controls-row "-->
-<!--div id="q1" class="span3"-->
+<!--div id="q1" class="col-sm-3"-->
 <fieldset>
 <legend>Picture Info</legend>
 
@@ -690,34 +757,34 @@ $(document).ready(function(){
 <div id="arw-1" class="controls-row">
 
 
-<div  class="control-group span3"  >
+<div  class="control-group col-sm-3"  >
 
 <label class="control-label" for="skyEvent">Sky Area(north,north-east..):</label> 
 <div class="controls">
 
- <input id="skyEvent" class="span12" type="text" name="skyEvent" />
+ <input id="skyEvent" class="col-sm-12" type="text" name="skyEvent" />
 
 </div><!--controls-->
 
 </div><!--control-group-->
 
-<div  class="control-group span3"  >
+<div  class="control-group col-sm-3"  >
 
 <label class="control-label" for="picDate">Date:</label> 
 <div class="controls">
 
- <input id="picDate" class="span12" type="text" name="picDate"/>
+ <input id="picDate" class="col-sm-12" type="text" name="picDate"/>
 </div><!--controls-->
 
 </div><!--control-group-->
 
 
-<div  class="control-group span3"  >
+<div  class="control-group col-sm-3"  >
 
 <label class="control-label" for="picEvent"> Event(eclipse, etc.)</label> 
 <div class="controls">
 
- <input id="picEvent" class="span12" type="text" name="picEvent"/>
+ <input id="picEvent" class="col-sm-12" type="text" name="picEvent"/>
 </div><!--controls-->
 
 </div><!--control-group-->
@@ -732,21 +799,21 @@ $(document).ready(function(){
 
 
 <div id="arw-2" class="controls-row">
-<div  class="control-group span3"  >
+<div  class="control-group col-sm-3"  >
 
 <label class="control-label" for="picName"> Picture Name:</label> 
 <div class="controls ">
-  <input id="picName" class="span12" type="text"  name="picName" placeholder="Pic Name:" />
+  <input id="picName" class="col-sm-12" type="text"  name="picName" placeholder="Pic Name:" />
 </div><!--controls-->
 
 </div><!--control-group-->
 
 
-<div  class="control-group span3">
+<div  class="control-group col-sm-3">
 <label  class="control-label" for="picLoc"> Location taken(City):</label> 
 <div class="controls ">
 
- <input  type="text" class="span12" name="picLoc" id="picLoc" placeholder="Location"/>
+ <input  type="text" class="col-sm-12" name="picLoc" id="picLoc" placeholder="Location"/>
 </div><!--controls-->
 
 </div><!--control-group-->
@@ -754,11 +821,11 @@ $(document).ready(function(){
 
 
 
-<div  class="control-group span3"  >
+<div  class="control-group col-sm-3"  >
 <label class="control-label" for="skyArea"> Sky Area(north,north-east..):</label> 
 <div class="controls">
 
- <input type="text" class="span12" id="skyArea" name="skyArea" placeholder="sky area"/>
+ <input type="text" class="col-sm-12" id="skyArea" name="skyArea" placeholder="sky area"/>
 </div><!--controls-->
 
 </div><!--control-group-->
@@ -776,11 +843,11 @@ $(document).ready(function(){
 
 <div id="arw-3" class="controls-row">
 
-<div class="control-group span3">
+<div class="control-group col-sm-3">
 <label class="control-label" for="picCom">Comments(put comments in here):</label>
 <div class="controls">
 Your comments:
-<textarea id="picCom" class="span12" name="picCom" rows="10" cols="40"></textarea>
+<textarea id="picCom" class="col-sm-12" name="picCom" rows="10" cols="40"></textarea>
 </div><!--controls-->
 </div><!--control-group-->
 
@@ -788,11 +855,11 @@ Your comments:
 <!--input type="submit" value="Send it!" onclick=" valUser(document.forms["user_check"]) ;"-->
 <!--input type="submit" value="Send it!" onclick=" valUser(document.forms["user_check"]) ;"-->
 
-<div  class="control-group span3"  >
+<div  class="control-group col-sm-3"  >
 
 <div class="controls">
 
-<input class="btn span12" type="submit" value="Submit!" >
+<input class="btn col-sm-12" type="submit" value="Submit!" >
 <!--input class="btn"  value="Display it!" onclick="getListDBB(0);"-->
 
 
@@ -800,12 +867,12 @@ Your comments:
 </div><!--control-group-->
 
 
-<div  class="control-group span3"  >
+<div  class="control-group col-sm-3"  >
 
 <div class="controls">
 
-<!--input class="btn span12" type="submit" value="Submit!" -->
-<input class="btn span12"  value="Display it!" onclick="getListDBB(0);">
+<!--input class="btn col-sm-12" type="submit" value="Submit!" -->
+<input class="btn col-sm-12"  value="Display it!" onclick="getListDBB(0);">
 
 
 </div><!--controls-->
@@ -828,7 +895,7 @@ Your comments:
 <p id="dis">disapear</p>
         <p>Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
       </div><!--**************** END container ***********************-->
-      <div class='span3 sidebar'>
+      <div class='col-sm-3 sidebar-offcanvas' id="sidebar" role="navigation">
         <h2>Sidebar</h2>
         <ul class="nav nav-tabs nav-stacked">
           <li><a href='#' onclick="load(0);">Home</a></li>
