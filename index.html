@@ -7,12 +7,16 @@
 <head>
 <title>StarAdvisor</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" title="starA">
+<link href="b320/css/bootstrap.css" rel="stylesheet" type="text/css" title="starA">
+<!--link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" rel="stylesheet"-->
+
+<!--################################3##3##########33#####33#-->
 <!--link href="b320/css/bootstrap.css" rel="stylesheet" type="text/css" -->
 
 <!--link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet"-->
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" rel="stylesheet">
-<!--link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet"-->
 
+<!--link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet"-->
+<!--################################3##3##########33#####33#-->
 
 <link type="text/css" href="css/ui-lightness/jquery-ui-1.8.23.custom.css" rel="stylesheet" title="starA">
 
@@ -24,11 +28,14 @@
 
 <script type="text/javascript" src="scripts/jquery-1.8.0.min.js"></script>
 <script type="text/javascript" src="scripts/jquery-ui-1.8.23.custom.min.js"></script>
+<!--script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script-->
 
 
-<!--script type="text/javascript" src="b320/js/bootstrap.js"></script-->
+
+<!--################################3##3##########33#####33#-->
+<script type="text/javascript" src="b320/js/bootstrap.js"></script>
 <!--script type="text/javascript" src="scripts/bootstrap.js"></script-->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script>
+
 <!--   -------------------------------------------->
 <!--   -------------Make random flickr pics------>
 
@@ -61,7 +68,7 @@ $(document).ready(function(){
 
 <script type="text/javascript" src="scripts/script.js"></script>
 <script type="text/javascript" src="scripts/valu.js"></script>
-<script typr="text/javascript" src="scripts/calender.js"></script>
+<script type="text/javascript" src="scripts/calender.js"></script>
 
 
 </head>
@@ -73,7 +80,7 @@ $(document).ready(function(){
 
 
     <!--TWITTER BOOTSTRAP TUTORIAL</h1-->
-<div id="head" style="text-align: center;" >Star Advisor 2<br>
+<div id="head" style="text-align: center;" >Foodie<br>
 
 </div>
 
@@ -83,15 +90,15 @@ $(document).ready(function(){
       <div class='container' >
       <div class='navbar-header' >
        
-          <a href="#" onclick="load(0);" class="navbar-brand"><i class="icon-user icon-whit"></i> Hoome</a><
+          <a href="#" onclick="load(0);" class="navbar-brand"><i class="icon-user icon-whit"></i> Home</a><
        
       </div><!--head-->
       <div class='collapse navbar-collapse' >
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#" onclick="load(0);"><i class="icon-user icon-whit"></i> Hoome</a></li>
-          <li><a href="#pageBar" onclick="getSFeedTerm(0);">Use LookUP</a></li>
-          <li><a href="#pageBar" onclick="listSites(0);"><i class="icon-leaf icon-white"> </i> Sites on Server</a></li>
-          <li><a href="#pageBar" onclick="listSites(0);">Page Two</a></li>
+          <li class="active"><a href="#" onclick="load(0);"><i class="icon-user icon-whit"></i> Home</a></li>
+          <li><a href="#field1" onclick="getSFeedTerm(0);">Choose Meal</a></li>
+          <li><a href="#tabs-2" onclick="listSites(0);"><i class="icon-leaf icon-white"> </i> Meal List Events</a></li>
+          <li><a href="#pageBar" onclick="listSites(0);" style="float:right;">Login/Sign-up</a></li>
         </ul>
       </div><!--nav-collapse-->
 
@@ -103,22 +110,22 @@ $(document).ready(function(){
     <!--div id='content' class='row-fluid'-->
     <div id='content' class='row row-offcanvas row-offcanvas-right'>
       <div class='col-sm-9 main'>
-        <h2>Main Content Section</h2>
+        <!--h2>Main Content Section</h2-->
 
 <p>
 
 
 
 <div id="hero" class="hero-unit" >
-<h1>Flickr</h1>
+<!--h1>Flickr</h1-->
 
 
 <div id="yCarousel" >
 
-</div><!--yCarousel-->
+</div> <!--yCarousel-->
 
 
-<p>hi</p>
+<!--p>hi</p-->
 
 
 
@@ -128,15 +135,15 @@ $(document).ready(function(){
 	<!--div ><a href="#" class="quickFlipCta"><img src="images/Yoursky.gif" /></a></div-->
 	<!--div ><a href="#" class="quickFlipCta"> <img src="images/ss036.gif" /></a>  </div-->
 	<!--/div-->
-<img src="images/Yoursky.gif" width="50" height="50"/>
+<!--img src="i/img/dish/dish1.jpg" width="50" height="50"/-->
 
 </br>
-<div id="images">
+<div id="images" style="display:none;">
 </div><!--imdiv images-->
 
 </div><!--imdiv-->
 
-<div id="imdivp">
+<div id="imdivp" style="display:none;">
 
 
 <div id="imagesp">
@@ -147,8 +154,8 @@ $(document).ready(function(){
 
 
 
-<a id="fb2" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="setRPic(0);">Fickr Random!!!!!</a>
-<a class="btn btn-large btn-success" onclick="setTim(0);">Start</a>
+<a id="fb2" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="setRPic(0);">Banner</a>
+<!--a class="btn btn-large btn-success" onclick="setTim(0);">Start</a-->
 
         
 
@@ -159,9 +166,11 @@ $(document).ready(function(){
 <!-- ############# TABS ############################-->
 <div id="tabs" >
 <ul>
-	<li><a href="#tabs-1">First</a></li>
-	<li><a href="#tabs-2">First</a></li>
-	<li><a href="#tabs-3">First</a></li>
+	<li><a href="#tabs-h">We;c</a></li>
+	<li><a href="#tabs-1">Administrator</a></li>
+	<li><a href="#tabs-2">Choose Meal & Time</a></li>
+	<li><a href="#tabs-3">Survey</a></li>
+	<li><a href="#tabs-4">Login</a></li>
 </ul>
 
 <div id="tabs-1">First container
@@ -344,48 +353,12 @@ $(document).ready(function(){
 </div>
 <!--end first tab-->
 
-<div id="tabs-2">Second container
+<div id="tabs-2"><h4>Days Available next 2 weeks </h4>
+</br>
 
-<img src="images/Yoursky.gif" width="50" height="50"/>
+<!--img src="images/Yoursky.gif" width="50" height="50"/-->
 
-</div>
-<!--end second tab-->
-<div id="tabs-3">Third container
-</div>
-<!--end third tab-->
-
-</div><!--divtabs-->
-
-<!-- ############# END TABS ############################-->
-
-
-
-<div id="pageBar" >
-
-
-</div><!--pagebar-->
-</p>
-
-<div id="journ">
-
-</div><!--journ-->
-
-
-<div id="son">
-</div><!--son-->
-
-<div id="loadson" style="display:none;">
-<img src="images/loading.gif" height="200px" width="200px"/>
-
-</div><!--loadson-->
-
-
-
-<div id="imagesky">
-
-</div> <!--imagesky-->
-
-
+<div id="cal">&nbsp;</div>
 
 <div id="formreg" >
 <form  action="insertreg.php" method="post" id="regform" name="regform">
@@ -393,24 +366,16 @@ $(document).ready(function(){
 
 <div id="field0">
 	<fieldset>
-	<legend>Details</legend>
-
-	<label  for="reghan" style="display:inline;vertical-align:centre;margin:0 0 0 20px;">User name:(your email)</label>
+	<legend>Details By Day Selected </legend>
 
 
-	<input id="reghan" type="text" name="reghan" style="width:100px;" />
+
+
 
 
 	<div class="regChex0">
 
-		<p>
-		<input type="checkbox" id="regCh0" name="regCxInterest[]" value="binoculars" checked="checked" />
-		<label for="regCh0" style="display:inline;">Binoculars</label>
-		</p>
-		<p>
-		<input type="checkbox" id="regCh1" name="regCxInterest[]" value="telescope" />
-		<label for="regCh1" style="display:inline;" >Telescope</label>
-		</p>
+
 	</div><!-- .regChex0-->
 
 
@@ -418,26 +383,30 @@ $(document).ready(function(){
 	</fieldset>
 </div> <!--field0-->
 
+
+<!--                     ############################-->
+
 <div id="field1">
 	<fieldset>
-	<legend>Colors</legend>
+	<legend>Tables Available</legend>
 
 	<div class="regRadx0">
 
 		<input type="radio" id="regRad0" name="regColor" value="black" checked="checked" />
-		<label for="regRad0" style="display:inline;">Black</label>
-
+		<label for="regRad0" style="display:inline;">Table 1 (1 seat left)</label>
+</br>
+</br>
 
 		<input type="radio" id="regRad1" name="regColor" value="white" />
-		<label for="regRad1" style="display:inline;">white</label>
-
+		<label for="regRad1" style="display:inline;">Table 2 (3 seats left)</label>
+</br>
 		<br/>
-		<input type="text" id="regRad2" name="regColor" value="grey" style="width:80px;" />
-		<label for="regRad2" style="display:inline;">grey</label>
+		<input type="button" id="regRad2" name="regColor" value="Select Dish" style="width:80px;" />
+	
 
 
-		<input type="text" id="regRad3" name="regColor" value="beige" style="width:80px;" />
-		<label for="regRad3" style="display:inline;">beige</label>
+	
+	
 
 
 
@@ -446,19 +415,119 @@ $(document).ready(function(){
 	<div class="regRadx1">
 
 		<input type="radio" id="regRad4" name="regColor" value="yellow"  />
-		<label for="regRad4" style="display:inline;">yellow</label>
+		<label for="regRad4" style="display:inline;">Table 3(2 seats left)</label>
+
+</br>
+</br>
+		<input type="radio" id="regRad5" name="regColor" value="orange" />
+		<label for="regRad5" style="display:inline;">Table 4 (3 Seats Left)</label>
+
+		<br/>
+		<br/>
+
+		<input type="button" id="regRad6" name="regColor" value="Select Dish" onclick="getSectionLO(0);" />
+
+
+
+
+
+
+
+	</div><!-- .regRadx1-->
+
+
+
+	</fieldset>
+</div> <!--field3-->
+
+
+<div id="field2" style="display:none;">
+	<fieldset>
+	<legend>Select Dish</legend>
+
+	<div class="regRadx0">
+
+		<input type="radio" id="regRad0" name="regColor" value="black" checked="checked" />
+		<label for="regRad0" style="display:inline;">Italian</label>
+
+
+		<input type="radio" id="regRad1" name="regColor" value="white" />
+		<label for="regRad1" style="display:inline;">Tai</label>
+
+		<br/>
+
+
+
+
+	</div><!-- .regRadx0-->
+	<div class="regRadx1">
+
+		<input type="radio" id="regRad4" name="regColor" value="yellow"  />
+		<label for="regRad4" style="display:inline;">Vegetarian</label>
 
 
 		<input type="radio" id="regRad5" name="regColor" value="orange" />
-		<label for="regRad5" style="display:inline;">orange</label>
+		<label for="regRad5" style="display:inline;">Mexican</label>
 
 		<br/>
-		<input type="text" id="regRad6" name="regColor" value="blue"  />
-		<label for="regRad6" style="display:inline;">blue</label>
+	
+		<br/>
+		<br/>
+
+		<input type="button" id="regRad6" name="regColor" value="Go To PayOut" onclick="getSectionPLO(0);" />
 
 
-		<input type="text" id="regRad7" name="regColor" value="green" />
-		<label for="regRad7" style="display:inline;">green</label>
+	</div><!-- .regRadx1-->
+
+
+
+	</fieldset>
+</div> <!--field2-->
+<div id="field3" style="display:none;">
+	<fieldset>
+	<legend>Select Payment Method</legend>
+
+	<div class="regRadx0">
+
+		<input type="radio" id="regRad0" name="regColor" value="black" checked="checked" />
+		<label for="regRad0" style="display:inline;">Visa</label>
+</br>
+</br>
+
+		<input type="radio" id="regRad1" name="regColor" value="white" />
+		<label for="regRad1" style="display:inline;">Master Card</label>
+</br>
+		<br/>
+
+	
+
+
+	
+	
+
+
+
+
+	</div><!-- .regRadx0-->
+	<div class="regRadx1">
+
+		<input type="radio" id="regRad4" name="regColor" value="yellow"  />
+		<label for="regRad4" style="display:inline;">Paypal</label>
+
+</br>
+</br>
+		<input type="radio" id="regRad5" name="regColor" value="orange" />
+		<label for="regRad5" style="display:inline;">Money Order</label>
+
+		<br/>
+		<br/>
+
+
+
+
+
+
+
 
 
 	</div><!-- .regRadx1-->
@@ -467,6 +536,12 @@ $(document).ready(function(){
 
 	</fieldset>
 </div> <!--field1-->
+
+
+<!--                                 #####################-->
+
+
+
 	<br/>
 
 	<div class="controls-row">
@@ -493,38 +568,14 @@ $(document).ready(function(){
 </form><!--regform-->
 </div><!--formreg-->
 
-<!--***************************init email and pass************-->
-<div id="formstarinipa" style="display:none;">
-<form class="form-inline" action="initpa.php" method="post" name="user_checkp">
-
-<div class="controls-row">
 
 
-
-
-<div  class="control-group"  >
-
-<div class="controls">
-
-<input class="btn btn-large btn-success" type="submit" value="Init pass!" />
-
-
-
-</div><!--controls-->
-</div><!--control-group-->
-
-
-
-
-
-</div><!--row-->
-
-
-</form><!--user_checkp formstarinitpa-->
-</div><!--formstarinitpa-->
-
-
-<!--***************************END init email and pass************-->
+</div>
+<!--end second tab-->
+<div id="tabs-3">Survey
+</div>
+<!--end second tab-->
+<div id="tabs-4">Login
 
 
 <!--************************formstar starform****************************-->
@@ -607,7 +658,7 @@ $(document).ready(function(){
 <!------------------password row-------------------------------------------->
 
 	<div class="control-group col-sm-3">
-		<label class="control-label" for="yourpw">Enter Password<span id="espanPass" class="espan" ></span></label>
+		<label class="control-label" for="yourpw">Choose Password<span id="espanPass" class="espan" ></span></label>
 		<div class="controls">
 		<input id="yourpw" class="col-sm-12" type="password" name="yourpw" />
 		</div><!--controls-->
@@ -625,15 +676,15 @@ $(document).ready(function(){
 	</div><!--control-group-->
 
 	<div  class="control-group col-sm-3"  >
-		<label class="control-label" for="countryx">Country</label>
+		<label class="control-label" for="countryx">City</label>
 		<div class="controls">
 
 		<select name="countryx" id="countryx"  style="width:120px;">
-			<option value="oC">Canada</option>
-			<option value="oA" selected="selected">United States</option>
-			<option value="oS">South America</option>
-			<option value="oB">United Kingdom</option>
-			<option value="oO">Asia</option>
+			<option value="oC">Ontario</option>
+			<option value="oA" selected="selected">Kitchener</option>
+			<option value="oS">Brampton</option>
+			<option value="oB">Hamilton</option>
+			<option value="oO">Elora</option>
 		</select>
 
 
@@ -740,174 +791,100 @@ $(document).ready(function(){
 
 
 
-<!--*******************forma****************************-->
-<div id="forma" >
-<!--div id="forma" -->
 
-<!--form class="form-horizontal" action="insertfos.php" method="post" name="user_check" -->
-<form class="form-inline" action="insertfos.php" method="post" name="userCheckaa" >
-<!-- div class="controls-row "-->
-<!--div id="q1" class="col-sm-3"-->
-<fieldset>
-<legend>Picture Info</legend>
+</div>
 
 
 
+<!--end third tab-->
 
-<div id="arw-1" class="controls-row">
+</div><!--divtabs-->
 
+<!-- ############# END TABS ############################-->
 
-<div  class="control-group col-sm-3"  >
 
-<label class="control-label" for="skyEvent">Sky Area(north,north-east..):</label> 
-<div class="controls">
 
- <input id="skyEvent" class="col-sm-12" type="text" name="skyEvent" />
+<div id="pageBar" >
 
-</div><!--controls-->
 
-</div><!--control-group-->
-
-<div  class="control-group col-sm-3"  >
-
-<label class="control-label" for="picDate">Date:</label> 
-<div class="controls">
-
- <input id="picDate" class="col-sm-12" type="text" name="picDate"/>
-</div><!--controls-->
-
-</div><!--control-group-->
-
-
-<div  class="control-group col-sm-3"  >
-
-<label class="control-label" for="picEvent"> Event(eclipse, etc.)</label> 
-<div class="controls">
-
- <input id="picEvent" class="col-sm-12" type="text" name="picEvent"/>
-</div><!--controls-->
-
-</div><!--control-group-->
-
-
-
-
-</div><!--arw-1-->
-
-
-
-
-
-<div id="arw-2" class="controls-row">
-<div  class="control-group col-sm-3"  >
-
-<label class="control-label" for="picName"> Picture Name:</label> 
-<div class="controls ">
-  <input id="picName" class="col-sm-12" type="text"  name="picName" placeholder="Pic Name:" />
-</div><!--controls-->
-
-</div><!--control-group-->
-
-
-<div  class="control-group col-sm-3">
-<label  class="control-label" for="picLoc"> Location taken(City):</label> 
-<div class="controls ">
-
- <input  type="text" class="col-sm-12" name="picLoc" id="picLoc" placeholder="Location"/>
-</div><!--controls-->
-
-</div><!--control-group-->
-
-
-
-
-<div  class="control-group col-sm-3"  >
-<label class="control-label" for="skyArea"> Sky Area(north,north-east..):</label> 
-<div class="controls">
-
- <input type="text" class="col-sm-12" id="skyArea" name="skyArea" placeholder="sky area"/>
-</div><!--controls-->
-
-</div><!--control-group-->
-
-</div><!--arw-2-->
-
-
-
-
-
-
-
-
-
-
-<div id="arw-3" class="controls-row">
-
-<div class="control-group col-sm-3">
-<label class="control-label" for="picCom">Comments(put comments in here):</label>
-<div class="controls">
-Your comments:
-<textarea id="picCom" class="col-sm-12" name="picCom" rows="10" cols="40"></textarea>
-</div><!--controls-->
-</div><!--control-group-->
-
-<p>
-<!--input type="submit" value="Send it!" onclick=" valUser(document.forms["user_check"]) ;"-->
-<!--input type="submit" value="Send it!" onclick=" valUser(document.forms["user_check"]) ;"-->
-
-<div  class="control-group col-sm-3"  >
-
-<div class="controls">
-
-<input class="btn col-sm-12" type="submit" value="Submit!" >
-<!--input class="btn"  value="Display it!" onclick="getListDBB(0);"-->
-
-
-</div><!--controls-->
-</div><!--control-group-->
-
-
-<div  class="control-group col-sm-3"  >
-
-<div class="controls">
-
-<!--input class="btn col-sm-12" type="submit" value="Submit!" -->
-<input class="btn col-sm-12"  value="Display it!" onclick="getListDBB(0);">
-
-
-</div><!--controls-->
-</div><!--control-group-->
-
-</div><!--arw-3-->
-
+</div><!--pagebar-->
 </p>
 
+<div id="journ">
+
+</div><!--journ-->
 
 
-</fieldset>
-</form>
-</div><!--div forma-->
+<div id="son">
+</div><!--son-->
+
+<div id="loadson" style="display:none;">
+<img src="images/loading.gif" height="200px" width="200px"/>
+
+</div><!--loadson-->
+
+
+
+<div id="imagesky">
+
+</div> <!--imagesky-->
 
 
 
 
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.<p> 
-<p id="dis">disapear</p>
-        <p>Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+<!--***************************init email and pass************-->
+<div id="formstarinipa" style="display:none;">
+<form class="form-inline" action="initpa.php" method="post" name="user_checkp">
+
+<div class="controls-row">
+
+
+
+
+<div  class="control-group"  >
+
+<div class="controls">
+
+<input class="btn btn-large btn-success" type="submit" value="Init pass!" />
+
+
+
+</div><!--controls-->
+</div><!--control-group-->
+
+
+
+
+
+</div><!--row-->
+
+
+</form><!--user_checkp formstarinitpa-->
+</div><!--formstarinitpa-->
+
+
+<!--***************************END init email and pass************-->
+
+
+
+<!--*******************forma****************************-->
+ 
+<!--p id="dis">disapear</p-->
+      
       </div><!--**************** END container ***********************-->
       <div class='col-sm-3 sidebar-offcanvas' id="sidebar" role="navigation">
         <h2>Sidebar</h2>
         <ul class="nav nav-tabs nav-stacked">
           <li><a href='#' onclick="load(0);">Home</a></li>
-          <li><a href='#pageBar' onclick="getSFeedTerm('nebula');">Use LookUP</a></li>
+          <li><a href='#pageBar' onclick="getSFeedTerm('nebula');">Look at restaurant</a></li>
           <li><a href='#' onclick="getSectionO(0);">News</a></li>
-          <li><a href='#' onclick="getSectionSky(0);">Sky Maps</a></li>
-          <li><a href='#pageBar' onclick="getSectionO(0);">Search Cornell</a></li>
-          <li><a href='#pageBar' onclick="getSectionBlog(0);">Search Blogs</a></li>
+
+          <li><a href='#pageBar' onclick="getSectionLO(0);">Search l</a></li>
+          <li><a href='#pageBar' onclick="getSectionBlog(0);">Search </a></li>
           <li><a href='#' onclick="getSectionInsertDB(0);">Insert DB</a></li>
           <li><a href='#' onclick="getSectionDBB(0);">Search DB</a></li>
-          <li><a href='#' onclick="getSectionLogin(0);">Login</a>EXTRA</br><span id="cal">&nbsp;LOOO</span>extre</li>
-	  <li><a href='#'><span id="call">&nbsp;LOOO</span></a></li>
+          <li><a href='#' onclick="getSectionLogin(0);">Login</a></br><span id="cal2">&nbsp;</span></li>
+	  <li><a href='#'><span id="call">&nbsp;</span></a></li>
         </ul>
       </div>
 

@@ -56,8 +56,8 @@ var csl= "<div id=\"myCarousel\" class=\"carousel slide\">";
 csl +="<div class=\"carousel-inner\">";
  
 csl+= "<div class=\"active item\">";
-csl += "<img src=\"images/Yoursky.gif\" width=\"200px\" height=\"200px\" alt=\"sky scape\"/>";
-
+csl += "<img src=\"i/img/dish/dish2.jpg\" width=\"200px\" height=\"200px\" alt=\"sky scape\"/>";
+csl +="<div class=\"carousel-caption\"><p style=\"font-size:200%;text-align:left;color:#FFFFFF;\">Try New Food</p><p style=\"font-size:220%;color:#225555;text-align:right;font-family:Poster,serif;\">With Someone New &hearts;</p></div>";
 csl +="</div>";
 csl +="</div>";
 
@@ -97,20 +97,25 @@ $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?
 
 
       $.each(data.items, function(i,item){
+	$("<img/>").attr("src", "i/img/dish/dish"+(i+1)+".jpg").attr("title",item.title).appendTo("#yCarousel #myCarousel .carousel-inner");
 
-      $("<img/>").attr("src", item.media.m).attr("title",item.title).appendTo("#yCarousel #myCarousel .carousel-inner");
+      //$("<img/>").attr("src", item.media.m).attr("title",item.title).appendTo("#yCarousel #myCarousel .carousel-inner");
 
 
       if ( i == 8 ) 
       {
+	  var ji=0;
 
      	 $("#yCarousel #myCarousel .carousel-inner > img").each(function()
 	 {
+		
 
 		    var iE=$(this);
 
-		    iE.wrap("<div class=\"item\"><a href=\" "+iE.attr("src")+"\"> </a></div>");
-
+		    iE.wrap("<div class=\"item\"><a href=\"i/img/dish/dish"+ji+".jpg\"> </a> <div class=\"carousel-caption\"><p style=\"font-size:240%;text-align:left;color:#FFFF11;\">Try New Food</p><p style=\"font-size:220%;color:#FF5588;text-align:right;font-family:Poster,serif;\">With Someone New &hearts;</p></div>  </div>");
+//		    iE.wrap("<div class=\"item\"><a href=\"i/img/dish/dish"+ji+".jpg\"> </a></div>");
+		   // iE.wrap("<div class=\"item\"><a href=\" "+iE.attr("src")+"\"> </a></div>");
+			ji=ji+1;
 	});//each img
 
 	//set carousel to not rotate: false
@@ -171,7 +176,7 @@ $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?
 		  //  alert ("IIimage:"+this.src);
 		    var iE=$(this);
 		//    iE.wrap("<a href=' "+iE.attr("src")+"' </a>");
-		    iE.wrap("<a href=\" "+iE.attr("src")+"\"> </a>");
+		    iE.wrap("<a href=\"i/img/dish/dish4.jpg \"> </a>");
 		});
 	  return false;
           }
@@ -207,7 +212,7 @@ var pRay=new Array();
 pRay=pR;
 
 
-
+alert("flickr");
 $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
   {
     tags: pId,
@@ -333,7 +338,7 @@ function boardDoubler(pI)
 
 		//(1st wrapper div)->anchor->image
 		//	var ele= $(iD.children()[0]).children().children();
-		alert ("id:"+$(ele[0]).attr("class"));	
+//flickran		alert ("id:"+$(ele[0]).attr("class"));	
 		}
 
 		iD.quickFlip();
@@ -859,6 +864,7 @@ $(document).ready(function(){
     var randI=Math.floor(Math.random()*(arrPic.length));
 //	$('.quickflip-wrapper3').quickFlip();
 //	srpA.push("hello");
+	alert("fLICKCK");
     setPic(arrPic[randI],srpA,randI);
 //	alert("+");
 //    setPicP(arrPic[randI],srpA);
@@ -876,7 +882,7 @@ function setRPicP(pId)
 
     var arrPic=["galaxy","star night","sky","observatory","nebula","moon","asteroid","meteor","telescope"];
     var randI=Math.floor(Math.random()*(arrPic.length));
-
+	alert("rick");
     setPic(arrPic[randI]);
     setCarousel(arrPic[randI]);
 
@@ -916,6 +922,10 @@ function getSFeedTerm(tId)
     document.getElementById("journ").style.display="none";
     document.getElementById("imagesky").style.display="none";
     document.getElementById("searchDi").style.display="";
+	$(document).ready(function(){
+		$('#tabs').tabs({selected:2});
+	});
+
 
 }
 
@@ -1724,6 +1734,61 @@ function getSectionO(dId)
 
 }
 //-----End getSectionO
+function getSectionLO(dId)
+{
+//----------------------------------
+//
+//Get journal results from search terms
+//------------------------------------
+
+    document.getElementById("field2").style.display="";
+    document.getElementById("imagesky").innerHTML="";
+    document.getElementById("son").innerHTML="";
+//    document.getElementById("son").before="";
+  //  document.getElementById("fbox").style.display="none";
+
+    hpb="<div id=\"searchDi\"><p>Enter terms to list sites listed on StarServer's cached sites:  Cornell.edu and Stargazing.net</p> <input type=\"text\" id=\"sbox\" onkeypress=\"handleKeyPressJ(event,this.form)\"/>";
+    //    hpb=hpb+"<div id=\"sbutton\"> <button onclick=\"getMatchJ(document.getElementById(\"sbox\").value)\">Search Now</button>";
+     hpb=hpb+"<div id=\"sbutton\"> <button onclick=\"getMatchJ(document.getElementById('sbox').value);\">Search Now</button>";
+    hpb=hpb+"</div></div>";
+    //    alert("pageBar");
+    document.getElementById("pageBar").innerHTML=hpb;
+    document.getElementById("journ").innerHTML="";
+    document.getElementById("imagesky").innerHTML="";
+    document.getElementById("journ").style.display="none";
+    document.getElementById("imagesky").style.display="none";
+    
+
+
+}
+
+function getSectionPLO(dId)
+{
+//----------------------------------
+//
+//Get journal results from search terms
+//------------------------------------
+
+    document.getElementById("field3").style.display="";
+    document.getElementById("imagesky").innerHTML="";
+    document.getElementById("son").innerHTML="";
+//    document.getElementById("son").before="";
+  //  document.getElementById("fbox").style.display="none";
+
+    hpb="<div id=\"searchDi\"><p>Enter terms to list sites listed on StarServer's cached sites:  Cornell.edu and Stargazing.net</p> <input type=\"text\" id=\"sbox\" onkeypress=\"handleKeyPressJ(event,this.form)\"/>";
+    //    hpb=hpb+"<div id=\"sbutton\"> <button onclick=\"getMatchJ(document.getElementById(\"sbox\").value)\">Search Now</button>";
+     hpb=hpb+"<div id=\"sbutton\"> <button onclick=\"getMatchJ(document.getElementById('sbox').value);\">Search Now</button>";
+    hpb=hpb+"</div></div>";
+    //    alert("pageBar");
+    document.getElementById("pageBar").innerHTML=hpb;
+    document.getElementById("journ").innerHTML="";
+    document.getElementById("imagesky").innerHTML="";
+    document.getElementById("journ").style.display="none";
+    document.getElementById("imagesky").style.display="none";
+    
+
+
+}
 
 
 
@@ -2150,10 +2215,10 @@ function getSectionBlog(dId)
 function load()
     {
 
-
+alert("what");
     document.getElementById("pageBar").style.display="";
     document.getElementById("formstar").style.display="";
-    document.getElementById("forma").style.display="";
+//    document.getElementById("forma").style.display="";
     document.getElementById("dbTable").style.display="";
 
     document.getElementById("journ").style.display="";

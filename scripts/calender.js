@@ -17,12 +17,12 @@ function calendarInit(d){
 
 	if (d ==null)
 	{
-	alert("da  undef");
+//	alert("da  undef");
 		day = new Date();
 	}else{
 		day=d;
 	}
-	alert("da  "+day.toDateString()+"");
+//	alert("da  "+day.toDateString()+"");
 	var calMonth = day.getMonth();
 	var calDay = day.getDate();
 	var calYear = day.getFullYear();
@@ -38,7 +38,7 @@ function calendarInit(d){
 	var dayName=day.toDateString().split(" ").slice(0,1);
 
 //	calStartMD = curMonthStart.getDay();
-	alert("calSD"+curMonthStartDay+"::"+curMonthStart.toDateString());	
+//	alert("calSD"+curMonthStartDay+"::"+curMonthStart.toDateString());	
 //	$("#cal").append("<table id=\"tabCal\" style=\"width:200;height:100;color:#3344ff;\" border=\"1\" cellspacing=\"2\" cellpadding=\"2\" >");
 //	$('<table id="tabCal" width="277" height="100" style="color:#3344ff;" border="1" cellspacing="2" cellpadding="2" ></table>').appendTo('#cal');
 //	$('<table id="tabCal"  style="color:#3344ff; border:1px solid black;" border="1" cellspacing="2" cellpadding="2" ></table>').appendTo('#cal');
@@ -91,9 +91,9 @@ function calendarInit(d){
 $(function(){
 $(document).ready(function(){
 var dd= new Date();
-alert("cal"+dd);
+//alert("cal"+dd);
 calendarInit(dd);
-alert("ccal");
+//alert("ccal");
 
 });//doc ready
 
