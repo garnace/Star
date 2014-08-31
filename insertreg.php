@@ -1,7 +1,22 @@
 <?php
 include("classes/user.php");
+/**
+ *-----------------insertreg.php 
+ *
+ *Script to init form data base by creating table reserve
+
+
+ *
+ */
+
+
+
+
+
 $yourname=check_input($_POST["reghan"],"Write name");
 $interests=check_input_array($_POST["regCxInterest"],"interests");
+$seatnum=check_input_array($_POST["regCxInterest"],"interests");
+$tablenum=check_input_array($_POST["regCxInterest"],"interests");
 
 
 $sam="STRING";
@@ -12,14 +27,26 @@ $password="Spasskydb8080";
 $database="mysql";
 
 
+$queryPassP=" CREATE TABLE reserve (id int(6) NOT NULL auto_increment ,email varchar(30) NOT NULL,tableN varchar(30) NOT NULL,seatN varchar(30) NOT NULL,PRIMARY KEY (email),KEY id_2 (id))";
+$querychk="SELECT * FROM reserve";
 
+//$query="INSERT INTO reserve (id,email,tablnum,seatnum) VALUES (:indx,:tablenum ,:seatnum)";
+$query="INSERT INTO reserve (id,email,tableN,seatN,interest) VALUES (NULL,'$email','$tablenum' ,'$seatnum','$interest')";
 
-$query="INSERT INTO contacts (id,first,last,phone,mobile,fax,email,web) VALUES (:indx,:first ,:last ,:phone ,:mobile ,:fax ,:email ,:web)";
+mysql_connect(localhost,$user,$password);
+@mysql_select_db($database) or die( "Unable to select database");
 
-$querypas="INSERT INTO uaccount (id,accounthandle,email,accountpass) VALUES(:cindx,:handle,:email,:pass)";
+$qr=mysql_query($querychk);
+$numchk=mysql_numrows($qr);
 
-
-
+if($numchk >0)
+    {
+        $r=mysql_query($query);
+    }
+else
+    {
+        $r=mysql_query($queryPassP);
+    }
 //header("Location:http://localhost:8280/StarAdvisor/index.html#user_check");
 
 
