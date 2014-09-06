@@ -88,7 +88,8 @@ csm +="</div>";
 $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
   {
     tags: pId,
-    tagmode: "any",
+//    tagmode: "any",
+    tagmode: "all",
     format: "json"
  },
   function(data) {
@@ -215,12 +216,15 @@ pRay=pR;
 alert("flickr");
 $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
   {
-    tags: pId,
-    tagmode: "any",
+    tags: pId+",nasa",
+//    tagmode: "any",
+    tagmode: "all",
+    l:"4",
     format: "json"
  },
   function(data) {
       $("#images").html("");
+	alert("hello"+pId);
       $.each(data.items, function(i,item){
 
       pRay.push(item);
@@ -860,7 +864,8 @@ $(document).ready(function(){
 	$(document).bind("matchEv",matchAlert);
     var srpA= new Array();
 
-    var arrPic=["galaxy","star night","sky","observatory","nebula","moon","asteroid","meteor","telescope"];
+//    var arrPic=["galaxy","star night","sky","observatory","nebula","moon","asteroid","meteor","telescope"];
+    var arrPic=["galaxy","star","comet","nebula","moon"];
     var randI=Math.floor(Math.random()*(arrPic.length));
 //	$('.quickflip-wrapper3').quickFlip();
 //	srpA.push("hello");
