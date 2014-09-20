@@ -37,16 +37,17 @@ function calendarInit(d){
 	var monthName;
 	var dayName=day.toDateString().split(" ").slice(0,1);
 
-//	calStartMD = curMonthStart.getDay();
+//	alert("mon"+calMonth.toString());
 //	alert("calSD"+curMonthStartDay+"::"+curMonthStart.toDateString());	
+//	alert("calSD"+calDay);	
 //	$("#cal").append("<table id=\"tabCal\" style=\"width:200;height:100;color:#3344ff;\" border=\"1\" cellspacing=\"2\" cellpadding=\"2\" >");
 //	$('<table id="tabCal" width="277" height="100" style="color:#3344ff;" border="1" cellspacing="2" cellpadding="2" ></table>').appendTo('#cal');
 //	$('<table id="tabCal"  style="color:#3344ff; border:1px solid black;" border="1" cellspacing="2" cellpadding="2" ></table>').appendTo('#cal');
 	$('<table id="tabCal"  style="color:#3344ff; border:1px solid black;" cellspacing="2" cellpadding="2" ></table>').appendTo('#cal');
 	$('<thead><tr></tr></thead> ').appendTo('#cal table');
 
-//	$('<th sytle="border: 1px solid white;">&lt;</th><th colspan="5" >'+day.toDateString().split(" ").slice(1,2)+'Sun</th><th>&gt;</th>').appendTo("#cal table thead tr");
-	$('<th sytle="border: 1px solid white;">&lt;</th><th colspan="5" >'+day.toDateString().split(" ").slice(1,2)+dayName+'Sun</th><th>&gt;</th>').appendTo("#cal table thead tr");
+
+	$('<th sytle="border: 1px solid white;"><a onclick="function(){prevMon(calMonth);};">&lt;</a></th><th colspan="5" style="text-align:center;">'+day.toDateString().split(" ").slice(1,2)+'</th><th>&gt;</th>').appendTo("#cal table thead tr");
 
 //	$('<thead><tr></tr></thead> ').appendTo('#cal table');
 	$('<tr></tr>').appendTo('#cal table thead');
@@ -66,14 +67,19 @@ function calendarInit(d){
 //			$('<td>hi'+i+'</td>').appendTo('#cal tbody');
 			if (curMonthStartDay == i && j==0)
 			{
-			$("#cal table tbody tr:eq("+j+")").append('<td>hi'+(startMCount++)+'</td>');
+			$("#cal table tbody tr:eq("+j+")").append('<td>hif'+(++startMCount)+'</td>');
 			}
 			else if (startMCount > 0)
 			{
-			if(calDay==startMCount)//check current day
-				$("#cal table tbody tr:eq("+j+")").append('<td><span style="opacity:0.5;">no'+(startMCount++)+'</span></td>');
-			else
-				$("#cal table tbody tr:eq("+j+")").append('<td>hi'+(startMCount++)+'</td>');
+				if(calDay==(startMCount+1))//check current day
+				{
+					$("#cal table tbody tr:eq("+j+")").append('<td><span style="opacity:0.5;">no'+(++startMCount)+'</span></td>');
+				}
+
+				else
+					$("#cal table tbody tr:eq("+j+")").append('<td>hi'+(++startMCount)+'</td>');
+
+
 			}
 
 			else 
@@ -86,6 +92,20 @@ function calendarInit(d){
 //		$('</tr>').appendTo('#cal table tbody');
 	}//rows
 
+}
+
+function nextMon(mId)
+{
+//	mId--;
+	alert("m"+mId);
+}
+function prevMon(mId)
+{
+//	mId--;
+	alert("m"+mId);
+
+
+//	alert("hello");
 }
 
 $(function(){
