@@ -15,6 +15,7 @@ var calStartMD;
 function calendarInit(d){
 	var day;
 
+	var zer=0;
 	if (d ==null)
 	{
 //	alert("da  undef");
@@ -37,7 +38,7 @@ function calendarInit(d){
 	var monthName;
 	var dayName=day.toDateString().split(" ").slice(0,1);
 
-//	alert("mon"+calMonth.toString());
+	alert("mon"+calMonth.toString());
 //	alert("calSD"+curMonthStartDay+"::"+curMonthStart.toDateString());	
 //	alert("calSD"+calDay);	
 //	$("#cal").append("<table id=\"tabCal\" style=\"width:200;height:100;color:#3344ff;\" border=\"1\" cellspacing=\"2\" cellpadding=\"2\" >");
@@ -47,7 +48,7 @@ function calendarInit(d){
 	$('<thead><tr></tr></thead> ').appendTo('#cal table');
 
 
-	$('<th sytle="border: 1px solid white;"><a onclick="function(){prevMon(calMonth);};">&lt;</a></th><th colspan="5" style="text-align:center;">'+day.toDateString().split(" ").slice(1,2)+'</th><th>&gt;</th>').appendTo("#cal table thead tr");
+	$('<th sytle="border: 1px solid white;"><a onclick="prevMon(0);">&lt;</a></th><th colspan="5" style="text-align:center;">'+day.toDateString().split(" ").slice(1,2)+'</th><th>&gt;</th>').appendTo("#cal table thead tr");
 
 //	$('<thead><tr></tr></thead> ').appendTo('#cal table');
 	$('<tr></tr>').appendTo('#cal table thead');
@@ -97,12 +98,24 @@ function calendarInit(d){
 function nextMon(mId)
 {
 //	mId--;
+	var monat=new Array("january","february","march","april","may","june","july","august","september","october","november","december");
 	alert("m"+mId);
 }
 function prevMon(mId)
 {
 //	mId--;
-	alert("m"+mId);
+//	alert("m"+mId.getMonth());
+//	alert("m"+mId);
+	var curM=0;
+	var monat=new Array("january","february","march","april","may","june","july","august","september","october","november","december");
+	var tabH=$("#cal table thead tr:eq(0) th:eq(1)").text();
+
+	for (i=0;i++;i< monat.length)
+	{
+		if ($("#cal table thead tr:eq(0) th:eq(1):contains("+monat[i]+")").text().length >0)
+			curM=i;	
+	}
+	alert("m"+curM+tabH);
 
 
 //	alert("hello");
