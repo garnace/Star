@@ -48,7 +48,7 @@ function calendarInit(d){
 	$('<thead><tr></tr></thead> ').appendTo('#cal table');
 
 
-	$('<th sytle="border: 1px solid white;"><a onclick="prevMon(0);">&lt;</a></th><th colspan="5" style="text-align:center;">'+day.toDateString().split(" ").slice(1,2)+'</th><th>&gt;</th>').appendTo("#cal table thead tr");
+	$('<th sytle="border: 1px solid white;"><a onclick="prevMon(0);">&lt;</a></th><th colspan="5" style="text-align:center;">'+day.toDateString().split(" ").slice(1,2).toString().toLowerCase().slice(0,3)+'</th><th>&gt;</th>').appendTo("#cal table thead tr");
 
 //	$('<thead><tr></tr></thead> ').appendTo('#cal table');
 	$('<tr></tr>').appendTo('#cal table thead');
@@ -109,13 +109,14 @@ function prevMon(mId)
 	var curM=0;
 	var monat=new Array("january","february","march","april","may","june","july","august","september","october","november","december");
 	var tabH=$("#cal table thead tr:eq(0) th:eq(1)").text();
-
-	for (i=0;i++;i< monat.length)
+//	var tabA=$("#cal table thead tr:eq(0) th:contains("+monat[i].toString().slice(0,3)+")").text();
+	var tabA=$("#cal table thead tr:eq(0) th:eq(1):contains("+monat[8].toString().slice(0,3)+")").text();
+	for (var i=0;i< monat.length;i++)
 	{
-		if ($("#cal table thead tr:eq(0) th:eq(1):contains("+monat[i]+")").text().length >0)
+		if ($("#cal table thead tr:eq(0) th:eq(1):contains("+monat[i].toString().slice(0,3)+")").text().length >0)
 			curM=i;	
 	}
-	alert("m"+curM+tabH);
+	alert("m"+tabA+curM+tabH+monat[7].toString().slice(0,3) + monat.length);
 
 
 //	alert("hello");
