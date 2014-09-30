@@ -154,26 +154,102 @@ background-image:url('../images/ss054.gif');
 	position:absolute;
 	font-size:22px;
 }
-.regRadx0
+
+
+
+
+
+.regTRadx0
 {
 	float:left;
 	display:inline;
-	width:200px;
+//	width:200px;
+	width:20%;
 	background-color:blue;
 //	margin: 0 5px 5px 20px;
-	margin: 0 auto 0 10%;
+	margin: 0 auto 0 20%;
 
 }
-.regRadx1
+.regTRadx1
 {
 	float:left;
 	display:inline;
-	width:200px;
+//	width:200px;
+	width:20%;
 	background-color:yellow;
 //	margin: 0 5px 5px 20px;
 //	margin: 0 20% 0 auto;
 
 }
+.regTRadx2
+{
+	float:left;
+	display:inline;
+//	width:200px;
+	width:20%;
+	background-color:green;
+//	margin: 0 5px 5px 20px;
+//	margin: 0 20% 0 auto;
+
+}
+
+
+
+
+
+
+.regDRadx0
+{
+	float:left;
+	display:inline;
+//	width:200px;
+	width:20%;
+	background-color:blue;
+//	margin: 0 5px 5px 20px;
+	margin: 0 auto 0 20%;
+
+}
+.regDRadx1
+{
+	float:left;
+	display:inline;
+//	width:200px;
+	width:20%;
+	background-color:yellow;
+//	margin: 0 5px 5px 20px;
+//	margin: 0 20% 0 auto;
+
+}
+
+
+
+
+
+.regPRadx0
+{
+	float:left;
+	display:inline;
+//	width:200px;
+	width:20%;
+	background-color:blue;
+//	margin: 0 5px 5px 20px;
+	margin: 0 auto 0 20%;
+
+}
+
+.regPRadx1
+{
+	float:left;
+	display:inline;
+//	width:200px;
+	width:20%;
+	background-color:yellow;
+//	margin: 0 5px 5px 20px;
+//	margin: 0 20% 0 auto;
+
+}
+
+
 
 
 #imdivp #imagesp{
@@ -447,7 +523,7 @@ p label
 //    width:392px;
 //    height:392px;
  //   font-size:12px;
-    font-color:#ff0000;
+    font-color:#00ff00;
 //	background-color:#ff0000;
     color:#5577ff;
     font-size:15px;
@@ -586,12 +662,31 @@ p label
 //	display:none;
 }
 
+.quickflip-wrapper
+{
+	width:50px;
+	height:50px;
+}
 
 .quickflip-wrapper2
 {
 	width:75px;
 	height:75px;
 }
+
+.quickflip-wrapper3 div img
+{
+//	width:75px;
+//	height:75px;
+
+	width:60px;
+	height:60px;
+
+	border-radius:7px;
+}
+
+
+
 
 .quickflip-wrapper3
 {
@@ -622,22 +717,6 @@ p label
 	height:75px;
 }
 
-.quickflip-wrapper3 div img
-{
-//	width:75px;
-//	height:75px;
-
-	width:60px;
-	height:60px;
-
-	border-radius:7px;
-}
-
-.quickflip-wrapper
-{
-	width:50px;
-	height:50px;
-}
 
 
 #imdiv #fb1

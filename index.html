@@ -392,18 +392,18 @@ $(document).ready(function(){
 	<fieldset>
 	<legend>Tables Available</legend>
 
-	<div class="regRadx0">
+	<div class="regTRadx0">
 
-		<input type="radio" id="regRad0" name="regColor" value="black" checked="checked" />
-		<label for="regRad0" style="display:inline;">Table 1 (1 seat left)</label>
+		<input type="radio" id="regTRad0" name="regTable" value="black" checked="checked" />
+		<label for="regTRad0" style="display:inline;">Table 1 (1 seat left)</label>
 </br>
 </br>
 
-		<input type="radio" id="regRad1" name="regColor" value="white" />
-		<label for="regRad1" style="display:inline;">Table 2 (3 seats left)</label>
+		<input type="radio" id="regTRad1" name="regTable" value="white" />
+		<label for="regTRad1" style="display:inline;">Table 2 (3 seats left)</label>
 </br>
 		<br/>
-		<input type="button" id="regRad2" name="regColor" value="Select Dish" style="width:80px;" />
+		<input type="button" id="regTxBut0" name="regTxBut0" value="Select Dish" style="width:80px;" />
 	
 
 
@@ -414,20 +414,20 @@ $(document).ready(function(){
 
 
 	</div><!-- .regRadx0-->
-	<div class="regRadx1">
+	<div class="regTRadx1">
 
-		<input type="radio" id="regRad4" name="regColor" value="yellow"  />
-		<label for="regRad4" style="display:inline;">Table 3(2 seats left)</label>
+		<input type="radio" id="regTRad4" name="regTable" value="yellow"  />
+		<label for="regTRad4" style="display:inline;">Table 3(2 seats left)</label>
 
 </br>
 </br>
-		<input type="radio" id="regRad5" name="regColor" value="orange" />
-		<label for="regRad5" style="display:inline;">Table 4 (3 Seats Left)</label>
+		<input type="radio" id="regTRad5" name="regTable" value="orange" />
+		<label for="regTRad5" style="display:inline;">Table 4 (3 Seats Left)</label>
 
 		<br/>
 		<br/>
 
-		<input type="button" id="regRad6" name="regColor" value="Select Dish" onclick="getSectionLO(0);" />
+		<input type="button" id="regTxBut1" name="regTxBut1" value="Select Dish" onclick="getSectionLO(0);" />
 
 
 
@@ -436,6 +436,28 @@ $(document).ready(function(){
 
 
 	</div><!-- .regRadx1-->
+	<div class="regTRadx2">
+
+		<input type="radio" id="regTRad6" name="regTable" value="yellow"  />
+		<label for="regTRad4" style="display:inline;">Table 3(2 seats left)</label>
+
+</br>
+</br>
+		<input type="radio" id="regTRad7" name="regTable" value="orange" />
+		<label for="regTRad5" style="display:inline;">Table 4 (3 Seats Left)</label>
+
+		<br/>
+		<br/>
+
+		<input type="button" id="regTxBut2" name="regTxBut2" value="Select Dish" onclick="getSectionLO(0);" />
+
+
+
+
+
+
+
+	</div><!-- .regRadx2-->
 
 
 
@@ -447,15 +469,16 @@ $(document).ready(function(){
 	<fieldset>
 	<legend>Select Dish</legend>
 
-	<div class="regRadx0">
+	<div class="regDRadx0">
+		<p>
+		<input type="radio" id="regDRad0" name="regDish" value="Italian" checked="checked" />
+		<label for="regDRad0" style="display:inline;">Italian</label>
+		</p>
 
-		<input type="radio" id="regRad0" name="regColor" value="black" checked="checked" />
-		<label for="regRad0" style="display:inline;">Italian</label>
-
-
-		<input type="radio" id="regRad1" name="regColor" value="white" />
-		<label for="regRad1" style="display:inline;">Tai</label>
-
+		<p>
+		<input type="radio" id="regDRad1" name="regDish" value="Thai" />
+		<label for="regDRad1" style="display:inline;">Tai</label>
+		</p>
 		<br/>
 		<br/>
 		<br/>
@@ -464,21 +487,21 @@ $(document).ready(function(){
 
 
 	</div><!-- .regRadx0-->
-	<div class="regRadx1">
+	<div class="regDRadx1">
 
-		<input type="radio" id="regRad4" name="regColor" value="yellow"  />
+		<input type="radio" id="regDRad4" name="regDish" value="Veg"  />
 		<label for="regRad4" style="display:inline;">Vegetarian</label>
 
 
-		<input type="radio" id="regRad5" name="regColor" value="orange" />
-		<label for="regRad5" style="display:inline;">Mexican</label>
+		<input type="radio" id="regDRad5" name="regDish" value="Mex" />
+		<label for="regDRad5" style="display:inline;">Mexican</label>
 
 		<br/>
 	
 		<br/>
 		<br/>
 
-		<input type="button" id="regRad6" name="regColor" value="Go To PayOut" onclick="getSectionPLO(0);" />
+		<input type="button" id="regDBut1" name="regDBut1" value="Go To PayOut" onclick="getSectionPLO(0);" />
 
 
 	</div><!-- .regRadx1-->
@@ -491,15 +514,15 @@ $(document).ready(function(){
 	<fieldset>
 	<legend>Select Payment Method</legend>
 
-	<div class="regRadx0">
+	<div class="regPRadx0">
 
-		<input type="radio" id="regRad0" name="regColor" value="black" checked="checked" />
-		<label for="regRad0" style="display:inline;">Visa</label>
+		<input type="radio" id="regPRad0" name="regPay" value="Visa" checked="checked" />
+		<label for="regPRad0" style="display:inline;">Visa</label>
 </br>
 </br>
 
-		<input type="radio" id="regRad1" name="regColor" value="white" />
-		<label for="regRad1" style="display:inline;">Master Card</label>
+		<input type="radio" id="regPRad1" name="regPay" value="Master" />
+		<label for="regPRad1" style="display:inline;">Master Card</label>
 </br>
 		<br/>
 
@@ -513,14 +536,14 @@ $(document).ready(function(){
 
 
 	</div><!-- .regRadx0-->
-	<div class="regRadx1">
+	<div class="regPRadx1">
 
-		<input type="radio" id="regRad4" name="regColor" value="yellow"  />
+		<input type="radio" id="regPRad4" name="regPay" value="paypal"  />
 		<label for="regRad4" style="display:inline;">Paypal</label>
 
 </br>
 </br>
-		<input type="radio" id="regRad5" name="regColor" value="orange" />
+		<input type="radio" id="regRad5" name="regPay" value="mo" />
 		<label for="regRad5" style="display:inline;">Money Order</label>
 
 		<br/>
