@@ -1,20 +1,21 @@
 @CHARSET "ISO-8859-1";
-//Course:  CS3210
-//Name:  Aikan Van Spyk
-//ID: 0099364
+/**************************************
+Course:  CS3210
+Name:  Aikan Van Spyk
+ID: 0099364
 
 
-//Project: Star Advisor
-//----------------------------------
+Project: Star Advisor
+----------------------------------
 
 
 
-//-#c
-//--{
+-#c
+--{
 
 
-//--}
-
+--}
+************************/
 #content {
       background-color: #FFF;
       border-radius: 5px;
@@ -165,10 +166,11 @@ background-image:url('../images/ss054.gif');
 	display:inline;
 //	width:200px;
 	width:20%;
-	background-color:blue;
+//	background-color:blue;
 //	margin: 0 5px 5px 20px;
 	margin: 0 auto 0 20%;
-
+	padding:10px 5px 15px 10px;
+//	padding: 0 5px 0 5px;
 }
 .regTRadx1
 {
@@ -178,8 +180,9 @@ background-image:url('../images/ss054.gif');
 	width:20%;
 	background-color:yellow;
 //	margin: 0 5px 5px 20px;
-//	margin: 0 20% 0 auto;
-
+	margin: 0 auto 0 0;
+	padding:10px 5px 15px 10px;
+//	padding: 0 5px 0 5px;
 }
 .regTRadx2
 {
@@ -190,7 +193,8 @@ background-image:url('../images/ss054.gif');
 	background-color:green;
 //	margin: 0 5px 5px 20px;
 //	margin: 0 20% 0 auto;
-
+	padding:10px 5px 15px 10px;
+//	padding: 0 5px 0 5px;
 }
 
 
@@ -266,14 +270,14 @@ background-image:url('../images/ss054.gif');
 //#imdivp #imagesp img{
 
 
-//------------------------------------
-// Flikr img styling modified from:
+/**------------------------------------
+ Flikr img styling modified from:
 
-//http://richardshepherd.com/how-to-use-jquery-with-a-json-flickr-feed-to-display-photos/
+http://richardshepherd.com/how-to-use-jquery-with-a-json-flickr-feed-to-display-photos/
 
-//http://www.richardshepherd.com/flickr.html
-//-------------------------------------------
-
+http://www.richardshepherd.com/flickr.html
+-------------------------------------------
+**/
 
   //  border: solid #021a40;
 
@@ -297,14 +301,13 @@ background-image:url('../images/ss054.gif');
 #imdiv #images img{
 
 
-//------------------------------------
-// Flikr img styling modified from:
+/**------------------------------------
+ Flikr img styling modified from:
+http://richardshepherd.com/how-to-use-jquery-with-a-json-flickr-feed-to-display-photos/
 
-//http://richardshepherd.com/how-to-use-jquery-with-a-json-flickr-feed-to-display-photos/
-
-//http://www.richardshepherd.com/flickr.html
-//-------------------------------------------
-
+http://www.richardshepherd.com/flickr.html
+-------------------------------------------
+**/
 
     border: solid #921a40;
 //    backbround-color:#ff0;
@@ -357,7 +360,14 @@ background-image:url('../images/ss054.gif');
 	opacity:0.4;
 //	display:inline;
 }
-
+.tbl
+{
+	color:#000000;
+//	indentation:5px;
+	padding-left:5pt;
+	padding-right:5pt;
+	background-color:#FF0000;
+}
 #imagesky{
 //    height:1165px;
 //    width:1165px;
