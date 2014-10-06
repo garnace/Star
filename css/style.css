@@ -699,6 +699,26 @@ p label
 	border-radius:100px;
 }
 
+.dih img
+{
+//	width:75px;
+//	height:75px;
+
+	width:60px;
+	height:60px;
+
+//	border-radius:7px;
+	border-radius:100px;
+}
+
+.dih
+{
+	width:60px;
+	height:60px;
+	margin:10px 5px 15px 10px;
+//	padding:10px 5px 15px 10px;
+	position:relative;
+}
 
 
 
