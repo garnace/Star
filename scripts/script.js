@@ -329,7 +329,8 @@ function boardDoubler(pI)
 		var iD="<div class=\"quickflip-wrapper3 qw"+i+"\" style=\"float:left;display:inline;\">";
 
 
-		iD=iD+"<div class=\"di1\"><div class=\"img-frame\"> <img src=\"images/Yoursky.gif\" class=\"img-responsive\" /><div class=\"img-frame-hover\"><a href=\"#\" class=\"quickFlipCta\"><i class=\"fa fa-cutlery\"></i></a></div> </div> </div>";
+//		iD=iD+"<div class=\"di1\"><div class=\"img-frame\"> <img src=\"images/Yoursky.gif\" class=\"img-responsive\" /><div class=\"img-frame-hover\"><a href=\"#\" class=\"quickFlipCta\"><i class=\"fa fa-play-circle\"></i></a></div> </div> </div>";
+		iD=iD+"<div class=\"di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"images/Yoursky.gif\" class=\"img-responsive\" /></a></div>";
 		iD=iD+"<div class=\"di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\""+pAA[i].media.m+"\" title=\""+pAA[i].title+"\" /></a></div>";
 
 		iD=iD+"</div>";

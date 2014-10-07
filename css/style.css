@@ -136,7 +136,7 @@ cakefactory img-frame
 	z-index: 10;
 	max-width: 300px;
 	margin: 0 auto;
-	margin-top: 10px;
+//	margin-top: 10px;
 	padding: 2px;
 	border: 1px solid rgba(0,0,0,0.2);
 	border-radius: 400px;
@@ -752,11 +752,11 @@ p label
 //	width:75px;
 //	height:75px;
 
-	width:60px;
+	width:58px;
 	height:60px;
 
 //	border-radius:7px;
-	border-radius:100px;
+//	border-radius:100px;
 }
 
 .dih img
@@ -786,7 +786,8 @@ p label
 {
 	width:60px;
 	height:60px;
-	margin:10px 5px 15px 10px;
+//	margin:10px 5px 15px 10px;
+	margin:5px 5px 15px 5px;
 //	padding:10px 5px 15px 10px;
 	position:relative;
 }
