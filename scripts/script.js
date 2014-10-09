@@ -929,7 +929,7 @@ function getSFeedTerm(tId)
     document.getElementById("imagesky").style.display="none";
     document.getElementById("searchDi").style.display="";
 	$(document).ready(function(){
-		$('#tabs').tabs({selected:2});
+		$('#tabs').tabs({selected:tId});
 	});
 
 
