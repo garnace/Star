@@ -83,8 +83,8 @@ try{
         }
 
 $iB=array();
-//$iB['users']=array(array("message"=>"DataBase loaded"));
-$iB['users']=$iA;
+$iB['users']=array(array("message"=>"DataBase loaded"));
+//$iB['users']=$iA;
 
 
 unset ($pdo);
