@@ -5,6 +5,31 @@
 	@returns boolean 
 **/
 
+function valReservation(oForm)
+{
+	var showErr = 0;
+
+//	with (oForm.formreg.regform  regTRadx0)
+//	{
+		
+//	}
+//	for (var i=0;i< )
+
+
+	if (showErr==1)
+	{
+		//alert("Err"+showErr);	
+
+        	return false;
+	}
+
+
+        	return true;
+
+
+}
+
+
 function valUser(oForm)
 {
     var dat= "1234";

@@ -537,7 +537,8 @@ $(document).ready(function(){
 <!--*****************formreg ****************-->
 
 <div id="formreg" >
-<form  action="insertreg.php" method="post" id="regform" name="regform">
+<form  action="insertreg.php" method="post" id="regform" name="regform"
+onsubmit="return valReservation(this)">
 
 <!--*****************formreg field 0 ****************-->
 <div id="field0">
@@ -550,9 +551,27 @@ $(document).ready(function(){
 
 
 	<div class="regChex0">
+	<input type="checkbox" id="prefwin" name="prefChk[]"/>	
+	<label style="display:inline;">window seating</label>
+	<br/>
+	<input type="checkbox" id="prefbench" name="prefChk[]"/>	
+	<label style="display:inline;">bench seating</label>
+	<br/>
+	<input type="checkbox" id="prefbench" name="prefChk[]"/>	
+	<label style="display:inline;">display seating (ie. fishtank)</label>
+
+	</div><!-- /.regChex1-->
+	<div class="regChex1">
+	<input type="checkbox" id="prefcasual" name="prefChk[]"/>	
+	<label style="display:inline;">cacual seating</label>
+	<br/>
+	<input type="checkbox" id="prefbusiness" name="prefChk[]"/>	
+	<label style="display:inline;">business seating</label>
+	<br/>
 
 
-	</div><!-- .regChex0-->
+
+	</div><!-- /.regChex1-->
 
 
 
@@ -766,10 +785,10 @@ $(document).ready(function(){
 
 
 
-		</div><!--controls-->
-	</div><!--control-group-->
+		</div><!--/controls-->
+	</div><!--/control-group-->
 
-	</div><!--row-->
+	</div><!--/row-->
 
 
 </form><!--regform-->
