@@ -8,10 +8,38 @@
 function valReservation(oForm)
 {
 	var showErr = 0;
+	var cxPref = null;
+
+	var errPrefBC=0;
+	cxPref = new Array();
 
 //	with (oForm.formreg.regform  regTRadx0)
+//	with (oForm.regform prefChk)
 //	{
-		
+	with (oForm)
+	{
+	for (var i = 0;i<prefChk.length;i++)
+	{
+		if (prefChk[i].checked==true)
+		{
+			cxPref.push(prefChk[i].value);
+		}
+	}
+	}
+	for (i=0;i<cxPref.length;i++)
+	{
+
+		if (cxPref[i] == 'business' || cxPref[i] =='casual')
+			for (j=0;j<cxPref.length;j++)
+			{
+
+				if ((cxPref[j] == 'business' || cxPref[j] =='casual') && i!=j)
+					errPrefBC=1;
+			}
+	}
+
+
+
 //	}
 //	for (var i=0;i< )
 
@@ -23,8 +51,8 @@ function valReservation(oForm)
         	return false;
 	}
 
-
-        	return true;
+	getSectionLO(0);
+       	return true;
 
 
 }
