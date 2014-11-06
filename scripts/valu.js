@@ -318,6 +318,23 @@ function valNum(el,msgg)
 **/
 
 $(function(){
+
+//$('input[checkbox]')
+//$('#addguest').toggle('#guestNum');
+//$('#addguest').click(function(){$('#guestNum').toggle();});
+//$('#addguest').click(function(){$('#guestNum').css({display:'inline',opacity:0.4});});
+
+$('#addguest').toggle(function()
+	{
+	$('#guestNum').css({display:'inline',opacity:0.4});
+	},function()
+	{
+	$('#guestNum').css({display:'none'});
+	}
+
+	);
+
+//$('#addguest').click(function(){$('#guestNum').css({display:'block';color:#330044});});
 $('#tabs').tabs();
 
 $('.quickflip-wrapper').quickFlip();

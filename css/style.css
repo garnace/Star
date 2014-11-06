@@ -414,12 +414,13 @@ background-image:url('../images/ss054.gif');
 .regChex0
 {
 	float:left;
-	display:line;
+//	display:line;
+	display:inline;
 }
 .regChex1
 {
 	float:left;
-	display:line;
+	display:inline;
 }
 
 

@@ -563,7 +563,7 @@ onsubmit="return valReservation(this)">
 <div id="fieldSeat">
 
 	<fieldset>
-	<legend>Narrow By Seat Preference<span><i class="fa fa-phone red">88</i></span> </legend>
+	<legend>Narrow By Seat Preference<span><i class="fa fa-phone red"> 88</i></span> </legend>
 
 	<div class="regChex0">
 	<input type="checkbox" id="prefwin" name="prefChk[]" value="win"/>	
@@ -583,7 +583,16 @@ onsubmit="return valReservation(this)">
 	<input type="checkbox" id="prefbusiness" name="prefChk[]" value="business"/>	
 	<label style="display:inline;">business seating</label>
 	<br/>
+	<input type="checkbox" id="addguest" name="prefChk[]" value="guest">
+	<label style="display:inline;" > add guest</label>
 	<br/>
+	<!--select id="guestNum" name="guestNum" style="display:none;"-->
+	<label for="guestNum">add</label>
+	<select id="guestNum" name="guestNum" style="display:none;">
+		<!--option value="0" selected="selected">0</option-->
+		<option value="1" selected="selected">1</option>
+		<option value="2" >2</option>
+	<select>
 	<br/>
 	<br/>
 	</div><!-- /.regChex1-->
