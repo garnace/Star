@@ -410,7 +410,40 @@ background-image:url('../images/ss054.gif');
 	font-size:22px;
 }
 
+.simple_overlay
+{
+	display:none;
+	z-index:1000;
+	width:300px;
+	min-height:350px;
+	background-color:#777777;
+}
+.simple_overlay .close
+{
+	background-image:url(../../Lab14/images/close.png);
+	position:absolute;
+	top:-15px;
+	right:-15px;
+	height:35px;
+	width:35px;
+	opacity:1.0;
+}
 
+.simple_overlay .details
+{
+
+	position:absolute;
+	top:15px;
+	left:15px;
+	width:200px;
+	color:#ffffff;
+}
+
+
+.guestC
+{
+	color:#000044;
+}
 .regChex0
 {
 	float:left;
@@ -421,6 +454,15 @@ background-image:url('../images/ss054.gif');
 {
 	float:left;
 	display:inline;
+	margin:0 10px 0 10px;
+
+}
+.regChex2
+{
+	float:left;
+	display:inline;
+	margin:0 10px 0 10px;
+
 }
 
 

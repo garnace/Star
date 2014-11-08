@@ -9,7 +9,7 @@
 <link href="css/style.css" rel="stylesheet" type="text/css" title="starA">
 <link href="../cf/theme/css/less-style.css" rel="stylesheet" type="text/css" >
 <link href="../cf/theme/css/bootstrap.css" rel="stylesheet" type="text/css" title="starA">
-<link href="b320/css/bootstrap.css" rel="stylesheet" type="text/css" title="starA">
+<link href="b320/css/bootstrap.css" rel="stylesheet" type="text/css" title="starvA">
 <!--link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" rel="stylesheet"-->
 
 <!--################################3##3##########33#####33#-->
@@ -35,12 +35,13 @@
 <!--link rel="shortcut icon" href="http://glyphicons.com/wp-content/themes/glyphicons/sk/public/favicon.ico"-->
 
 
-<script type="text/javascript" src="scripts/jquery.tools.min.js"></script>
+<!--overlay-script type="text/javascript" src="scripts/jquery.tools.min.js"></script-->
 
 
 <script type="text/javascript" src="scripts/jquery-1.8.0.min.js"></script>
 <script type="text/javascript" src="scripts/jquery-ui-1.8.23.custom.min.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
+<script type="text/javascript" src="scripts/jquery.tools.min.js"></script>
 <!--script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script-->
 
 
@@ -318,6 +319,11 @@ $(document).ready(function(){
 
 </div><!--imdiv-->
 
+<div class="simple_overlay"  id="mies">
+	<div class="details">
+	</div>
+</div>
+
 <div id="imdivp" >
 
 
@@ -566,36 +572,53 @@ onsubmit="return valReservation(this)">
 	<legend>Narrow By Seat Preference<span><i class="fa fa-phone red"> 88</i></span> </legend>
 
 	<div class="regChex0">
-	<input type="checkbox" id="prefwin" name="prefChk[]" value="win"/>	
-	<label style="display:inline;">window seating</label>
-	<br/>
-	<input type="checkbox" id="prefbench" name="prefChk[]" value="bench"/>	
-	<label style="display:inline;">bench seating</label>
-	<br/>
-	<input type="checkbox" id="prefdisplay" name="prefChk[]" value="display"/>	
-	<label style="display:inline;">display seating (ie. fishtank)</label>
+		<input type="checkbox" id="prefwin" name="prefChk[]" value="win"/>	
+		<label style="display:inline;">window seating</label>
+		<br/>
+		<input type="checkbox" id="prefbench" name="prefChk[]" value="bench"/>	
+		<label style="display:inline;">bench seating</label>
+		<br/>
+		<input type="checkbox" id="prefdisplay" name="prefChk[]" value="display"/>	
+		<label style="display:inline;">display seating (ie. fishtank)</label>
 
 	</div><!-- /.regChex0-->
 	<div class="regChex1">
-	<input type="checkbox" id="prefcasual" name="prefChk[]" value="casual"/>	
-	<label style="display:inline;">casual seating</label>
-	<br/>
-	<input type="checkbox" id="prefbusiness" name="prefChk[]" value="business"/>	
-	<label style="display:inline;">business seating</label>
-	<br/>
-	<input type="checkbox" id="addguest" name="prefChk[]" value="guest">
-	<label style="display:inline;" > add guest</label>
-	<br/>
+		<input type="checkbox" id="prefcasual" name="prefChk[]" value="casual"/>	
+		<label for="prefcasual" style="display:inline;">casual seating</label>
+		<br/>
+		<input type="checkbox" id="prefbusiness" name="prefChk[]" value="business"/>	
+		<label for="prefbusiness" style="display:inline;">business seating</label>
+		<br/>
+		<input type="checkbox" id="addguest" name="prefChk[]" value="guest">
+		<label for="addguest" style="display:inline;" > add guest</label>
+		<br/>
 	<!--select id="guestNum" name="guestNum" style="display:none;"-->
-	<label for="guestNum">add</label>
-	<select id="guestNum" name="guestNum" style="display:none;">
+		<label id="guestLab" class="guestC" style="display:none;" for="guestNum">party of</label>
+		<select id="guestNum" class="guestC" name="guestNum" style="display:none;">
 		<!--option value="0" selected="selected">0</option-->
-		<option value="1" selected="selected">1</option>
-		<option value="2" >2</option>
-	<select>
-	<br/>
-	<br/>
+			<option value="2" selected="selected">1</option>
+			<option value="3" >2</option>
+		<select>
+		<br/>
+		<br/>
 	</div><!-- /.regChex1-->
+	<div class="regChex2">
+		<input type="checkbox" id="prefcasual" name="prefChk[]" value="casual"/>	
+		<label style="display:inline;">casual2 seating</label>
+		<br/>
+		<input type="checkbox" id="prefbusiness" name="prefChk[]" value="business"/>	
+		<label style="display:inline;">business seating</label>
+		<br/>
+		<input type="button" id="about" name="about" value="about" rel="#mies"/>
+		<label for="about" style="display:inline;" > about seat</label>
+		<br/>
+		<br/>
+		<br/>
+	</div><!-- /.regChex2-->
+
+
+
+
 	</fieldset>
 </div>
 
