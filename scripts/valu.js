@@ -349,39 +349,18 @@ $('#addguest').click(function()
 	$('#addguest').css({display:'inline'});
 //	$('#addguest').css({display:'inline',opacity:0.4});
 
-	$('#guestNum').css({display:'inline'});
-	$('#guestLab').css({display:'inline'});
+	$('#guestNum').css({display:'inline',opacity:1.0});
+	$('#guestLab').css({display:'inline',opacity:1.0});
 	}
 	else
 	{
 //	$('#addguest').css({display:'inline',opacity:0.8});
 	$('#addguest').css({display:'inline'});
-	$('#guestNum').css({display:'none'});
-	$('#guestLab').css({display:'none'});
+	$('#guestNum').css({display:'none',opacity:0.0});
+	$('#guestLab').css({display:'none',opacity:0.0});
 	}
 
-	});//------/#addguest checked----------- 
-
-$('#addguest2').click(function()
-	{
-	if ($('#addguest2:checked').length == 1)
-	{
-
-	$('#addguest2').css({display:'inline'});
-//	$('#addguest').css({display:'inline',opacity:0.4});
-
-	$('#guestNum2').css({display:'inline'});
-	$('#guestLab2').css({display:'inline'});
-	}
-	else
-	{
-//	$('#addguest').css({display:'inline',opacity:0.8});
-	$('#addguest2').css({display:'inline'});
-	$('#guestNum2').css({display:'none'});
-	$('#guestLab2').css({display:'none'});
-	}
-
-	});//------/#addguest2 checked----------- 
+	});//------/--#addguest checked----------- 
 
 
 
