@@ -1075,7 +1075,7 @@ p label
 
 }
 
-//.controls-row .control-group
+//.controls-row .form-group
 //{
 //	height:100px;
 //	display:table-cell;
@@ -1090,7 +1090,7 @@ p label
 }
 
 
-.controls-row .control-group .control-label
+.controls-row .form-group .control-label
 {
 //	vertical-align:bottom;
 //	vertical-align:top;
@@ -1101,7 +1101,7 @@ p label
 //	bottom:0px;
 //}
 
-.control-group label
+.form-group label
 {
 //	width:140px;
 //	height:35px;
@@ -1112,7 +1112,7 @@ p label
 	whitespace:normal;
 	overflow:hidden;
 }
-.control-group .controls 
+.form-group .controls 
 {
 //	display:table-cell;
 //	vertical-align:bottom;
@@ -1156,7 +1156,7 @@ input[type="checkbox"]
 	clear:both;
 }
 
-.control-group .controls input
+.form-group .controls input
 {
 	width:100%;
 //	height:100%;

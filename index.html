@@ -470,7 +470,7 @@ $(document).ready(function(){
 
 	<!--input type="submit" value="Send it!" onclick=" valUser(document.forms["user_check"]) ;"-->
 
-	<div  class="control-group col-sm-3"  >
+	<div  class="form-group col-sm-3"  >
 
 		<div class="controls">
 
@@ -479,9 +479,9 @@ $(document).ready(function(){
 
 
 		</div><!--controls-->
-	</div><!--control-group-->
+	</div><!--form-group-->
 
-	<div  class="control-group col-sm-3"  >
+	<div  class="form-group col-sm-3"  >
 
 		<div class="controls">
 
@@ -491,7 +491,7 @@ $(document).ready(function(){
 
 
 		</div><!--controls-->
-	</div><!--control-group-->
+	</div><!--form-group-->
 
 
 	</div><!--row-->
@@ -499,7 +499,7 @@ $(document).ready(function(){
 	<div class="controls-row">
 
 
-	<div  class="control-group col-sm-3"  >
+	<div  class="form-group col-sm-3"  >
 
 		<div class="controls">
 
@@ -509,10 +509,10 @@ $(document).ready(function(){
 
 
 		</div><!--controls-->
-	</div><!--control-group-->
+	</div><!--form-group-->
 
 
-	<div  class="control-group col-sm-3"  >
+	<div  class="form-group col-sm-3"  >
 
 		<div class="controls">
 
@@ -522,7 +522,7 @@ $(document).ready(function(){
 
 
 		</div><!--controls-->
-	</div><!--control-group-->
+	</div><!--form-group-->
 	</div><!--row-->
 
 </form>
@@ -536,7 +536,7 @@ $(document).ready(function(){
 
 <div id="tabs-2"><h4>Days Available next 2 weeks </h4>
 </br>
-<div class="dih"><div class="img-frame"> <img src="images/Yoursky.gif" class="img-responsive" /><div class="img-frame-hover"><a href="#"><i class="fa fa-cutlery"></i></a></div> </div> </div>
+<div class="dih"><div class="img-frame"> <img src="images/Yoursky.gif" class="img-responsive" /><div class="img-frame-hover"><a href="#" title="header[note]body[helpful message]"><i class="fa fa-cutlery"></i></a></div> </div> </div>
 <!--# img src="images/Yoursky.gif" width="50" height="50" /-->
 
 <div id="cal">&nbsp;</div>
@@ -573,13 +573,13 @@ onsubmit="return valReservation(this)">
 
 	<div class="regChex0">
 		<input type="checkbox" id="prefwin" name="prefChk[]" value="win"/>	
-		<label style="display:inline;">window seating</label>
+		<label for="prefwin" style="display:inline;">window seating</label>
 		<br/>
 		<input type="checkbox" id="prefbench" name="prefChk[]" value="bench"/>	
-		<label style="display:inline;">bench seating</label>
+		<label for="prefbench" style="display:inline;">bench seating</label>
 		<br/>
 		<input type="checkbox" id="prefdisplay" name="prefChk[]" value="display"/>	
-		<label style="display:inline;">display seating (ie. fishtank)</label>
+		<label for="prefdisplay" style="display:inline;">display seating (ie. fishtank)</label>
 
 	</div><!-- /.regChex0-->
 	<div class="regChex1">
@@ -593,7 +593,7 @@ onsubmit="return valReservation(this)">
 		<label for="addguest" style="display:inline;" > add guest</label>
 		<br/>
 	<!--select id="guestNum" name="guestNum" style="display:none;"-->
-		<label id="guestLab" class="guestC" style="display:none;" for="guestNum">party of</label>
+		<label for="guestNum" id="guestLab" class="guestC" style="display:none;" for="guestNum">party of</label>
 		<!--select id="guestNum" class="guestC" name="guestNum" style="display:none;"-->
 		<select id="guestNum" class="guestC" name="guestNum" style="opacity:0;">
 		<!--option value="0" selected="selected">0</option-->
@@ -605,10 +605,10 @@ onsubmit="return valReservation(this)">
 	</div><!-- /.regChex1-->
 	<div class="regChex2">
 		<input type="checkbox" id="prefcasual" name="prefChk[]" value="casual"/>	
-		<label style="display:inline;">casual2 seating</label>
+		<label for="prefcasual" style="display:inline;">casual2 seating</label>
 		<br/>
 		<input type="checkbox" id="prefbusiness" name="prefChk[]" value="business"/>	
-		<label style="display:inline;">business seating</label>
+		<label for="prefbusiness" style="display:inline;">business seating</label>
 		<br/>
 		<input type="button" id="about" name="about" value="about" rel="#mies"/>
 		<label for="about" style="display:inline;" > about seat</label>
@@ -653,7 +653,7 @@ onsubmit="return valReservation(this)">
 
 
 
-	</div><!-- .regRadx0-->
+	</div><!-- /.regRadx0-->
 	<div class="regTRadx1">
 	  <p  class="tbl">
 		<input type="radio" id="regTRad4" name="regTable" value="yellow"  />
@@ -819,7 +819,7 @@ onsubmit="return valReservation(this)">
 
 
 
-	<div  class="control-group col-sm-3"  >
+	<div  class="form-group col-sm-3"  >
 
 		<div class="controls">
 
@@ -830,7 +830,7 @@ onsubmit="return valReservation(this)">
 
 
 		</div><!--/controls-->
-	</div><!--/control-group-->
+	</div><!--/form-group-->
 
 	</div><!--/row-->
 
@@ -856,100 +856,102 @@ onsubmit="return valReservation(this)">
 
 	<fieldset>
 	<legend>Names</legend>
-	<div id="rw1"  class="controls-row"  >
-	<div  class="control-group col-sm-3"  >
+	<div id="rw1"  class="row"  >
+	<div  class="form-group col-sm-3"  >
 
 		<label class="control-label" for="yournamef"> First Name:<span class="espan" id="espanFirst"></span> </label> 
-		<div class="controls">
-		<input id="yournamef" class="col-sm-12" type="text"  name="yournamef" placeholder="Your Name:" />
-		</div><!--controls-->
+		<div class="input-group">
+		<input id="yournamef" class="form-control col-sm-12" type="text"  name="yournamef" placeholder="Your Name:" />
+		</div><!--cntrls input-group-->
 
-	</div><!--control-group-->
+	</div><!--form-group-->
 
-	<div  class="control-group col-sm-3"  >
+	<div  class="form-group col-sm-3"  >
 
 		<label class="control-label" for="yournamel"> Last Name:<span class="espan" id="espanLast"></span> </label> 
 		<div class="controls">
-		<input id="yournamel" class="col-sm-12" type="text"  name="yournamel" placeholder="Your Name:" />
-		</div><!--controls-->
+		<input id="yournamel" class="form-control col-sm-12" type="text"  name="yournamel" placeholder="Your Name:" />
+		</div><!--cntrls-->
 
-	</div><!--control-group-->
+	</div><!--form-group-->
 
 
-	<div  class="control-group col-sm-3"  >
+	<div  class="form-group col-sm-3"  >
 
 		<label class="control-label" for="yourp"> Phone:<span id="espanPhone" class="espan" ></span> </label> 
 		<div class="controls">
-		<input id="yourp" class="col-sm-12" type="text"  name="yourp" placeholder="Phone:" />
+		<input id="yourp" class="form-control col-sm-12" type="text"  name="yourp" placeholder="Phone:" />
 		</div><!--controls-->
 
-	</div><!--control-group-->
+	</div><!--form-group-->
 
 
-	</div><!--row-->
-
-	<div id="rw2"  class="controls-row"  >
 
 
-	<div  class="control-group col-sm-3"  >
+	<div  class="form-group col-sm-3"  >
 
 		<label class="control-label" for="youre"> Your Email:<span id="espanEmail" class="espan" ></span></label> 
 		<div class="controls">
-		<input id="youre" class="col-sm-12" type="text"  name="youre" placeholder="Your Email" />
+		<input id="youre" class="form-control col-sm-12" type="text"  name="youre" placeholder="Your Email" />
 		</div><!--controls-->
 
-	</div><!--control-group-->
+	</div><!--form-group-->
 
-	<div  class="control-group col-sm-3"  >
+	</div><!--row-->
+
+	<div id="rw2"  class="row"  >
+
+
+	<div  class="form-group col-sm-3"  >
 
 		<label class="control-label" for="yourmp"> Mobile Phone:<span id="espanMobile" class="espan" ></span> </label> 
 		<div class="controls">
-		<input id="yourmp" class="col-sm-12" type="text"  name="yourmp" placeholder="Mobile" />
+		<input id="yourmp" class="form-control col-sm-12" type="text"  name="yourmp" placeholder="Mobile" />
 		</div><!--controls-->
 
-	</div><!--control-group-->
+	</div><!--form-group-->
 
 
-	<div  class="control-group col-sm-3"  >
+	<div  class="form-group col-sm-3"  >
 
 		<label class="control-label" for="yourx"> Fax:<span id="espanFax" class="espan" ></span></label> 
 		<div class="controls">
-		<input id="yourx" class="col-sm-12" type="text"  name="yourx" placeholder="Your Fax:" />
+		<input id="yourx" class="form-control col-sm-12" type="text"  name="yourx" placeholder="Your Fax:" />
 		</div><!--controls-->
 
-	</div><!--control-group-->
+	</div><!--form-group-->
 
 
 	</div><!--row-->
 
 
-	<div id="rw3"  class="controls-row"  >
+	<div id="rw3"  class="row"  >
 
 <!------------------password row-------------------------------------------->
 
-	<div class="control-group col-sm-3">
+	<div class="form-group col-sm-3">
 		<label class="control-label" for="yourpw">Choose Password<span id="espanPass" class="espan" ></span></label>
 		<div class="controls">
-		<input id="yourpw" class="col-sm-12" type="password" name="yourpw" />
+		<input id="yourpw" class="form-control col-sm-12" type="password" name="yourpw" />
 		</div><!--controls-->
 
-	</div><!--control-group-->
+	</div><!--form-group-->
 
 
 
-	<div class="control-group col-sm-3">
+	<div class="form-group col-sm-3">
 		<label class="control-label" for="yourpwa">Re-enter Pass <span id="espanPassa" class="espan" ></span></label>
 		<div class="controls">
-		<input id="yourpwa" class="col-sm-12" type="password" name="yourpwa" />
+		<input id="yourpwa" class="form-control col-sm-12" type="password" name="yourpwa" />
 		</div><!--controls-->
 
-	</div><!--control-group-->
+	</div><!--form-group-->
 
-	<div  class="control-group col-sm-3"  >
+	<div  class="form-group col-sm-3"  >
 		<label class="control-label" for="countryx">City</label>
 		<div class="controls">
 
-		<select name="countryx" id="countryx"  style="width:120px;">
+		<select name="countryx" id="countryx"  style="width:90px;">
 			<option value="oC">Ontario</option>
 			<option value="oA" selected="selected">Kitchener</option>
 			<option value="oS">Brampton</option>
@@ -961,7 +963,7 @@ onsubmit="return valReservation(this)">
 
 <!--input class="btn btn-large btn-success col-sm-12" value="Check it!" onclick="getListDBB(0);"-->
 		</div><!--controls-->
-	</div><!--control-group-->
+	</div><!--form-group-->
 
 
 <!----------------------end password row-------------------------------->
@@ -970,15 +972,15 @@ onsubmit="return valReservation(this)">
 
 <!----------# Extra Row ##################################-Extra row------->
 
-	<div class="controls-row">
+	<div class="row">
 	<p>Membership:</p>
 
 
-	<div class="controls-group">
-		<div class="controls">
+	<div class="form-group">
+		<!--div class="controls"-->
 		<input  type="checkbox" name="membChk[]" id="chk0"/>
 		<label class="control-label mem" for="chk0">Trial</label>
-		</div><!--controls-->
+		<!--controls-->
 
 
 	</div><!--group-->
@@ -993,12 +995,12 @@ onsubmit="return valReservation(this)">
 
 
 
-	<div class="control-group">
+	<div class="form-group">
 	<!--div class="controls form-inline"-->
-		<div class="controls form-inline">
+		<!--div class="controls form-inline"-->
 		<input  type="checkbox" name="membChk[]" id="chk2">
 		<label class="control-label mem" for="chk2">Ultimate</label>
-		</div><!--controls-->
+		<!--controls-->
 
 
 	</div><!--group-->
@@ -1006,44 +1008,44 @@ onsubmit="return valReservation(this)">
 
 	</div><!--row-->
 
-	<div class="controls-row">
+	<div class="row">
 
 
 
 
-	<div  class="control-group col-sm-3"  >
+	<div  class="form-group col-sm-3"  >
 
-		<div class="controls">
+		
 
-		<input class="btn btn-large btn-success" type="submit" value="Submit!" id="subM" >
-
-
+		<input class="btn btn-large btn-primary" type="submit" value="Submit!" id="subM" >
 
 
-		</div><!--controls-->
-	</div><!--control-group-->
 
 
-	<div  class="control-group col-sm-3"  >
+		<!--controls-->
+	</div><!--form-group-->
 
-		<div class="controls">
+
+	<div  class="form-group col-sm-3"  >
+
+		
 
 		<!--input class="btn btn-large btn-success" type="submit" value="Submit!" -->
 		<input class="btn btn-large btn-success col-sm-12" value="Display it!" onclick="getListDBB(0);">
 		<!--input class="btn btn-large btn-success"  value="Check it!" onclick="getListDBB(0);"-->
 
 
-		</div><!--controls-->
-	</div><!--control-group-->
+		
+	</div><!--form-group-->
 
 
-	<div  class="control-group col-sm-3"  >
+	<div  class="form-group col-sm-3"  >
 
-		<div class="controls">
+		
 
 		<!--input class="btn btn-large btn-success col-sm-12" value="Check it!" onclick="getListDBB(0);"-->
-		</div><!--controls-->
-	</div><!--control-group-->
+		
+	</div><!--form-group-->
 
 
 
@@ -1106,12 +1108,12 @@ onsubmit="return valReservation(this)">
 <div id="formstarinipa" style="display:none;">
 <form class="form-inline" action="initpa.php" method="post" name="user_checkp">
 
-<div class="controls-row">
+<div class="row">
 
 
 
 
-<div  class="control-group"  >
+<div  class="form-group"  >
 
 <div class="controls">
 
@@ -1120,7 +1122,7 @@ onsubmit="return valReservation(this)">
 
 
 </div><!--controls-->
-</div><!--control-group-->
+</div><!--form-group-->
 
 
 
