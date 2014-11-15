@@ -1155,6 +1155,72 @@ input[type="checkbox"]
 	display:block;
 	clear:both;
 }
+a .tooltip span
+{
+	display:none;
+	z-index:10;
+
+	width:300px;
+	height:200px;
+	line-height:12px;
+
+}
+a.tooltipp
+{
+//	outline:none;
+}
+a strong
+{
+	line-height:30px;
+}
+a.tooltipp span
+{
+	display:none;
+	padding:14px 20px;
+	background:#fffaf0;
+	margin-left:30px;
+	margin-top:-30px;
+
+	width:300px;
+	line-height:16px;
+	z-index:20;
+//	z-index:20;
+}
+a.tooltipp:hover
+{
+	text-decoration:none;
+}
+a.tooltipp:hover span
+{
+	display:inline;
+//	color:#f1f1a1;
+	color:#111;
+//	color:#aa0000;
+	border:1px solid #dca;
+
+	background:0f0af0;
+	box-shadow:15px 15px 25px #888;
+
+a.tooltip
+{
+	outline:none;
+}
+
+a .tooltip:hover
+{
+	text-decoration:none;
+}
+
+a .tooltip:hover span
+{
+	display:inline;
+	position:absolute;
+
+	border:1px solid #DCA;
+	color:#111;
+	background:#fffAf0;	
+	
+}
 
 .form-group .controls input
 {
