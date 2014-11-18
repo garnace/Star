@@ -1167,7 +1167,8 @@ a .tooltip span
 }
 a.tooltipp
 {
-//	outline:none;
+
+//	overflow:hidden;
 }
 a strong
 {
@@ -1176,20 +1177,56 @@ a strong
 a.tooltipp span
 {
 	display:none;
-	padding:14px 20px;
+	padding:40px 40px;
 	background:#fffaf0;
 	margin-left:30px;
 	margin-top:-30px;
 
 	width:300px;
-	line-height:16px;
+//	line-height:16px;
+	font:18px Helvetica, Arial, Sans-Serif;
+	position:relative;
 	z-index:20;
 //	z-index:20;
 }
+/*a.tooltipp:after
+{
+	width:0px;
+	height:0px;
+	border-right:30px solid #fffaf0;
+	border-top:50px solid transparent;
+
+	border-bottom:50px solid transparent;
+
+}
+*/
+a.tooltipp span:after
+{
+	content:"";
+	display:block;
+	width:0px;
+	height:0px;
+	position:absolute;
+	top:50%;
+	margin-top:-50px;
+	right:100%;
+//	margin-right:5px;
+	border-right:40px solid #fffa30;
+	border-top:50px solid transparent;
+
+	border-bottom:10px solid transparent;
+	z-index:21;
+}
+
+
+
 a.tooltipp:hover
 {
 	text-decoration:none;
 }
+
+
+
 a.tooltipp:hover span
 {
 	display:inline;
@@ -1200,6 +1237,10 @@ a.tooltipp:hover span
 
 	background:0f0af0;
 	box-shadow:15px 15px 25px #888;
+}
+
+
+
 
 a.tooltip
 {
