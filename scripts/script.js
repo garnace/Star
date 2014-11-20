@@ -1871,7 +1871,16 @@ function loadDBB(dbId)
 }
 //--End loadDBB---------------------
 
+function readfDBB(dbId)
+{
+	$.getJSON("http://localhost:8280/StarAdvisor/co.txt?fName="+dbId+"&callback=?",function(data){
 
+		$.each(function(i,item){
+			
+			});//each
+
+	});	//json
+}
 
 /*************writeDBB
 *Function to delete database contact entry by way of
@@ -2009,6 +2018,8 @@ function(data){
 	//if (tabP.text().length > 1)
     if (tabP.text().length > 0)
     {//--alert (tabP.text());
+
+	//map as alternative to if td contains item conditional
 	$("#dbTable tbody tr:eq("+i+") td:eq(0):contains('"+item[1]+"')").map(function()
 	{//--alert (item.first + $(this).text());
 		tab1=$("#dbTable tbody tr:eq("+i+") td:eq(1)");
