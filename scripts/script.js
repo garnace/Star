@@ -1852,8 +1852,8 @@ function getListDel(dbId)
 
 
 
-/*************getListDel
-*Function to delete database contact entry by way of
+/*************loadDBB
+*Function to load database contact entry by way of
 *json helper file del.php using email
 *
 **/
@@ -1873,11 +1873,111 @@ function loadDBB(dbId)
 
 function readfDBB(dbId)
 {
-	$.getJSON("http://localhost:8280/StarAdvisor/co.txt?fName="+dbId+"&callback=?",function(data){
-
-		$.each(function(i,item){
+//	$.getJSON("http://localhost:8280/StarAdvisor/co.txt?fName="+dbId+"&callback=?",function(data){
+	$.getJSON("http://localhost:8280/StarAdvisor/readp.php?fName="+dbId+"&callback=?",function(data){
+   alert ("hi");
+		$.each(data.users,function(i,item){
 			
-			});//each
+
+
+
+//    $.each(data.items,function(i,item){
+//$("#yournamea").val("hello");
+
+//    $o=eval('('+data+')');
+  //  alert (data.first);
+  //  $tusers=data.users.length;
+
+	pending=1;
+	//item =array_values(item);
+//	$("#dbTable").addRow({
+//	newRow:"<tr><td>"+item.first+" </td><td> "+item.last+"</td> <td>"+item.phone+"</td><td>"+item.mobile+"</td> </tr>", addTop: false , removeTop:false});
+
+
+//	$("<tr><td>"+item.first+" </td><td> "+item.last+"</td> <td>"+item.phone+"</td><td>"+item.mobile+"</td> </tr>").appendTo("#dbTable tbody");
+
+
+/*******************  i3********************************
+	if (i <3)
+	    {
+	$("#dbTable tbody tr:eq("+i+") td:eq(0)").html(item.first);
+	$("#dbTable tbody tr:eq("+i+") td:eq(1)").html(item.last);
+	$("#dbTable tbody tr:eq("+i+") td:eq(2)").html(item.phone);
+	$("#dbTable tbody tr:eq("+i+") td:eq(3)").html(item.mobile);
+	} else if (i >= 3)
+	    {
+
+*******************************************************/
+
+//	$("#dbTable tbody tr:eq("+i+") td:not('"+item.first+"')").map(function()
+//	$("#dbTable tbody tr:eq("+i+") td:contains('"+item.first+"')").map(function()
+//	$("#dbTable tbody tr:eq("+i+") td:eq(0):not('"+item.first+"')").map(function()
+
+//	$("#dbTable tbody tr:eq("+i+") td:not(contains('"+item.first+"'))").map(function()
+
+
+	tabP=$("#dbTable tbody tr:eq("+i+") td:eq(0)");
+	//if (tabP.text().length > 1)
+    if (tabP.text().length > 0)
+    {//--alert (tabP.text());
+
+	//map as alternative to if td contains item conditional
+	$("#dbTable tbody tr:eq("+i+") td:eq(0):contains('"+item[1]+"')").map(function()
+	{//--alert (item.first + $(this).text());
+		tab1=$("#dbTable tbody tr:eq("+i+") td:eq(1)");
+		tab2=$("#dbTable tbody tr:eq("+i+") td:eq(2)");
+		tab3=$("#dbTable tbody tr:eq("+i+") td:eq(3)");
+
+		//match all cells
+
+		if (($("#dbTable tbody tr:eq("+i+") td:eq(1):contains("+item[2]+")").text().length >0) && ($("#dbTable tbody tr:eq("+i+") td:eq(2):contains("+item[3]+")").text().length > 0 ) && ($("#dbTable tbody tr:eq("+i+") td:eq(3):contains("+item[4]+")").text().length > 0))
+		{
+			//--alert ("matchp:"+$("#dbTable tbody tr:eq("+i+") td:eq(1)").text()+$("#dbTable tbody tr:eq("+i+") td:eq(2)").text()+$("#dbTable tbody tr:eq("+i+") td:eq(3)").text()+":"+item.last+item.phone+item.mobile);//+item.phone+tab2.text());
+			pending=0;
+		}else//match all
+		{
+//		alert ("nomatch"+item.phone +$("#dbTable tbody tr:eq("+i+") td:eq(2)").text());
+	//	alert ("nomatch"+item.phone +tab2.text());
+		alert ("nomatch"+$("#dbTable tbody tr:eq("+i+") td:eq(1)").text()+$("#dbTable tbody tr:eq("+i+") td:eq(2)").text()+$("#dbTable tbody tr:eq("+i+") td:eq(3)").text()+":"+item[2]+item[3]+item[4]);//+item.phone +tab2.text()+tab3.text()+tab1.text());
+	//	alert ("nomatch"+item.phone +tab2.text());
+
+
+		pending=2;
+//("nomatch:"+item.phone+$tab2.txt()+"at"+i);
+		}//else match all
+//	$pending=0;
+
+	});//map first item
+
+	if ( pending ==1)  //since table cell exists
+	{
+		//--alert(""+i+"");
+		pending=2;		//dont append
+	}
+//	$pending=0;
+	}  //tabP length
+	if (pending == 1)
+	{	//alert ("pendLine:"+$tabP);
+	$("<tr><td>"+item[6]+" </td><td> "+item[2]+"</td> <td>"+item[3]+"</td><td>"+item[4]+"</td><td><button class=\"butdelc\">Delete</button></td> </tr>").appendTo("#dbTable tbody");
+	}else if (pending==2)
+	{	
+	alert("itemii:"+item.phone);
+		//alert("itemii:"+item.getPhone());
+		//alert ("item"+item.last);
+	$("#dbTable tbody tr:eq("+i+") td:eq(0)").html(item[6]);
+	$("#dbTable tbody tr:eq("+i+") td:eq(1)").html(item[2]);
+	$("#dbTable tbody tr:eq("+i+") td:eq(2)").html(item[3]);
+	$("#dbTable tbody tr:eq("+i+") td:eq(3)").html(item[4]);
+			
+	}//pending==0
+
+
+
+
+
+
+	});//each json
+
 
 	});	//json
 }
