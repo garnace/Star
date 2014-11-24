@@ -1874,46 +1874,17 @@ function loadDBB(dbId)
 function readfDBB(dbId)
 {
 //	$.getJSON("http://localhost:8280/StarAdvisor/co.txt?fName="+dbId+"&callback=?",function(data){
-	$.getJSON("http://localhost:8280/StarAdvisor/readp.php?fName="+dbId+"&callback=?",function(data){
+	$.getJSON("http://localhost:8280/StarAdvisor/readph.php?fName="+dbId+"&callback=?",function(data){
    alert ("hi");
-		$.each(data.users,function(i,item){
+		$.each(data.file,function(i,item){
 			
 
 
 
-//    $.each(data.items,function(i,item){
-//$("#yournamea").val("hello");
-
-//    $o=eval('('+data+')');
-  //  alert (data.first);
-  //  $tusers=data.users.length;
-
 	pending=1;
-	//item =array_values(item);
-//	$("#dbTable").addRow({
-//	newRow:"<tr><td>"+item.first+" </td><td> "+item.last+"</td> <td>"+item.phone+"</td><td>"+item.mobile+"</td> </tr>", addTop: false , removeTop:false});
 
 
-//	$("<tr><td>"+item.first+" </td><td> "+item.last+"</td> <td>"+item.phone+"</td><td>"+item.mobile+"</td> </tr>").appendTo("#dbTable tbody");
 
-
-/*******************  i3********************************
-	if (i <3)
-	    {
-	$("#dbTable tbody tr:eq("+i+") td:eq(0)").html(item.first);
-	$("#dbTable tbody tr:eq("+i+") td:eq(1)").html(item.last);
-	$("#dbTable tbody tr:eq("+i+") td:eq(2)").html(item.phone);
-	$("#dbTable tbody tr:eq("+i+") td:eq(3)").html(item.mobile);
-	} else if (i >= 3)
-	    {
-
-*******************************************************/
-
-//	$("#dbTable tbody tr:eq("+i+") td:not('"+item.first+"')").map(function()
-//	$("#dbTable tbody tr:eq("+i+") td:contains('"+item.first+"')").map(function()
-//	$("#dbTable tbody tr:eq("+i+") td:eq(0):not('"+item.first+"')").map(function()
-
-//	$("#dbTable tbody tr:eq("+i+") td:not(contains('"+item.first+"'))").map(function()
 
 
 	tabP=$("#dbTable tbody tr:eq("+i+") td:eq(0)");
@@ -1983,8 +1954,8 @@ function readfDBB(dbId)
 }
 
 /*************writeDBB
-*Function to delete database contact entry by way of
-*json helper file del.php using email
+*Function to write database contact entry by way of
+*json helper file write.php using email
 *
 **/
 

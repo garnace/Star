@@ -9,7 +9,7 @@
  */
 
 header('Content-type: application/json');
-$fileName = (isset ($_SERVER["fName"]) && !empty($_SERVER["fName"])) ? $_SERVER["fName"] : null;
+$fileName = (isset ($_GET["fName"]) && !empty($_GET["fName"])) ? $_GET["fName"] : null;
 $fileName = check_infile($fileName,"named file does not exist");
 $data= null;
 $fileRay=array();
@@ -22,16 +22,19 @@ if (file_exists($fileName) && is_file($fileName))
             {
                 foreach($data as $line)
                     {
+                        stripslashes($line);
                         $lineRay = explode(",",$line);
                         $fileRay[] = $lineRay;
                     }
             }
 
     }
+$jsOut["file"]=$fileRay;
+
 $callback= (empty($_GET["callback"])) ? 'callback' : $_GET["callback"];
-$jsonData = $callback.'('.json_encode($fileRay).');';
+$jsonData = $callback.'('.json_encode($jsOut).');';
 //echo $fileRay;
-echo $jsonData
+echo $jsonData;
 
 function check_infile($fn,$problem)
 {
