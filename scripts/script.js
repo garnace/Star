@@ -1870,7 +1870,92 @@ function loadDBB(dbId)
 
 }
 //--End loadDBB---------------------
+function readfjDBB(dbId)
+{
+//	$.getJSON("http://localhost:8280/StarAdvisor/co.txt?fName="+dbId+"&callback=?",function(data){
+	$.getJSON("http://localhost:8280/StarAdvisor/readph.php?fName="+dbId+"&callback=?",function(data){
+   alert ("hi");
+		$.each(data.file,function(i,item){
+			
 
+
+
+	pending=1;
+
+
+
+
+
+	tabP=$("#dbTable tbody tr:eq("+i+") td:eq(0)");
+	//if (tabP.text().length > 1)
+    if (tabP.text().length > 0)
+    {//--alert (tabP.text());
+
+	//map as alternative to if td contains item conditional
+	$("#dbTable tbody tr:eq("+i+") td:eq(0):contains('"+item[1]+"')").map(function()
+	{//--alert (item.first + $(this).text());
+		tab1=$("#dbTable tbody tr:eq("+i+") td:eq(1)");
+		tab2=$("#dbTable tbody tr:eq("+i+") td:eq(2)");
+		tab3=$("#dbTable tbody tr:eq("+i+") td:eq(3)");
+
+		//match all cells
+
+		if (($("#dbTable tbody tr:eq("+i+") td:eq(1):contains("+item[2]+")").text().length >0) && ($("#dbTable tbody tr:eq("+i+") td:eq(2):contains("+item[3]+")").text().length > 0 ) && ($("#dbTable tbody tr:eq("+i+") td:eq(3):contains("+item[4]+")").text().length > 0))
+		{
+			//--alert ("matchp:"+$("#dbTable tbody tr:eq("+i+") td:eq(1)").text()+$("#dbTable tbody tr:eq("+i+") td:eq(2)").text()+$("#dbTable tbody tr:eq("+i+") td:eq(3)").text()+":"+item.last+item.phone+item.mobile);//+item.phone+tab2.text());
+			pending=0;
+		}else//match all
+		{
+//		alert ("nomatch"+item.phone +$("#dbTable tbody tr:eq("+i+") td:eq(2)").text());
+	//	alert ("nomatch"+item.phone +tab2.text());
+		alert ("nomatch"+$("#dbTable tbody tr:eq("+i+") td:eq(1)").text()+$("#dbTable tbody tr:eq("+i+") td:eq(2)").text()+$("#dbTable tbody tr:eq("+i+") td:eq(3)").text()+":"+item[2]+item[3]+item[4]);//+item.phone +tab2.text()+tab3.text()+tab1.text());
+	//	alert ("nomatch"+item.phone +tab2.text());
+
+
+		pending=2;
+//("nomatch:"+item.phone+$tab2.txt()+"at"+i);
+		}//else match all
+//	$pending=0;
+
+	});//map first item
+
+	if ( pending ==1)  //since table cell exists
+	{
+		//--alert(""+i+"");
+		pending=2;		//dont append
+	}
+//	$pending=0;
+	}  //tabP length
+	if (pending == 1)
+	{	//alert ("pendLine:"+$tabP);
+	$("<tr><td>"+item[6]+" </td><td> "+item[2]+"</td> <td>"+item[3]+"</td><td>"+item[4]+"</td><td><button class=\"butdelc\">Delete</button></td> </tr>").appendTo("#dbTable tbody");
+	}else if (pending==2)
+	{	
+	alert("itemii:"+item.phone);
+		//alert("itemii:"+item.getPhone());
+		//alert ("item"+item.last);
+	$("#dbTable tbody tr:eq("+i+") td:eq(0)").html(item[6]);
+	$("#dbTable tbody tr:eq("+i+") td:eq(1)").html(item[2]);
+	$("#dbTable tbody tr:eq("+i+") td:eq(2)").html(item[3]);
+	$("#dbTable tbody tr:eq("+i+") td:eq(3)").html(item[4]);
+			
+	}//pending==0
+
+
+
+
+
+
+	});//each json
+
+
+	});	//json
+}
+
+//--readfjDBB
+
+
+//-- End readfjDBB()
 function readfDBB(dbId)
 {
 //	$.getJSON("http://localhost:8280/StarAdvisor/co.txt?fName="+dbId+"&callback=?",function(data){

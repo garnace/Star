@@ -22,8 +22,11 @@ if (file_exists($fileName) && is_file($fileName))
             {
                 foreach($data as $line)
                     {
-                        stripslashes($line);
+                        //                      $line =stripslashes($line);
+                        $line=preg_replace("/oo/","xx",$line);
                         $lineRay = explode(",",$line);
+//                        array_map('addH',$lineRay);
+                        $fileRay[] = $line;
                         $fileRay[] = $lineRay;
                     }
             }
@@ -35,7 +38,7 @@ $callback= (empty($_GET["callback"])) ? 'callback' : $_GET["callback"];
 $jsonData = $callback.'('.json_encode($jsOut).');';
 //echo $fileRay;
 echo $jsonData;
-
+function addH ($value){return "hi".$value;}
 function check_infile($fn,$problem)
 {
     $fn = trim($fn);
