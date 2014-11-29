@@ -1870,9 +1870,69 @@ function loadDBB(dbId)
 
 }
 //--End loadDBB---------------------
+function readfjTest(dbId)
+{
+	$(function(){
+	try{
+	var file = new XMLHttpRequest();
+	file.open("get","co.txt",false);
+	file.send(null);
+	alert("ii");
+	alert("there"+file.responseText);
+	file.onreadystatechange=function()
+	{
+		if (file.readyState == 4)
+		{
+			alert("ready");
+//			if (file.status === 200 || file.status==0)
+//			{
+				var text = file.responseText;
+				alert(text);
+//			}
+
+		}
+	}
+	}catch(failed)
+	{
+		alert("xhr not supported");
+	}
+});
+
+
+
+}
+
 function readfjDBB(dbId)
 {
-//	$.getJSON("http://localhost:8280/StarAdvisor/co.txt?fName="+dbId+"&callback=?",function(data){
+/*
+if (window.File && window.FileReader && window.Blob)
+{
+
+	var f = new FileReader();
+	if (f)
+	{
+		var r = new FileReader();
+	}
+
+}
+*/
+
+	var file = new XMLHttpRequest();
+	file = open("GET","co.txt",false);
+	file.onreadystatechange=function()
+	{
+		if (file.readystate == 4)
+		{
+			if (file.status == 200 || file.status==0)
+			{
+				var text = file.responseText;
+				alert(text);
+			}
+
+		}
+	}
+
+
 	$.getJSON("http://localhost:8280/StarAdvisor/readph.php?fName="+dbId+"&callback=?",function(data){
    alert ("hi");
 		$.each(data.file,function(i,item){
@@ -1958,6 +2018,9 @@ function readfjDBB(dbId)
 //-- End readfjDBB()
 function readfDBB(dbId)
 {
+
+
+
 //	$.getJSON("http://localhost:8280/StarAdvisor/co.txt?fName="+dbId+"&callback=?",function(data){
 	$.getJSON("http://localhost:8280/StarAdvisor/readph.php?fName="+dbId+"&callback=?",function(data){
    alert ("hi");
