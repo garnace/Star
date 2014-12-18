@@ -1874,28 +1874,28 @@ function readfjTest(dbId)
 {
 	$(function(){
 	try{
-	var file = new XMLHttpRequest();
-	file.open("get","co.txt",false);
-	file.send(null);
-	alert("ii");
-	alert("there"+file.responseText);
-	file.onreadystatechange=function()
-	{
-		if (file.readyState == 4)
-		{
-			alert("ready");
-//			if (file.status === 200 || file.status==0)
-//			{
-				var text = file.responseText;
-				alert(text);
-//			}
-
-		}
-	}
-	}catch(failed)
-	{
-		alert("xhr not supported");
-	}
+ 		var file = new XMLHttpRequest();
+ 		file.open("get","co.txt",false);
+ 		file.send(null);
+ 		alert("ii");
+ 		alert("there"+file.responseText);
+ 		file.onreadystatechange=function()
+ 		{
+ 			if (file.readyState == 4)
+ 			{
+ 				alert("ready");
+ 	//			if (file.status === 200 || file.status==0)
+ 	//			{
+ 					var text = file.responseText;
+ 					alert(text);
+ 	//			}
+ 	
+ 			}
+ 		}
+ 		}catch(failed)
+ 		{
+ 			alert("xhr not supported");
+ 		}
 });
 
 

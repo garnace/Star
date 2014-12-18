@@ -281,6 +281,12 @@ body
 
 //   border:80 0 80 0;
     padding: 80 0 80 0;
+	margin: 0 0 20px 0;
+}
+
+#yCarousel
+{
+	margin:20px 0 5px 0;
 }
 
 #yCarousel #myCarousel .carousel-inner .item img
@@ -1232,7 +1238,7 @@ a.tooltipp span:after
 	border-right:40px solid #fffa30;
 	border-top:50px solid transparent;
 
-	border-bottom:10px solid transparent;
+	border-bottom:50px solid transparent;
 	z-index:21;
 }
 
