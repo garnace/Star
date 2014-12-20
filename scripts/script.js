@@ -1872,30 +1872,44 @@ function loadDBB(dbId)
 //--End loadDBB---------------------
 function readfjTest(dbId)
 {
+
 	$(function(){
+	$("#aftTable").html("helloooooo");
 	try{
  		var file = new XMLHttpRequest();
- 		file.open("get","co.txt",false);
- 		file.send(null);
+		var fdbRay= new Array();
+// 		file.open("get","co.txt",false);
+ 		file.open("get","co.txt",true);
+
  		alert("ii");
- 		alert("there"+file.responseText);
+// 		alert("there"+file.responseText);
+
  		file.onreadystatechange=function()
  		{
  			if (file.readyState == 4)
  			{
  				alert("ready");
- 	//			if (file.status === 200 || file.status==0)
- 	//			{
+ 				if (file.status == 200 || file.status==0)
+ 				{
  					var text = file.responseText;
  					alert(text);
- 	//			}
+					$("#aftTable").html(text);
+					fdbRay = text.split('\n');
+				//	alert(fdbRay[0]);
+					alert(text);
+
+ 				}
  	
  			}
+
  		}
+ 		file.send(null);
  		}catch(failed)
  		{
  			alert("xhr not supported");
  		}
+
+
 });
 
 
