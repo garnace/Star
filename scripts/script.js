@@ -213,7 +213,7 @@ var pRay=new Array();
 pRay=pR;
 
 
-alert("flickr");
+alert("flickr setPic");
 $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
   {
     tags: pId+",nasa",
@@ -363,6 +363,16 @@ function boardDoubler(pI)
 	});//each flipper wrapper
 
 }
+//  end boardDoubler
+
+
+
+/**  #boardToubler
+*Function to double number of images on board
+*using flipbox instead of quickFlip
+
+*Status: non functional
+*/
 
 function boardToubler(pI)
 {
@@ -497,9 +507,14 @@ $("#imagesp> img").each(function(i,item){
 //$('.quickflip-wrapper3').quickFlipper();
 
 }
+// end  #boardToubler
 
 
-
+/**  #setPicP
+*Function to populated imagesp div
+*
+*status: non functional
+*/
 
 function setPicP(pId,pRay)
 {
@@ -512,7 +527,7 @@ function setPicP(pId,pRay)
 
 //------------------
 
-alert("here");
+alert("here picP");
 
 
 //$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
@@ -603,7 +618,14 @@ function checkMatch(event)
 
 */
 
-//function checkPic(picId)
+/*function clickPicQF(picId)
+*
+*Function that listens to click event
+*User click is used to trigger checkEv function
+*
+*Used with quickflip
+**/
+
 function clickPicQF(event){
 //	alert("clickPic"+event.data.pId)
 //	$(document).trigger("checkEv",{pId:"pId"});
@@ -635,6 +657,15 @@ function clickPicQF(event){
 //	alert("done");
 }
 
+
+/*function clickPic(picId)
+*
+*Function that listens to click event with flipbox
+*User click is used to trigger checkEv function
+*
+*Status: non functional
+**/
+
 function clickPic(event){
 //	alert("clickPic"+event.data.pId)
 //	$(document).trigger("checkEv",{pId:"pId"});
@@ -654,20 +685,28 @@ function clickPic(event){
 	$(document).trigger("checkEv",{pId: event.data.pId});
 //	alert("done");
 }
+//end clickPic
 
+
+/**  function setTim
+*
+*Used to wrap setTimeout
+*
+*Status: not used
+**/
 
 function setTim()
 {
 	setTimeout(matchAlert,5000);
 }
 
-/**
-
-checkPic 
+/** function checkPic 
 
 Function to check 2 picture cards
 with helper functions for match events
-*/
+*
+*
+**/
 
 function checkPic(event,data)
 {
@@ -743,7 +782,7 @@ function checkPic(event,data)
 //				setTimeout(function(){matchAlert(z);},3000);
 				setTimeout(function(){matchAlert(headsv);},3000);
 				
-				exit();
+				exit();//use exit instead of return false
 //				return false;
 			}
 			else
@@ -781,6 +820,15 @@ function checkPic(event,data)
 	});
 	//}    else hasClass
 }
+//  end checkPic
+
+
+/** function matchAlert
+*
+*Function to alert a match
+*
+*
+**/
 
 function matchAlert(pId)
 {
@@ -799,6 +847,14 @@ function matchAlert(pId)
 	$(pId[1]).addClass("hidy");
 
 }
+//end matchAlert
+
+
+/** function noMatch
+*
+*  Function to handle non matching card select
+*
+**/
 
 function noMatch(pId)
 {
@@ -852,9 +908,13 @@ function noMatch(pId)
 
 
 }
+// end noMatch
 
-
-
+/** function setRPic
+*
+* Function to setup random picture cards for quickflip
+*
+**/
 function setRPic(pId)
 {
 $(document).ready(function(){
@@ -870,7 +930,7 @@ $(document).ready(function(){
     var randI=Math.floor(Math.random()*(arrPic.length));
 //	$('.quickflip-wrapper3').quickFlip();
 //	srpA.push("hello");
-	alert("fLICKCK");
+	alert("fLICKCK setRPIC");
     setPic(arrPic[randI],srpA,randI);
 //	alert("+");
 //    setPicP(arrPic[randI],srpA);
@@ -881,6 +941,12 @@ $(document).ready(function(){
 
 }
 
+/** function setRPicP
+*
+* Function to setup random picture cards for quickflip
+*
+*Status: not used
+**/
 
 function setRPicP(pId)
 {
@@ -934,13 +1000,17 @@ function getSFeedTerm(tId)
 
 
 }
+//end getSFeedTerm
+
+
+/** function listSites
+*
+*List sites being used on cache as well as listing the cached locations.
+*
+*/
 
 function listSites(pId)
 {
-/*
-List sites being used on cache as well as listing the cached locations.
-
-*/
 
 
 
@@ -970,10 +1040,15 @@ List sites being used on cache as well as listing the cached locations.
 	//	alert ("hi");
     siteCount=arrCount+1;
 }
+// end listSites
 
 
-//----wrap setSFeed
-
+/** function setSSFeed
+*
+*Function to wrap setSFeed
+*
+*
+**/
 function setSSFeed(pId)
 {
 //----wrap setSFeed
@@ -986,15 +1061,22 @@ function setSSFeed(pId)
 //    document.getElementById("loadson").style.display="none";
 //    document.getElementById("fbox").style.display="none";
 }
+//end setSSFeed
+
+
+
+/** function setSFeed
+*
+*
+*----------------------------------------------
+Grabbing JSON into div #son is based on sample code from:
+http://brightscape.net/blog/display-rss-feed-jquery-json/
+*
+*
+**/
 
 function setSFeed(pId)
 {
-    //----------------------------------------------
-    //
-    //Grabbing JSON into div #son is based on sample code from:
-    //http://brightscape.net/blog/display-rss-feed-jquery-json/
-
-    //------------------------------------------------------------
 
 
     var htfeed;
@@ -1080,6 +1162,19 @@ function setSFeed(pId)
 
 //    document.getElementById("loadson").style.display="none";
 }
+// end setSFeed
+
+
+
+/** function setLFeed
+*
+*Function to read google blog
+*
+*Status: non functional
+*
+**/
+
+
 function setLFeed(pId)
 {
     
@@ -1169,16 +1264,19 @@ $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?
 
 
 }
-//---------------------------------------------------
+//end setLFeed (nf)---------------------------
+
+
+/***function getMatchCi
+
+Input from user is used to find city by name and display link name
+to the user
+
+*****/
 
 function getMatchCi(mId)
 
 {
-/***********************************************
-Input from user is used to find city by name and display link name
-to the user
-
-**********************************************/
 
 
     //    	  alert("BLOG");
@@ -1361,12 +1459,16 @@ to the user
 
 	//    alert ("getMatch");
 }
+//---end getMatchCi
 
 
+/***function getMatchBl
 
+Input from user is used to find blog link name
+to the user
 
+*****/
 
-//------------------------------------------------------
 function getMatchBl(mId)
 
 {
@@ -1524,9 +1626,9 @@ function getMatchBl(mId)
 
 	//    alert ("getMatch");
 }
+//---end getMatchBl-
 
 
-//-------------------------------------------------------
 function getMatchJ(mId)
 {
     var urlArr=[];
@@ -1881,8 +1983,6 @@ function readfjTest(dbId)
 // 		file.open("get","co.txt",false);
  		file.open("get","co.txt",true);
 
- 		alert("ii");
-// 		alert("there"+file.responseText);
 
  		file.onreadystatechange=function()
  		{
@@ -1893,8 +1993,10 @@ function readfjTest(dbId)
  				{
  					var text = file.responseText;
  					alert(text);
-					$("#aftTable").html(text);
 					fdbRay = text.split('\n');
+//					$("#aftTable").html(text);
+					$("#aftTable").html(fdbRay[0]);
+
 				//	alert(fdbRay[0]);
 					alert(text);
 
@@ -1915,7 +2017,15 @@ function readfjTest(dbId)
 
 
 }
+/**********readfjDBB*****
+The readfjDBB reads saved files such as co.txt: reading database info using php
+in the event of the database being down.
+Uses php helper file
 
+--readph.php
+
+
+*/
 function readfjDBB(dbId)
 {
 /*
@@ -2025,11 +2135,10 @@ if (window.File && window.FileReader && window.Blob)
 
 	});	//json
 }
-
-//--readfjDBB
-
-
 //-- End readfjDBB()
+
+
+//--readfDBB
 function readfDBB(dbId)
 {
 
