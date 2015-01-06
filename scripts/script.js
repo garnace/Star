@@ -1978,9 +1978,11 @@ function readfjTest(dbId)
 	$(function(){
 	$("#aftTable").html("helloooooo");
 	try{
+		var j = 0;
  		var file = new XMLHttpRequest();
 		var fdbRay= new Array();
 		var lineRay = new Array();
+		var rx = /\"/g;
 // 		file.open("get","co.txt",false);
  		file.open("get","co.txt",true);
 
@@ -1996,15 +1998,21 @@ function readfjTest(dbId)
  					alert(text);
 					fdbRay = text.split('\n');
 					
-//					$("#aftTable").html(text);
-//					for (int jj==0;jj<fdbRay.length;jj++)
-//					{
-					$("#aftTable").append(fdbRay[0]+"<br/>");
-//					}
-//					$("#aftTable").append(fdbRay[0]+"<br/>");
-//					tableFill(i,item);				
 
-				//	alert(fdbRay[0]);
+					for (j = 0; j<fdbRay.length -1 ;j++)
+
+					{
+						//if (rx.test(fdbRay[j])){alert("match");}
+						fdbRay[j]=fdbRay[j].replace(rx,"");
+						fdbRay[j]=fdbRay[j].split(',');
+						tableFill(j,fdbRay[j]);
+//					$("#aftTable").append(fdbRay[j][3]+"<br/>");						
+//					$("#aftTable").append("line<br/>");
+					}
+
+
+
+
 					alert(text);
 
  				}
