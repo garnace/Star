@@ -253,7 +253,10 @@ $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?
 }
 
 /**  #boardDoubler
-*Function to double number of images on board
+*Function to double number of images on board for memory game
+*Game code inspired from http://webdevplayground.com/2009/09/a-basic-memory-game-with-jquery-and-php/
+*
+*The use of quickflip was decided  after experimenting between quickflip and flipbox
 *
 *@param array pI
 *
@@ -1972,6 +1975,20 @@ function loadDBB(dbId)
 
 }
 //--End loadDBB---------------------
+
+
+
+/**readfjTest
+*
+*Function to read from text file via xhr connection object
+*and fill in table in admin section of website
+*
+*
+*param dbId -- text file name to read from
+*
+*
+*/
+
 function readfjTest(dbId)
 {
 

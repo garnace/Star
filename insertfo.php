@@ -85,7 +85,7 @@ catch(PDOException $e){
 	echo "<html>";
 	echo "<body><p>DB ERROR</p>";
 	echo "<p>ERROR DB".$e->getMessage()."</p>";
-		echo "<p>ERROR Obj".$uzer->getPhone()."</p>";
+//		echo "<p>ERROR Obj".$uzer->getPhone()."</p>";
 	print_r(PDO::getAvailableDrivers());
 	
 	echo "</body>";

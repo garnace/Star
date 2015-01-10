@@ -28,12 +28,21 @@ $database="mysql";
 //--------------------initpass account------------
 $queryd="DROP TABLE IF EXISTS contacts";
 $querydP="DROP TABLE IF EXISTS uaccount";
-
-
+$querydR="DROP TABLE IF EXISTS reserve";
+$querydT="DROP TABLE IF EXISTS tables";
 
 $queryPassP=" CREATE TABLE uaccount (id int(6) NOT NULL auto_increment ,accounthandle varchar(30) NOT NULL,email varchar(30) NOT NULL,accountpass varchar(30) NOT NULL,PRIMARY KEY (email),UNIQUE id_e (accounthandle),KEY id_2 (id))";
 
 $query=" CREATE TABLE contacts (id int(6) NOT NULL auto_increment,first varchar(30) NOT NULL,last varchar(30) NOT NULL,phone varchar(20) NOT NULL,mobile varchar(20) NOT NULL,fax varchar(20) NOT NULL,email varchar(30) NOT NULL,web varchar(30) NOT NULL,PRIMARY KEY (id),UNIQUE id (id),KEY id_2 (id),FOREIGN KEY (email) REFERENCES uaccount(email) ON DELETE CASCADE)";
+
+
+$queryReserve=" CREATE TABLE reserve (id int(6) NOT NULL auto_increment ,email varchar(30) NOT NULL,tableN varchar(30) NOT NULL,seatN varchar(30) NOT NULL,meal varchar(30) NOT NULL,PRIMARY KEY (id),FOREIGN KEY (email) REFERENCES uaccount (email),KEY id_2 (id))";
+
+$queryTables="CREATE TABLE tables (id int(6) NOT NULL auto_increment ,tableN varchar(30) NOT NULL,seatN varchar(30) NOT NULL,seatAvail varchar(10) NOT NULL,PRIMARY KEY (id),KEY id_2 (id))";
+$queryRchk="SELECT * FROM reserve";
+
+//$query="INSERT INTO reserve (id,email,tablnum,seatnum) VALUES (:indx,:tablenum ,:seatnum)";
+$queryRI="INSERT INTO reserve (id,email,tableN,seatN,meal) VALUES (NULL,'$email','$tablenum' ,'$seatnum','$interest')";
 
 
 
@@ -55,18 +64,29 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 //delete contacts first
 $pdo->query($queryd);
-
+$pdo->query($querydR);
 //then delete uaccount
 $pdo->query($querydP);
+
+$pdo->query($querydT);
+
+
 
 //create uaccount first
 $pdo->query($queryPassP);
 
 //then contacts
 $pdo->query($query);
-
+$pdo->query($queryTables);
+$pdo->query($queryReserve);
 $pdo->exec("INSERT INTO uaccount (id,accounthandle,email,accountpass) VALUES (NULL,'jsoolffe','johnsmith@gowansnet.com','smith1234')");
 $pdo->exec("INSERT INTO contacts (id,first,last,phone,mobile,fax,email,web) VALUES (NULL,'BooffC','Candy','01233 567890','30112 334455','01234 567891','johnsmith@gowansnet.com','http://www.gowansnet.com')");
+$pdo->exec("INSERT INTO tables (id,tableN,seatN,seatAvail) VALUES (NULL,'TA1','SA1','Y')");
+$pdo->exec("INSERT INTO tables (id,tableN,seatN,seatAvail) VALUES (NULL,'TA1','SA2','Y')");
+$pdo->exec("INSERT INTO tables (id,tableN,seatN,seatAvail) VALUES (NULL,'TA2','SA1','Y')");
+$pdo->exec("INSERT INTO tables (id,tableN,seatN,seatAvail) VALUES (NULL,'TA2','SA2','Y')");
+$pdo->exec("INSERT INTO reserve (id,email,tableN,seatN,meal) VALUES (NULL,'johnsmith@gowansnet.com','TA1','SA1','Italian')");
+$pdo->exec("UPDATE tables SET seatAvail = 'N' WHERE tableN = 'TA1' AND seatN = 'SA1'");
 
 
 $resultP=$pdo->query($queryshowP);
