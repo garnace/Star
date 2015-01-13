@@ -1993,7 +1993,7 @@ function readfjTest(dbId)
 {
 
 	$(function(){
-	$("#aftTable").html("helloooooo");
+//	$("#aftTable").html("helloooooo");
 	try{
 		var j = 0;
  		var file = new XMLHttpRequest();
@@ -2008,7 +2008,7 @@ function readfjTest(dbId)
  		{
  			if (file.readyState == 4)
  			{
- 				alert("ready");
+// 				alert("ready");
  				if (file.status == 200 || file.status==0)
  				{
  					var text = file.responseText;
@@ -2222,7 +2222,10 @@ if (window.File && window.FileReader && window.Blob)
 }
 //-- End readfjtDBB()
 
-
+function tableFillT(i,item)
+{
+	
+}
 
 function tableFill(i,item)
 {
@@ -2423,7 +2426,14 @@ function writeDBB(dbId)
 }
 //--End writeDBB---------------------------
 
-
+function getListTable(dbID)
+{
+	$.getJSON("http://localhost:8280/StarAdvisor/readTable.php?rtId="+dbID+"&callback=?",
+		function(data.tables){
+			tableFillT();
+			
+		});	
+}
 function getListDBB(dbId)
 {
 				//table cells

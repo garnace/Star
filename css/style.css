@@ -1153,7 +1153,7 @@ input[type="checkbox"]
 	padding:0 20px 0 0;
 //	visibility:hidden;
 }
-#formreg:after
+#formres:after
 {
 	content:"";
 	height:0;

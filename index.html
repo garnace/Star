@@ -563,13 +563,13 @@ $(document).ready(function(){
 
 <div id="cal">&nbsp;</div>
 
-<!--*****************formreg ****************-->
+<!--*****************formres ****************-->
 
-<div id="formreg" >
+<div id="formres" >
 <form  action="insertres.php" method="post" id="regform" name="regform"
 onsubmit="return valReservation(this)">
 
-<!--*****************formreg field 0 ****************-->
+<!--*****************formres field 0 ****************-->
 <div id="field0">
 	<fieldset>
 	<legend>Details By Day Selected<span><i class="fa fa-phone fa-red">88</i></span> </legend>
@@ -625,11 +625,11 @@ onsubmit="return valReservation(this)">
 		<br/>
 		<br/>
 	</div><!-- /.regChex1-->
-	<div class="regChex2">
-		<input type="checkbox" id="prefcasual" name="prefChk[]" value="casual"/>	
-		<label for="prefcasual" style="display:inline;">casual2 seating</label>
+	<div class="regPrRadx2">
+		<input type="radio" id="prefcasual" name="prefBC" value="casual"/>	
+		<label for="prefcasual" style="display:inline;">casual seating</label>
 		<br/>
-		<input type="checkbox" id="prefbusiness" name="prefChk[]" value="business"/>	
+		<input type="radio" id="prefbusiness" name="prefBC" value="business"/>	
 		<label for="prefbusiness" style="display:inline;">business seating</label>
 		<br/>
 		<input type="button" id="about" name="about" value="about" rel="#mies"/>
@@ -637,7 +637,7 @@ onsubmit="return valReservation(this)">
 		<br/>
 		<br/>
 		<br/>
-	</div><!-- /.regChex2-->
+	</div><!-- /.regPrRadx2-->
 
 
 
@@ -661,7 +661,7 @@ onsubmit="return valReservation(this)">
 	   </p>
 	  <p class="tbl">
 		<input type="radio" id="regTRad1" name="regTable" value="white" />
-		<label for="regTRad1" style="display:inline;">Table 2 (3 seats left)</label>
+		<label id="labtr1" for="regTRad1" style="display:inline;">Table 2 </label>
 </br>
 		<br/>
 	   </p>
