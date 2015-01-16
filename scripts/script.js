@@ -1873,6 +1873,39 @@ function getSectionLO(dId)
 
 }
 
+function getSectionT(tId)
+{
+//----------------------------------
+//
+//Get section for tables available
+//------------------------------------
+
+    document.getElementById("fieldT1").style.display="";
+
+    document.getElementById("imagesky").innerHTML="";
+    document.getElementById("son").innerHTML="";
+//    document.getElementById("son").before="";
+  //  document.getElementById("fbox").style.display="none";
+
+    hpb="<div id=\"searchDi\"><p>Enter terms to list sites listed on StarServer's cached sites:  Cornell.edu and Stargazing.net</p> <input type=\"text\" id=\"sbox\" onkeypress=\"handleKeyPressJ(event,this.form)\"/>";
+    //    hpb=hpb+"<div id=\"sbutton\"> <button onclick=\"getMatchJ(document.getElementById(\"sbox\").value)\">Search Now</button>";
+     hpb=hpb+"<div id=\"sbutton\"> <button onclick=\"getMatchJ(document.getElementById('sbox').value);\">Search Now</button>";
+    hpb=hpb+"</div></div>";
+    //    alert("pageBar");
+    document.getElementById("pageBar").innerHTML=hpb;
+    document.getElementById("journ").innerHTML="";
+    document.getElementById("imagesky").innerHTML="";
+    document.getElementById("journ").style.display="none";
+    document.getElementById("imagesky").style.display="none";
+
+	$(function(){
+    		getListTable(0);	    
+	});
+
+}
+
+
+
 function getSectionPLO(dId)
 {
 //----------------------------------
@@ -2224,7 +2257,9 @@ if (window.File && window.FileReader && window.Blob)
 
 function tableFillT(i,item)
 {
-	
+		alert("table");
+//		$('#lblTR'+i+'').append('tbl'+item[i]);	
+		$('#lblTR'+i).html('tbl'+item[i]);	
 }
 
 function tableFill(i,item)
@@ -2428,11 +2463,19 @@ function writeDBB(dbId)
 
 function getListTable(dbID)
 {
-	$.getJSON("http://localhost:8280/StarAdvisor/readTable.php?rtId="+dbID+"&callback=?",
-		function(data.tables){
-			tableFillT();
+	$(document).ready(function(){
+	alert("listtable");
+	$.getJSON("http://localhost:8280/StarAdvisor/readTable.php?callback=?",
+		function(data){
+			$.each(data.tables,function(i,item){
+			alert("talist");
+			tableFillT(i,item);
+			});
 			
 		});	
+	});
+
+
 }
 function getListDBB(dbId)
 {

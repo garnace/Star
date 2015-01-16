@@ -30,7 +30,7 @@ function valReservation(oForm)
 	{
 
 		if (cxPref[i] == 'business' || cxPref[i] =='casual')
-			for (j=0;j<cxPref.length -1;j++)
+			for (j=0;j<cxPref.length ;j++)
 			{
 
 				if ((cxPref[j] == 'business' || cxPref[j] =='casual') && i!=j)

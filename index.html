@@ -636,6 +636,10 @@ onsubmit="return valReservation(this)">
 		<label for="about" style="display:inline;" > about seat</label>
 		<br/>
 		<br/>
+		<input type="button" id="avail" name="about" value="about" onclick="getSectionT(0);"/>
+		<label for="about" style="display:inline;" > available</label>
+		<br/>
+
 		<br/>
 	</div><!-- /.regPrRadx2-->
 
@@ -647,7 +651,7 @@ onsubmit="return valReservation(this)">
 
 <!--                     ############################-->
 
-<div id="fieldT1">
+<div id="fieldT1" style="display:none;">
 	<fieldset>
 	<legend>Tables Available</legend>
 
@@ -655,13 +659,13 @@ onsubmit="return valReservation(this)">
 
 	  <p  class="tbl">
 		<input type="radio" id="regTRad0" name="regTable" value="black" checked="checked" />
-		<label for="regTRad0" style="display:inline;">Table 1 (1 seat left)</label>
+		<label for="regTRad0" style="display:inline;" id="lblTR0">Table 1 (1 seat left)</label>
 </br>
 </br>
 	   </p>
 	  <p class="tbl">
 		<input type="radio" id="regTRad1" name="regTable" value="white" />
-		<label id="labtr1" for="regTRad1" style="display:inline;">Table 2 </label>
+		<label for="regTRad1" style="display:inline;" id="lblTR1">Table 2 </label>
 </br>
 		<br/>
 	   </p>
@@ -678,15 +682,15 @@ onsubmit="return valReservation(this)">
 	</div><!-- /.regRadx0-->
 	<div class="regTRadx1">
 	  <p  class="tbl">
-		<input type="radio" id="regTRad4" name="regTable" value="yellow"  />
-		<label for="regTRad4" style="display:inline;">Table 3(2 seats left)</label>
+		<input type="radio" id="regTRad2" name="regTable" value="yellow"  />
+		<label for="regTRad2" style="display:inline;" id="lblTR2">Table 3(2 seats left)</label>
 
 </br>
 </br>
 	</p>
 	  <p  class="tbl">
-		<input type="radio" id="regTRad5" name="regTable" value="orange" />
-		<label for="regTRad5" style="display:inline;">Table 4 (3 Seats Left)</label>
+		<input type="radio" id="regTRad3" name="regTable" value="orange" />
+		<label for="regTRad3" style="display:inline;" id="lblTR3">Table 4 (3 Seats Left)</label>
 
 		<br/>
 		<br/>
@@ -703,13 +707,13 @@ onsubmit="return valReservation(this)">
 	</div><!-- .regRadx1-->
 	<div class="regTRadx2">
 
-		<input type="radio" id="regTRad6" name="regTable" value="yellow2"  />
-		<label for="regTRad4" style="display:inline;">Table 3(2 seats left)</label>
+		<input type="radio" id="regTRad4" name="regTable" value="yellow2"  />
+		<label for="regTRad4" style="display:inline;" id="lblTR4">Table 3(2 seats left)</label>
 
 </br>
 </br>
-		<input type="radio" id="regTRad7" name="regTable" value="orange2" />
-		<label for="regTRad5" style="display:inline;">Table 4 (3 Seats Left)</label>
+		<input type="radio" id="regTRad5" name="regTable" value="orange2" />
+		<label for="regTRad5" style="display:inline;" id="lblTR5">Table 4 (3 Seats Left)</label>
 
 		<br/>
 		<br/>
