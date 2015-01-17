@@ -19,7 +19,8 @@ $database="mysql";
 //$query="INSERT INTO contacts VALUES ('','$first' ,'$last' ,'$phone' ,'$mobile' ,'$fax' ,'$email' ,'$web')";
 $query="SELECT * FROM contacts ORDER BY last DESC" ;
 $queryT="SELECT * FROM tables ORDER BY tableN DESC" ;
-
+//$queryR="SELECT * ,COUNT (*) FROM tables t JOIN reserves r ON r.tableN = t.tableN WHERE COUNT(SELECT * FROM tables WHERE seatAvail = 'Y') ";
+$queryR="SELECT t.tableN, COUNT(*) AS countAvail FROM tables t LEFT JOIN reserve r ON r.tableN = t.tableN WHERE seatAvail = 'Y' GROUP BY tableN";
 try
 {
 //mysql_query($query);
