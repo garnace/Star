@@ -1992,7 +1992,8 @@ function getListDel(dbId)
 
 /*************loadDBB
 *Function to load database contact entry by way of
-*json helper file del.php using email
+*json helper read.php 
+*reads from files co.txt and ac.txt
 *
 **/
 
@@ -2255,11 +2256,12 @@ if (window.File && window.FileReader && window.Blob)
 }
 //-- End readfjtDBB()
 
+
 function tableFillT(i,item)
 {
-		alert("table");
+//		alert("table");
 //		$('#lblTR'+i+'').append('tbl'+item[i]);	
-		$('#lblTR'+i).html('tbl'+item[i]);	
+		$('#lblTR'+i).html('table'+(i+1)+':('+item[1]+'seats left)');	
 }
 
 function tableFill(i,item)
@@ -2461,14 +2463,22 @@ function writeDBB(dbId)
 }
 //--End writeDBB---------------------------
 
+
+/**************getListTable*************************
+*
+*Function to read table of reservations and count
+*how many seats/table are available
+*
+**/
+
 function getListTable(dbID)
 {
 	$(document).ready(function(){
-	alert("listtable");
+//	alert("listtable");
 	$.getJSON("http://localhost:8280/StarAdvisor/readTable.php?callback=?",
 		function(data){
 			$.each(data.tables,function(i,item){
-			alert("talist");
+//			alert("talist");
 			tableFillT(i,item);
 			});
 			
@@ -2476,7 +2486,60 @@ function getListTable(dbID)
 	});
 
 
-}
+}// end getListTable
+
+
+/**************getListDB*************************
+*
+*Function to read contacts database and display
+*Administration table
+*
+**/
+function getListDB(dbId)
+{
+	var tabP;
+	var tab1;
+	var tab2;
+	var tab3;
+				//variable determines whether to append.
+				//0:dont change, 2:insert cell values, 1:append
+	var pending = 0;
+
+	alert("pre jquery");
+  // document.starformLog.youre.value="null";
+  document.starform.youre.value="null";
+
+$(document).ready(function(){
+//	location.href="index.html";
+alert ("here");
+//--alert ("ehire");
+$("#yourname").html("hello");
+$("#yournameb").val("hello");
+
+$("#yournamea").val("hello");
+
+
+$.getJSON("http://localhost:8280/StarAdvisor/myf3.php?callback=?",
+function(data){
+
+
+
+    $.each(data.users,function(i,item){
+	tableFill(i,item);
+    });//each
+});//getJSON
+});//doc ready
+
+}// end getListDB
+
+
+/**************getListDBB*************************
+*
+*Function to read contacts database and display
+*Administration table
+*
+**/
+
 function getListDBB(dbId)
 {
 				//table cells

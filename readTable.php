@@ -29,7 +29,8 @@ try
 //$num=mysql_numrows($result);
 $pdo= new PDO('mysql:dbname=mysql;host=localhost','root','Spasskydb8080');
 $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-$result=$pdo->query($queryT);
+$result=$pdo->query($queryR);
+//$result=$pdo->query($queryR);
 $num=$result->rowCount();
 
 $iA= array();
@@ -39,16 +40,25 @@ $i=0;
 
 
 //$row=mysql_fetch_assoc($result);      
-$result->setFetchMode(PDO::FETCH_CLASS,'Table');
+//--(table rewult)$result->setFetchMode(PDO::FETCH_CLASS,'Table');
+//$result->setFetchMode(PDO::FETCH_CLASS,'Table');
+$result->setFetchMode(PDO::FETCH_NUM);
 //$result->setFetchMode(PDO::FETCH_BOTH);
 $roww= array();
 while ( $i<$num)
 {
      // $row=mysql_fetch_assoc($result);      
       $row=$result->fetch();
-      $roww=array('id'=>$row->getId(),'tableN'=>$row->getTableN(),'seatN'=>$row->getSeatN(),'seatAvail'=>$row->getSeatAvail());
-	  //array_push($iA,$roww );
-      $iA[]=array_values($roww);
+      //    $roww=array('id'=>$row->getId(),'tableN'=>$row->getTableN(),'seatN'=>$row->getSeatN(),'seatAvail'=>$row->getSeatAvail());
+/*
+      if ($i==0)
+          {
+              unset($roww['tableN']);
+
+          }
+*/
+	  array_push($iA,$row );
+//      $iA[]=array_values($roww);
       $i++;
 }
 

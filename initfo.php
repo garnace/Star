@@ -64,10 +64,14 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 //delete contacts first
 $pdo->query($queryd);
+
+//delete reserve 
 $pdo->query($querydR);
+
 //then delete uaccount
 $pdo->query($querydP);
 
+//then delete tables
 $pdo->query($querydT);
 
 

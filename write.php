@@ -12,15 +12,21 @@ $querylU="LOAD DATA INFILE './con.cvs' INTO TABLE contacts FIELDS TERMINATED BY 
 //------------------------------linux write
 $queryi="SELECT * FROM contacts INTO OUTFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/co.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
 $queryiU="SELECT * FROM uaccount INTO OUTFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/ac.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
+$queryiR="SELECT * FROM uaccount INTO OUTFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/res.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
+$queryiT="SELECT * FROM uaccount INTO OUTFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/tab.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
 
 
 //------------------------------both windows &linux write
 $linQueryi="SELECT * FROM contacts INTO OUTFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/co.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
 $linQueryiu="SELECT * FROM uaccount INTO OUTFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/ac.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
+$linQueryir="SELECT * FROM uaccount INTO OUTFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/res.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
+$linQueryit="SELECT * FROM uaccount INTO OUTFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/tab.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
 
 
 $winQueryi="SELECT * FROM contacts INTO OUTFILE 'C:/StarGit/Star/coo.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
 $winQueryiu="SELECT * FROM uaccount INTO OUTFILE 'C:/StarGit/Star/acc.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
+$winQueryir="SELECT * FROM uaccount INTO OUTFILE 'C:/StarGit/Star/ress.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
+$winQueryir="SELECT * FROM uaccount INTO OUTFILE 'C:/StarGit/Star/tabb.txt' FIELDS ENCLOSED BY '\"' TERMINATED BY ',' ESCAPED BY '\"' LINES TERMINATED BY '\r\n'";
 
 
 $delElement= (empty($_GET["emaild"])) ? '' : $_GET["emaild"];
@@ -63,12 +69,21 @@ try {
     $rp=$stmt->execute();
     $stmt=$pdo->prepare($winQueryiu);
     $rp=$stmt->execute();
+    $stmt=$pdo->prepare($winQueryir);
+    $rp=$stmt->execute();
+    $stmt=$pdo->prepare($winQueryit);
+    $rp=$stmt->execute();
+
         }
     else
         {
     $stmt=$pdo->prepare($linQueryi);
     $rp=$stmt->execute();
     $stmt=$pdo->prepare($linQueryiu);
+    $rp=$stmt->execute();
+    $stmt=$pdo->prepare($linQueryir);
+    $rp=$stmt->execute();
+    $stmt=$pdo->prepare($linQueryit);
     $rp=$stmt->execute();
 
         }
