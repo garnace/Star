@@ -14,12 +14,12 @@ header('Content-type: application/json');
 //--------------------------does windows and linux read
 $linQueryl="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/co.txt' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
 $linQuerylU="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/ac.txt' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
-$linQuerylT="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/tab.txt' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
-$linQuerylR="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/res.txt' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
+$linQuerylT="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/tab.txt' INTO TABLE tables FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
+$linQuerylR="LOAD DATA INFILE '".$_SERVER['DOCUMENT_ROOT']."/StarAdvisor/res.txt' INTO TABLE reserve FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
 $winQueryl="LOAD DATA INFILE 'C:/StarGit/Star/co.txt' INTO TABLE contacts FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
 $winQuerylU="LOAD DATA INFILE 'C:/StarGit/Star/ac.txt' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
-$winQuerylT="LOAD DATA INFILE 'C:/StarGit/Star/tab.txt' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
-$winQuerylR="LOAD DATA INFILE 'C:/StarGit/Star/res.txt' INTO TABLE uaccount FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
+$winQuerylT="LOAD DATA INFILE 'C:/StarGit/Star/tab.txt' INTO TABLE tables FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
+$winQuerylR="LOAD DATA INFILE 'C:/StarGit/Star/res.txt' INTO TABLE reserve FIELDS TERMINATED BY ',' ENCLOSED BY '\"' ESCAPED BY '\"'  LINES TERMINATED BY '\r\n'";
 
 
 
@@ -71,13 +71,14 @@ $result=mysql_query($delquery);
 try{
     $pdo= new PDO('mysql:dbname=mysql;host=localhost','root','Spasskydb8080');
     $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-
+    
+    //delete
     $pdo->query($queryd);
     $pdo->query($querydR);
     $pdo->query($querydP);
     $pdo->query($querydT);
 
-
+    //create
     $pdo->query($queryPassP);
     $pdo->query($query);
     $pdo->query($queryTables);
@@ -95,7 +96,7 @@ try{
             $rpR=$stmtR->execute();
 
         }
-        else{
+    else{//linux
             $stmtP=$pdo->prepare($linQuerylU);
             $rpP=$stmtP->execute();
             $stmt=$pdo->prepare($linQueryl);

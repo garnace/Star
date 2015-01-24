@@ -2441,7 +2441,7 @@ function writeDBB(dbId)
 {
 	var errLabel;
 
-	alert("write");
+	alert("writedb");
 	$(document).ready(function(){
 	$.getJSON("http://localhost:8280/StarAdvisor/write.php?emaild="+dbId+"&callback=?",
 	function(data){
