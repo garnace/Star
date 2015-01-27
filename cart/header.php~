@@ -280,7 +280,7 @@ $(document).ready(function(){
       </div><!--nav-collapse-->
 
     </div><!--container-->
-    </div><!--navbar-->
+    </div>
   <div class='container'>
   <!--div class='container'-->
 <!-- #content div -->
@@ -1169,7 +1169,7 @@ onsubmit="return valReservation(this)">
  
 <!--p id="dis">disapear</p-->
       
-      </div><!--**************** END col ***********************-->
+      </div><!--**************** END container ***********************-->
       <div class='col-sm-3 sidebar-offcanvas' id="sidebar" role="navigation">
         <h2>Sidebar</h2>
         <ul class="nav nav-tabs nav-stacked">
@@ -1184,13 +1184,13 @@ onsubmit="return valReservation(this)">
           <li><a href='#' onclick="getSectionLogin(0);">Login</a></br><span id="cal2">&nbsp;</span></li>
 	  <li><a href='#'><span id="call">&nbsp;</span></a></li>
         </ul>
-      </div><!--**************** END col ***********************-->
+      </div>
 
 
-    </div><!--**************** END content ***********************-->
+    </div>
 
 
-  </div><!--**************** END container ***********************-->
+  </div>
 </div><!--wrapper-->
 <!--script language="JavaScript">
 new valUser(document.forms['starform']);
