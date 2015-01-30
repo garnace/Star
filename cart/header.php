@@ -256,3 +256,35 @@ $(document).ready(function(){
 </div><!--container-->
 </div><!--header-->
 <!--  END CAKE header                  -->
+
+
+<!--twitter bootstrap top menu followed by bootstrap containers-->
+
+    <div class='navbar fixed-top navbar-inverse' role="navigation">
+      <div class='container' >
+      <div class='navbar-header' >
+       
+          <a href="#" onclick="load(0);" class="navbar-brand"><i class="glyphicon glyphicon-leaf "></i> Home</a><
+       
+      </div><!--head-->
+      <div class='collapse navbar-collapse' >
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#" onclick="load(0);"><span class="glyphicon glyphicon-leaf"></span> Home</a></li>
+          <li><a href="#fieldT1" onclick="getSFeedTerm(2);"><span class="glyphicon glyphicon-glass"> </span>Choose Meal</a></li>
+          <li><a href="#tabs-2" onclick="listSites(0);"><span class="glyphicon glyphicon-pencil"> </span> Meal List Events</a></li>
+          <li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+          <li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+          <li><a href="#formstar" onclick="getSFeedTerm(4);" style="float:right;"><span class="glyphicon glyphicon-user"> Login/Sign-up</a></li>
+
+        </ul>
+      </div><!--nav-collapse-->
+
+    </div><!--container-->
+    </div><!--navbar-->
+  <div class='container'>
+  <!--div class='container'-->
+<!-- #content div -->
+    <!--div id='content' class='row-fluid'-->
+    <div id='content' class='row row-offcanvas row-offcanvas-right'>
+      <div class='col-sm-9 main'>
+        <!--h2>Main Content Section</h2-->

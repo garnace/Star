@@ -934,10 +934,11 @@ $(document).ready(function(){
 //	$('.quickflip-wrapper3').quickFlip();
 //	srpA.push("hello");
 	alert("fLICKCK setRPIC");
-    setPic(arrPic[randI],srpA,randI);
+
 //	alert("+");
 //    setPicP(arrPic[randI],srpA);
     setCarousel(arrPic[randI]);
+    setPic(arrPic[randI],srpA,randI);
 });
 
 
@@ -958,9 +959,9 @@ function setRPicP(pId)
     var arrPic=["galaxy","star night","sky","observatory","nebula","moon","asteroid","meteor","telescope"];
     var randI=Math.floor(Math.random()*(arrPic.length));
 	alert("rick");
-    setPic(arrPic[randI]);
-    setCarousel(arrPic[randI]);
 
+    setCarousel(arrPic[randI]);
+    setPic(arrPic[randI]);
 
 //--------------------------------------
 
@@ -2863,25 +2864,26 @@ function load()
     {
 
 alert("what");
-    document.getElementById("pageBar").style.display="";
-    document.getElementById("formstar").style.display="";
-//    document.getElementById("forma").style.display="";
+    setRPic(0);
+    document.getElementById("hero").style.display="";
     document.getElementById("dbTable").style.display="";
 
+    document.getElementById("formstar").style.display="";
+//    document.getElementById("forma").style.display="";
+
+    document.getElementById("pageBar").style.display="";
+    document.getElementById("pageBar").innerHTML="";
+
     document.getElementById("journ").style.display="";
+    document.getElementById("journ").innerHTML="";
+
+    document.getElementById("son").innerHTML="";
     document.getElementById("imagesky").style.display="";
-
-    document.getElementById("hero").style.display="";
-
-    document.getElementById("imagesky").style.display="";
-
 
     document.getElementById("imagesky").innerHTML="";
-    document.getElementById("pageBar").innerHTML="";
-    document.getElementById("journ").innerHTML="";
-    document.getElementById("son").innerHTML="";
 
-    setRPic(0);
+
+//    setRPic(0);
 
 
 

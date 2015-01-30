@@ -338,9 +338,11 @@ $(function(){
 	);
 
 */
+//overlay for about
 $("input[rel]").overlay();
 
 
+//display addition addguest info checkboxes
 $('#addguest').click(function()
 	{
 	if ($('#addguest:checked').length == 1)
