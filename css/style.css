@@ -1153,6 +1153,16 @@ input[type="checkbox"]
 	padding:0 20px 0 0;
 //	visibility:hidden;
 }
+#chkRes:after
+{
+	content:"";
+	height:0;
+	visibility:hidden;
+	display:block;
+	clear:both;
+}
+
+
 #formres:after
 {
 	content:"";
