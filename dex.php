@@ -4,13 +4,12 @@ include ('./header.php');
     if (isset($_POST['action']))
         {
             $action=$_POST['action'];
-//            if ($action)
         }else if (isset($_GET['action']))
         {
             $action=$_GET['action'];
         } else
         {
-            $action='shwres';
+            $action='none';
         }
     //(isset($_POST['action'])) ? $action=$_POST['action']: $action=$_p
 
@@ -287,7 +286,7 @@ include ('./header.php');
 <div id="cal">&nbsp;</div>
 
 <div id="chkRes">
-<form action="." class="form-inline" method="post"  id="chkResf" name="chkResf">
+<form action="insertfos.php" class="form-inline" method="post"  id="chkResf" name="chkResf">
 <fieldset>
 <legend>Chek your reservations</legend>
 	<div class="controls-row">
@@ -295,9 +294,9 @@ include ('./header.php');
 	<div  class="form-group col-sm-3"  >
 
 		<div class="controls">
-		<input type="hidden" name="action" value="showres">
+
 		<input class="btn btn-large btn-success" type="submit" value="Show res" />
-
+		<!--input class="btn btn-large btn-success"  value="Display it!" onclick="getListDBB(0);"-->
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfjtDBB('co.txt');"-->
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadF!" onclick="readfjTest('co.txt');"-->
@@ -312,46 +311,6 @@ include ('./header.php');
 </fieldset>
 </form>
 </div>
-
-<div id="shwRes">
-<!--/?php
-     if ($action == "shwres")
-     {
-         echo "<h3>show</h3>";
-     }
-?/-->
-<?php
-    if ($action == "shwres"):
-?>
-<h3>showif</h3>
-<?php endif; ?>
-<form action="." class="form-inline" method="post"  id="shwResf" name="shwResf">
-<fieldset>
-<legend>Your reservation listings</legend>
-	<div class="controls-row">
-
-	<div  class="form-group col-sm-3"  >
-
-		<div class="controls">
-		<input type="hidden" name="action" value="upres">
-		<input class="btn btn-large btn-success" type="submit" value="Update res" />
-
-		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
-		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfjtDBB('co.txt');"-->
-		<!--input class="btn btn-large btn-success col-sm-12" value="ReadF!" onclick="readfjTest('co.txt');"-->
-
-
-		</div><!--controls-->
-	</div><!--form-group-->
-
-
-
-	</div><!--row-->
-</fieldset>
-</form>
-</div>
-
-
 
 <h3>hello</h3>
 

@@ -13,7 +13,12 @@ include ('./header.php');
             $action='shwres';
         }
     //(isset($_POST['action'])) ? $action=$_POST['action']: $action=$_p
+/*    if (($_SERVER[REQUEST_METHOD]=="POST") && ($action == "showres"))
+        {
 
+            header("Location:index.php#imagesp");
+        }
+*/
 ?>
 <div id="hero" class="hero-unit" >
 <!--h1>Flickr</h1-->
@@ -58,7 +63,7 @@ include ('./header.php');
 
 
 
-<a id="fb2" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="setRPic(0);">Banner</a>
+<a id="fb2" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="getLoc(2);">Banner</a>
 <!--a class="btn btn-large btn-success" onclick="setTim(0);">Start</a-->
 
         
@@ -313,7 +318,17 @@ include ('./header.php');
 </form>
 </div>
 
-<div id="shwRes">
+<?php 
+      if ($action == "shwres"):
+?>
+
+<div id="shwRes" style="display:none;">
+
+<?php  else: ?>
+<div id="shwRes" >
+<?php  endif; ?>
+
+
 <!--/?php
      if ($action == "shwres")
      {

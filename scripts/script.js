@@ -969,13 +969,18 @@ function setRPicP(pId)
 
 
 }
-
+function getLoc(tId)
+{
+//	alert("hello");
+		location.href="book.html";
+}
 function getSFeedTerm(tId)
 {
 //***********************************************
 //Get search term for Lookup service
 
 //***********************************************    
+
     document.getElementById("pageBar").style.display="";
     document.getElementById("imagesky").innerHTML="";
     document.getElementById("imagesky").innerHTML="";
@@ -1000,6 +1005,7 @@ function getSFeedTerm(tId)
     document.getElementById("searchDi").style.display="";
 	$(document).ready(function(){
 		$('#tabs').tabs({selected:tId});
+//		location.href("b/index.html#tabs-2");
 	});
 
 
