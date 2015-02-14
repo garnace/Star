@@ -1,4 +1,26 @@
+<?php 
+//include ('./header.php');  
 
+    if (isset($_POST['action']))
+        {
+            $action=$_POST['action'];
+//            if ($action)
+        }else if (isset($_GET['action']))
+        {
+            $action=$_GET['action'];
+        } else
+        {
+            $action='shwres';
+        }
+    //(isset($_POST['action'])) ? $action=$_POST['action']: $action=$_p
+/*    if (($_SERVER[REQUEST_METHOD]=="POST") && ($action == "showres"))
+        {
+
+            header("Location:index.php#imagesp");
+        }
+*/
+
+?>
 <!--CTYPE html-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -64,8 +86,18 @@ $(document).ready(function(){
 });
 
 </script>
-
 <!--   -------------------------------------------->
+<?php
+     if ($action == "showres")
+         {
+         echo("<script type=\"text/javascript\">");
+//         echo("alert (\"hi\");");
+         echo("$(function(){");
+         echo("$('#tabs').tabs({selected:2});");
+         echo("});");
+         echo("</script>");
+         }
+?>
 <!--   -------------Make tabs------>
 
 <script type="text/javascript">

@@ -972,7 +972,8 @@ function setRPicP(pId)
 function getLoc(tId)
 {
 //	alert("hello");
-		location.href="book.html";
+//	$("#tabs").tabs({selected:2});
+	location.href="index.php?action=showres#chkRes";
 }
 function getSFeedTerm(tId)
 {

@@ -1,31 +1,5 @@
 <?php 
-include ('./header.php');  
-
-    if (isset($_POST['action']))
-        {
-            $action=$_POST['action'];
-//            if ($action)
-        }else if (isset($_GET['action']))
-        {
-            $action=$_GET['action'];
-        } else
-        {
-            $action='shwres';
-        }
-    //(isset($_POST['action'])) ? $action=$_POST['action']: $action=$_p
-/*    if (($_SERVER[REQUEST_METHOD]=="POST") && ($action == "showres"))
-        {
-
-            header("Location:index.php#imagesp");
-        }
-
-     if ($action == "showres")
-         {
-         echo("<script type=\"text/javascript\">");
-         echo("$('#tabs').tabs({selected:2});");
-         echo("</script">");
-         }
-*/
+include ('./header.php');
 ?>
 <div id="hero" class="hero-unit" >
 <!--h1>Flickr</h1-->
