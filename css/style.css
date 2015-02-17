@@ -897,13 +897,13 @@ p label
 #searchDi #sbox
 {
     color:black;
-    width:300px;
-    height:40px;
+    width:150px;
+//    height:40px;
     background-color:#ffff88;
-    font-size:20px;
+  //  font-size:20px;
 //    padding:10px 10px 80px 10px;
-    position:absolute;
-    z-index:2;
+  //  position:absolute;
+//    z-index:2;
 
 }
 #searchDi{

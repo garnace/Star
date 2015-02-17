@@ -67,7 +67,7 @@
 <script type="text/javascript" src="scripts/custom.js"></script>
 <script type="text/javascript" src="scripts/jquery.tools.min.js"></script>
 <!--script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script-->
-
+<script type="text/javascript" src="scripts/jqm/jquery.mobile-1.4.5.min.js"></script>
 
 
 <!--################################3##3##########33#####33#-->

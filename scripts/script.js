@@ -973,7 +973,14 @@ function getLoc(tId)
 {
 //	alert("hello");
 //	$("#tabs").tabs({selected:2});
+	$(function (){
+	var EMPTY = '';
+	alert ("echange");
+	$.get(EMPTY,function(){
 	location.href="index.php?action=showres#chkRes";
+	});
+	});
+//	location.href="index.php?action=showres#chkRes";
 }
 function getSFeedTerm(tId)
 {
@@ -992,12 +999,25 @@ function getSFeedTerm(tId)
     document.getElementById("son").innerHTML="";
 
 
-    hpb="<div id=\"searchDi\"> <p>Search for terms via http://www.strudel.org.uk/lookUP</p><input type=\"text\" id=\"sbox\" onkeypress=\"handleKeyPressFeed(event,this.form)\"/>";
-    //    hpb=hpb+"<div id=\"sbutton\"> <button onclick=\"getMatchJ(document.getElementById(\"sbox\").value)\">Search Now</button>";
-//     hpb=hpb+"<div id=\"sbutton\"> <button onclick=\"setSFeed(document.getElementById('sbox').value);\">Search LookUP</button>";
+    hpb="<div id=\"searchDi\"> <p>Search for terms via http://www.strudel.org.uk/lookUP</p>";
+//hpb=hpb+"<input type=\"text\" id=\"sbox\" onkeypress=\"handleKeyPressFeed(event,this.form)\"/>";
+/*
     hpb=hpb+"<div id=\"sbutton\"> <button onclick=\"setLFeed(document.getElementById('sbox').value);\">Search LookUP</button>";
     hpb=hpb+"</div></div>";
-    //    alert("pageBar");
+*/
+
+    hpb=hpb+"<div class=\"row\">";
+hpb=hpb+"<div class=\"col-md-4 col-sm-4\">";
+hpb=hpb+"<!-- Header top left content contact -->";
+hpb=hpb+"<div class=\"header-contact\">";
+hpb=hpb+"<!-- Contact number -->";
+hpb=hpb+"<span><i class=\"fa fa-phone red\"></i> 888-888-8888</span>";
+hpb=hpb+"</div></div><div class=\"col-md-4 col-sm-4\"><!-- Header top right content search box --><div class=\" header-search\">";
+hpb=hpb+"<form class=\"form\" role=\"form\"><div class=\"input-group\">";
+hpb=hpb+"<input type=\"text\" class=\"form-control\" placeholder=\"Search...\" id=\"sbox\" onkeypress=\"handleKeyPressFeed(event,this.form)\">";
+hpb=hpb+" <span class=\"input-group-btn\"><button class=\"btn btn-default\" type=\"button\" onclick=\"setSSFeed(document.getElementById('sbox').value);\"><i class=\"fa fa-search\"></i></button> </span>";
+hpb=hpb+"</div></form></div></div></div>";
+hpb=hpb+"</div>";
     document.getElementById("pageBar").innerHTML=hpb;
     document.getElementById("journ").innerHTML="";
     document.getElementById("imagesky").innerHTML="";
