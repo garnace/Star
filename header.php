@@ -28,7 +28,7 @@
 
 <head>
 <title>StarAdvisor</title>
-<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"/>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
 <link href="css/style.css" rel="stylesheet" type="text/css" title="starA">
 <link href="cf/theme/css/less-style.css" rel="stylesheet" type="text/css">
 <link href="cf/theme/css/bootstrap.css" rel="stylesheet" type="text/css" title="starA">
@@ -51,6 +51,7 @@
 <link href="cf/theme/css/font-awesome.min.css" rel="stylesheet">
 <!--link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"-->
 <link href="css/bootstrap-glyphicons.css" rel="stylesheet">
+<!--link href="css/jqm/jquery.mobile-1.4.5.min.css" rel="stylesheet"-->
 <!-- ********************end cake links**********************************-->
 
 <!--link rel="shortcut icon" href="#"-->
@@ -67,7 +68,7 @@
 <script type="text/javascript" src="scripts/custom.js"></script>
 <script type="text/javascript" src="scripts/jquery.tools.min.js"></script>
 <!--script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script-->
-<script type="text/javascript" src="scripts/jqm/jquery.mobile-1.4.5.min.js"></script>
+<!--script type="text/javascript" src="scripts/jqm/jquery.mobile-1.4.5.min.js"></script-->
 
 
 <!--################################3##3##########33#####33#-->

@@ -213,7 +213,7 @@ var pRay=new Array();
 pRay=pR;
 
 
-alert("flickr setPic");
+//alert("flickr setPic");
 $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
   {
     tags: pId+",nasa",
@@ -224,7 +224,7 @@ $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?
  },
   function(data) {
       $("#images").html("");
-	alert("hello"+pId);
+//	alert("hello"+pId);
       $.each(data.items, function(i,item){
 
       pRay.push(item);
@@ -933,7 +933,7 @@ $(document).ready(function(){
     var randI=Math.floor(Math.random()*(arrPic.length));
 //	$('.quickflip-wrapper3').quickFlip();
 //	srpA.push("hello");
-	alert("fLICKCK setRPIC");
+//	alert("fLICKCK setRPIC");
 
 //	alert("+");
 //    setPicP(arrPic[randI],srpA);
@@ -975,7 +975,7 @@ function getLoc(tId)
 //	$("#tabs").tabs({selected:2});
 	$(function (){
 	var EMPTY = '';
-	alert ("echange");
+//	alert ("echange");
 	$.get(EMPTY,function(){
 	location.href="index.php?action=showres#chkRes";
 	});
@@ -1658,7 +1658,20 @@ function getMatchBl(mId)
 	//    alert ("getMatch");
 }
 //---end getMatchBl-
+function getSites(sId)
+{
+	getCach(htReal[1]);
+}
 
+function getCach(sId)
+{
+	alert(htReal[1]);
+	$.getJSON("http://localhost:8280/StarAdvisor/sites.php?sName="+sId+"&callback=?",function(data){
+		alert(data.users);
+
+	});
+
+}
 
 function getMatchJ(mId)
 {
@@ -1696,7 +1709,7 @@ function getMatchJ(mId)
     var htshow;
     var htshow;
 
-
+//  getCache();
     urlArr=[urlM,urlA];
     urlAL=urlArr.length;
     //	  htsamp=htsamp+"<p><b><font color=#ffee22 size=\"2\" >from: "+htarr[arrCount]+":</b></p></font>";
@@ -1886,11 +1899,27 @@ function getSectionLO(dId)
 //    document.getElementById("son").before="";
   //  document.getElementById("fbox").style.display="none";
 
-    hpb="<div id=\"searchDi\"><p>Enter terms to list sites listed on StarServer's cached sites:  Cornell.edu and Stargazing.net</p> <input type=\"text\" id=\"sbox\" onkeypress=\"handleKeyPressJ(event,this.form)\"/>";
-    //    hpb=hpb+"<div id=\"sbutton\"> <button onclick=\"getMatchJ(document.getElementById(\"sbox\").value)\">Search Now</button>";
-     hpb=hpb+"<div id=\"sbutton\"> <button onclick=\"getMatchJ(document.getElementById('sbox').value);\">Search Now</button>";
-    hpb=hpb+"</div></div>";
-    //    alert("pageBar");
+    hpb="<div id=\"searchDi\"><p>Enter terms to list sites listed on StarServer's cached sites:  Cornell.edu and Stargazing.net</p>";
+// <input type=\"text\" id=\"sbox\" onkeypress=\"handleKeyPressJ(event,this.form)\"/>";
+
+//     hpb=hpb+"<div id=\"sbutton\"> <button onclick=\"getMatchJ(document.getElementById('sbox').value);\">Search Now</button>";
+  //  hpb=hpb+"</div></div>";
+
+
+
+    hpb=hpb+"<div class=\"row\">";
+hpb=hpb+"<div class=\"col-md-4 col-sm-4\">";
+hpb=hpb+"<!-- Header top left content contact -->";
+hpb=hpb+"<div class=\"header-contact\">";
+hpb=hpb+"<!-- Contact number -->";
+hpb=hpb+"<span><i class=\"fa fa-phone red\"></i> 888-888-8888</span>";
+hpb=hpb+"</div></div><div class=\"col-md-4 col-sm-4\"><!-- Header top right content search box --><div class=\" header-search\">";
+hpb=hpb+"<form class=\"form\" role=\"form\"><div class=\"input-group\">";
+hpb=hpb+"<input type=\"text\" class=\"form-control\" placeholder=\"Search...\" id=\"sbox\" onkeypress=\"handleKeyPressJ(event,this.form)\">";
+hpb=hpb+" <span class=\"input-group-btn\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getMatchJ(document.getElementById('sbox').value);\"><i class=\"fa fa-search\"></i></button> </span>";
+hpb=hpb+"</div></form></div></div></div>";
+hpb=hpb+"</div>";
+
     document.getElementById("pageBar").innerHTML=hpb;
     document.getElementById("journ").innerHTML="";
     document.getElementById("imagesky").innerHTML="";

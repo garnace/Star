@@ -44,7 +44,7 @@ include ('./header.php');
 
 
 
-<a id="fb2" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="getLoc(2);">Banner</a>
+<a id="fb2" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="getSites(2);">Banner</a>
 <!--a class="btn btn-large btn-success" onclick="setTim(0);">Start</a-->
 
         
@@ -70,6 +70,38 @@ include ('./header.php');
 <div id="dbTable" >
 
 <BR/>
+
+<div data-role="page" >
+<div data-role="header">
+<h1>first</h1>
+</div>
+
+
+<div data-role="content">
+<ul data-role="listview" data-split-icon="gear">
+<li><a href="#">one</a><a href="#">button</a></li>
+<li><a href="#">two</a><a href="#">button</a></li>
+</ul>
+<p>hello world<a href="#second" data-transition="pop">go second</a></p>
+
+</div>
+
+</div><!--page-->
+
+
+<div data-role="page" id="second">
+<div data-role="header">
+<h1>second</h1>
+</div>
+
+
+<div data-role="content">
+<p>hello world</p>
+</div>
+
+
+</div>
+
 <BR/>
 <h3>DATA</h3>
 <table id="tableDB" cellpadding="2" cellspacing="2" style="text-align: left;  color:rgb(5,25,215);" border="1" cellpadding="2" cellspacing="2">

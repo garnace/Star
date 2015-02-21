@@ -72,6 +72,24 @@ body
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
 
+.mine.in{
+	-moz-animation-name:myslidein;
+}
+.mine.out{
+	-moz-animation-name:myslideout;
+}
+@-webkit-keyframes myslidein{
+	from { -moz-transform: rotateZ(0deg) scale(0)}
+	to { -moz-transform: rotateZ(360deg) scale(1)}
+
+}
+@-webkit-keyframes myslideout{
+	from { -moz-transform: rotateZ(360deg) scale(1)}
+	to { -moz-transform: rotateZ(0deg) scale(0)}
+
+}
+
+
 .header .header-top{
 	padding-top: 15px;
 	padding-bottom: 15px;
@@ -897,7 +915,7 @@ p label
 #searchDi #sbox
 {
     color:black;
-    width:150px;
+//    width:150px;
 //    height:40px;
     background-color:#ffff88;
   //  font-size:20px;
