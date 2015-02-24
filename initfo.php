@@ -88,16 +88,32 @@ $pdo->query($queryReserve);
 $pdo->exec("INSERT INTO uaccount (id,accounthandle,email,accountpass) VALUES (NULL,'jsoolffe','johnsmith@gowansnet.com','smith1234')");
 $pdo->exec("INSERT INTO uaccount (id,accounthandle,email,accountpass) VALUES (NULL,'2@net.net','2@net.net','Squiggle')");
 $pdo->exec("INSERT INTO uaccount (id,accounthandle,email,accountpass) VALUES (NULL,'2@zed.nez','2@zed.nez','Squiggle')");
+$pdo->exec("INSERT INTO uaccount (id,accounthandle,email,accountpass) VALUES (NULL,'3@zed.nez','3@zed.nez','Squiggle')");
+$pdo->exec("INSERT INTO uaccount (id,accounthandle,email,accountpass) VALUES (NULL,'4@zed.nez','4@zed.nez','Squiggle')");
+$pdo->exec("INSERT INTO uaccount (id,accounthandle,email,accountpass) VALUES (NULL,'5@zed.nez','5@zed.nez','Squiggle')");
 $pdo->exec("INSERT INTO contacts (id,first,last,phone,mobile,fax,email,web,dateAdd) VALUES (NULL,'BooffC','Candy','01233 567890','30112 334455','01234 457891','johnsmith@gowansnet.com','http://www.gowansnet.com','NULL')");
 $pdo->exec("INSERT INTO contacts (id,first,last,phone,mobile,fax,email,web,dateAdd) VALUES (NULL,'George','HILL','(111)-123-4545','(111)-222-2222','fa@nak','2@net.net','website','NULL')");
 $pdo->exec("INSERT INTO contacts (id,first,last,phone,mobile,fax,email,web) VALUES (NULL,'mary','jane','(555)-444-4444','(777)-444-4444','fa@mak','2@zed.nez','website')");
+$pdo->exec("INSERT INTO contacts (id,first,last,phone,mobile,fax,email,web) VALUES (NULL,'James','Smiley','(555)-434-4444','(777)-434-4444','fo@mak','3@zed.nez','website')");
+$pdo->exec("INSERT INTO contacts (id,first,last,phone,mobile,fax,email,web) VALUES (NULL,'Tim','Orwell','(555)-433-4444','(777)-433-4444','fi@mak','4@zed.nez','website')");
+$pdo->exec("INSERT INTO contacts (id,first,last,phone,mobile,fax,email,web) VALUES (NULL,'Brandy','Orwell','(555)-433-4444','(777)-433-4444','fi@mak','5@zed.nez','website')");
 $pdo->exec("INSERT INTO tables (id,tableN,seatN,seatAvail) VALUES (NULL,'TA1','SA1','Y')");
 $pdo->exec("INSERT INTO tables (id,tableN,seatN,seatAvail) VALUES (NULL,'TA1','SA2','Y')");
 $pdo->exec("INSERT INTO tables (id,tableN,seatN,seatAvail) VALUES (NULL,'TA2','SA1','Y')");
 $pdo->exec("INSERT INTO tables (id,tableN,seatN,seatAvail) VALUES (NULL,'TA2','SA2','Y')");
-$pdo->exec("INSERT INTO reserve (id,email,tableN,seatN,meal,resTime,resFee) VALUES (NULL,'johnsmith@gowansnet.com','TA1','SA1','Italian','2015-02-22 17:30:00','55.25')");
-$pdo->exec("UPDATE tables SET seatAvail = 'N' WHERE tableN = 'TA1' AND seatN = 'SA1'");
+$pdo->exec("INSERT INTO tables (id,tableN,seatN,seatAvail) VALUES (NULL,'TA3','SA1','Y')");
+$pdo->exec("INSERT INTO tables (id,tableN,seatN,seatAvail) VALUES (NULL,'TA3','SA2','Y')");
 
+$pdo->exec("INSERT INTO reserve (id,email,tableN,seatN,meal,resTime,resFee) VALUES (NULL,'johnsmith@gowansnet.com','TA1','SA1','Italian','2015-02-22 17:30:00','55.25')");
+$pdo->exec("INSERT INTO reserve (id,email,tableN,seatN,meal,resTime,resFee) VALUES (NULL,'3@zed.nez','TA2','SA2','Thai','2015-02-24 18:30:00','65.25')");
+$pdo->exec("INSERT INTO reserve (id,email,tableN,seatN,meal,resTime,resFee) VALUES (NULL,'4@zed.nez','TA3','SA1','Mexican','2015-02-24 18:00:00','65.25')");
+$pdo->exec("INSERT INTO reserve (id,email,tableN,seatN,meal,resTime,resFee) VALUES (NULL,'5@zed.nez','TA2','SA1','Mexican','2015-02-24 18:30:00','65.25')");
+//$pdo->exec("UPDATE tables SET seatAvail = 'N' WHERE tableN = 'TA1' AND seatN = 'SA1'");
+$pdo->exec("UPDATE tables t RIGHT JOIN reserve r ON t.tableN=r.tableN SET t.seatAvail='N' WHERE t.seatN=r.seatN");
+
+//$pdo->exec("UPDATE tables SET seatAvail = 'N' WHERE  (tableN, seatN) IN (SELECT tableN, seatN FROM reserve)");
+//$pdo->exec("UPDATE tables SET seatAvail = 'N' WHERE (SELECT tableN, seatN FROM reserve)");
+//$pdo->exec("UPDATE tables SET seatAvail = 'N' WHERE EXISTS (SELECT r.tableN, r.seatN FROM tables t LEFT JOIN reserve r ON t.tableN=r.tableN WHERE r.tableN=t.tableN AND r.seatN=t.seatN)");
 
 $resultP=$pdo->query($queryshowP);
 $numP=$resultP->rowCount();
@@ -124,7 +140,8 @@ while ($vP < $numP)
 unset($pdo);
 
 //set header back to index.html
-header("Location: http://localhost:8280/StarAdvisor/index.html#user_check");
+//header("Location: http://localhost:8280/StarAdvisor/index.html#user_check");
+header("Location: http://localhost:8280/StarAdvisor/index.php#user_check");
 //header("Location: http://".$_SERVER[HTTP_HOST]."/StarAdvisor/index.html#user_check");
 
 
