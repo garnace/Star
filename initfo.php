@@ -59,8 +59,12 @@ $queryshowP= "SELECT * FROM uaccount";
 
 try {
 
+/* Replace with database class
 $pdo= new PDO('mysql:dbname=mysql;host=localhost','root','Spasskydb8080');
 $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+*/
+
+$pdo= Database::getDB();
 
 //delete contacts first
 $pdo->query($queryd);
