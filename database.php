@@ -6,11 +6,11 @@ class Database{
     private static $password = "Spasskydb8080";
     private static $db ;
 
-    private function __construct{}
-
+    private function __construct(){}
+//    private function __destruct(){ unset(self::$db);}
     public static function getDB()
     {
-        if (isset(self::$db))
+        if (!isset(self::$db))
         {
                 try{
                     self::$db = new PDO(self::$dsn,self::$username,self::$password);

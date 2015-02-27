@@ -20,7 +20,18 @@ $database="mysql";
 $query="SELECT * FROM contacts ORDER BY last DESC" ;
 $queryT="SELECT * FROM tables ORDER BY tableN DESC" ;
 //$queryR="SELECT * ,COUNT (*) FROM tables t JOIN reserves r ON r.tableN = t.tableN WHERE COUNT(SELECT * FROM tables WHERE seatAvail = 'Y') ";
-$queryR="SELECT t.tableN, COUNT(*) AS countAvail FROM tables t LEFT JOIN reserve r ON r.tableN = t.tableN WHERE seatAvail = 'Y' GROUP BY tableN";
+
+
+
+//----------------# replace with id query to count and check filled seating-----
+//$queryR="SELECT t.tableN, COUNT(*) AS countAvail FROM tables t LEFT JOIN reserve r ON r.tableN = t.tableN WHERE seatAvail = 'Y' GROUP BY t.tableN";
+//---------------------------------------------------------
+//$queryR="SELECT t.id,t.tableN, COUNT(*) AS countAvail FROM tables t LEFT JOIN reserve r ON r.tableN = t.tableN WHERE t.seatAvail = 'Y' GROUP BY t.tableN";
+//$queryR="SELECT t.id,t.tableN, COUNT(*) AS countAvail,t.seatAvail FROM tables t LEFT JOIN reserve r ON r.tableN = t.tableN WHERE t.seatAvail = 'Y' GROUP BY t.tableN";
+$queryR="SELECT t.tableN, COUNT(*) AS countAvail FROM tables t LEFT JOIN reserve r ON r.tableN = t.tableN AND r.seatN=t.seatN WHERE t.seatAvail = 'Y' GROUP BY t.tableN";
+
+
+
 try
 {
 //mysql_query($query);

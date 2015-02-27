@@ -12,6 +12,7 @@
 //$email=check_input($_POST["youre"],"write emaail address");
 //$likeit=check_input($_POST["likeit"]);
 //$comments=check_input($_POST["yourc"],"write a comment");
+include('./database.php');
 $unsecure="string";//$_POST["yournamef"];
 $sam="STRING";
 $iAP= array();
@@ -110,7 +111,7 @@ $pdo->exec("INSERT INTO tables (id,tableN,seatN,seatAvail) VALUES (NULL,'TA3','S
 
 $pdo->exec("INSERT INTO reserve (id,email,tableN,seatN,meal,resTime,resFee) VALUES (NULL,'johnsmith@gowansnet.com','TA1','SA1','Italian','2015-02-22 17:30:00','55.25')");
 $pdo->exec("INSERT INTO reserve (id,email,tableN,seatN,meal,resTime,resFee) VALUES (NULL,'3@zed.nez','TA2','SA2','Thai','2015-02-24 18:30:00','65.25')");
-$pdo->exec("INSERT INTO reserve (id,email,tableN,seatN,meal,resTime,resFee) VALUES (NULL,'4@zed.nez','TA3','SA1','Mexican','2015-02-24 18:00:00','65.25')");
+//Temp remove ta3reserve --$pdo->exec("INSERT INTO reserve (id,email,tableN,seatN,meal,resTime,resFee) VALUES (NULL,'4@zed.nez','TA3','SA1','Mexican','2015-02-24 18:00:00','65.25')");
 $pdo->exec("INSERT INTO reserve (id,email,tableN,seatN,meal,resTime,resFee) VALUES (NULL,'5@zed.nez','TA2','SA1','Mexican','2015-02-24 18:30:00','65.25')");
 //$pdo->exec("UPDATE tables SET seatAvail = 'N' WHERE tableN = 'TA1' AND seatN = 'SA1'");
 $pdo->exec("UPDATE tables t RIGHT JOIN reserve r ON t.tableN=r.tableN SET t.seatAvail='N' WHERE t.seatN=r.seatN");
@@ -142,7 +143,11 @@ while ($vP < $numP)
 
 //destroy
 unset($pdo);
+//------------replace destroy with closeCursor-------
 
+//$pdo->closeCursor();
+
+//----------------------------------
 //set header back to index.html
 //header("Location: http://localhost:8280/StarAdvisor/index.html#user_check");
 header("Location: http://localhost:8280/StarAdvisor/index.php#user_check");
