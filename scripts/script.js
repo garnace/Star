@@ -2319,10 +2319,12 @@ function tableFillT(i,item)
 //		alert("table");
 //		$('#lblTR'+i+'').append('tbl'+item[i]);	
 //		$('#lblTR'+i).html('table'+(i+1)+':('+item[1]+'seats left)');	
-		if (item[3] == 'N')
+/*		if (item[3] == 'N')
 		$('#lblTR'+i).html('table'+(i+1)+':('+item[2]+'seats left)');	
 		else
 		$('#lblTR'+i).html('table'+(i+1)+':(0 seats left)');	
+*/
+		$('#lblTR'+i).html('table'+(i+1)+':('+item[1]+'seats left)');	
 
 }
 
