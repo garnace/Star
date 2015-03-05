@@ -28,13 +28,47 @@
 <link href="css/bootstrap-glyphicons.css" rel="stylesheet">
 <link href="css/jqm/jquery.mobile-1.4.5.min.css" rel="stylesheet">
 <script type="text/javascript" src="scripts/jquery-1.8.0.min.js"></script>
-<script type="text/javascript" src="scripts/jquery-ui-1.8.23.custom.min.js"></script>
+<!--script type="text/javascript" src="scripts/jquery-ui-1.8.23.custom.min.js"></script-->
 <!--script type="text/javascript" src="scripts/jquery.tools.min.js"></script-->
 
 
 
 <script type="text/javascript" src="scripts/jqm/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+//var $=jQuery.noConflict();
+$(document).ready(function(){
+	var blis= "b1news b2headline";
+	var bray = blis.split(' ');
+	var uline = $('#b1 a');
+	var lcount = 0;
 
+	var t = uline;
+
+//	("#b1 a").click(function(){alert('jquery');});
+	("#a1").click(function(){alert('jquery');});
+	("#m").click(function(){alert('jquery');});
+/*	uline.setTimeout(function(){
+		alert("hi");
+		lcount = (lcount +1) % bray.length ;
+		t.fadeOut();
+
+
+		uline.html('yello'+lcount);
+		uline.fadeIn();
+
+	},200);
+*/
+
+});
+
+function getM()
+{
+	alert('button');
+}
+
+
+
+</script>
 </head>
 <body>
 
@@ -47,10 +81,15 @@
 
 <div data-role="content">
 <ul data-role="listview" data-split-icon="gear">
-<li><a href="#">one</a><a href="#">button</a></li>
-<li><a href="#">two</a><a href="#">button</a></li>
+<li id="b1"><a href="#" id="a1">one</a><a href="#">button</a></li>
+<li id="b2"><a href="#">two</a><a href="#">button</a></li>
+<li id="b3"><a href="#" onclick="getM();">3</a><a href="#">button</a></li>
+
 </ul>
-<p>helloo world<a href="#second" data-transition="pop">go second</a></p>
+<br>
+<br>
+<p>helloo world<a href="#second" data-transition="mine">go second</a></p>
+<p>helloo world<a href="#third" id="m">go third</a></p>
 
 </div>
 

@@ -81,10 +81,40 @@
 
 <script>
 
-var $= jQuery.noConflict();
+//var $= jQuery.noConflict();
 $(document).ready(function(){
+	var blis= "b1news b2headline";
+	var bray = (blis).split(' ');
+	var uline = $('#m');
+	var lcount = 0;
+    var mtimer =0;
+
+
+//	("#b1 a").click(function(){alert('jquery');});
+	$("#a3").click(function(){alert('jquery'); if (mtimer) clearInterval(mtimer);});
+//	$("#m").click(function(){alert(bray[1]);
+	uline.click(function(){alert(bray[1]);
+	mtimer =setInterval(function(){
+//		alert("hi");
+		lcount = (lcount +1) % (bray.length) ;
+		uline.fadeOut();
+
+
+//		uline.html('yello'+lcount);
+		uline.html(bray[lcount]+bray.length+lcount);
+		uline.fadeIn();
+
+	},1500);
+
 
 });
+
+
+});
+function getM()
+{
+	alert('button');
+}
 
 </script>
 <!--   -------------------------------------------->

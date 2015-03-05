@@ -78,12 +78,12 @@ body
 .mine.out{
 	-moz-animation-name:myslideout;
 }
-@-webkit-keyframes myslidein{
+@-moz-keyframes myslidein{
 	from { -moz-transform: rotateZ(0deg) scale(0)}
 	to { -moz-transform: rotateZ(360deg) scale(1)}
 
 }
-@-webkit-keyframes myslideout{
+@-moz-keyframes myslideout{
 	from { -moz-transform: rotateZ(360deg) scale(1)}
 	to { -moz-transform: rotateZ(0deg) scale(0)}
 

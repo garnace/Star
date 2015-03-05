@@ -80,9 +80,11 @@ include ('./header.php');
 <div data-role="content">
 <ul data-role="listview" data-split-icon="gear">
 <li><a href="#">one</a><a href="#">button</a></li>
-<li><a href="#">two</a><a href="#">button</a></li>
+<li><a href="#" id="m">twoo</a><a href="#">button</a></li>
+<li id ="b3"><a href="#" id="a3">threewo</a><a href="#">button</a></li>
 </ul>
 <p>hello world<a href="#second" data-transition="pop">go second</a></p>
+<p>hello world<a href="#third" onclick="getM();">go second</a></p>
 
 </div>
 
