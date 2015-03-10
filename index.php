@@ -305,6 +305,13 @@ include ('./header.php');
 
 <!--***************** cal ****************-->
 <div id="cal">&nbsp;</div>
+<div id="calm"> 
+   <label id="ldshow" for="dshow">date picked:</label>
+    <input id="dshow"></input>
+     <div id="cmpick">
+     <!--input type="text" id="cmpick"></input-->
+    </div>
+</div>
 
 <div id="chkRes">
 <form action="tag.php" class="form-inline" method="post"  id="chkResf" name="chkResf">

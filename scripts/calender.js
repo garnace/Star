@@ -69,18 +69,22 @@ function calendarInit(d){
 //			$('<td>hi'+i+'</td>').appendTo('#cal tbody');
 			if (curMonthStartDay == i && j==0)
 			{
-			$("#cal table tbody tr:eq("+j+")").append('<td>hif'+(++startMCount)+'</td>');
+					++startMCount;
+			$("#cal table tbody tr:eq("+j+")").append('<td id="'+startMCount+'">hif'+(startMCount)+'</td>');
 			}
 			else if (startMCount > 0)
 			{
 				if(calDay==(startMCount+1))//check current day
 				{
-					$("#cal table tbody tr:eq("+j+")").append('<td><span style="opacity:0.5;">no'+(++startMCount)+'</span></td>');
+					++startMCount;
+					$("#cal table tbody tr:eq("+j+")").append('<td id="day'+startMCount+'"><span style="opacity:0.5;">no'+(startMCount)+'</span></td>');
 				}
 
 				else
-					$("#cal table tbody tr:eq("+j+")").append('<td>hi'+(++startMCount)+'</td>');
-
+				{
+					++startMCount;
+					$("#cal table tbody tr:eq("+j+")").append('<td id="day'+startMCount+'">hi'+(startMCount)+'</td>');
+				}
 
 			}
 
@@ -106,7 +110,7 @@ function prevMon(mId)
 {
 //	mId--;
 //	alert("m"+mId.getMonth().toString());
-	alert("m"+mId);
+//--	alert("m"+mId);
 	var curM=0;
 	var monat=new Array("january","february","march","april","may","june","july","august","september","october","november","december");
 	var tabH=$("#cal table thead tr:eq(0) th:eq(1)").text();
@@ -119,7 +123,7 @@ function prevMon(mId)
 	}
 //	alert("m"+tabA+curM+tabH+monat[7].toString().slice(0,3) + monat.length);
 //	datePrevMonth= new Date(mId.getYear,curM-1,1);
-
+	alert(curM+"m"+mId);
 //	alert("hello");
 }
 
@@ -129,7 +133,19 @@ var dd= new Date();
 //alert("cal"+dd);
 calendarInit(dd);
 //alert("ccal");
+//$("#cmpick").datepicker();
 
+//$("#cmpick").datepicker({appendText:'mm/dd/yy','show'});
+$("#cmpick").datepicker({appendText:'mm/dd/yy',
+	onSelect:function(dateText,inst){
+	$('#dshow').val(dateText);
+	$('#ldshow').html(dateText);
+
+	}});
+$("[id^=day]").click(function(){alert("hi"+$(this).text());});
+
+//$("#cmpick").datepicker({});
+//$("#cmpick").datepicker('show');
 });//doc ready
 
 });
