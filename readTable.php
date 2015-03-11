@@ -32,6 +32,8 @@ $queryT="SELECT * FROM tables ORDER BY tableN DESC" ;
 //--Simple count of seating left per table
 //$queryR="SELECT t.tableN, COUNT(*) AS countAvail FROM tables t LEFT JOIN reserve r ON r.tableN = t.tableN AND r.seatN=t.seatN WHERE t.seatAvail = 'Y' GROUP BY t.tableN";
 //--possible join for zero countAvail results--/
+//--first left join tables reserves for tables avail including null set
+//--then join result with tables on tablenumber
 $queryR="SELECT tt.tableN, IFNULL(countAvail,0) FROM (SELECT t.tableN, COUNT(*) AS countAvail FROM tables t LEFT JOIN reserve r ON r.tableN = t.tableN AND r.seatN=t.seatN WHERE t.seatAvail = 'Y' GROUP BY t.tableN) AS tc RIGHT JOIN tables tt ON tc.tableN=tt.tableN GROUP BY tt.tableN";
 
 
