@@ -1,5 +1,5 @@
 <?php
-
+include("./database.php");
 header('Content-type: application/json');
 
 //--------------------------windows read
@@ -70,9 +70,11 @@ $query="SELECT * FROM contacts" ;
 $result=mysql_query($delquery);
 */
 try{
-    $pdo= new PDO('mysql:dbname=mysql;host=localhost','root','Spasskydb8080');
+    $pdo=Database::getDB();
+
+/*replace    $pdo= new PDO('mysql:dbname=mysql;host=localhost','root','Spasskydb8080');
     $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-    
+*/  
     //delete
     $pdo->query($queryd);
     $pdo->query($querydR);
@@ -110,7 +112,7 @@ try{
         }
 
 $iB=array();
-$iB['users']=array(array("message"=>"DataBase loaded"));
+$iB['users']=array(array("message"=>"DtaBase loaded"));
 //$iB['users']=$iA;
 
 

@@ -59,7 +59,7 @@ include ('./header.php');
 	<li><a href="#tabs-h">Welcome</a></li>
 	<li><a href="#tabs-1">Administrator</a></li>
 	<li><a href="#tabs-2">Choose Meal & Time</a></li>
-	<li><a href="#tabs-3">Survey</a></li>
+	<li><a href="#tabs-3">Upload</a></li>
 	<li><a href="#tabs-4">Login</a></li>
 </ul>
 
@@ -711,7 +711,21 @@ onsubmit="return valReservation(this)">
 
 </div>
 <!--end second tab-->
-<div id="tabs-3">Survey
+<div id="tabs-3">Upload
+
+<div id="frmUpload">
+<form action = "." method="post" id="starUp" name="starUp" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Upload picture</legend>
+	        <p>
+			<input type="file" name="file1"><br/>
+			<input type="submit" value="upload">			
+	        </p>
+    </fieldset>
+</form>
+
+</div>
+
 </div>
 <!--end second tab-->
 <div id="tabs-4">Login
