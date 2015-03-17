@@ -6,13 +6,26 @@ header("Content-type:application/json");
 //$sname="http://astro.cornell.edu/journals-and-newsletters.html";
 $sname= isset ($_POST["sName"]) ? $_POST["sName"]: (isset($_GET["sName"]) ? $_GET["sName"] : "");
 //$sname="http://www.strudel.org.uk/spacebuzz/blogs.html";
-$fname="tt.txt";
+$fname="x.txt";
+//$fnames=substr($name,,);
+//$fnames=explode('.',$snames[i]);
+$fnames=explode('.',$sname);
+$fcount=0;
+foreach ($fnames as $fn)
+{
+        $fn=preg_replace("/\//","%",$fn);
+        $fnames[$fcount]=$fn;
+        $fcount++;
+}
+$fnames=implode('.',$fnames);
+
 try{
 $curlp = curl_init($sname);
 //$fp = fopen($sName.".txt",'w');
 //if (!$fp = @fopen("ss.txt",'w')){
 //if (!$fp = @fopen($fname.".txt",'w')){
-if (!$fp = @fopen($sname.".txt",'w')){
+//if (!$fp = @fopen($sname.".txt",'w')){
+if (!$fp = @fopen($fnames.".txt",'w')){
     throw new Exception("could not write");
 }
 
