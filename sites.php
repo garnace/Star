@@ -10,11 +10,12 @@ $fname="x.txt";
 
 
 //++begin multiple
-//foreach ($sname as $snameI){
+foreach ($sname as $snameI){
 //
 //$fnames=substr($name,,);
 //$fnames=explode('.',$snames[i]);
-$fnames=explode('.',$sname);
+//$fnames=explode('.',$sname);
+$fnames=explode('.',$snameI);
 $fcount=0;
 foreach ($fnames as $fn)
 {
@@ -25,7 +26,8 @@ foreach ($fnames as $fn)
 $fnames=implode('.',$fnames);
 
 try{
-$curlp = curl_init($sname);
+//$curlp = curl_init($sname);
+$curlp = curl_init($snameI);
 //$fp = fopen($sName.".txt",'w');
 //if (!$fp = @fopen("ss.txt",'w')){
 //if (!$fp = @fopen($fname.".txt",'w')){
@@ -49,11 +51,18 @@ $result = curl_exec($curlp);
 
 curl_close($curlp);
 fclose($fp);
+$fp=NULL;
+$curlp=NULL;
+unset($fp);
+unset($curlp);
 }catch (Exception $e){
-    $result = $e->getMessage();
+    $result = 'err site:'.$snameI.'::'.$e->getMessage();
+
+    break;//break foreach loop
     }
 
 //++end multiple
+}
 //foreach ($sname as $snameI){
 //
 

@@ -1658,6 +1658,36 @@ function getMatchBl(mId)
 	//    alert ("getMatch");
 }
 //---end getMatchBl-
+function getSitesM(sId)
+{
+//	getCach(htReal[2]);
+	getCachM(htReal);
+}
+
+function getCachM(sId)
+{
+//	alert(htReal[2].substr(0,-1));
+	alert(htReal[2].substr(0,htReal[2].length-1));
+
+	var urlTerms = '';
+	for (var i=0;i< sId.length;i++)
+	{ 
+		urlTerms += 'sName[]='+sId[i]+'&';
+	}	
+	if (urlTerms.substr(-1) == '&')
+		urlTerms = urlTerms.substr(0,urlTerms.length-1);
+	alert(urlTerms);
+//	return;
+	$.getJSON("http://localhost:8280/StarAdvisor/sites.php?"+urlTerms+"&callback=?",function(data){
+
+//	$.getJSON("http://localhost:8280/StarAdvisor/sites.php?sName="+sId+"&callback=?",function(data){
+		alert(data.users);
+
+	});
+
+}
+
+//--end getCachM
 function getSites(sId)
 {
 	getCach(htReal[2]);
@@ -1704,7 +1734,7 @@ function getMatchJ(mId)
     var dLen=0;
     var htcount=0;
     var htarr=[];
-    var htsamp="<BR><p><b><font color=#ffee22 size=\"2\" >RESULTS FOUND:</b></p></font><BR>";
+    var htsamp="<BR><p><b><font color=#00ee22 size=\"2\" >RESULTS FOUND:</b></p></font><BR>";
     var htleft="";
     var htout="";
     var htsub="";
@@ -1729,7 +1759,7 @@ function getMatchJ(mId)
 
     htsamp=htsamp +"<ul type=\"square\" color=\"blue\">";
     document.getElementById("journ").innerHTML="";
-    htsamp=htsamp+"<p><b><font color=#ffee22 size=\"2\" >FROM: </b></p></font>";
+    htsamp=htsamp+"<p><b><font color=#ff0000 size=\"2\" >FROM: </b></p></font>";
     for (cc=0;cc<urlAL;cc++)
     {
 		  //alert(urlArr[cc]);
@@ -1738,7 +1768,7 @@ function getMatchJ(mId)
 	{
 	    break;
 	}
-	htsamp=htsamp+"<p><b><font color=#ffee22 size=\"2\" > "+urlArr[cc]+":</b></p></font>";
+	htsamp=htsamp+"<p><b><font color=#ffee22 size=\"2\" > site:"+urlArr[cc]+":</b></p></font>";
 			//$.each(urlArr){
         $.get(urlArr[cc],function(data)
 	      {
@@ -1795,7 +1825,7 @@ function getMatchJ(mId)
 
 			     //	           $("<li><p><b><font color =#ffee22  >x-"+  htarr[arrCount]+ "</font></b></p></li>"  ).appendTo("#journ");		
 //			     htsamp=htsamp+"<li><p><b><font color =#ffee22  >"+  htarr[arrCount]+ "</font></b></p></li>"   ;
-			     htsamp=htsamp+"<li><p><b><font color =#2211ff  >"+  htarr[arrCount]+ "</font></b></p></li>"   ;
+			     htsamp=htsamp+"<li><p><b><font color =#221100  >site:"+  htarr[arrCount]+ "</font></b></p></li>"   ;
 			      //			      htsamp=htsamp+"<li><p><b><font color =#ffee22 size=22px >"+  htarr[arrCount]+ "</font></b></p></li>"   ;
 			 }
 		     //	     document.getElementById("journ").innerHTML="<p><b><font color =#ffee22>HI"+htsamp+"</font></b></p><BR>";
