@@ -2,11 +2,16 @@
 header("Content-type:application/json");
 
 //isset ($_GET["sName"])? $sname = "" : $sname= $_GET["sName"]
-//$sname = (isset ($_POST["sName"])) ? $_POST["sName"]) : ((isset $_GET["sName"]) ? $_GET["sName"] : "");
+
 //$sname="http://astro.cornell.edu/journals-and-newsletters.html";
 $sname= isset ($_POST["sName"]) ? $_POST["sName"]: (isset($_GET["sName"]) ? $_GET["sName"] : "");
-//$sname="http://www.strudel.org.uk/spacebuzz/blogs.html";
+
 $fname="x.txt";
+
+
+//++begin multiple
+//foreach ($sname as $snameI){
+//
 //$fnames=substr($name,,);
 //$fnames=explode('.',$snames[i]);
 $fnames=explode('.',$sname);
@@ -47,6 +52,11 @@ fclose($fp);
 }catch (Exception $e){
     $result = $e->getMessage();
     }
+
+//++end multiple
+//foreach ($sname as $snameI){
+//
+
 
 $iB = array();
 $iB['users']= array($result);

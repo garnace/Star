@@ -1660,12 +1660,25 @@ function getMatchBl(mId)
 //---end getMatchBl-
 function getSites(sId)
 {
-	getCach(htReal[1]);
+	getCach(htReal[2]);
+//	getCach(htReal);
 }
 
 function getCach(sId)
 {
-	alert(htReal[1]);
+//	alert(htReal[2].substr(0,-1));
+	alert(htReal[2].substr(0,htReal[2].length-1));
+
+/*	var urlTerms = '';
+	for (var i=0;i< sId.length,i++)
+	{ 
+		urlTerms += 'sName[]='+sId[i]+'&';
+	}	
+	if (urlTerms.substr(-1) == '&')
+		urlTerms = urlTerms.substr(0,urlTerms.length-1);
+	alert(urlTerms);
+	$.getJSON("http://localhost:8280/StarAdvisor/sites.php?"+urlTerms+"&callback=?",function(data){
+*/
 	$.getJSON("http://localhost:8280/StarAdvisor/sites.php?sName="+sId+"&callback=?",function(data){
 		alert(data.users);
 
