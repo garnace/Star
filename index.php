@@ -71,6 +71,86 @@ include ('./header.php');
 
 <BR/>
 
+			<!-- Header Start -->
+			
+			<div class="header">
+				<div class="container">
+					<!-- Header top area content -->
+					<div class="header-top">
+						<div class="row">
+							<div class="col-md-4 col-sm-4">
+								<!-- Button Kart -->
+								<div class="btn-cart-md">
+									<a class="cart-link" href="#">
+										<!-- Image -->
+										<img class="img-responsive" src="images/Yoursky.gif" alt="" />
+										<!-- Heading -->
+										<h4>Shopping Cart</h4>
+										<span>3 items $489/-</span>
+										<div class="clearfix"></div>
+									</a>
+									<ul class="cart-dropdown" role="menu">
+										<li>
+											<!-- Cart items for shopping list -->
+											<div class="cart-item">
+												<!-- Item remove icon -->
+												<a href="#"><i class="fa fa-times"></i></a>
+												<!-- Image -->
+												<img class="img-responsive img-rounded" src="img/nav-menu/nav1.jpg" alt="" />
+												<!-- Title for purchase item -->
+												<span class="cart-title"><a href="#">Exception Reins Evocative</a></span>
+												<!-- Cart item price -->
+												<span class="cart-price pull-right red">$200/-</span>
+												<div class="clearfix"></div>
+											</div>
+										</li>
+										<li>
+											<!-- Cart items for shopping list -->
+											<div class="cart-item">
+												<!-- Item remove icon -->
+												<a href="#"><i class="fa fa-times"></i></a>
+												<!-- Image -->
+												<img class="img-responsive img-rounded" src="img/nav-menu/nav2.jpg" alt="" />
+												<!-- Title for purchase item -->
+												<span class="cart-title"><a href="#">Taut Mayoress Alias Appendicitis</a></span>
+												<!-- Cart item price -->
+												<span class="cart-price pull-right red">$190/-</span>
+												<div class="clearfix"></div>
+											</div>
+										</li>
+										<li>
+											<!-- Cart items for shopping list -->
+											<div class="cart-item">
+												<!-- Item remove icon -->
+												<a href="#"><i class="fa fa-times"></i></a>
+												<!-- Image -->
+												<img class="img-responsive img-rounded" src="img/nav-menu/nav3.jpg" alt="" />
+												<!-- Title for purchase item -->
+												<span class="cart-title"><a href="#">Sinter et Molests Perfectionist</a></span>
+												<!-- Cart item price -->
+												<span class="cart-price pull-right red">$99/-</span>
+												<div class="clearfix"></div>
+											</div>
+										</li>
+										<li>
+											<!-- Cart items for shopping list -->
+											<div class="cart-item">
+												<a class="btn btn-danger" data-toggle="modal" href="#shoppingcart1">Checkout</a>
+											</div>
+										</li>
+									</ul>
+									<div class="clearfix"></div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div><!--   row-->
+					</div><!--top-->
+</div><!--container-->
+</div>
+
+<BR/>
+
+
 <div data-role="page" >
 <div data-role="header">
 <h1>first</h1>
@@ -100,7 +180,60 @@ include ('./header.php');
 <div data-role="content">
 <p>hello world</p>
 </div>
+</div>
+<div class="btn-car-md" id="cartd" style="width:200px;">
 
+									<ul class="car-dropdown" role="menu">
+
+										<li>
+											<!-- Cart items for shopping list -->
+											<div class="car-item">
+												<!-- Item remove icon -->
+												<a href="#"><i class="fa fa-times"></i></a>
+												<!-- Image -->
+												<img class="img-responsive img-rounded" src="img/nav-menu/nav1.jpg" alt="" />
+												<!-- Title for purchase item -->
+												<span class="car-title"><a href="#">Exception Reins Evocative</a></span>
+												<!-- Cart item price -->
+												<span class="car-price pull-right red">$200/-</span>
+												<div class="clearfix"></div>
+											</div>
+										</li>
+										<li>
+											<!-- Cart items for shopping list -->
+											<div class="car-item">
+												<!-- Item remove icon -->
+												<a href="#"><i class="fa fa-times"></i></a>
+												<!-- Image -->
+												<img class="img-responsive img-rounded" src="img/nav-menu/nav2.jpg" alt="" />
+												<!-- Title for purchase item -->
+												<span class="car-title"><a href="#">Taut Mayoress Alias Appendicitis</a></span>
+												<!-- Cart item price -->
+												<span class="cart-price pull-right red">$190/-</span>
+												<div class="clearfix"></div>
+											</div>
+										</li>
+										<li>
+											<!-- Cart items for shopping list -->
+											<div class="car-item">
+												<!-- Item remove icon -->
+												<a href="#"><i class="fa fa-times"></i></a>
+												<!-- Image -->
+												<img class="img-responsive img-rounded" src="img/nav-menu/nav3.jpg" alt="" />
+												<!-- Title for purchase item -->
+												<span class="car-title"><a href="#">Sinter et Molests Perfectionist</a></span>
+												<!-- Cart item price -->
+												<span class="car-price pull-right red">$99/-</span>
+												<div class="clearfix"></div>
+											</div>
+										</li>
+										<li>
+											<!-- Cart items for shopping list -->
+											<div class="cart-item" id="cartButton">
+												<a class="btn btn-danger"  href="#cartd" onclick="getEvents(2)">Checkout</a>
+											</div>
+										</li>
+									</ul>
 
 </div>
 

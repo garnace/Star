@@ -73,8 +73,8 @@
 
 <!--################################3##3##########33#####33#-->
 <script type="text/javascript" src="cf/theme/js/bootstrap.js"></script>
-<script type="text/javascript" src="b320/js/bootstrap.js"></script>
-<script type="text/javascript" src="scripts/bootstrap.js"></script>
+<!--script type="text/javascript" src="b320/js/bootstrap.js"></script--modal-->
+<!--script type="text/javascript" src="scripts/bootstrap.js"></script-->
 
 <!--   -------------------------------------------->
 <!--   -------------Make random flickr pics------>
@@ -318,6 +318,7 @@ function getM()
 					</div><!--   row-->
 </div><!--top-->
 </div><!--container-->
+
 </div><!--header-->
 <!--  END CAKE header                  -->
 

@@ -35,7 +35,7 @@ htReal[0]="http://astro.cornell.edu/journals-and-newsletters.html";
 htReal[1]="http://www.strudel.org.uk/spacebuzz/blogs.html";
 htReal[2]="http://www.stargazing.net/naa/sotw.htm";
 htReal[3]="http://www.fourmilab.ch/yoursky";    
-
+htReal[4]="http://www.seasky.org/astronomy/astronomy-calendar-2015.html";
 
 
 
@@ -254,7 +254,7 @@ $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?
 
 /**  #boardDoubler
 *Function to double number of images on board for memory game
-*Game code inspired from http://webdevplayground.com/2009/09/a-basic-memory-game-with-jquery-and-php/
+*Game code idea modeled from http://webdevplayground.com/2009/09/a-basic-memory-game-with-jquery-and-php/
 *
 *The use of quickflip was decided  after experimenting between quickflip and flipbox
 *
@@ -982,6 +982,50 @@ function getLoc(tId)
 	});
 //	location.href="index.php?action=showres#chkRes";
 }
+function getEvents(tId)
+{
+//***********************************************
+//Get search term for Lookup service
+
+//***********************************************    
+
+
+    hpb="<div id=\"searchDi\"> <p>Search for terms via http://www.strudel.org.uk/lookUP</p>";
+//hpb=hpb+"<input type=\"text\" id=\"sbox\" onkeypress=\"handleKeyPressFeed(event,this.form)\"/>";
+/*
+    hpb=hpb+"<div id=\"sbutton\"> <button onclick=\"setLFeed(document.getElementById('sbox').value);\">Search LookUP</button>";
+    hpb=hpb+"</div></div>";
+*/
+
+    hpb=hpb+"<div class=\"row\">";
+
+
+
+
+
+hpb=hpb+"<div class=\"col-md-4 col-sm-4\"><!-- Header top right content search box --><div class=\" header-search\">";
+hpb=hpb+"<form class=\"form\" role=\"form\"><div class=\"input-group\">";
+hpb=hpb+"<input type=\"text\" class=\"form-control\" placeholder=\"Search...\" id=\"sbox\" onkeypress=\"handleKeyPressFeed(event,this.form)\">";
+hpb=hpb+" <span class=\"input-group-btn\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getMatchJE(document.getElementById('sbox').value);\"><i class=\"fa fa-search\"></i></button> </span>";
+hpb=hpb+"</div></form></div></div></div>";
+hpb=hpb+"</div>";
+    document.getElementById("cartButton").innerHTML=hpb;
+
+
+
+
+    document.getElementById("searchDi").style.display="";
+	$(document).ready(function(){
+		$('#tabs').tabs({selected:tId});
+//		location.href("b/index.html#tabs-2");
+	});
+
+
+}
+//end getEvents
+
+
+
 function getSFeedTerm(tId)
 {
 //***********************************************
@@ -1722,7 +1766,7 @@ function getMatchJ(mId)
     var urlAL=0;
     var urlM="http://localhost:8280/StarServer/journals-and-newsletters.html";
     var urlA="http://localhost:8280/StarServer/stargazing.htm";
-    
+	    
     var htr="";
     //        var term="ature";
     var term=mId;
@@ -1754,6 +1798,154 @@ function getMatchJ(mId)
 
 //  getCache();
     urlArr=[urlM,urlA];
+    urlAL=urlArr.length;
+    //	  htsamp=htsamp+"<p><b><font color=#ffee22 size=\"2\" >from: "+htarr[arrCount]+":</b></p></font>";
+
+    htsamp=htsamp +"<ul type=\"square\" color=\"blue\">";
+    document.getElementById("journ").innerHTML="";
+    htsamp=htsamp+"<p><b><font color=#ff0000 size=\"2\" >FROM: </b></p></font>";
+    for (cc=0;cc<urlAL;cc++)
+    {
+		  //alert(urlArr[cc]);
+		  //}
+	if (cc>urlAL)
+	{
+	    break;
+	}
+	htsamp=htsamp+"<p><b><font color=#ffee22 size=\"2\" > site:"+urlArr[cc]+":</b></p></font>";
+			//$.each(urlArr){
+        $.get(urlArr[cc],function(data)
+	      {
+
+
+
+	 //	 var rPos=data.toUpperCase().search(term);
+	 //	 	       $("<ul >").appendTo("#journ");		
+		  htarr=new Array();
+		  htcount =0;
+		  rPos=data.toLowerCase().search(term.toLowerCase());
+	     //	     var aPos=data.search("htt");
+		  aPos;
+		  htleft=data;
+		  arrCount=0;
+		  doubleFlag=0;
+	     //	     alert ("herae:"+htleft);
+	     //	     aPos=htleft.syearch("htt");
+		  while ((aPos=htleft.toLowerCase().search(htTok.toLowerCase())) != -1)
+		     {
+			 //alert("Ffound"+aPos);
+			 //			 			  var htsho=htleft.substr(aPos+htTok.length,80);
+			  htsho=htleft.substr(aPos,80);
+//			  var htshow=htsho.substr(0,htsho.search(htTokE));
+			  htshow=htsho.substr(0,htsho.toLowerCase().search(htTokE.toLowerCase())+htTokE.length);
+			 //			 var htshow=htleft.substr(aPos+htTok.length,htleft.search("/a>"));
+
+			 htleft=htleft.substr(aPos+htTok.length,htleft.length - aPos -htTok.length);
+			 for (arrCount=0;arrCount<htarr.length;arrCount++){
+			     //			     htarr[htcount]=htshow;
+			     if (htarr[arrCount]==htshow)
+				 {doubleFlag=1;break;}
+			 }
+			 //			 if (doubleFlag==1 || (htshow.search("ornel") == -1)){doubleFlag=0;}
+			 if (doubleFlag==1 || (htshow.toLowerCase().search("ornel") != -1)){doubleFlag=0;}
+			 else {
+			     //get termy
+			     if (htshow.toLowerCase().search(term.toLowerCase()) != -1)
+			     {
+				 //update array result and imcrement
+
+				 htarr[htcount]=htshow;htcount++
+			     }
+			 }
+			 //alert(htshow);
+		     }
+	     
+
+
+		
+		     for (arrCount=0;arrCount<htcount;arrCount++)
+			 {
+			     //display array results
+
+			     //	           $("<li><p><b><font color =#ffee22  >x-"+  htarr[arrCount]+ "</font></b></p></li>"  ).appendTo("#journ");		
+//			     htsamp=htsamp+"<li><p><b><font color =#ffee22  >"+  htarr[arrCount]+ "</font></b></p></li>"   ;
+			     htsamp=htsamp+"<li><p><b><font color =#221100  >site:"+  htarr[arrCount]+ "</font></b></p></li>"   ;
+			      //			      htsamp=htsamp+"<li><p><b><font color =#ffee22 size=22px >"+  htarr[arrCount]+ "</font></b></p></li>"   ;
+			 }
+		     //	     document.getElementById("journ").innerHTML="<p><b><font color =#ffee22>HI"+htsamp+"</font></b></p><BR>";
+		     // $("</ul>").appendTo("#journ");		
+
+		  htsamp=htsamp+"</ul>";
+                  htsamp=htsamp+"<ul type=\"circle\">";
+		  document.getElementById("journ").innerHTML=htsamp;
+
+
+		    //		    		    document.getElementById("images").style.display="none";
+
+			//      $("<p><b><font color=#ffee22 >hello</font></b></p>").appendTo("#journ");		
+
+		    		    document.getElementById("imagesky").style.display="none";
+				    //NO ALERalert(htsamp);
+	      }).error(function(){alert("An error has occurreddddd");return;}).complete(function()
+	     {    });
+    }
+	//		     htsamp=htsamp+"</ul>";
+	//htele=document.getElementById("journ");
+
+	//htele=htele.add(document.createTextNode("<ul><li>hello</li></ul>"));
+	//NOALERalert( htsamp);
+
+		     // document.getElementById("journ").innerHTML=htele;
+    // display in journ
+
+    document.getElementById("journ").style.display="";
+
+	//    alert ("getMatch");
+}
+
+function getMatchJE(mId)
+{
+    var urlArr=[];
+    var urlAL=0;
+    var urlM="http://localhost:8280/StarServer/journals-and-newsletters.html";
+//    var urlA="http://localhost:8280/StarServer/stargazing.htm";
+    var urlA="http://localhost:8280/StarAdvisor/calendr.html";
+	    
+    var htr="";
+    //        var term="ature";
+    var term=mId;
+     //    var htTok="<li><a href=\"http://";
+    var htTok="<a href=\"http://";
+    var htTokE="</a>";
+    var htToks=$("li p > span");
+    var htToksE="</a>";
+
+    var htStart="<li><a href=\"http://";
+    var htEnd="</a></li>";
+    var dLen=0;
+    var htcount=0;
+    var htarr=[];
+    var htsamp="<BR><p><b><font color=#00ee22 size=\"2\" >RESULTS FOUND:</b></p></font><BR>";
+    var htleft="";
+    var htout="";
+    var htsub="";
+    var htTotal="";
+    var htsubLen=0,htleftLen=0;
+    var htele;
+    var cc=0;
+    var rPos;
+	     //	     var aPos=data.search("htt");
+    var aPos;
+    var htleft;
+    var arrCount=0;
+    var doubleFlag=0;
+    var htsho;
+    var htshow;
+    var htshow;
+//alert(":::");
+//  getCache();
+//    urlArr=[urlM,urlA];
+    urlArr=[urlA];
     urlAL=urlArr.length;
     //	  htsamp=htsamp+"<p><b><font color=#ffee22 size=\"2\" >from: "+htarr[arrCount]+":</b></p></font>";
 

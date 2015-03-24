@@ -32,7 +32,8 @@ $curlp = curl_init($snameI);
 //if (!$fp = @fopen("ss.txt",'w')){
 //if (!$fp = @fopen($fname.".txt",'w')){
 //if (!$fp = @fopen($sname.".txt",'w')){
-if (!$fp = @fopen($fnames.".txt",'w')){
+//if (!$fp = @fopen($fnames.".txt",'w')){
+if (!$fp = @fopen($fnames,'w')){
     throw new Exception("could not write");
 }
 
