@@ -1942,9 +1942,18 @@ function getMatchJE(mId)
     var htsho;
     var htshow;
     var htshow;
+	var datC;
 //alert(":::");
 //  getCache();
 //    urlArr=[urlM,urlA];
+    var liString= "<li><div class=\"car-item\"><!-- Item remove icon --><a href=\"#\"><i class=\"fa fa-times\"></i></a><!-- Image --><img class=\"img-responsive img-rounded\" src=\"img/nav-menu/nav2.jpg\" alt=\"\" /><!-- Title for purchase item --><span class=\"car-title\"><a href=\"#\">";
+
+var liStringE="</a></span><span class=\"cart-price pull-right red\">$190/-</span><div class=\"clearfix\"></div></div></li>";
+	//+-End liString
+    var liStrin= "<div class=\"car-item\"><!-- Item remove icon --><a href=\"#\"><i class=\"fa fa-times\"></i></a><!-- Image --><img class=\"img-responsive img-rounded\" src=\"img/nav-menu/nav2.jpg\" alt=\"\" /><!-- Title for purchase item --><span class=\"car-title\"><a href=\"#\">haha</a></span><span class=\"cart-price pull-right red\">$190/-</span><div class=\"clearfix\"></div></div>";
+
+
+
     urlArr=[urlA];
     urlAL=urlArr.length;
     //	  htsamp=htsamp+"<p><b><font color=#ffee22 size=\"2\" >from: "+htarr[arrCount]+":</b></p></font>";
@@ -1966,7 +1975,39 @@ function getMatchJE(mId)
 	      {
 
 
+		//datC=$(data).find('p > ');
+		datC=$(data).find('li');
+//		datC=$.map(datC,function(value,index){return value.children().children()[1];});
+//		datC=datC.map(function(value,index){return $(value).children().children()[0];});
+		//get p span span
+//		alert($($(datC).slice(0).children().children()[1]).html());
+		alert($($(datC).slice(0).children().children()[1]).html());
+//		alert($($(datC).slice(1).children().children()[1]).text());
+//		alert($($(datC).slice(1).clone().children("span").remove().end()).text());
+//		alert($("span:eq(1)",$(datC)).html());
+//workz		alert($($(datC).clone().find("p").children("span")).text());
+		alert($($(datC).clone().find("p").children("span").remove().end()).text());
+		  //		datC=datC.map(function(){$($(this).children()[0].children()[0]).attr({"text":"hi"});});
 
+//		$('#cartd').append('<br/><ul class="car-dropdown" role="menu">');
+		datC.each(function(i,item){
+//			var ite=item.getElementByTagName("span")[0]substr(0,20);
+//			var ite=item.getElementByTagName("span")[0];
+//			$('#cartd').append(liString+$(item).html+liStringE);
+			if (i == 5){ return false;}
+//startgood			$('#cartd').append($(liStrin).children().children()[0]);
+//			$('#cartd').append($(liStrin).children().children()[0]);
+//			$('#cartd').append("hi");
+			$('#cartd').append(item);
+//			$('#cartd').append($(item).children().children()[0]);
+//			$('#cartd').append($("<li><p>"+$(item.children().children()[0]).text()+"</p></li>"));
+
+//			$('#cartd').append(liStringE);
+//			$('#cartd ul').append(liString+item.substr(0,20)+liStringE);
+//			$('#cartd').append(liString+"hello"+liStringE);
+//			$('#cartd ul').append(liStrin);
+		});
+//		$('#cartd').append('</ul><br/>');
 	 //	 var rPos=data.toUpperCase().search(term);
 	 //	 	       $("<ul >").appendTo("#journ");		
 		  htarr=new Array();

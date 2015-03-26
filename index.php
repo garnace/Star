@@ -230,7 +230,7 @@ include ('./header.php');
 										<li>
 											<!-- Cart items for shopping list -->
 											<div class="cart-item" id="cartButton">
-												<a class="btn btn-danger"  href="#cartd" onclick="getEvents(2)">Checkout</a>
+												<a class="btn btn-danger"  href="#cartd" onclick="getEvents(1)">Checkout</a>
 											</div>
 										</li>
 									</ul>
