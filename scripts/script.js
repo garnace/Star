@@ -1952,7 +1952,7 @@ var liStringE="</a></span><span class=\"cart-price pull-right red\">$190/-</span
 	//+-End liString
     var liStrin= "<div class=\"car-item\"><!-- Item remove icon --><a href=\"#\"><i class=\"fa fa-times\"></i></a><!-- Image --><img class=\"img-responsive img-rounded\" src=\"img/nav-menu/nav2.jpg\" alt=\"\" /><!-- Title for purchase item --><span class=\"car-title\"><a href=\"#\">haha</a></span><span class=\"cart-price pull-right red\">$190/-</span><div class=\"clearfix\"></div></div>";
 
-
+//workz full text		  //		datC=datC.map(function(){$($(this).children()[0].children()[0]).attr({"text":"hi"});});
 
     urlArr=[urlA];
     urlAL=urlArr.length;
@@ -1977,17 +1977,26 @@ var liStringE="</a></span><span class=\"cart-price pull-right red\">$190/-</span
 
 		//datC=$(data).find('p > ');
 		datC=$(data).find('li');
-//		datC=$.map(datC,function(value,index){return value.children().children()[1];});
+//		datC=$.map(datC,function(value,index){return $(value).children().children()[1];});
+		$(datC).map(function(value,index){ return $(index).find("p").children("span").remove().end().html();});
+//		$(datC).map(function(value,index){ return $(index).html().split('').map(function(){$(this).slice(0,10).join('').html();});});
+//		$(datC).map(function(value,index){ return $(index).html().split('').map(function(i,v){if (i ==4){return 'hi'+v;} else {return '';}  }).join('+');});
+		$(datC).map(function(value,index){ return $(index).html($(index).html().split(" ").join("+"));});
+alert($(datC).slice(2).html());
+//mwork		$(datC).map(function(){return $(this).find("p").children("span").remove().end().html();});
+//worksz		alert($(datC).slice(1,2).find("p").children("span").remove().end().text());
+//workz full text		  //		datC=datC.map(function(){$($(this).children()[0].children()[0]).attr({"text":"hi"});});
 //		datC=datC.map(function(value,index){return $(value).children().children()[0];});
 		//get p span span
 //		alert($($(datC).slice(0).children().children()[1]).html());
-		alert($($(datC).slice(0).children().children()[1]).html());
+//		alert($($(datC).slice(0).children().children()[1]).html());
 //		alert($($(datC).slice(1).children().children()[1]).text());
 //		alert($($(datC).slice(1).clone().children("span").remove().end()).text());
 //		alert($("span:eq(1)",$(datC)).html());
-//workz		alert($($(datC).clone().find("p").children("span")).text());
-		alert($($(datC).clone().find("p").children("span").remove().end()).text());
-		  //		datC=datC.map(function(){$($(this).children()[0].children()[0]).attr({"text":"hi"});});
+//		alert($($(datC).clone().find("p").children("span")).text());
+//workz		alert($($(datC).clone().find("p").children("span").remove().end()).text());
+//worksz		alert($(datC).slice(1,2).find("p").children("span").remove().end().text());
+//workz full text		  //		datC=datC.map(function(){$($(this).children()[0].children()[0]).attr({"text":"hi"});});
 
 //		$('#cartd').append('<br/><ul class="car-dropdown" role="menu">');
 		datC.each(function(i,item){
