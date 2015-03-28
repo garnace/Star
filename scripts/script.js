@@ -1942,7 +1942,11 @@ function getMatchJE(mId)
     var htsho;
     var htshow;
     var htshow;
+	var datA={};
+	var datB={};
 	var datC;
+	var elemr=null;
+	var elemc=null;
 //alert(":::");
 //  getCache();
 //    urlArr=[urlM,urlA];
@@ -1977,12 +1981,29 @@ var liStringE="</a></span><span class=\"cart-price pull-right red\">$190/-</span
 
 		//datC=$(data).find('p > ');
 		datC=$(data).find('li');
+//		datA=jQuery.extend($(datA),$(datC));
+//		$(datC).clone().map(function(i,v){});
 //		datC=$.map(datC,function(value,index){return $(value).children().children()[1];});
+//+-+-+-
+
+//		$(datC).map(function(value,index){ return $(index).find("p").children("span").remove().end().html();});
 		$(datC).map(function(value,index){ return $(index).find("p").children("span").remove().end().html();});
-//		$(datC).map(function(value,index){ return $(index).html().split('').map(function(){$(this).slice(0,10).join('').html();});});
-//		$(datC).map(function(value,index){ return $(index).html().split('').map(function(i,v){if (i ==4){return 'hi'+v;} else {return '';}  }).join('+');});
-		$(datC).map(function(value,index){ return $(index).html($(index).html().split(" ").join("+"));});
-alert($(datC).slice(2).html());
+//		$(datB).map(function(value,index){ return $(index).find("p").children("span").remove();});
+//		$(datC).map(function(value,index){ return [$(index).clone().find("p").children("span").remove(),$(index).clone().find("p").children("span").remove().end().html()];});
+		alert($(datC).html());
+
+//		$(datC).map(function(value,index){ return $(index).html($(index).html().split(" ").slice(0,20).join("+"));});
+		$(datC).map(function(value,index){ return $(index).html($(index).html().split(" ").slice(0,20).join("+"));});
+
+//		$(datB).map(function(value,index){ return $(index).html($(index).html().split(" ").slice(0,12).join("-"));});
+//		$(datC).map(function(value,index){ return $(index).slice(2).html($(index).slice(2).html().split(" ").slice(0,20).join("+"));});
+//alert($(datC).slice(1).html());
+alert($(datC).slice(1).html());
+//alert($(datC).html()+"::"+$(datB).html());
+
+
+//+-+-+-
+
 //mwork		$(datC).map(function(){return $(this).find("p").children("span").remove().end().html();});
 //worksz		alert($(datC).slice(1,2).find("p").children("span").remove().end().text());
 //workz full text		  //		datC=datC.map(function(){$($(this).children()[0].children()[0]).attr({"text":"hi"});});
