@@ -1950,9 +1950,10 @@ function getMatchJE(mId)
 //alert(":::");
 //  getCache();
 //    urlArr=[urlM,urlA];
-    var liString= "<li><div class=\"car-item\"><!-- Item remove icon --><a href=\"#\"><i class=\"fa fa-times\"></i></a><!-- Image --><img class=\"img-responsive img-rounded\" src=\"img/nav-menu/nav2.jpg\" alt=\"\" /><!-- Title for purchase item --><span class=\"car-title\"><a href=\"#\">";
+//    var liString= "<li><div class=\"car-item\"><!-- Item remove icon --><a href=\"#\"><i class=\"fa fa-times\"></i></a><!-- Image --><img class=\"img-responsive img-rounded\" src=\"img/nav-menu/nav2.jpg\" alt=\"\" /><!-- Title for purchase item --><span class=\"car-title\"><a href=\"#\">";
+    var liString= "<li><div class=\"car-item\"><!-- Item remove icon --><a href=\"#\"><i class=\"fa fa-times\"></i></a><!-- Image --><img class=\"img-responsive img-rounded\" src=\"img/nav-menu/nav2.jpg\" alt=\"\" /><!-- Title for purchase item --><span class=\"car-title\">";
 
-var liStringE="</a></span><span class=\"cart-price pull-right red\">$190/-</span><div class=\"clearfix\"></div></div></li>";
+var liStringE="</span><span class=\"cart-price pull-right red\">$190/-</span><div class=\"clearfix\"></div></div></li>";
 	//+-End liString
     var liStrin= "<div class=\"car-item\"><!-- Item remove icon --><a href=\"#\"><i class=\"fa fa-times\"></i></a><!-- Image --><img class=\"img-responsive img-rounded\" src=\"img/nav-menu/nav2.jpg\" alt=\"\" /><!-- Title for purchase item --><span class=\"car-title\"><a href=\"#\">haha</a></span><span class=\"cart-price pull-right red\">$190/-</span><div class=\"clearfix\"></div></div>";
 
@@ -1996,7 +1997,9 @@ var liStringE="</a></span><span class=\"cart-price pull-right red\">$190/-</span
 //		$(datC).map(function(value,index){ elemr= $(index).clone(); return $($(index).html($(index).children("p").children("span"))).html($(elemr).html() +":"+ $(index).html());});
 //		$(datC).map(function(value,index){ elemr= $(index).clone(); return $($(index).html($(index).children("p").children("span"))).html($(index).html()+":"+$($(elemr).find("p").children("span").remove().end()).wrapInner("<p></p>").html());});
 //		$(datC).map(function(value,index){ elemr= $(index).clone(); return $($(index).html($(index).children("p").children("span"))).html($(index).wrapInner("<p></p>").html()+":"+$($(elemr).find("p").children("span").remove().end()).wrapInner("<p></p>").html());});
-		$(datC).map(function(value,index){ elemr= $(index).clone();elemc= $(index).clone(); return $($(index).html($(index).children("p").children("span"))).html($(index).wrapInner("<p></p>").html()+":"+ $($(elemc).find("p").children("span").remove().end()).wrapInner("<p></p>").html().split(" ").slice(0,20).join("+")+":"+$($(elemr).find("p").children("span").remove().end()).wrapInner("<p></p>").html());});
+//works has p span		$(datC).map(function(value,index){ elemr= $(index).clone();elemc= $(index).clone(); return $($(index).html($(index).children("p").children("span"))).html($(index).wrapInner("<p></p>").html()+":"+ $($(elemc).find("p").children("span").remove().end()).wrapInner("<p></p>").html().split(" ").slice(0,20).join("+")+":"+$($(elemr).find("p").children("span").remove().end()).wrapInner("<p></p>").html());});
+//		$(datC).map(function(value,index){ elemr= $(index).clone();elemc= $(index).clone(); return $($(index).html($(index).children("p").children("span"))).html($(index).wrapInner("<p></p>").html()+":"+ $($(elemc).find("p").children("span").remove().end()).wrapInner("<p></p>").html().split(" ").slice(0,20).join("+")+":"+$($(elemr).find("p").children("span").remove().end()).wrapInner("<p></p>").html());});
+	$(datC).map(function(value,index){ elemr= $(index).clone();elemc= $(index).clone(); return $($(index).html($(index).children("p").children("span"))).html($(index).children("span:first").html()+"<br/>"+$(index).children("span:last").html()+":<br/>"+ $($(elemc).find("p").children("span").remove().end()).unwrap("<span></span>").html().split(" ").slice(0,20).join(" ")+"<a href=\"#\" onclick=\"return getTog("+value+");\"><i class=\"fa fa-plus sen\">...</i></a>:<br/>"+$($(elemr).find("p").children("span").remove().end()).wrapInner("<div class=\"hidden ftx"+value+"\"></div>").html());});
 //		$(datC).map(function(value,index){ return $(index).html($(index).children("p").children("span") );});
 //		$(datB).map(function(value,index){ return $(index).find("p").children("span").remove();});
 //		$(datC).map(function(value,index){ return [$(index).clone().find("p").children("span").remove(),$(index).clone().find("p").children("span").remove().end().html()];});
@@ -2050,6 +2053,7 @@ var liStringE="</a></span><span class=\"cart-price pull-right red\">$190/-</span
 //			$('#cartd').append($("<li><p>"+$(item.children().children()[0]).text()+"</p></li>"));
 
 
+//			$('#cartd ul').append(liString+"<span>hello hello hello<span>"+liStringE);
 			$('#cartd ul').append(liString+$(item).html()+liStringE);
 //			$('#cartd ul').append(liString+"hello"+liStringE);
 //			$('#cartd ul').append(liStrin);
@@ -2180,7 +2184,14 @@ var liStringE="</a></span><span class=\"cart-price pull-right red\">$190/-</span
 }
 */
 
-
+function getTog(dId)
+{
+	$(function(){
+//		alert("hi");
+		$("div .ftx"+dId+"").toggleClass("hidden");
+	});	
+	return false;
+}
 function getSectionO(dId)
 {
 //----------------------------------
