@@ -937,6 +937,7 @@ $(document).ready(function(){
 
 //	alert("+");
 //    setPicP(arrPic[randI],srpA);
+
     setCarousel(arrPic[randI]);
     setPic(arrPic[randI],srpA,randI);
 });
