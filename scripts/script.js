@@ -1708,6 +1708,11 @@ function getSitesM(sId)
 //	getCach(htReal[2]);
 	getCachM(htReal);
 }
+function getAniM(sId)
+{
+//	getCach(htReal[2]);
+	getCachM(htReal);
+}
 
 function getCachM(sId)
 {

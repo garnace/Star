@@ -235,7 +235,7 @@ $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?
       {
 	   $("#images> img").each(function()
 	   {
-		    alert ("IIimage:"+this.src);
+//		    alert ("IIimage:"+this.src);
 
 		    var iE=$(this);
 	
@@ -342,11 +342,15 @@ function boardDoubler(pI)
 		//testing
 		if(i==4){
 		var ele= $(iD.children()[0]).children();
+		var ela= $(iD);
 
 
 		//(1st wrapper div)->anchor->image
 		//	var ele= $(iD.children()[0]).children().children();
 //flickran		alert ("id:"+$(ele[0]).attr("class"));	
+//		$(".qw4").addClass("cls");
+		alert ("id:"+$(ela).attr("class"));	
+
 		}
 
 		iD.quickFlip();
@@ -912,6 +916,31 @@ function noMatch(pId)
 
 }
 // end noMatch
+
+function getAniM(sId)
+{
+//	getCach(htReal[2]);
+//	getCachM(htReal);
+	var ln;
+	var divv;
+	var lastp;
+
+//	ln=$("div[id*=qw]").length();
+	ln=$("div[class*=qw]").length;
+
+	alert("length qw:"+ln);
+	divv =$("div[class*=qw]");
+	alert("last qw:"+$($(divv)[0]).attr("class")+$($(divv)[0]).css("top"));
+	ln=ln-1;
+	lastp=$($(divv)[0]).css("top");
+	alert("last qw:"+$($(divv)[ln]).attr("class")+$($(divv)[0]).css("top"));
+	$($(divv)[ln]).animate({bottom: '-=140'},200);
+	$($(divv)[ln]).animate({top: lastp},200);
+//	alert("length qw:");
+}
+
+
+
 
 /** function setRPic
 *

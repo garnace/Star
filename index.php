@@ -45,6 +45,7 @@ include ('./header.php');
 
 
 <a id="fb2" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="getSitesM(2);">Banner</a>
+<a id="fb3" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="getAniM(2);">Animate</a>
 <!--a class="btn btn-large btn-success" onclick="setTim(0);">Start</a-->
 
         
