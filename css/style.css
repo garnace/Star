@@ -264,7 +264,7 @@ body
 	display:inline-block;
 	text-align:center;
 	margin-top:-6px;
-	padding: 0 0 0 8px;
+	padding: 0 0 0 12px;
 	vertical-align:top;
 
 	color: #080;
@@ -282,7 +282,7 @@ body
 	box-shadow: 0px 0px 5px rgba(0,0,0,0.75);
 }
 
-.car-dropdown .car-item span { display: block; margin-left: 70px }
+.car-dropdown .car-item span { display: block; margin-left: 30px }
 
 .car-dropdown .car-item span.car-title { font-size: 15px; }
 .car-dropdown .car-item span.car-price { display:inline-block; font-weight: 700; }
@@ -1353,7 +1353,7 @@ a .tooltip span
 a.tooltipp
 {
 
-//	overflow:hidden;
+	overflow:hidden;
 }
 a strong
 {
@@ -1362,16 +1362,21 @@ a strong
 a.tooltipp span
 {
 	display:none;
-	padding:40px 40px;
+	padding:50px 50px;
 	background:#fffaf0;
 	margin-left:30px;
 	margin-top:-30px;
 
-	width:300px;
+//	width:100px;
+	max-width:300px;
+//	min-width:300px;
 //	line-height:16px;
-	font:18px Helvetica, Arial, Sans-Serif;
+//	font:18px Helvetica, Arial, Sans-Serif;
+	font:12px Helvetica, Arial, Sans-Serif;
 	position:relative;
 	z-index:20;
+	overflow:hidden;
+	
 //	z-index:20;
 }
 /*a.tooltipp:after

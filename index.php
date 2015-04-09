@@ -430,7 +430,7 @@ include ('./header.php');
 </div>
 <!--end first tab-->
 
-<div id="tabs-2"><a href="#" class="tooltipp"><strong>Days Available next 2 weeks </strong><span>Tools and tips</span></a>
+<div id="tabs-2"><a href="#" class="tooltipp"><strong>Days Available next 2 weeks </strong><span>Tools and tippppppppptips</span></a>
 </br>
 <div class="dih"><div class="img-frame"> <img src="images/Yoursky.gif" class="img-responsive" /><div class="img-frame-hover"><a href="#"><i class="fa fa-cutlery"></i></a></div> </div> </div>
 
@@ -787,8 +787,8 @@ onsubmit="return valReservation(this)">
 		<input type="radio" id="regPRad4" name="regPay" value="paypal"  />
 		<label for="regRad4" style="display:inline;">Paypal</label>
 
-</br>
-</br>
+<br/>
+<br/>
 		<input type="radio" id="regRad5" name="regPay" value="mo" />
 		<label for="regRad5" style="display:inline;">Money Order</label>
 
