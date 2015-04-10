@@ -1006,8 +1006,13 @@ function getEvents(tId)
 
 hpb=hpb+"<div class=\"col-md-4 col-sm-4\"><!-- Header top right content search box --><div class=\" header-search\">";
 hpb=hpb+"<form class=\"form\" role=\"form\"><div class=\"input-group\">";
-hpb=hpb+"<input type=\"text\" class=\"form-control\" placeholder=\"Search...\" id=\"sbox\" onkeypress=\"handleKeyPressFeed(event,this.form)\">";
-hpb=hpb+" <span class=\"input-group-btn\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getMatchJE(document.getElementById('sbox').value);\"><i class=\"fa fa-search\"></i></button> </span>";
+hpb=hpb+"<input type=\"text\" class=\"form-control\" placeholder=\"Search...\" id=\"sibox\" onkeypress=\"handleKeyPressFeed(event,this.form)\">";
+//hpb=hpb+" <span class=\"input-group-btn in-sp\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getMatchJE(document.getElementById('sibox').value);\"><i class=\"fa fa-search\"></i>Press</button> </span>";
+hpb=hpb+"<br> <span class=\"in-sp\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getMatchJE(document.getElementById('sibox').value);\"><i class=\"fa fa-search\"></i>Press</button> </span>";
+hpb=hpb+"<br/> <span class=\"in-sp\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getScrollAn('sibox');\"><i class=\"fa fa-search\"></i>Scroll</button> </span><br>";
+
+
+
 hpb=hpb+"</div></form></div></div></div>";
 hpb=hpb+"</div>";
     document.getElementById("cartButton").innerHTML=hpb;
@@ -1060,7 +1065,7 @@ hpb=hpb+"<span><i class=\"fa fa-phone red\"></i> 888-888-8888</span>";
 hpb=hpb+"</div></div><div class=\"col-md-4 col-sm-4\"><!-- Header top right content search box --><div class=\" header-search\">";
 hpb=hpb+"<form class=\"form\" role=\"form\"><div class=\"input-group\">";
 hpb=hpb+"<input type=\"text\" class=\"form-control\" placeholder=\"Search...\" id=\"sbox\" onkeypress=\"handleKeyPressFeed(event,this.form)\">";
-hpb=hpb+" <span class=\"input-group-btn\"><button class=\"btn btn-default\" type=\"button\" onclick=\"setSSFeed(document.getElementById('sbox').value);\"><i class=\"fa fa-search\"></i></button> </span>";
+hpb=hpb+" <span class=\"input-group-btn\"><button class=\"btn btn-default\" type=\"button\" onclick=\"setSSFeed(document.getElementById('sbox').value);\"><i class=\"fa fa-search\"></i>se</button> </span>";
 hpb=hpb+"</div></form></div></div></div>";
 hpb=hpb+"</div>";
     document.getElementById("pageBar").innerHTML=hpb;
@@ -1958,7 +1963,7 @@ function getMatchJE(mId)
 //  getCache();
 //    urlArr=[urlM,urlA];
 //    var liString= "<li><div class=\"car-item\"><!-- Item remove icon --><a href=\"#\"><i class=\"fa fa-times\"></i></a><!-- Image --><img class=\"img-responsive img-rounded\" src=\"img/nav-menu/nav2.jpg\" alt=\"\" /><!-- Title for purchase item --><span class=\"car-title\"><a href=\"#\">";
-    var liString= "<li><div class=\"car-item\"><!-- Item remove icon --><a href=\"#\"><i class=\"fa fa-times\"></i></a><!-- Image --><img class=\"img-responsive img-rounded\" src=\"img/nav-menu/nav2.jpg\" alt=\"\" /><!-- Title for purchase item --><span class=\"car-title\">";
+    var liString= "<li><div class=\"car-item carni\"><!-- Item remove icon --><a href=\"#\"><i class=\"fa fa-times\"></i></a><!-- Image --><img class=\"img-responsive img-rounded\" src=\"img/nav-menu/nav2.jpg\" alt=\"\" /><!-- Title for purchase item --><span class=\"car-title\">";
 
 var liStringE="</span><span class=\"cart-price pull-right red\">$190/-</span><div class=\"clearfix\"></div></div></li>";
 	//+-End liString
@@ -2075,7 +2080,7 @@ var liStringEt="</span><span class=\"cart-price pull-right red\">$190/-</span><d
 //dont tooltipp			$('#cartd ul').append(liString+$(item).html()+liStringE);
 //			$('#cartd ul').append(liString+$(item).html()+liStringE);
 //try add tooltipp			$('#cartd ul').append(liString+$(item).html()+liStringE +$($(elema).find("p").children("span").remove().end()).wrapInner("<span></span>").html());
-			$('#cartd ul').append(liString+$(item).html()+liStringEt +"<a class=\"tooltipp\">aaalloooooo"+$($(elema).find("p").children("span").remove().end()).wrapInner("<span></span>").html()+"</a></li>");
+			$('#cartd ul').append(liString+$(item).html()+liStringEt +"<a class=\"tooltipp\">detail"+$($(elema).find("p").children("span").remove().end()).wrapInner("<span></span>").html()+"</a></li>");
 //			$('#cartd ul').append(liString+"hello"+liStringE);
 //			$('#cartd ul').append(liStrin);
 		});
@@ -2204,6 +2209,154 @@ var liStringEt="</span><span class=\"cart-price pull-right red\">$190/-</span><d
 
 }
 */
+
+function getScrollAni(dId)
+{
+$(document).ready(function(){
+
+
+
+/***********************************************/
+	var blis= "b1news b2headline";
+	var lis= "xc1news cb2headline";
+	var bray = blis.split(' ');
+	var bay = lis.split(' ');
+	var lb = new Array(bray,bay);
+	var lbcount = 0;
+	var uline = $('#b1 a');
+	var lcount = 0;
+	
+	var t = 0;//uline;
+	var th = 0;
+//	("#b1 a").click(function(){alert('jquery');});
+//	$("#a1").click(function(){
+	$("#b1 a").click(function(){
+	th=$(this);
+	lbcount = (lbcount+1)%2;
+//	alert (th.timer);
+		if (t) clearInterval(t);
+//		if (uline.timer) alert('time'+uline.timer);
+		if (uline.timer) {//alert('time'+uline.timer);
+			clearInterval(uline.timer);
+		}
+//		if (th.timer) alert('time');
+//		if ($(this).timer) alert('time');
+//clearInterval(th.timer);
+
+//	$(this).timer=$(this).setInterval(function(){
+//	$(this).timer=setInterval(function(){
+	th.timer=setInterval(function(){
+//		alert("hi"+th.timer);
+//		alert("hi"+th.timer);
+		lcount = (lcount +1) % bay.length ;
+		th.parent().slideUp(function(){
+
+
+	//		uline.html(bay[lcount]);
+			uline.html(lb[lbcount][lcount]);
+			uline.parent().slideDown();});
+			uline.timer=th.timer
+	},2200);
+		
+
+		//alert('jquery');
+
+	});
+	$("#m").click(function(){alert('jquery');if (t) clearInterval(t);});
+	t=setInterval(function(){
+//		alert("hi");
+		lcount = (lcount +1) % bray.length ;
+		uline.fadeOut(function(){
+
+
+		uline.html(bray[lcount]);
+		uline.fadeIn();});
+
+	},2200);
+
+
+});
+
+
+}
+
+function getScrollAn(dId)
+{
+$(document).ready(function(){
+
+
+
+/***********************************************/
+	var blis= "b1news b2headline";
+	var lis= "xc1news cb2headline";
+	var klis=null;
+	var bray = blis.split(' ');
+	var bay = lis.split(' ');
+//	var lb = new Array(bray,bay);
+	var lb = new Array();
+	var lbcount = 0;
+//	var uline = $('#b1 a');
+//	var uline = $('li .carni:first');
+	var uline = $('li .carni:eq(2)');
+
+	var lcount = 0;
+	
+	var t = 0;//uline;
+	var th = 0;
+
+
+//	$("#b1 a").click(function(){
+//	th=$(this);
+	th=$(uline);
+//	lb = new Array(bray,bay);	
+	lbcount = (lbcount+1)%2;
+//	alert (th.timer);
+		if (t) clearInterval(t);
+//		if (uline.timer) alert('time'+uline.timer);
+		if (uline.timer) {//alert('time'+uline.timer);
+			clearInterval(uline.timer);
+		}
+
+
+
+
+
+
+	th.timer=setInterval(function(){
+
+
+		lcount = (lcount +1) % bay.length ;
+		th.parent().slideUp(function(){
+
+
+	//		uline.html(bay[lcount]);
+//			uline.html(lb[lbcount][lcount]);
+			uline.parent().slideDown();});
+			uline.timer=th.timer
+	},2200);
+		
+
+		//alert('jquery');
+	//click
+//	});
+/*
+	$("#m").click(function(){alert('jquery');if (t) clearInterval(t);});
+	t=setInterval(function(){
+
+		lcount = (lcount +1) % bray.length ;
+		uline.fadeOut(function(){
+
+
+		uline.html(bray[lcount]);
+		uline.fadeIn();});
+
+	},2200);
+*/
+
+});
+
+
+}
 
 function getTog(dId)
 {

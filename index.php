@@ -1108,8 +1108,8 @@ onsubmit="return valReservation(this)">
 </div><!--son-->
 
 <div id="loadson" style="display:none;">
-<!--img src="images/loading.gif" height="200px" width="200px"/-->
-<img src="images/ajax-loader.gif" height="1000px" width="400px"/>
+<img src="images/loading.gif" height="200px" width="200px"/>
+<!--img src="images/ajax-loader.gif" height="1000px" width="400px"/-->
 
 </div><!--loadson-->
 

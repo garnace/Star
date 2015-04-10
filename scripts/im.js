@@ -925,7 +925,10 @@ function getAniM(sId)
 	var divv;
 	var lastp;
         var qwray= new Array();
-
+	var turnbp=0;
+	var turntp=0;
+	var turn=2;
+//	var turnn=1;
 //	ln=$("div[id*=qw]").length();
 	ln=$("div[class*=qw]").length;
 
@@ -939,7 +942,14 @@ function getAniM(sId)
 	lastp=$($(divv)[0]).css("top");
 	alert("lasddt qw:"+$($(divv)[ln]).attr("class")+$($(divv)[0]).css("top")+$($(divv)[5]).css("top")+"left"+$($(divv)[0]).css("left"));
 	$($(divv)[ln]).animate({bottom: '-=140'},200);
-	$($(divv)[ln]).animate({top: '10'},200);
+	$($(divv)[ln]).animate({top: '10',left:'10'},200);
+/*	for (i=0;i<ln;i++)
+	{
+		turnbp = (turnbp+1) % turn;
+		$($(divv)[i]).animate({},200);
+		turntp = (turntp) %turn;
+	}
+*/
 //	alert("length qw:");
 }
 
