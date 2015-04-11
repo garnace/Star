@@ -292,31 +292,31 @@ function boardDoubler(pI)
 
 	$.each(pAA, function (i,item){
 
-		ranP= Math.floor(Math.random()*pAA.length) 
-		{
+		ranP= Math.floor(Math.random()*pAA.length); 
+//		{
 			tempP=item;
 			tempR=pAA[ranP];
 			pAA[i]=tempR;          //pAA[ranP];
 			pAA[ranP]=tempP;       //item;
 //			rAA.push(pAA(ranP));
-		}
+//		}
 
 	});
 
 	//try to randomize pictures that ended up side by side
 
 	$.each(pAA, function(i,item){
-		if ( ( (pAA[i+1]!=null) &&(pAA[i].media.m== pAA[i+1].media.m)) || ((pAA[i-1]!=null)&&(pAA[i].media.m== pAA[i-1].media.m)))
+		if ( ( (pAA[i+1]!=null) &&(pAA[i].media.m== pAA[i+1].media.m)) || ((pAA[i-1]!=null)&&(pAA[i].media.m== pAA[i-1].media.m)) || ((pAA[i+4]!=null)&&(pAA[i].media.m== pAA[i+4].media.m)))
 		{
 
-		ranP= Math.floor(Math.random()*pAA.length) 
-		{
+		ranP= Math.floor(Math.random()*pAA.length); 
+//		{
 			tempP=item;
 			tempR=pAA[ranP];
 			pAA[i]=tempR;          //pAA[ranP];
 			pAA[ranP]=tempP;       //item;
 //			rAA.push(pAA(ranP));
-		}
+//		}
 			
 		}
 
