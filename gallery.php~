@@ -1,36 +1,6 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<!-- Title here -->
-		<title>Gallery - CakeFactory</title>
-		<!-- Description, Keywords and Author -->
-		<meta name="description" content="Your description">
-		<meta name="keywords" content="Your,Keywords">
-		<meta name="author" content="ResponsiveWebInc">
-		
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<!-- Styles -->
-		<!-- Bootstrap CSS -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<!-- Portfolio CSS -->
-		<link href="css/prettyPhoto.css" rel="stylesheet">
-		<!-- Font awesome CSS -->
-		<link href="css/font-awesome.min.css" rel="stylesheet">	
-		<!-- Custom Less -->
-		<link href="css/less-style.css" rel="stylesheet">	
-		<!-- Custom CSS -->
-		<link href="css/style.css" rel="stylesheet">
-		<!--[if IE]><link rel="stylesheet" href="css/ie-style.css"><![endif]-->
-		
-		<!-- Favicon -->
-		<link rel="shortcut icon" href="#">
-	</head>
-	
-	<body>
-		
-			
+<?php 
+include ('./header.php');
+?>
 		<!-- Shopping cart Modal -->
 		<div class="modal fade" id="shoppingcart1" tabindex="-1" role="dialog" aria-hidden="true">
 			<div class="modal-dialog">
@@ -81,6 +51,35 @@
 			</div><!-- /.modal-dialog -->
 		</div><!-- /.modal -->
 		<!-- Model End -->
+<div id="imdiv">
+	<!--div class="quickflip-wrapper"-->
+	<!--div ><a href="#" class="quickFlipCta"><img src="images/Yoursky.gif" /></a></div-->
+	<!--div ><a href="#" class="quickFlipCta"> <img src="images/ss036.gif" /></a>  </div-->
+	<!--/div-->
+<!--img src="i/img/dish/dish1.jpg" width="50" height="50"/-->
+
+</br>
+<div id="images" >
+</div><!--imdiv images-->
+
+</div><!--imdiv-->
+
+<div class="simple_overlay"  id="mies">
+	<div class="details">
+	</div>
+</div>
+
+<div id="imdivp" >
+
+
+<div id="imagesp">
+</div><!--imdiv imagesp-->
+
+</div><!--imdiv-->
+
+
+
+
 		
 		<!-- Page Wrapper -->
 		<div class="wrapper">
@@ -190,6 +189,8 @@
 									<h1>CakeFactory</h1>
 									<!-- Paragraph -->
 									<p>Facility ester expedite instinct.</p>
+<a id="fb3" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="getAniM(2);">Animate</a>
+
 								</div>
 							</a>
 						</div>
@@ -222,7 +223,7 @@
 																	<!-- Heading -->
 																	<h3>Vegetarian</h3>
 																	<!-- Image -->
-																	<img src="img/dish/dish1.jpg" class="img-responsive" alt="" />
+																	<img src="../cf/theme/img/dish/dish1.jpg" class="img-responsive" alt="" />
 																	<!-- Paragraph -->
 																	<p>Sea nut perspicacity under omni piste natures mirror of there with consequent.</p>
 																	<!-- Button -->
@@ -235,7 +236,7 @@
 																	<!-- Heading -->
 																	<h3>Non-Vegetarian</h3>
 																	<!-- Image -->
-																	<img src="img/dish/dish2.jpg" class="img-responsive" alt="" />
+																	<img src="../cf/theme/img/dish/dish2.jpg" class="img-responsive" alt="" />
 																	<!-- Paragraph -->
 																	<p>Sea nut perspicacity under omni piste natures mirror as precode consequent.</p>
 																	<!-- Button -->
@@ -248,7 +249,7 @@
 																	<!-- Heading -->
 																	<h3>Special Menu</h3>
 																	<!-- Image -->
-																	<img src="img/dish/dish3.jpg" class="img-responsive" alt="" />
+																	<img src="../cf/theme/img/dish/dish3.jpg" class="img-responsive" alt="" />
 																	<!-- Paragraph -->
 																	<p>Sea nut perspicacity under omni piste natures mirror consequent.</p>
 																	<!-- Button -->
@@ -333,15 +334,175 @@
 						<!-- Gallery elements with pretty photo -->
 						<div class="gallery-content">
 							<div class="row">
-								<div class="col-md-3 col-sm-4">
+								<div class="col-md-3 col-sm-4 qw1">
 									<!-- Separate gallery element -->
 									<div class="element">
 										<!-- Image -->
-										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish1.jpg" alt=""/>
+										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish/dish1.jpg" alt=""/>
 										<!-- Gallery Image Hover Effect -->
 										<span class="gallery-img-hover"></span>
 										<!-- Gallery Image Hover Icon -->
-										<a href="../cf/theme/img/dish1.jpg" class="gallery-img-link">
+										<a href="../cf/theme/img/dish/dish1.jpg" class="gallery-img-link">
+											<i class="fa fa-search-plus hover-icon icon-left"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-link hover-icon icon-right"></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-4 qw1">
+									<!-- Separate gallery element -->
+									<div class="element">
+										<!-- Image -->
+										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish/dish2.jpg" alt=""/>
+										<!-- Gallery Image Hover Effect -->
+										<span class="gallery-img-hover"></span>
+										<!-- Gallery Image Hover Icon -->
+										<a href="../cf/theme/img/dish/dish2.jpg" class="gallery-img-link">
+											<i class="fa fa-search-plus hover-icon icon-left"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-link hover-icon icon-right"></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-4 qw1">
+									<!-- Separate gallery element -->
+									<div class="element">
+										<!-- Image -->
+										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish/dish3.jpg" alt=""/>
+										<!-- Gallery Image Hover Effect -->
+										<span class="gallery-img-hover"></span>
+										<!-- Gallery Image Hover Icon -->
+										<a href="../cf/theme/img/dish/dish3.jpg" class="gallery-img-link">
+											<i class="fa fa-search-plus hover-icon icon-left"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-link hover-icon icon-right"></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-4 qw1">
+									<!-- Separate gallery element -->
+									<div class="element">
+										<!-- Image -->
+										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish/dish4.jpg" alt=""/>
+										<!-- Gallery Image Hover Effect -->
+										<span class="gallery-img-hover"></span>
+										<!-- Gallery Image Hover Icon -->
+										<a href="../cf/theme/img/dish/dish4.jpg" class="gallery-img-link">
+											<i class="fa fa-search-plus hover-icon icon-left"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-link hover-icon icon-right"></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-4 qw1">
+									<!-- Separate gallery element -->
+									<div class="element">
+										<!-- Image -->
+										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish/dish12.jpg" alt=""/>
+										<!-- Gallery Image Hover Effect -->
+										<span class="gallery-img-hover"></span>
+										<!-- Gallery Image Hover Icon -->
+										<a href="../cf/theme/img/dish/dish12.jpg" class="gallery-img-link">
+											<i class="fa fa-search-plus hover-icon icon-left"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-link hover-icon icon-right"></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-4 qw1">
+									<!-- Separate gallery element -->
+									<div class="element">
+										<!-- Image -->
+										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish/dish13.jpg" alt=""/>
+										<!-- Gallery Image Hover Effect -->
+										<span class="gallery-img-hover"></span>
+										<!-- Gallery Image Hover Icon -->
+										<a href="../cf/theme/img/dish/dish13.jpg" class="gallery-img-link">
+											<i class="fa fa-search-plus hover-icon icon-left"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-link hover-icon icon-right"></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-4 qw1">
+									<!-- Separate gallery element -->
+									<div class="element">
+										<!-- Image -->
+										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish/dish14.jpg" alt=""/>
+										<!-- Gallery Image Hover Effect -->
+										<span class="gallery-img-hover"></span>
+										<!-- Gallery Image Hover Icon -->
+										<a href="../cf/theme/img/dish/dish14.jpg" class="gallery-img-link">
+											<i class="fa fa-search-plus hover-icon icon-left"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-link hover-icon icon-right"></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-4 qw1">
+									<!-- Separate gallery element -->
+									<div class="element">
+										<!-- Image -->
+										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish/dish15.jpg" alt=""/>
+										<!-- Gallery Image Hover Effect -->
+										<span class="gallery-img-hover"></span>
+										<!-- Gallery Image Hover Icon -->
+										<a href="../cf/theme/img/dish/dish15.jpg" class="gallery-img-link">
+											<i class="fa fa-search-plus hover-icon icon-left"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-link hover-icon icon-right"></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-4 qw1">
+									<!-- Separate gallery element -->
+									<div class="element">
+										<!-- Image -->
+										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish/dish16.jpg" alt=""/>
+										<!-- Gallery Image Hover Effect -->
+										<span class="gallery-img-hover"></span>
+										<!-- Gallery Image Hover Icon -->
+										<a href="../cf/theme/img/dish/dish16.jpg" class="gallery-img-link">
+											<i class="fa fa-search-plus hover-icon icon-left"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-link hover-icon icon-right"></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-4 qw1">
+									<!-- Separate gallery element -->
+									<div class="element">
+										<!-- Image -->
+										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish/dish17.jpg" alt=""/>
+										<!-- Gallery Image Hover Effect -->
+										<span class="gallery-img-hover"></span>
+										<!-- Gallery Image Hover Icon -->
+										<a href="../cf/theme/img/dish/dish17.jpg" class="gallery-img-link">
+											<i class="fa fa-search-plus hover-icon icon-left"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-link hover-icon icon-right"></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-4 qw1">
+									<!-- Separate gallery element -->
+									<div class="element">
+										<!-- Image -->
+										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish/dish18.jpg" alt=""/>
+										<!-- Gallery Image Hover Effect -->
+										<span class="gallery-img-hover"></span>
+										<!-- Gallery Image Hover Icon -->
+										<a href="../cf/theme/img/dish/dish18.jpg" class="gallery-img-link">
 											<i class="fa fa-search-plus hover-icon icon-left"></i>
 										</a>
 										<a href="#">
@@ -353,171 +514,11 @@
 									<!-- Separate gallery element -->
 									<div class="element">
 										<!-- Image -->
-										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish2.jpg" alt=""/>
+										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish/dish19.jpg" alt=""/>
 										<!-- Gallery Image Hover Effect -->
 										<span class="gallery-img-hover"></span>
 										<!-- Gallery Image Hover Icon -->
-										<a href="../cf/theme/img/dish2.jpg" class="gallery-img-link">
-											<i class="fa fa-search-plus hover-icon icon-left"></i>
-										</a>
-										<a href="#">
-											<i class="fa fa-link hover-icon icon-right"></i>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-4">
-									<!-- Separate gallery element -->
-									<div class="element">
-										<!-- Image -->
-										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish3.jpg" alt=""/>
-										<!-- Gallery Image Hover Effect -->
-										<span class="gallery-img-hover"></span>
-										<!-- Gallery Image Hover Icon -->
-										<a href="../cf/theme/img/dish3.jpg" class="gallery-img-link">
-											<i class="fa fa-search-plus hover-icon icon-left"></i>
-										</a>
-										<a href="#">
-											<i class="fa fa-link hover-icon icon-right"></i>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-4">
-									<!-- Separate gallery element -->
-									<div class="element">
-										<!-- Image -->
-										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish4.jpg" alt=""/>
-										<!-- Gallery Image Hover Effect -->
-										<span class="gallery-img-hover"></span>
-										<!-- Gallery Image Hover Icon -->
-										<a href="../cf/theme/img/dish4.jpg" class="gallery-img-link">
-											<i class="fa fa-search-plus hover-icon icon-left"></i>
-										</a>
-										<a href="#">
-											<i class="fa fa-link hover-icon icon-right"></i>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-4">
-									<!-- Separate gallery element -->
-									<div class="element">
-										<!-- Image -->
-										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish12.jpg" alt=""/>
-										<!-- Gallery Image Hover Effect -->
-										<span class="gallery-img-hover"></span>
-										<!-- Gallery Image Hover Icon -->
-										<a href="../cf/theme/img/dish12.jpg" class="gallery-img-link">
-											<i class="fa fa-search-plus hover-icon icon-left"></i>
-										</a>
-										<a href="#">
-											<i class="fa fa-link hover-icon icon-right"></i>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-4">
-									<!-- Separate gallery element -->
-									<div class="element">
-										<!-- Image -->
-										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish13.jpg" alt=""/>
-										<!-- Gallery Image Hover Effect -->
-										<span class="gallery-img-hover"></span>
-										<!-- Gallery Image Hover Icon -->
-										<a href="../cf/theme/img/dish13.jpg" class="gallery-img-link">
-											<i class="fa fa-search-plus hover-icon icon-left"></i>
-										</a>
-										<a href="#">
-											<i class="fa fa-link hover-icon icon-right"></i>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-4">
-									<!-- Separate gallery element -->
-									<div class="element">
-										<!-- Image -->
-										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish14.jpg" alt=""/>
-										<!-- Gallery Image Hover Effect -->
-										<span class="gallery-img-hover"></span>
-										<!-- Gallery Image Hover Icon -->
-										<a href="../cf/theme/img/dish14.jpg" class="gallery-img-link">
-											<i class="fa fa-search-plus hover-icon icon-left"></i>
-										</a>
-										<a href="#">
-											<i class="fa fa-link hover-icon icon-right"></i>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-4">
-									<!-- Separate gallery element -->
-									<div class="element">
-										<!-- Image -->
-										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish15.jpg" alt=""/>
-										<!-- Gallery Image Hover Effect -->
-										<span class="gallery-img-hover"></span>
-										<!-- Gallery Image Hover Icon -->
-										<a href="../cf/theme/img/dish15.jpg" class="gallery-img-link">
-											<i class="fa fa-search-plus hover-icon icon-left"></i>
-										</a>
-										<a href="#">
-											<i class="fa fa-link hover-icon icon-right"></i>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-4">
-									<!-- Separate gallery element -->
-									<div class="element">
-										<!-- Image -->
-										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish16.jpg" alt=""/>
-										<!-- Gallery Image Hover Effect -->
-										<span class="gallery-img-hover"></span>
-										<!-- Gallery Image Hover Icon -->
-										<a href="../cf/theme/img/dish16.jpg" class="gallery-img-link">
-											<i class="fa fa-search-plus hover-icon icon-left"></i>
-										</a>
-										<a href="#">
-											<i class="fa fa-link hover-icon icon-right"></i>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-4">
-									<!-- Separate gallery element -->
-									<div class="element">
-										<!-- Image -->
-										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish17.jpg" alt=""/>
-										<!-- Gallery Image Hover Effect -->
-										<span class="gallery-img-hover"></span>
-										<!-- Gallery Image Hover Icon -->
-										<a href="../cf/theme/img/dish17.jpg" class="gallery-img-link">
-											<i class="fa fa-search-plus hover-icon icon-left"></i>
-										</a>
-										<a href="#">
-											<i class="fa fa-link hover-icon icon-right"></i>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-4">
-									<!-- Separate gallery element -->
-									<div class="element">
-										<!-- Image -->
-										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish18.jpg" alt=""/>
-										<!-- Gallery Image Hover Effect -->
-										<span class="gallery-img-hover"></span>
-										<!-- Gallery Image Hover Icon -->
-										<a href="../cf/theme/img/dish18.jpg" class="gallery-img-link">
-											<i class="fa fa-search-plus hover-icon icon-left"></i>
-										</a>
-										<a href="#">
-											<i class="fa fa-link hover-icon icon-right"></i>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-4">
-									<!-- Separate gallery element -->
-									<div class="element">
-										<!-- Image -->
-										<img class="img-responsive img-thumbnail" src="../cf/theme/img/dish19.jpg" alt=""/>
-										<!-- Gallery Image Hover Effect -->
-										<span class="gallery-img-hover"></span>
-										<!-- Gallery Image Hover Icon -->
-										<a href="../cf/theme/img/dish19.jpg" class="gallery-img-link">
+										<a href="../cf/theme/img/dish/dish19.jpg" class="gallery-img-link">
 											<i class="fa fa-search-plus hover-icon icon-left"></i>
 										</a>
 										<a href="#">
@@ -569,138 +570,4 @@
 				
 			</div><!-- / Inner Page Content End -->	
 			
-			<!-- Footer Start -->
-			
-			<div class="footer padd">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3 col-sm-6">
-							<!-- Footer widget -->
-							<div class="footer-widget">
-								<!-- Logo area -->
-								<div class="logo">
-									<img class="img-responsive" src="img/logo.png" alt="" />
-									<!-- Heading -->
-									<h1>CakeFactory</h1>
-								</div>
-								<!-- Paragraph -->
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et magna aliqua.</p>
-								<hr />
-								<!-- Heading -->
-								<h6>On-line Payment Clients</h6>
-								<!-- Images -->
-								<a href="#"><img class="payment img-responsive" src="img/payment/2co.gif" alt="" /></a>
-								<a href="#"><img class="payment img-responsive" src="img/payment/authorizenet.gif" alt="" /></a>
-								<a href="#"><img class="payment img-responsive" src="img/payment/discover.gif" alt="" /></a>
-								<a href="#"><img class="payment img-responsive" src="img/payment/egold.gif" alt="" /></a>
-								<a href="#"><img class="payment img-responsive" src="img/payment/mastercard.gif" alt="" /></a>
-								<a href="#"><img class="payment img-responsive" src="img/payment/paypal.gif" alt="" /></a>
-								<a href="#"><img class="payment img-responsive" src="img/payment/visa.gif" alt="" /></a>
-								<a href="#"><img class="payment img-responsive" src="img/payment/worldpay.gif" alt="" /></a>
-							</div> <!--/ Footer widget end -->
-						</div>
-						<div class="col-md-3 col-sm-6">
-							<!-- Footer widget -->
-							<div class="footer-widget">
-								<!-- Heading -->
-								<h4>Famous Dishes</h4>
-								<!-- Images -->
-								<a href="#"><img class="dish img-responsive" src="../cf/theme/img/dish1.jpg" alt="" /></a>
-								<a href="#"><img class="dish img-responsive" src="../cf/theme/img/dish1.jpg" alt="" /></a>
-								<a href="#"><img class="dish img-responsive" src="../cf/theme/img/dish1.jpg" alt="" /></a>
-								<a href="#"><img class="dish img-responsive" src="../cf/theme/img/dish1.jpg" alt="" /></a>
-								<a href="#"><img class="dish img-responsive" src="../cf/theme/img/dish1.jpg" alt="" /></a>
-								<a href="#"><img class="dish img-responsive" src="../cf/theme/img/dish1.jpg" alt="" /></a>
-								<a href="#"><img class="dish img-responsive" src="../cf/theme/img/dish1.jpg" alt="" /></a>
-								<a href="#"><img class="dish img-responsive" src="../cf/theme/img/dish1.jpg" alt="" /></a>
-								<a href="#"><img class="dish img-responsive" src="../cf/theme/img/dish1.jpg" alt="" /></a>
-							</div> <!--/ Footer widget end -->
-						</div>
-						<div class="clearfix visible-sm"></div>
-						<div class="col-md-3 col-sm-6">
-							<!-- Footer widget -->
-							<div class="footer-widget">
-								<!-- Heading -->
-								<h4>Join Us Today</h4>
-								<!-- Paragraph -->
-								<p>There is no one who loves pain itself, who seeks after it and wants to have it.</p>
-								<!-- Subscribe form -->
-								<form role="form">
-									<div class="form-group">
-										<input class="form-control" type="text" placeholder="Your name" />
-									</div>
-									<div class="form-group">
-										<input class="form-control" type="email" placeholder="Your email" />
-									</div>
-									<button class="btn btn-danger" type="button">Subscribe</button>
-								</form>
-							</div> <!--/ Footer widget end -->
-						</div>
-						<div class="col-md-3 col-sm-6">
-							<!-- Footer widget -->
-							<div class="footer-widget">
-								<!-- Heading -->
-								<h4>Contact Us</h4>
-								<div class="contact-details">
-									<!-- Address / Icon -->
-									<i class="fa fa-map-marker br-red"></i> <span>#768, 5th floor, N S Building,<br />Csm Block, Park Road,<br /> Bangalore - 234567</span>
-									<div class="clearfix"></div>
-									<!-- Contact Number / Icon -->
-									<i class="fa fa-phone br-green"></i> <span>+91 88-88-888888</span>
-									<div class="clearfix"></div>
-									<!-- Email / Icon -->
-									<i class="fa fa-envelope-o br-lblue"></i> <span><a href="#">abc@example.com</a></span>
-									<div class="clearfix"></div>
-								</div>
-								<!-- Social media icon -->
-								<div class="social">
-									<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-									<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-									<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-									<a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
-								</div>
-							</div> <!--/ Footer widget end -->
-						</div>
-					</div>
-					<!-- Copyright -->
-					<div class="footer-copyright">
-						<!-- Paragraph -->
-						<p>&copy; Copyright 2014 <a href="#">Company Name</a></p>
-					</div>
-				</div>
-			</div>
-			
-			<!-- Footer End -->
-			
-		</div><!-- / Wrapper End -->
-		
-		
-		<!-- Scroll to top -->
-		<span class="totop"><a href="#"><i class="fa fa-angle-up"></i></a></span> 
-		
-		
-		
-		<!-- Javascript files -->
-		<!-- jQuery -->
-		<script src="js/jquery.js"></script>
-		<!-- Bootstrap JS -->
-		<script src="js/bootstrap.min.js"></script>
-		<!-- Pretty Photo JS -->
-		<script src="js/jquery.prettyPhoto.js"></script>
-		<!-- Respond JS for IE8 -->
-		<script src="js/respond.min.js"></script>
-		<!-- HTML5 Support for IE -->
-		<script src="js/html5shiv.js"></script>
-		<!-- Custom JS -->
-		<script src="js/custom.js"></script>
-		<!-- JS code for this page -->
-		<script>
-		/* Gallery */
-
-		jQuery(".gallery-img-link").prettyPhoto({
-		   overlay_gallery: false, social_tools: false
-		});
-		
-		</script>
-	</body>	
-</html>
+<?php include ('./footer.php')  ?>

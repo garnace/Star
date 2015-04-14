@@ -88,7 +88,7 @@ csm +="</div>";
 $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
   {
     tags: pId,
-//    tagmode: "any",
+
     tagmode: "all",
     format: "json"
  },
@@ -252,6 +252,60 @@ $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?
 
 }
 
+function setPicB(pId,pR,randY)
+{
+
+//-------------------------
+
+//Flikr Example taken from
+
+//http://api.jquery.com/jQuery.getJSON/
+
+//------------------
+
+var pRay=new Array();
+pRay=pR;
+
+
+//alert("flickr setPic");
+$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+  {
+    tags: pId+",nasa",
+//    tagmode: "any",
+    tagmode: "all",
+    l:"4",
+    format: "json"
+ },
+  function(data) {
+      $("#images").html("");
+//	alert("hello"+pId);
+      $.each(data.items, function(i,item){
+
+      pRay.push(item);
+
+//      $("<img/>").attr("src", pRay[i].media.m).attr("title",pRay[i].title).appendTo("#images");
+      if ( i == 8 ) 
+
+      {
+/*	   $("#images> img").each(function()
+	   {
+		    var iE=$(this);
+		    iE.wrap("<a href=\" "+iE.attr("src")+"\"> </a>");
+	    });
+*/
+
+//	boardDoubler(pRay);
+	boardDoublerCF(pRay);
+	  return false;
+     }
+    });//$.each
+  });//json
+
+}
+
+
+
+
 /**  #boardDoubler
 *Function to double number of images on board for memory game
 *Game code idea modeled from http://webdevplayground.com/2009/09/a-basic-memory-game-with-jquery-and-php/
@@ -367,6 +421,141 @@ function boardDoubler(pI)
 
 }
 //  end boardDoubler
+
+
+/**  #   boardDoublerCF ******************************
+
+*Function to double number of images on board using
+*CakeFactory layout for memory game
+*Game code idea modeled from http://webdevplayground.com/2009/09/a-basic-memory-game-with-jquery-and-php/
+*
+*The use of quickflip was decided  after experimenting between quickflip and flipbox
+*
+*@param array pI
+*
+**/
+
+
+function boardDoublerCF(pI)
+{
+	var rAA = new Array();
+	var track= new Array();
+	var ranP=null;
+	var tempP = null;
+	var tempR=null;
+
+	
+
+//	alert("return"+pI);
+	var pAA = null;
+	pAA = new Array();
+
+	document.getElementById("imagesp").innerHTML="";
+
+
+	$.each(pI, function (i,item){
+		pAA.push(item);
+	});
+
+	$.each(pI, function (i,item){
+		pAA.push(item);
+	});
+
+	//randomize pics
+
+	$.each(pAA, function (i,item){
+
+		ranP= Math.floor(Math.random()*pAA.length); 
+
+			tempP=item;
+			tempR=pAA[ranP];
+			pAA[i]=tempR;          //pAA[ranP];
+			pAA[ranP]=tempP;       //item;
+
+
+
+	});
+
+	//try to randomize pictures that ended up side by side
+
+	$.each(pAA, function(i,item){
+		if ( ( (pAA[i+1]!=null) &&(pAA[i].media.m== pAA[i+1].media.m)) || ((pAA[i-1]!=null)&&(pAA[i].media.m== pAA[i-1].media.m)) || ((pAA[i+4]!=null)&&(pAA[i].media.m== pAA[i+4].media.m)))
+		{
+
+		ranP= Math.floor(Math.random()*pAA.length); 
+
+			tempP=item;
+			tempR=pAA[ranP];
+			pAA[i]=tempR;          //pAA[ranP];
+			pAA[ranP]=tempP;       //item;
+
+
+			
+		}
+
+	});//each randomizer
+
+	$.each(pAA, function (i,item){
+
+
+	        var iiD=$("<br style=\"clear:both;\"/>");
+	        var iiDCF=$("<div class=\"row\">");
+	        var iiDCFall=$("<div class=\"row\"></div>");
+	        var iiDCEnd=$("</div>");
+
+
+		//card element
+/*		var iD="<div class=\"quickflip-wrapper3 qw"+i+"\" style=\"float:left;display:inline;\">";
+		iD=iD+"<div class=\"di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"images/Yoursky.gif\" class=\"img-responsive\" /></a></div>";
+		iD=iD+"<div class=\"di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\""+pAA[i].media.m+"\" title=\""+pAA[i].title+"\" /></a></div>";
+
+		iD=iD+"</div>";
+
+alert ("hi");*/
+var iD="<div class=\"col-md-3 col-sm-4 qw"+i+"\"><!-- Separate gallery element --><div class=\"element\"><!-- Image --><img class=\"img-responsive img-thumbnail\" src=\"../cf/theme/img/dish/dish1.jpg\" alt=\"\"/><!-- Gallery Image Hover Effect --><span class=\"gallery-img-hover\"></span><!-- Gallery Image Hover Icon --><a href=\"../cf/theme/img/dish/dish1.jpg\" class=\"gallery-img-link\"><i class=\"fa fa-search-plus hover-icon icon-left\"></i></a><a href=\"#\"><i class=\"fa fa-link hover-icon icon-right\"></i></a></div></div>";
+
+		iD=$(iD);
+
+		//testing
+		if(i==4){
+		var ele= $(iD.children()[0]).children();
+
+
+		//(1st wrapper div)->anchor->image
+		//	var ele= $(iD.children()[0]).children().children();
+//flickran		alert ("id:"+$(ele[0]).attr("class"));	
+//		alert ("id:"+$(ele[0]).attr("class"));	
+		}
+/*add later
+		iD.quickFlip();
+
+
+	        iD.bind("click",{pId:iD},clickPicQF);
+*/
+		if (i%4==0 ){		//break lines but not the first
+
+//			iiD.appendTo("#imagesp");
+//			iiDCFall.appendTo(".gallery-content .board");
+			alert($(iD).html());
+			iiDCFall.appendTo(".board");
+//			iiDCF.appendTo(".gallery-content-board");
+		}
+		/*else if (i%4==0 && i==0){	
+
+			iiDCF.appendTo(".gallery-content-board");
+		}*/
+
+//		iD.appendTo("#imagesp");
+//		iD.appendTo(".gallery-content .board .row");
+		iD.appendTo(".board .row:last");
+
+//	$('.'+iD.attr("src")).quickFlip();
+
+	});//each flipper wrapper
+
+}
+//  end boardDoubler
+
 
 
 
@@ -946,14 +1135,49 @@ $(document).ready(function(){
 
 }
 
-/** function setRPicP
+/** function setRPic
+*
+* Function to setup random picture cards for quickflip
+*
+**/
+function setRPik(pId)
+{
+$(document).ready(function(){
+
+	//bind events for match and check picture events
+
+	$(document).bind("checkEv",checkPic);
+	$(document).bind("matchEv",matchAlert);
+    var srpA= new Array();
+
+//    var arrPic=["galaxy","star night","sky","observatory","nebula","moon","asteroid","meteor","telescope"];
+    var arrPic=["galaxy","star","comet","nebula","moon"];
+    var randI=Math.floor(Math.random()*(arrPic.length));
+//	$('.quickflip-wrapper3').quickFlip();
+//	srpA.push("hello");
+//	alert("fLICKCK setRPIC");
+
+//	alert("+");
+//    setPicP(arrPic[randI],srpA);
+
+//    setCarousel(arrPic[randI]);
+//    setPic(arrPic[randI],srpA,randI);
+    setPicB(arrPic[randI],srpA,randI);
+});
+
+
+
+}
+
+
+/** function setRP
 *
 * Function to setup random picture cards for quickflip
 *
 *Status: not used
 **/
 
-function setRPicP(pId)
+function setRP(pId)
 {
 
 
@@ -961,7 +1185,7 @@ function setRPicP(pId)
     var randI=Math.floor(Math.random()*(arrPic.length));
 	alert("rick");
 
-    setCarousel(arrPic[randI]);
+//    setCarousel(arrPic[randI]);
     setPic(arrPic[randI]);
 
 //--------------------------------------
@@ -972,6 +1196,9 @@ function setRPicP(pId)
 }
 function getLoc(tId)
 {
+// based on jquery game example: http://code.tutsplus.com/tutorials/jquery_android--mobile-4720
+//http://code.tutsplus.com/tutorials/use-jquery-mobile-to-build-a-native-android-news-reader-app-part-2--mobile-4775
+//http://code.tutsplus.com/tutorials/use-jquery-mobile-to-build-a-native-android-news-reader-app-part-3--mobile-4886
 //	alert("hello");
 //	$("#tabs").tabs({selected:2});
 	$(function (){
@@ -1715,8 +1942,82 @@ function getSitesM(sId)
 }
 function getAniM(sId)
 {
+
+	var ln;
+	var divv;
+	var lastp;
+        var qwray= new Array();
+	var turnbp=1;
+	var turntp=1;
+	var turnlp=1;
+	var turn=5;
+	var leftS=null;
+	var topS=null;
+	var l=0,t=0;
+
+//	var turnn=1;
+//	ln=$("div[id*=qw]").length();
+	ln=$("div[class*=qw]").length;
+
+	alert("length qw:"+ln);
+	divv =$("div[class*=qw]");
+        $(divv).map(function(i,v){qwray.push([i,$($(divv)[i]).css("left")]);});
+//	alert("last qw:"+qwray);
+//	alert("last qw:"+$(qwray[6])[0]+"::"+qwray[6][1]);
+//	alert("last qw:"+$($(divv)[0]).attr("class")+$($(divv)[0]).css("top"));
+	ln=ln-1;
+	lastp=$($(divv)[0]).css("top");
+//	alert("lasddt qw:"+$($(divv)[ln]).attr("class")+$($(divv)[0]).css("top")+$($(divv)[5]).css("top")+"left"+$($(divv)[0]).css("left"));
+//	$($(divv)[ln]).animate({bottom: '-=140'},200);
+//	$($(divv)[ln]).animate({top: '10',left:'10'},200);
+	for (i=0;i<ln+1;i++)
+	{
+		
+		turntp = (turntp+1) % turn;
+		turntp = Math.floor(Math.random()* (turn-1))+2;
+		if (turntp < 3 || turnlp >3)
+		{
+			l = (-100)* turnlp*2; 
+			t = (-100)* turntp*2; 
+			leftS = l.toString(); 
+			topS = t.toString(); 
+
+
+
+		}
+		else if (turnlp < 3 && turntp > 4)
+		{
+			l = (100)* turnlp*2; 
+			t = (100)* turntp*2; 
+			leftS = l.toString(); 
+			topS = t.toString(); 
+
+
+
+		}
+
+		else{
+			l = (-100)* turnlp*2; 
+			t = (100)* turntp*2; 
+			leftS = l.toString(); 
+			topS = t.toString(); 
+
+		}
+		$($(divv)[i]).animate({top:topS,left:leftS},1200);
+
+		turnlp = (turnlp) %turn;
+		turnlp = Math.floor(Math.random()* (turn-1))+2;
+	}
+	for (i=0;i<ln+1;i++)
+		$($(divv)[i]).animate({top:'0',left:'0'},1200);
+
+
+
+
+//	alert("length qw:");
+
 //	getCach(htReal[2]);
-	getCachM(htReal);
+//--	getCachM(htReal);
 }
 
 function getCachM(sId)
@@ -3435,7 +3736,8 @@ function load()
     {
 
 alert("what");
-    setRPic(0);
+//    setRPic(0);
+    setRPik(0);
     document.getElementById("hero").style.display="";
     document.getElementById("dbTable").style.display="";
 
