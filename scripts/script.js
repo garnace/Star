@@ -504,15 +504,49 @@ function boardDoublerCF(pI)
 	        var iiDCEnd=$("</div>");
 
 
+/*var iD="<div class=\"col-md-3 col-sm-4 qww"+i+"  \"><!-- Separate gallery element --><div class=\"quickflip-wrapper8 qw"+i+"\"><div class=\"element di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"element di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div></div>";*/
+
+var iD="<div class=\"col-md-3 col-sm-4 qww"+i+" quickflip-wrapper8 qw"+i+"  \"><!-- Separate gallery element --><div class=\"element di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"element di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div>";
+
+
 		//card element
 /*		var iD="<div class=\"quickflip-wrapper3 qw"+i+"\" style=\"float:left;display:inline;\">";
 		iD=iD+"<div class=\"di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"images/Yoursky.gif\" class=\"img-responsive\" /></a></div>";
 		iD=iD+"<div class=\"di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\""+pAA[i].media.m+"\" title=\""+pAA[i].title+"\" /></a></div>";
 
 		iD=iD+"</div>";
+*/
 
-alert ("hi");*/
-var iD="<div class=\"col-md-3 col-sm-4 qw"+i+"\"><!-- Separate gallery element --><div class=\"element\"><!-- Image --><img class=\"img-responsive img-thumbnail\" src=\"../cf/theme/img/dish/dish1.jpg\" alt=\"\"/><!-- Gallery Image Hover Effect --><span class=\"gallery-img-hover\"></span><!-- Gallery Image Hover Icon --><a href=\"../cf/theme/img/dish/dish1.jpg\" class=\"gallery-img-link\"><i class=\"fa fa-search-plus hover-icon icon-left\"></i></a><a href=\"#\"><i class=\"fa fa-link hover-icon icon-right\"></i></a></div></div>";
+
+
+/*
+		var iD="<div class=\"quickflip-wrapper3 qw"+i+"\" style=\"float:left;display:inline;\">";
+		iD=iD+"<div class=\"di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"images/Yoursky.gif\" class=\"img-responsive\" /></a></div>";
+		iD=iD+"<div class=\"di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\""+pAA[i].media.m+"\" title=\""+pAA[i].title+"\" /></a></div>";
+
+		iD=iD+"</div>";
+*/
+
+
+
+
+
+/* CF works var iD="<div class=\"col-md-3 col-sm-4 qw"+i+"\"><!-- Separate gallery element --><div class=\"element\"><!-- Image --><img class=\"img-responsive img-thumbnail\" src=\"../cf/theme/img/dish/dish1.jpg\" alt=\"\"/><!-- Gallery Image Hover Effect --><span class=\"gallery-img-hover\"></span><!-- Gallery Image Hover Icon --><a href=\"../cf/theme/img/dish/dish1.jpg\" class=\"gallery-img-link\"><i class=\"fa fa-search-plus hover-icon icon-left\"></i></a><a href=\"#\"><i class=\"fa fa-link hover-icon icon-right\"></i></a></div></div>";
+*/
+
+
+
+
+
+/*var iD="<div class=\"col-md-3 col-sm-4 qww"+i+"  \"><!-- Separate gallery element --><div class=\"element\">< div class=\"quickflip-wrapper3 qw"+i+"\"><div class=\"element di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"element di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div> </div></div>";*/
+
+
+
+
+/*var iD="<div class=\"col-md-3 col-sm-4 qww"+i+"  \"><!-- Separate gallery element --><div class=\"element\">< div class=\"quickflip-wrapper3 qw"+i+"\"><div class=\"di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"images/Yoursky.gif\" class=\"img-responsive\" /></a></div><div class=\"di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\""+pAA[i].media.m+"\" title=\""+pAA[i].title+"\" /></a></div></div> </div></div>";*/
+
+
+
 
 		iD=$(iD);
 
@@ -526,8 +560,8 @@ var iD="<div class=\"col-md-3 col-sm-4 qw"+i+"\"><!-- Separate gallery element -
 //flickran		alert ("id:"+$(ele[0]).attr("class"));	
 //		alert ("id:"+$(ele[0]).attr("class"));	
 		}
-/*add later
-		iD.quickFlip();
+
+/*		iD.quickFlip();
 
 
 	        iD.bind("click",{pId:iD},clickPicQF);
@@ -1957,10 +1991,10 @@ function getAniM(sId)
 
 //	var turnn=1;
 //	ln=$("div[id*=qw]").length();
-	ln=$("div[class*=qw]").length;
+	ln=$("div[class*=qww]").length;
 
-	alert("length qw:"+ln);
-	divv =$("div[class*=qw]");
+	alert("length qww:"+ln);
+	divv =$("div[class*=qww]");
         $(divv).map(function(i,v){qwray.push([i,$($(divv)[i]).css("left")]);});
 //	alert("last qw:"+qwray);
 //	alert("last qw:"+$(qwray[6])[0]+"::"+qwray[6][1]);

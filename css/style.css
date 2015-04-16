@@ -1208,6 +1208,19 @@ p label
 //	border-radius:100px;
 }
 
+.quickflip-wrapper5 div img
+{
+//	width:75px;
+//	height:75px;
+
+	width:58px;
+	height:60px;
+
+//	border-radius:7px;
+//	border-radius:100px;
+}
+
+
 .dih img
 {
 //	width:75px;
@@ -1231,7 +1244,7 @@ p label
 
 
 
-.quickflip-wrapper3
+.quickflip-wrapper5
 {
 	width:60px;
 	height:60px;
