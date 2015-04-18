@@ -504,9 +504,24 @@ function boardDoublerCF(pI)
 	        var iiDCEnd=$("</div>");
 
 
-/*var iD="<div class=\"col-md-3 col-sm-4 qww"+i+"  \"><!-- Separate gallery element --><div class=\"quickflip-wrapper8 qw"+i+"\"><div class=\"element di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"element di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div></div>";*/
+//var iD="<div class=\"col-md-3 col-sm-4 qww"+i+"  \"><!-- Separate gallery element --><div class=\"element\"><div class=\"quickflip-wrapper8 qw"+i+"\"><div class=\"di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div></div></div>";
 
-var iD="<div class=\"col-md-3 col-sm-4 qww"+i+" quickflip-wrapper8 qw"+i+"  \"><!-- Separate gallery element --><div class=\"element di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"element di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div>";
+/*var iD="<div class=\"col-md-3 col-sm-4 qww"+i+" quickflip-wrapper8 qw"+i+"  \"><!-- Separate gallery element --><div class=\"element di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"element di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div>";*/
+
+var iD_AA="<div class=\"col-md-3 col-sm-4 qww"+i+"\"> <div class=\" quickflip-wrapper8 qw"+i+"  \"><!-- Separate gallery element --><div class=\"element di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"element di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div></div>";
+var iD_AB="<div class=\"col-md-3 col-sm-4 qww"+i+" quickflip-wrapper5 qw"+i+"  \"><!-- Separate gallery element --><div class=\"element di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"element di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div>";
+
+var iD_A="<div class=\"col-md-3 col-sm-4 qww"+i+"\">";
+var iD_A2=" <div class=\" quickflip-wrapper8 qw"+i+"  \"><!-- Separate gallery element --><div class=\"element di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"element di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div>";
+var iD_A2o=" <div class=\" quickflip-wrapper5 qw"+i+"  \"><!-- Separate gallery element --><div class=\"di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div>";
+var iD_A2oo=" <div class=\" quickflip-wrapper5 qw"+i+"  \"><!-- Separate gallery element --><div class=\"di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div>";
+var iD_A3="</div>";
+var iD_A4="<div class=\"col-md-3 col-sm-4 qww"+i+"\"><div class=\"element\"></div></div>";
+var iD_A5="<div class=\"col-md-3 col-sm-4 qww"+i+"\"><div class=\"element\"></div></div>";
+
+var iD_B="<div class=\"col-md-3 col-sm-4 qww"+i+" quickflip-wrapper8 qw"+i+"  \"><!-- Separate gallery element --><div class=\"element di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"element di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div>";
+
+var iD_C="<div class=\"col-md-3 col-sm-4 qww"+i+" quickflip-wrapper8 qw"+i+"  \"><!-- Separate gallery element --><div class=\"element di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"element di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div>";
 
 
 		//card element
@@ -519,13 +534,12 @@ var iD="<div class=\"col-md-3 col-sm-4 qww"+i+" quickflip-wrapper8 qw"+i+"  \"><
 
 
 
-/*
-		var iD="<div class=\"quickflip-wrapper3 qw"+i+"\" style=\"float:left;display:inline;\">";
+	var iD="<div class=\"quickflip-wrapper3 qw"+i+"\" style=\"float:left;display:inline;\">";
 		iD=iD+"<div class=\"di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"images/Yoursky.gif\" class=\"img-responsive\" /></a></div>";
 		iD=iD+"<div class=\"di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\""+pAA[i].media.m+"\" title=\""+pAA[i].title+"\" /></a></div>";
 
 		iD=iD+"</div>";
-*/
+
 
 
 
@@ -538,18 +552,20 @@ var iD="<div class=\"col-md-3 col-sm-4 qww"+i+" quickflip-wrapper8 qw"+i+"  \"><
 
 
 
-/*var iD="<div class=\"col-md-3 col-sm-4 qww"+i+"  \"><!-- Separate gallery element --><div class=\"element\">< div class=\"quickflip-wrapper3 qw"+i+"\"><div class=\"element di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"element di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div> </div></div>";*/
+//var iD="<div class=\"col-md-3 col-sm-4 qww"+i+"  \"><!-- Separate gallery element --><div class=\"element\">< div class=\"quickflip-wrapper3 qw"+i+"\"><div class=\"element di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"element di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div> </div></div>";
 
 
 
 
-/*var iD="<div class=\"col-md-3 col-sm-4 qww"+i+"  \"><!-- Separate gallery element --><div class=\"element\">< div class=\"quickflip-wrapper3 qw"+i+"\"><div class=\"di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"images/Yoursky.gif\" class=\"img-responsive\" /></a></div><div class=\"di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\""+pAA[i].media.m+"\" title=\""+pAA[i].title+"\" /></a></div></div> </div></div>";*/
+//var iD="<div class=\"col-md-3 col-sm-4 qww"+i+"  \"><!-- Separate gallery element --><div class=\"element\">< div class=\"quickflip-wrapper3 qw"+i+"\"><div class=\"di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"images/Yoursky.gif\" class=\"img-responsive\" /></a></div><div class=\"di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\""+pAA[i].media.m+"\" title=\""+pAA[i].title+"\" /></a></div></div> </div></div>";
 
 
 
 
 		iD=$(iD);
-
+		iD_AA=$(iD_AA);
+		iD_AB=$(iD_AB);
+		iD_A2o=$(iD_A2o);
 		//testing
 		if(i==4){
 		var ele= $(iD.children()[0]).children();
@@ -566,9 +582,22 @@ var iD="<div class=\"col-md-3 col-sm-4 qww"+i+" quickflip-wrapper8 qw"+i+"  \"><
 
 	        iD.bind("click",{pId:iD},clickPicQF);
 */
+		iD_A2o.quickFlip();
+
+
+	        iD_A2o.bind("click",{pId:iD},clickPicQF);
+
+
+
+
+
+//		iD=$(iD_A2o).wrapInner(iD_A4);
+
+
 		if (i%4==0 ){		//break lines but not the first
 
 //			iiD.appendTo("#imagesp");
+//			iiD.appendTo(".board");
 //			iiDCFall.appendTo(".gallery-content .board");
 			alert($(iD).html());
 			iiDCFall.appendTo(".board");
@@ -581,7 +610,20 @@ var iD="<div class=\"col-md-3 col-sm-4 qww"+i+" quickflip-wrapper8 qw"+i+"  \"><
 
 //		iD.appendTo("#imagesp");
 //		iD.appendTo(".gallery-content .board .row");
-		iD.appendTo(".board .row:last");
+//		iD_AA.appendTo(".gallery-content .board .row");
+//			$('#cartd ul').append(liString+$(item).html()+liStringEt +"<a class=\"tooltipp\">detail"+$($(elema).find("p").children("span").remove().end()).wrapInner("<span></span>").html()+"</a></li>");
+
+//CHANGE		iD.appendTo(".board .row:last");
+//		iD.appendTo(".board .row:last");
+//		$(".board .row:last").append($(iD));
+//		$(".board .row:last").append($(iD).wrapInner(iD_A4));
+//		$(".board .row:last").append($(iD_A).html()+$(iD_A2).html()+$(iD_A3).html());
+//	$(".board .row:last").append(iD);
+//		$(".board .row:last").append(iD_A+$(iD_A2o).html()+iD_A3);
+//		$(".board .row:last").append($(iD).html());
+//		$(".board .row:last").append($(iD_A2o));
+		$(".board .row:last").append(iD_A4);
+		$(".board .row:last .element:last").append($(iD_A2o));
 
 //	$('.'+iD.attr("src")).quickFlip();
 
