@@ -613,7 +613,7 @@ onsubmit="return valReservation(this)">
 		<label for="about" style="display:inline;" > about seat</label>
 		<br/>
 		<br/>
-		<input type="button" id="avail" name="about" value="about" onclick="getSectionT(0);"/>
+		<input type="button" id="avail" name="about" value="aboutT" onclick="getSectionT(0);"/>
 		<label for="about" style="display:inline;" > available</label>
 		<br/>
 

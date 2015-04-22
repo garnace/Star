@@ -513,10 +513,13 @@ var iD_AB="<div class=\"col-md-3 col-sm-4 qww"+i+" quickflip-wrapper5 qw"+i+"  \
 
 var iD_A="<div class=\"col-md-3 col-sm-4 qww"+i+"\">";
 var iD_A2=" <div class=\" quickflip-wrapper8 qw"+i+"  \"><!-- Separate gallery element --><div class=\"element di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"element di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div>";
-var iD_A2o=" <div class=\" quickflip-wrapper5 qw"+i+"  \"><!-- Separate gallery element --><div class=\"di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div>";
+var iD_B2=" <div class=\" quickflip-wrapper5 qw"+i+" \"><!-- Separate gallery element --><div class=\"di1\"><a href=\"#\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div ></div>";
+var iD_A2o=" <div class=\" quickflip-wrapper3 qw"+i+"  \"><!-- Separate gallery element --><div class=\"di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"images/Yoursky.gif\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\""+pAA[i].media.m+"\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div>";
+var iD_A2op=" <div class=\"quickflip-wrapper5 qw"+i+"  element \"><!-- Separate gallery element --><div class=\"di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"images/Yoursky.gif\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\""+pAA[i].media.m+"\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div>";
+var iD_A1="<div class=\" quickflip-wrapper3 qw"+i+" col-md-3 col-sm-4 qww"+i+" \"> <!-- Separate gallery element --><div class=\"element di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"images/Yoursky.gif\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"element di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\""+pAA[i].media.m+"\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div>";
 var iD_A2oo=" <div class=\" quickflip-wrapper5 qw"+i+"  \"><!-- Separate gallery element --><div class=\"di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div>";
 var iD_A3="</div>";
-var iD_A4="<div class=\"col-md-3 col-sm-4 qww"+i+"\"><div class=\"element\"></div></div>";
+var iD_A4="<div class=\"col-md-3 col-sm-4 qww"+i+"  \"></div>";
 var iD_A5="<div class=\"col-md-3 col-sm-4 qww"+i+"\"><div class=\"element\"></div></div>";
 
 var iD_B="<div class=\"col-md-3 col-sm-4 qww"+i+" quickflip-wrapper8 qw"+i+"  \"><!-- Separate gallery element --><div class=\"element di1\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" /></a></div><div class=\"element di2\"><a href=\"#\" class=\"quickFlipCta\"><img src=\"../cf/theme/img/dish/dish1.jpg\" class=\"img-responsive img-thumbnail\" title=\""+pAA[i].title+"\" /></a></div></div>";
@@ -564,8 +567,11 @@ var iD_C="<div class=\"col-md-3 col-sm-4 qww"+i+" quickflip-wrapper8 qw"+i+"  \"
 
 		iD=$(iD);
 		iD_AA=$(iD_AA);
+		iD_A1=$(iD_A1);
 		iD_AB=$(iD_AB);
+		iD_A1=$(iD_A1);
 		iD_A2o=$(iD_A2o);
+		iD_A2op=$(iD_A2op);
 		//testing
 		if(i==4){
 		var ele= $(iD.children()[0]).children();
@@ -582,10 +588,11 @@ var iD_C="<div class=\"col-md-3 col-sm-4 qww"+i+" quickflip-wrapper8 qw"+i+"  \"
 
 	        iD.bind("click",{pId:iD},clickPicQF);
 */
-		iD_A2o.quickFlip();
+		iD_A2op.quickFlip();
 
 
-	        iD_A2o.bind("click",{pId:iD},clickPicQF);
+//	        iD_A1.bind("click",{pId:iD},clickPicQF);
+	        iD_A2op.bind("click",{pId:iD_A2op},clickPicQF);
 
 
 
@@ -623,7 +630,10 @@ var iD_C="<div class=\"col-md-3 col-sm-4 qww"+i+" quickflip-wrapper8 qw"+i+"  \"
 //		$(".board .row:last").append($(iD).html());
 //		$(".board .row:last").append($(iD_A2o));
 		$(".board .row:last").append(iD_A4);
-		$(".board .row:last .element:last").append($(iD_A2o));
+//		$(".board .row:last").append(iD_A1);
+		$(".board .row:last div[class*=qww]:last").append($(iD_A2op));
+//		$(".board .row:last .element:last").append($(iD_A2o));
+//		$(".board .row:last .element:last").append($(iD_B2));
 
 //	$('.'+iD.attr("src")).quickFlip();
 
@@ -978,7 +988,8 @@ with helper functions for match events
 
 function checkPic(event,data)
 {
-//	alert("bind"+data.pId);
+//	alert("bind"+$($(data.pId).parent()).html());
+//	alert("bind"+$(data.pId).html());
 //	alert("bind");
 //	data.pId.quickFlipper();
 	var ch=0;
@@ -1007,15 +1018,19 @@ function checkPic(event,data)
 //	$(document).trigger(checkBoard);
 //	$("#imdivp #imagesp img .head:visible").each(function (i,items){
 //	alert ("cP:::"+$($(data.pId.children()[1]).children().children()).attr("src")  );
-	var heads=$("#imdivp #imagesp .headp");
-
+//--less spec	var heads=$("#imdivp #imagesp .headp");
+//	var heads=$("#imdivp #imagesp .headp");
+	var heads=$(".headp");
+alert($(".headp").length);
 //	var headsv=$("#imdivp #imagesp .headp");
 //-----change to hidy
 //	var headsv=$("#imdivp #imagesp .headp:visible");
 //	var total=$("#imdivp #imagesp img:visible").length;
 //-----change to hidy
 //	var headsv=$("#imdivp #imagesp .headp .hidy");
-	var headsv=$("#imdivp #imagesp .headp");
+//-less spec	var headsv=$("#imdivp #imagesp .headp");
+//	var headsv=$("#imdivp #imagesp .headp");
+	var headsv=$(".headp");
 //	var total=$("#imdivp #imagesp ").length;
 
 
@@ -1024,13 +1039,15 @@ function checkPic(event,data)
 //falert		setTimeout(function(){alert("found"+total+"VIS"+headsv.length);},1000);
 
 	//go through upturned cards
-	$("#imdivp #imagesp .headp").each(function (i,item){
+//less spec	$("#imdivp #imagesp .headp").each(function (i,item){
+	$(".headp").each(function (i,item){
 //	data.pId.each(function (i,item){
 
 		//check if only 2 turned up cards
 		if (headsv.length==2)
 		{
 //			alert ("two"+heads.slice(0).attr("src"));
+//			alert ("two"+$($(headsv.slice(0).children()[1]).children().children()).attr("src"));
 
 //			if (headsv.slice(0).attr("src") == headsv.slice(1).attr("src"))
 //switch child			if ($($(headsv.slice(0).children()[1]).children().children()).attr("src") == $($(headsv.slice(1).children()[1]).children().children()).attr("src"))
@@ -1129,14 +1146,14 @@ function noMatch(pId)
 
 	//remove headp class
 	$(pId[0]).removeClass("headp");
-//	alert("no");
+	alert("no");
 	$(pId[1]).removeClass("headp");
 
 
 	//check make sure not child as in raasch example for quickflip
 	//http://dev.jonraasch.com/quickflip/examples/hover-quickflips
 //	if (!pId.slice(0).hasClass("quickflip-wrapper3"))
-	if (!$(pId[0]).hasClass("quickflip-wrapper3"))
+	if (!$(pId[0]).hasClass("quickflip-wrapper5"))
 	{
 		//flip back parent
 		$($(pId[0]).parent()).quickFlipper();
@@ -1157,7 +1174,7 @@ function noMatch(pId)
 
 	//again for the 2nd pic
 	//check make sure not child as in raasch example for quickflip
-	if (!$(pId[1]).hasClass("quickflip-wrapper3"))
+	if (!$(pId[1]).hasClass("quickflip-wrapper5"))
 	{
 		//flip parent
 		$($(pId[1]).parent()).quickFlipper();

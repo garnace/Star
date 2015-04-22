@@ -1210,13 +1210,15 @@ p label
 
 .quickflip-wrapper5 div img
 {
-//	width:75px;
-//	height:75px;
+	width:200px;
+	height:120px;
 
-	width:58px;
-	height:60px;
+//	width:100%;
+//	height:100%;
 
-//	border-radius:7px;
+//	margin:0 0;
+//	padding:0 0;
+	//	border-radius:7px;
 //	border-radius:100px;
 }
 
@@ -1246,13 +1248,14 @@ p label
 
 .quickflip-wrapper5
 {
-	width:60px;
-	height:60px;
+	width:200px;
+	height:200px;
 //	width:100%;
 //	height:100%;
 
 //	margin:10px 5px 15px 10px;
 	margin:5px 5px 15px 5px;
+//	margin:0 auto;
 //	padding:10px 5px 15px 10px;
 	position:relative;
 }
