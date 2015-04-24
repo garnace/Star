@@ -606,7 +606,7 @@ var iD_C="<div class=\"col-md-3 col-sm-4 qww"+i+" quickflip-wrapper8 qw"+i+"  \"
 //			iiD.appendTo("#imagesp");
 //			iiD.appendTo(".board");
 //			iiDCFall.appendTo(".gallery-content .board");
-			alert($(iD).html());
+//			alert($(iD).html());
 			iiDCFall.appendTo(".board");
 //			iiDCF.appendTo(".gallery-content-board");
 		}
@@ -1021,7 +1021,7 @@ function checkPic(event,data)
 //--less spec	var heads=$("#imdivp #imagesp .headp");
 //	var heads=$("#imdivp #imagesp .headp");
 	var heads=$(".headp");
-alert($(".headp").length);
+//alert($(".headp").length);
 //	var headsv=$("#imdivp #imagesp .headp");
 //-----change to hidy
 //	var headsv=$("#imdivp #imagesp .headp:visible");
@@ -1130,6 +1130,16 @@ function matchAlert(pId)
 	//next add hidy class to  hide by css
 	$(pId[0]).addClass("hidy");
 	$(pId[1]).addClass("hidy");
+
+	//next add hidy class to  hide by css
+//	$(pId[0]).hide();
+//	$(pId[1]).hide();
+
+
+	//next disable
+	$(pId[0]).prop('disabled',true);
+	$(pId[1]).prop('disabled',true);
+
 
 }
 //end matchAlert
@@ -1541,7 +1551,7 @@ function setSFeed(pId)
 
          }).always(function()
 {
-	alert("com ");
+//	alert("com ");
 	window.console.log("donee");
 //    document.getElementById("loadson").style.display="none";
   //  document.getElementById("fbox").style.display="none";
@@ -2054,7 +2064,10 @@ function getAniM(sId)
 
 	alert("length qww:"+ln);
 	divv =$("div[class*=qww]");
-        $(divv).map(function(i,v){qwray.push([i,$($(divv)[i]).css("left")]);});
+//	$(divv).each(function(i,v){$(v).addClass('hidy'); $(v).find('a').attr('style','auto');});
+	$(divv).each(function(i,v){$(v).addClass('hidy'); $(v).filter('a').each($(this).hover($(this).css({cursor:'crosshair'})));});
+//	$(divv).each(function(i,v){ $(i).hover($(this).unwrap('<a></a>'));});
+//        $(divv).map(function(i,v){qwray.push([i,$($(divv)[i]).css("left")]);});
 //	alert("last qw:"+qwray);
 //	alert("last qw:"+$(qwray[6])[0]+"::"+qwray[6][1]);
 //	alert("last qw:"+$($(divv)[0]).attr("class")+$($(divv)[0]).css("top"));
@@ -2112,6 +2125,170 @@ function getAniM(sId)
 //	getCach(htReal[2]);
 //--	getCachM(htReal);
 }
+
+function getIniAniM(sId)
+{
+
+	var ln;
+	var divv;
+	var lastp;
+        var qwray= new Array();
+	var turnbp=1;
+	var turntp=1;
+	var turnlp=1;
+	var turn=5;
+	var leftS=null;
+	var topS=null;
+	var l=0,t=0;
+
+//	var turnn=1;
+//	ln=$("div[id*=qw]").length();
+	ln=$("div[class*=qww]").length;
+
+//	alert("length qww:"+ln);
+	divv =$("div[class*=qww]");
+//        $(divv).map(function(i,v){qwray.push([i,$($(divv)[i]).css("left")]);});
+//	alert("last qw:"+qwray);
+//	alert("last qw:"+$(qwray[6])[0]+"::"+qwray[6][1]);
+//	alert("last qw:"+$($(divv)[0]).attr("class")+$($(divv)[0]).css("top"));
+	ln=ln-1;
+	lastp=$($(divv)[0]).css("top");
+//	alert("lasddt qw:"+$($(divv)[ln]).attr("class")+$($(divv)[0]).css("top")+$($(divv)[5]).css("top")+"left"+$($(divv)[0]).css("left"));
+//	$($(divv)[ln]).animate({bottom: '-=140'},200);
+//	$($(divv)[ln]).animate({top: '10',left:'10'},200);
+	for (i=0;i<ln+1;i++)
+	{
+		
+		turntp = (turntp+1) % turn;
+		turntp = Math.floor(Math.random()* (turn-1))+2;
+		if (turntp < 3 || turnlp >3)
+		{
+			l = (-100)* turnlp*2; 
+			t = (-100)* turntp*2; 
+			leftS = l.toString(); 
+			topS = t.toString(); 
+
+
+
+		}
+		else if (turnlp < 3 && turntp > 4)
+		{
+			l = (100)* turnlp*2; 
+			t = (100)* turntp*2; 
+			leftS = l.toString(); 
+			topS = t.toString(); 
+
+
+
+		}
+
+		else{
+			l = (-100)* turnlp*2; 
+			t = (100)* turntp*2; 
+			leftS = l.toString(); 
+			topS = t.toString(); 
+
+		}
+		$($(divv)[i]).animate({top:topS,left:leftS},1200);
+
+		turnlp = (turnlp) %turn;
+		turnlp = Math.floor(Math.random()* (turn-1))+2;
+	}
+/*	for (i=0;i<ln+1;i++)
+		$($(divv)[i]).animate({top:'0',left:'0'},1200);
+*/
+
+
+
+//	alert("length qw:");
+
+//	getCach(htReal[2]);
+//--	getCachM(htReal);
+}
+
+
+function getEndAniM(sId)
+{
+
+	var ln;
+	var divv;
+	var lastp;
+        var qwray= new Array();
+	var turnbp=1;
+	var turntp=1;
+	var turnlp=1;
+	var turn=5;
+	var leftS=null;
+	var topS=null;
+	var l=0,t=0;
+
+//	var turnn=1;
+//	ln=$("div[id*=qw]").length();
+	ln=$("div[class*=qww]").length;
+
+//	alert("length qww:"+ln);
+	divv =$("div[class*=qww]");
+//        $(divv).map(function(i,v){qwray.push([i,$($(divv)[i]).css("left")]);});
+//	alert("last qw:"+qwray);
+//	alert("last qw:"+$(qwray[6])[0]+"::"+qwray[6][1]);
+//	alert("last qw:"+$($(divv)[0]).attr("class")+$($(divv)[0]).css("top"));
+	ln=ln-1;
+	lastp=$($(divv)[0]).css("top");
+//	alert("lasddt qw:"+$($(divv)[ln]).attr("class")+$($(divv)[0]).css("top")+$($(divv)[5]).css("top")+"left"+$($(divv)[0]).css("left"));
+//	$($(divv)[ln]).animate({bottom: '-=140'},200);
+//	$($(divv)[ln]).animate({top: '10',left:'10'},200);
+/*	for (i=0;i<ln+1;i++)
+	{
+		
+		turntp = (turntp+1) % turn;
+		turntp = Math.floor(Math.random()* (turn-1))+2;
+		if (turntp < 3 || turnlp >3)
+		{
+			l = (-100)* turnlp*2; 
+			t = (-100)* turntp*2; 
+			leftS = l.toString(); 
+			topS = t.toString(); 
+
+
+
+		}
+		else if (turnlp < 3 && turntp > 4)
+		{
+			l = (100)* turnlp*2; 
+			t = (100)* turntp*2; 
+			leftS = l.toString(); 
+			topS = t.toString(); 
+
+
+
+		}
+
+		else{
+			l = (-100)* turnlp*2; 
+			t = (100)* turntp*2; 
+			leftS = l.toString(); 
+			topS = t.toString(); 
+
+		}
+		$($(divv)[i]).animate({top:topS,left:leftS},1200);
+
+		turnlp = (turnlp) %turn;
+		turnlp = Math.floor(Math.random()* (turn-1))+2;
+	}
+*/
+
+	for (i=0;i<ln+1;i++)
+		$($(divv)[i]).animate({top:'0',left:'0'},1200);
+
+
+
+
+//	alert("length qw:");
+
+//	getCach(htReal[2]);
+//--	getCachM(htReal);
+}
+
 
 function getCachM(sId)
 {
@@ -2307,6 +2484,14 @@ function getMatchJ(mId)
 
 	//    alert ("getMatch");
 }
+
+/*****************************************
+Function: getMatchJE:
+
+Description: Retrieves astro events with date and description:
+
+Status:  Working.  
+*********************************************************/
 
 function getMatchJE(mId)
 {
@@ -3226,8 +3411,16 @@ function tableFillT(i,item)
 		else
 		$('#lblTR'+i).html('table'+(i+1)+':(0 seats left)');	
 */
-		$('#lblTR'+i).html('table'+(i+1)+':('+item[1]+'seats left)');	
 
+		//seat(s) instead of seats
+		if (item[1] == 1)
+		{
+			$('#lblTR'+i).html('table'+(i+1)+':('+item[1]+'seat left)');	
+		}
+		else
+		{
+			$('#lblTR'+i).html('table'+(i+1)+':('+item[1]+'seats left)');	
+		}
 }
 
 function tableFill(i,item)
@@ -3451,7 +3644,7 @@ function getListTable(dbID)
 		function(data){
 			$.each(data.tables,function(i,item){
 //			alert("talist");
-			tableFillT(i,item);
+				tableFillT(i,item);
 			});
 			
 		});	
