@@ -191,7 +191,7 @@ include ('./header.php');
 									<p>Facility ester expedite instinct.</p>
 <a id="fb3" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="getIniAniM(2);">Start</a>
 <a id="fb3" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="getEndAniM(2);">Reshuffle</a>
-<a id="fb3" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="getAniM(2);">Reshuffle</a>
+<a id="fb3" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="getAniMPos(2);">Reshuffle</a>
 
 								</div>
 							</a>

@@ -2114,9 +2114,15 @@ function getAniM(sId)
 		turnlp = (turnlp) %turn;
 		turnlp = Math.floor(Math.random()* (turn-1))+2;
 	}
+//	$(divv).each(function(i,v){$(v).removeClass('hidy'); $(v).filter('a').each($(this).hover($(this).css({cursor:'crosshair'})));});
 	for (i=0;i<ln+1;i++)
-		$($(divv)[i]).animate({top:'0',left:'0'},1200);
+	{
 
+//		$($(divv)[i]).animate({top:'0',left:'0',visibilty:'visible',opacity:'1.0'},1200,function(){$(this).removeClass('hidy');});
+		$($(divv)[i]).animate({top:'+=0',left:'+=0',visibilty:'visible',opacity:'1.0'},12,function(){$(this).removeClass('hidy');}).animate({top:'0',left:'0',visibilty:'visible',opacity:'1.0'},1200);
+//		$($(divv)[i]).animate({top:'0',left:'0',visibilty:'visible',opacity:'1.0'},1200).removeClass('hidy');
+//		$($(divv)[i]).animate({top:'0',left:'0'},1200);
+	}
 
 
 
@@ -2125,6 +2131,99 @@ function getAniM(sId)
 //	getCach(htReal[2]);
 //--	getCachM(htReal);
 }
+
+function getAniMPos(sId)
+{
+
+	var ln;
+	var divv;
+	var lastp;
+	var lastpos;
+        var qwray= new Array();
+	var turnbp=1;
+	var turntp=1;
+	var turnlp=1;
+	var turn=5;
+	var leftS=null;
+	var topS=null;
+	var l=0,t=0;
+
+//	var turnn=1;
+//	ln=$("div[id*=qw]").length();
+	ln=$("div[class*=qww]").length;
+
+//	alert("length qww:"+ln);
+	divv =$("div[class*=qww]");
+//	$(divv).each(function(i,v){$(v).addClass('hidy'); $(v).find('a').attr('style','auto');});
+	$(divv).each(function(i,v){$(v).addClass('hidy'); $(v).filter('a').each($(this).hover($(this).css({cursor:'crosshair'})));});
+//	$(divv).each(function(i,v){ $(i).hover($(this).unwrap('<a></a>'));});
+//        $(divv).map(function(i,v){qwray.push([i,$($(divv)[i]).css("left")]);});
+//	alert("last qw:"+qwray);
+//	alert("last qw:"+$(qwray[6])[0]+"::"+qwray[6][1]);
+//	alert("last qw:"+$($(divv)[0]).attr("class")+$($(divv)[0]).css("top"));
+	ln=ln-1;
+	lastp=$($(divv)[0]).css("top");
+	lastpos=$($(divv)[0]).position();
+	alert("lasddt qw:"+$($(divv)[ln]).attr("class")+"top:"+lastpos.top+":");
+//	alert("lasddt qw:"+$($(divv)[ln]).attr("class")+$($(divv)[0]).css("top")+$($(divv)[5]).css("top")+"left"+$($(divv)[0]).css("left"));
+//	$($(divv)[ln]).animate({bottom: '-=140'},200);
+//	$($(divv)[ln]).animate({top: '10',left:'10'},200);
+	for (i=0;i<ln+1;i++)
+	{
+		
+		turntp = (turntp+1) % turn;
+		turntp = Math.floor(Math.random()* (turn-1))+2;
+		if (turntp < 3 || turnlp >3)
+		{
+			l = (-100)* turnlp*2; 
+			t = (-100)* turntp*2; 
+			leftS = l.toString(); 
+			topS = t.toString(); 
+
+
+
+		}
+		else if (turnlp < 3 && turntp > 4)
+		{
+			l = (100)* turnlp*2; 
+			t = (100)* turntp*2; 
+			leftS = l.toString(); 
+			topS = t.toString(); 
+
+
+
+		}
+
+		else{
+			l = (-100)* turnlp*2; 
+			t = (100)* turntp*2; 
+			leftS = l.toString(); 
+			topS = t.toString(); 
+
+		}
+		$($(divv)[i]).animate({top:topS,left:leftS},1200);
+
+		turnlp = (turnlp) %turn;
+		turnlp = Math.floor(Math.random()* (turn-1))+2;
+	}
+//	$(divv).each(function(i,v){$(v).removeClass('hidy'); $(v).filter('a').each($(this).hover($(this).css({cursor:'crosshair'})));});
+	for (i=0;i<ln+1;i++)
+	{
+
+//		$($(divv)[i]).animate({top:'0',left:'0',visibilty:'visible',opacity:'1.0'},1200,function(){$(this).removeClass('hidy');});
+		$($(divv)[i]).animate({top:'+=0',left:'+=0',visibilty:'visible',opacity:'1.0'},12,function(){$(this).removeClass('hidy');}).animate({top:'0',left:'0',visibilty:'visible',opacity:'1.0'},1200);
+//		$($(divv)[i]).animate({top:'0',left:'0',visibilty:'visible',opacity:'1.0'},1200).removeClass('hidy');
+//		$($(divv)[i]).animate({top:'0',left:'0'},1200);
+	}
+
+
+
+//	alert("length qw:");
+
+//	getCach(htReal[2]);
+//--	getCachM(htReal);
+}
+
 
 function getIniAniM(sId)
 {
