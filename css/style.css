@@ -1442,14 +1442,19 @@ a strong
 }
 a.tooltipp span
 {
-	display:none;
-	padding:50px 50px;
-	background:#fffaf0;
+	display:none; !important;
+//	visibility:hidden;
+//	opacity:0;
+//	padding:50px 50px;
+//	margin:50px 0 0 90px;
+//	background:#fffaf0;
 	margin-left:30px;
-	margin-top:-30px;
+//	margin-top:-30px;
 
-//	width:100px;
-	max-width:300px;
+	width:0;
+	height:0;
+//--hide	max-width:300px;
+//	min-width:300px;
 //	min-width:300px;
 //	line-height:16px;
 //	font:18px Helvetica, Arial, Sans-Serif;
@@ -1482,7 +1487,7 @@ a.tooltipp span:after
 	margin-top:-50px;
 	right:100%;
 //	margin-right:5px;
-	border-right:40px solid #fffa30;
+	border-right:10px solid #fffa30;
 	border-top:50px solid transparent;
 
 	border-bottom:50px solid transparent;
@@ -1500,13 +1505,59 @@ a.tooltipp:hover
 
 a.tooltipp:hover span
 {
-	display:inline;
+//	display:inline;
+	display:block;
+//	visibility:visible;
+	padding:20px 220px 20px 20px;
+//	padding:10px 0 140px 10px;
+//	border:50px 0 0 40px;
+	background:#fffaf0;
+	margin-left:50px;
+	margin-top:-30px;
+//	margin-top:30px;
+
+
+
+//	max-width:300px;
+//	min-width:320px;
+
+
+
+//	opacity:1.0;
 //	color:#f1f1a1;
 	color:#111;
 //	color:#aa0000;
 	border:1px solid #dca;
 
 	background:0f0af0;
+	box-shadow:15px 15px 25px #888;
+}
+
+a.tooltipp:hover span span
+{
+	display:block;
+	position:relative;
+//	visibility:visible;
+//	padding:50px 50px;
+	padding:20px 0 100px 10px;
+	background:#ffaa0a;
+	margin-left:60px;
+//	margin-top:-30px;
+
+
+
+//	max-width:300px;
+	min-width:300px;
+
+
+
+//	opacity:1.0;
+//	color:#f1f1a1;
+	color:#111;
+//	color:#aa0000;
+	border:1px solid #dca;
+
+//	background:ff0ff0;
 	box-shadow:15px 15px 25px #888;
 }
 

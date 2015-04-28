@@ -430,7 +430,7 @@ include ('./header.php');
 </div>
 <!--end first tab-->
 
-<div id="tabs-2"><a href="#" class="tooltipp"><strong>Days Available next 2 weeks </strong><span>Tools and tippppppppptips</span></a>
+<div id="tabs-2"><a href="#" class="tooltipp"><strong>Days Available next 2 weeks </strong><span>Tools and tippppppppptidds</span></a>
 </br>
 <div class="dih"><div class="img-frame"> <img src="images/Yoursky.gif" class="img-responsive" /><div class="img-frame-hover"><a href="#"><i class="fa fa-cutlery"></i></a></div> </div> </div>
 
