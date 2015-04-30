@@ -1320,7 +1320,85 @@ function getEvents(tId)
 
 //***********************************************    
 
+/*
 
+    hpab="<div id=\"searchDi\"> <p>Search for terms via http://www.strudel.org.uk/lookUP</p>";
+
+
+
+
+
+
+    hpab=hpab+"<div class=\"row\">";
+
+
+
+
+
+hpab=hpab+"<div class=\"col-md-4 col-sm-4\"><!-- Header top right content search box --><div class=\" header-search\">";
+hpab=hpab+"<form class=\"form\" role=\"form\"><div class=\"input-group\">";
+hpab=hpab+"<input type=\"text\" class=\"form-control\" placeholder=\"Search...\" id=\"sibox\" onkeypress=\"handleKeyPressFeed(event,this.form)\">";
+
+hpab=hpab+"<span class=\"input-group-btn\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getMatchJE(document.getElementById('sibox').value);\"><i class=\"fa fa-search\"></i>Press</button> </span>";
+hpab=hpab+" <span class=\"in-sp\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getScrollAn('sibox');\"><i class=\"fa fa-search\"></i>Scrolle</button> </span><br>";
+
+
+
+hpab=hpab+"</div></form></div></div></div>";
+hpab=hpab+"</div>";
+
+
+*/
+
+    hpab="<div id=\"searchDi\"> <p>Search for terms via http://www.strudel.org.uk/lookUP</p>";
+
+
+
+
+
+
+    hpab=hpab+"<div class=\"row\">";
+
+
+
+
+
+hpab=hpab+"<div class=\"col-md-4 col-sm-4\"><!-- Header top right content search box --><div class=\" header-search\">";
+hpab=hpab+"<form class=\"form\" role=\"form\"><div class=\"input-group\">";
+hpab=hpab+"<input type=\"text\" class=\"form-control\" placeholder=\"Search...\" id=\"sibox\" onkeypress=\"handleKeyPressFeed(event,this.form)\">";
+
+hpab=hpab+"<span class=\"input-group-btn\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getMatchJE(document.getElementById('sibox').value);\"><i class=\"fa fa-search\"></i>Press</button> </span>";
+hpab=hpab+" <span class=\"in-sp\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getScrollAn('sibox');\"><i class=\"fa fa-search\"></i>Scrolle</button> </span><br>";
+
+
+
+hpab=hpab+"</div></form></div></div></div>";
+hpab=hpab+"</div>";
+
+
+
+
+//hold string
+
+    hpxb="<div id=\"searchDi\"> <p>Search for terms via http://www.strudel.org.uk/lookUP</p>";
+
+
+
+    hpxb=hpxb+"<div class=\"row\">";
+hpxb=hpxb+"<div class=\"col-md-4 col-sm-4\">";
+hpxb=hpxb+"<!-- Header top left content contact -->";
+hpxb=hpxb+"<div class=\"header-contact\">";
+hpxb=hpxb+"<!-- Contact number -->";
+hpxb=hpxb+"<span><i class=\"fa fa-phone red\"></i> 888-888-8888</span>";
+hpxb=hpxb+"</div></div><div class=\"col-md-4 col-sm-4\"><!-- Header top right content search box --><div class=\" header-search\">";
+hpxb=hpxb+"<form class=\"form\" role=\"form\"><div class=\"input-group\">";
+hpxb=hpxb+"<input type=\"text\" class=\"form-control\" placeholder=\"Search...\" id=\"sbox\" onkeypress=\"handleKeyPressFeed(event,this.form)\">";
+hpxb=hpxb+" <span class=\"input-group-btn\"><button class=\"btn btn-default\" type=\"button\" onclick=\"setSSFeed(document.getElementById('sbox').value);\"><i class=\"fa fa-search\"></i>se</button> </span>";
+hpxb=hpxb+"</div></form></div></div></div>";
+hpxb=hpxb+"</div>";
+
+
+//alt strings
     hpb="<div id=\"searchDi\"> <p>Search for terms via http://www.strudel.org.uk/lookUP</p>";
 //hpb=hpb+"<input type=\"text\" id=\"sbox\" onkeypress=\"handleKeyPressFeed(event,this.form)\"/>";
 /*
@@ -1338,14 +1416,14 @@ hpb=hpb+"<div class=\"col-md-4 col-sm-4\"><!-- Header top right content search b
 hpb=hpb+"<form class=\"form\" role=\"form\"><div class=\"input-group\">";
 hpb=hpb+"<input type=\"text\" class=\"form-control\" placeholder=\"Search...\" id=\"sibox\" onkeypress=\"handleKeyPressFeed(event,this.form)\">";
 //hpb=hpb+" <span class=\"input-group-btn in-sp\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getMatchJE(document.getElementById('sibox').value);\"><i class=\"fa fa-search\"></i>Press</button> </span>";
-hpb=hpb+"<br> <span class=\"in-sp\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getMatchJE(document.getElementById('sibox').value);\"><i class=\"fa fa-search\"></i>Press</button> </span>";
-hpb=hpb+"<br/> <span class=\"in-sp\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getScrollAn('sibox');\"><i class=\"fa fa-search\"></i>Scroll</button> </span><br>";
+hpb=hpb+"<span class=\"input-group-btn\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getMatchJE(document.getElementById('sibox').value);\"><i class=\"fa fa-search\"></i>Press</button> </span>";
+hpb=hpb+" <span class=\"in-sp\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getScrollAn('sibox');\"><i class=\"fa fa-search\"></i>Scrolle</button> </span><br>";
 
 
 
 hpb=hpb+"</div></form></div></div></div>";
 hpb=hpb+"</div>";
-    document.getElementById("cartButton").innerHTML=hpb;
+    document.getElementById("cartButton").innerHTML=hpxb;
 
 
 
@@ -1378,7 +1456,71 @@ function getSFeedTerm(tId)
 
     document.getElementById("son").innerHTML="";
 
+    hpxb="<div id=\"searchDi\"> <p>Search for terms via http://www.strudel.org.uk/lookUP</p>";
 
+
+
+    hpxb=hpxb+"<div class=\"row\">";
+hpxb=hpxb+"<div class=\"col-md-4 col-sm-4\">";
+hpxb=hpxb+"<!-- Header top left content contact -->";
+hpxb=hpxb+"<div class=\"header-contact\">";
+hpxb=hpxb+"<!-- Contact number -->";
+hpxb=hpxb+"<span><i class=\"fa fa-phone red\"></i> 888-888-8888</span>";
+hpxb=hpxb+"</div></div><div class=\"col-md-4 col-sm-4\"><!-- Header top right content search box --><div class=\" header-search\">";
+hpxb=hpxb+"<form class=\"form\" role=\"form\"><div class=\"input-group\">";
+hpxb=hpxb+"<input type=\"text\" class=\"form-control\" placeholder=\"Search...\" id=\"sbox\" onkeypress=\"handleKeyPressFeed(event,this.form)\">";
+hpxb=hpxb+" <span class=\"input-group-btn\"><button class=\"btn btn-default\" type=\"button\" onclick=\"setSSFeed(document.getElementById('sbox').value);\"><i class=\"fa fa-search\"></i>se</button> </span>";
+hpxb=hpxb+"</div></form></div></div></div>";
+hpxb=hpxb+"</div>";
+
+
+    hpab="<div id=\"searchDi\"> <p>Search for terms via http://www.strudel.org.uk/lookUP</p>";
+
+
+/*
+
+    hpxb="<div id=\"searchDi\"> <p>Search for terms via http://www.strudel.org.uk/lookUP</p>";
+
+
+
+    hpxb=hpxb+"<div class=\"row\">";
+hpxb=hpxb+"<div class=\"col-md-4 col-sm-4\">";
+hpxb=hpxb+"<!-- Header top left content contact -->";
+hpxb=hpxb+"<div class=\"header-contact\">";
+hpxb=hpxb+"<!-- Contact number -->";
+hpxb=hpxb+"<span><i class=\"fa fa-phone red\"></i> 888-888-8888</span>";
+hpxb=hpxb+"</div></div><div class=\"col-md-4 col-sm-4\"><!-- Header top right content search box --><div class=\" header-search\">";
+hpxb=hpxb+"<form class=\"form\" role=\"form\"><div class=\"input-group\">";
+hpxb=hpxb+"<input type=\"text\" class=\"form-control\" placeholder=\"Search...\" id=\"sbox\" onkeypress=\"handleKeyPressFeed(event,this.form)\">";
+hpxb=hpxb+" <span class=\"input-group-btn\"><button class=\"btn btn-default\" type=\"button\" onclick=\"setSSFeed(document.getElementById('sbox').value);\"><i class=\"fa fa-search\"></i>se</button> </span>";
+hpxb=hpxb+"</div></form></div></div></div>";
+hpxb=hpxb+"</div>";
+
+
+*/
+//alt string
+
+    hpab=hpab+"<div class=\"row\">";
+
+
+
+
+
+hpab=hpab+"<div class=\"col-md-4 col-sm-4\"><!-- Header top right content search box --><div class=\" header-search\">";
+hpab=hpab+"<form class=\"form\" role=\"form\"><div class=\"input-group\">";
+hpab=hpab+"<input type=\"text\" class=\"form-control\" placeholder=\"Search...\" id=\"sibox\" onkeypress=\"handleKeyPressFeed(event,this.form)\">";
+
+hpab=hpab+"<span class=\"input-group-btn\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getMatchJE(document.getElementById('sibox').value);\"><i class=\"fa fa-search\"></i>Press</button> </span>";
+hpab=hpab+" <span class=\"in-sp\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getScrollAn('sibox');\"><i class=\"fa fa-search\"></i>Scrolle</button> </span><br>";
+
+
+
+hpab=hpab+"</div></form></div></div></div>";
+hpab=hpab+"</div>";
+
+
+
+//hold string
     hpb="<div id=\"searchDi\"> <p>Search for terms via http://www.strudel.org.uk/lookUP</p>";
 //hpb=hpb+"<input type=\"text\" id=\"sbox\" onkeypress=\"handleKeyPressFeed(event,this.form)\"/>";
 /*
@@ -1398,7 +1540,7 @@ hpb=hpb+"<input type=\"text\" class=\"form-control\" placeholder=\"Search...\" i
 hpb=hpb+" <span class=\"input-group-btn\"><button class=\"btn btn-default\" type=\"button\" onclick=\"setSSFeed(document.getElementById('sbox').value);\"><i class=\"fa fa-search\"></i>se</button> </span>";
 hpb=hpb+"</div></form></div></div></div>";
 hpb=hpb+"</div>";
-    document.getElementById("pageBar").innerHTML=hpb;
+    document.getElementById("pageBar").innerHTML=hpxb;
     document.getElementById("journ").innerHTML="";
     document.getElementById("imagesky").innerHTML="";
     document.getElementById("journ").style.display="none";

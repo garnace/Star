@@ -1083,6 +1083,7 @@ p label
 
 .in-sp{
 //	height:32px;
+//	display:inline-block;!important;
 	padding-top:40px;
 	padding-left:40px;	
     margin-left:40px;
@@ -1091,7 +1092,8 @@ p label
 //  position:absolute;
   position:relative;
   float:left;
-   display:block;
+//   display:block;
+   display:inline;
 
 }
 #searchDi br:after{
