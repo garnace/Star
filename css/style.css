@@ -1448,7 +1448,8 @@ a.tooltipp span
 //	padding:50px 50px;
 //	margin:50px 0 0 90px;
 //	background:#fffaf0;
-	margin-left:30px;
+//	margin-left:30px;
+	margin-left:0;
 //	margin-top:-30px;
 
 	width:0;
@@ -1459,8 +1460,11 @@ a.tooltipp span
 //	line-height:16px;
 //	font:18px Helvetica, Arial, Sans-Serif;
 	font:12px Helvetica, Arial, Sans-Serif;
-	position:relative;
+//	position:relative;
+	position:absolute;
 	z-index:20;
+//	overflow-x:hidden;
+//	overflow-y:hidden;
 	overflow:hidden;
 	
 //	z-index:20;
@@ -1476,7 +1480,7 @@ a.tooltipp span
 
 }
 */
-a.tooltipp span:after
+/*a.tooltipp span:after
 {
 	content:"";
 	display:block;
@@ -1486,10 +1490,30 @@ a.tooltipp span:after
 	top:50%;
 	margin-top:-50px;
 	right:100%;
-//	margin-right:5px;
 	border-right:10px solid #fffa30;
 	border-top:50px solid transparent;
 
+	border-bottom:50px solid transparent;
+	z-index:21;
+}
+
+*/
+a.tooltipp > span:after
+{
+	content:"";
+	display:block;
+	width:0px;
+	height:0px;
+	position:absolute;
+	top:50%;
+	margin-top:-50px;
+	right:100%;
+//	left:-20%;
+//	background:#ffaa0a;
+//	border-right:20px solid #fffa30;
+	border-right:20px solid #ffaa0a;
+	border-top:50px solid transparent;
+//	overflow:visible;
 	border-bottom:50px solid transparent;
 	z-index:21;
 }
@@ -1503,16 +1527,19 @@ a.tooltipp:hover
 
 
 
-a.tooltipp:hover span
+a.tooltipp:hover > span
 {
 //	display:inline;
 	display:block;
 //	visibility:visible;
-	padding:20px 220px 20px 20px;
+	position:absolute;
+	left:20%;
+	top:0%;
+	padding:20px 320px 120px 10px;
 //	padding:10px 0 140px 10px;
 //	border:50px 0 0 40px;
 	background:#fffaf0;
-	margin-left:50px;
+	margin-left:60px;
 	margin-top:-30px;
 //	margin-top:30px;
 
@@ -1528,7 +1555,8 @@ a.tooltipp:hover span
 	color:#111;
 //	color:#aa0000;
 	border:1px solid #dca;
-
+	overflow-y:visible;
+	overflow-x:visible;
 	background:0f0af0;
 	box-shadow:15px 15px 25px #888;
 }
@@ -1541,8 +1569,8 @@ a.tooltipp:hover span span
 //	padding:50px 50px;
 	padding:20px 0 100px 10px;
 	background:#ffaa0a;
-	margin-left:60px;
-//	margin-top:-30px;
+	margin-left:6px;
+	margin-top:-10px;
 
 
 
@@ -1558,7 +1586,7 @@ a.tooltipp:hover span span
 	border:1px solid #dca;
 
 //	background:ff0ff0;
-	box-shadow:15px 15px 25px #888;
+//	box-shadow:15px 15px 25px #888;
 }
 
 

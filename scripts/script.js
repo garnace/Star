@@ -2647,7 +2647,9 @@ var liStringE="</span><span class=\"cart-price pull-right red\">$190/-</span><di
 	//+-End liString
 var liStringEt="</span><span class=\"cart-price pull-right red\">$190/-</span><div class=\"clearfix\"></div></div>";
 var liStringESpan="</span>";
-var liStringEtt="<span class=\"cart-price pull-right red\">$190/-</span><div class=\"clearfix\"></div></div>";
+var liStringEtt="<span class=\"cart-price pull-right red\">detail/-</span><div class=\"clearfix\"></div></div>";
+var liStringEtta="<span class=\"cart-price pull-right red\"><a class=\"tooltipp red\">detail/-";
+var liStringEttb="-</a></span><div class=\"clearfix\"></div></div>";
 	//+- End liString with tooltipp
 
     var liStrin= "<div class=\"car-item\"><!-- Item remove icon --><a href=\"#\"><i class=\"fa fa-times\"></i></a><!-- Image --><img class=\"img-responsive img-rounded\" src=\"img/nav-menu/nav2.jpg\" alt=\"\" /><!-- Title for purchase item --><span class=\"car-title\"><a href=\"#\">haha</a></span><span class=\"cart-price pull-right red\">$190/-</span><div class=\"clearfix\"></div></div>";
@@ -2698,7 +2700,7 @@ var liStringEtt="<span class=\"cart-price pull-right red\">$190/-</span><div cla
 	//seperate heading spans and description paragraph
 	//produce summary of paragraph with toggle for full description.
 
-	$(datC).map(function(value,index){ elemr= $(index).clone();elema= $(index).clone();elemc= $(index).clone(); return $($(index).html($(index).children("p").children("span"))).html($(index).children("span:first").html()+"<br/>"+$(index).children("span:last").html()+":<br/>"+ $($(elemc).find("p").children("span").remove().end()).unwrap("<span></span>").html().split(" ").slice(0,20).join(" ")+"<a href=\"#\"  onclick=\"return getTog("+value+");\"><i class=\"fa fa-plus sen\">...</i></a>:<br/>"+$($(elemr).find("p").children("span").remove().end()).wrapInner("<div class=\"hidden ftx"+value+"\"></div>").html());});
+	$(datC).map(function(value,index){ elemr= $(index).clone();elema= $(index).clone();elemk= $(index).clone();elemc= $(index).clone(); return $($(index).html($(index).children("p").children("span"))).html($(index).children("span:first").html()+"<br/>"+$(index).children("span:last").html()+":<br/>"+ $($(elemc).find("p").children("span").remove().end()).unwrap("<span></span>").html().split(" ").slice(0,20).join(" ")+"<a href=\"#\"  onclick=\"return getTog("+value+");\"><i class=\"fa fa-plus sen\">...</i></a>:<br/>"+$($(elemr).find("p").children("span").remove().end()).wrapInner("<div class=\"hidden ftx"+value+"\"></div>").html());});
 /*############with tooltipp
 	$(datC).map(function(value,index){ elemr= $(index).clone();elema= $(index).clone();elemc= $(index).clone(); return $($(index).html($(index).children("p").children("span"))).html($(index).children("span:first").html()+"<br/>"+$(index).children("span:last").html()+":<br/>"+ $($(elemc).find("p").children("span").remove().end()).unwrap("<span></span>").html().split(" ").slice(0,20).join(" ")+"<a href=\"#\" class=\"tooltipp\" onclick=\"return getTog("+value+");\"><i class=\"fa fa-plus sen\">...</i>"+ $($(elema).find("p").children("span").remove().end()).wrapInner("<span></span>").html()+"</a>:<br/>"+$($(elemr).find("p").children("span").remove().end()).wrapInner("<div class=\"hidden ftx"+value+"\"></div>").html());});
 
@@ -2744,6 +2746,7 @@ var liStringEtt="<span class=\"cart-price pull-right red\">$190/-</span><div cla
 //			var ite=item.getElementByTagName("span")[0]substr(0,20);
 //			var ite=item.getElementByTagName("span")[0];
 //			$('#cartd').append(liString+item+liStringE);
+			elemk=$(item).clone();
 			if (i == 5){ return false;}
 //startgood			$('#cartd').append($(liStrin).children().children()[0]);
 //			$('#cartd').append($(liStrin).children().children()[0]);
@@ -2768,7 +2771,9 @@ var liStringEtt="<span class=\"cart-price pull-right red\">$190/-</span><div cla
 //			$('#cartd ul').append(liString+$(item).html()+liStringEt +"<a class=\"tooltipp\">detail"+$($(elema).find("p").children("span").remove().end()).wrapInner("<span></span>").html()+"</a></li>");
 
 //replace with div p			$('#cartd ul').append(liString+$(item).html() +liStringESpan+"<a class=\"tooltipp\">detail"+$($(elema).find("p").children("span").remove().end()).wrapInner("<span></span>").html()+"</a>"+liStringEtt+"</li>");
-			$('#cartd ul').append(liString+$(item).html() +liStringESpan+"<a class=\"tooltipp\">detail"+$($(elema).find("p").children("span").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+"</a>"+liStringEtt+"</li>");
+//change details			$('#cartd ul').append(liString+$(item).html() +liStringESpan+"<a class=\"tooltipp\">detail"+$($(elema).find("p").children("span").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+"</a>"+liStringEtt+"</li>");
+//change elemk			$('#cartd ul').append(liString+$(item).html() +liStringESpan+"<a class=\"tooltipp\">detail"+$($(elema).find("p").children("span").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+"</a>"+liStringEtta+ $($(elemk).find("p").children("span").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+liStringEttb+"</li>");
+			$('#cartd ul').append(liString+$(item).html() +liStringESpan+"<a class=\"tooltipp\">detail"+$($(elema).find("p").children("span").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+"</a>"+liStringEtta+ $($(elemk).children("div[class*=ftx]").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+liStringEttb+"</li>");
 //			$('#cartd ul').append(liString+$(item).html()+liStringEt +$($(elema).find("p").children("span").remove().end()).wrapInner("<a class=\"tooltipp\">detail<span></span></a>").html()+"</li>");
 //			$('#cartd ul').append(liString+"hello"+liStringE);
 //			$('#cartd ul').append(liStrin);
