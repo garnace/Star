@@ -1082,20 +1082,76 @@ p label
 }
 
 .in-sp{
-//	height:32px;
-//	display:inline-block;!important;
-	padding-top:40px;
-	padding-left:40px;	
-    margin-left:40px;
+	font-size:20px;!important;
+	height:32px;
+	display:inline-block;!important;
+//	padding:20px 20px 20px 20px;
+//	padding-top:40px;
+//	padding-left:80px;	
+//	width:80px;
+//	padding-right:20px;	
+//   margin-left:20px;
+   margin-left:0px;
 
-   border-radius:6px;
+//   border-radius:6px;
 //  position:absolute;
   position:relative;
-  float:left;
+  //float:left;
+//	left:40px;
 //   display:block;
-   display:inline;
-
+//	overflow:auto;
+//   display:inline;
+//z-index:21;
 }
+
+.input-group-btn .in-sp{
+	font-size:20px;!important;
+	height:32px;
+	display:inline-block;!important;
+//	padding:20px 20px 20px 20px;
+//	padding-top:40px;
+//	padding-left:80px;	
+//	width:80px;
+//	padding-right:20px;	
+//   margin-left:20px;
+   margin-left:0px;
+
+//   border-radius:6px;
+//  position:absolute;
+  position:relative;
+  //float:left;
+//	left:40px;
+//   display:block;
+//	overflow:auto;
+//   display:inline;
+//z-index:21;
+}
+
+
+.ui-widget .in-sp button, .in-sp button{
+	line-height:32px;
+	font-size:20px;!important;
+//	font-size:70px;!important;
+	height:32px;
+	display:inline-block;!important;
+	padding:20px 20px 40px 20px;
+//	padding-top:40px;
+//	padding-left:80px;	
+	width:90px;
+//	padding-right:20px;	
+//   margin-left:20px;
+
+//   border-radius:6px;
+//  position:absolute;
+//  position:relative;
+  //float:left;
+//	left:40px;
+//   display:block;
+//   display:inline;
+//	overflow:auto;
+//z-index:21;
+}
+
 #searchDi br:after{
 	content:"";
 	width:0;
@@ -1105,18 +1161,6 @@ p label
 	clear:both;
 }
 
-.in-sp button{
-//    padding-left:10px;
-//   padding-top:0px;
-	padding: 0 10px 0 10px;
-   border-radius:7px;
-//   width:190px;
-   height:32px;
-//	width:42px;
-	margin-left:10px;
-  //position:absolute;
-
-}
 
 #sibox{
     color:black;
@@ -1569,7 +1613,7 @@ a.tooltipp:hover span span
 	position:relative;
 //	visibility:visible;
 //	padding:50px 50px;
-	padding:20px 0 100px 10px;
+	padding:20px 0 120px 10px;
 	background:#ffaa0a;
 	margin-left:6px;
 	margin-top:-10px;
@@ -1589,6 +1633,20 @@ a.tooltipp:hover span span
 
 //	background:ff0ff0;
 //	box-shadow:15px 15px 25px #888;
+}
+a.tooltipp:hover span span:after
+{
+	display:block;
+	position:relative;
+//	visibility:visible;
+//	padding:50px 50px;
+	width:0;
+	height:0;
+	visibility:hidden;
+	content:"";
+
+	clear:both;
+
 }
 
 

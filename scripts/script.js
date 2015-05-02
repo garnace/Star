@@ -1393,7 +1393,7 @@ hpxb=hpxb+"<span><i class=\"fa fa-phone red\"></i> 888-888-8888</span>";
 hpxb=hpxb+"</div></div><div class=\"col-md-4 col-sm-4\"><!-- Header top right content search box --><div class=\" header-search\">";
 hpxb=hpxb+"<form class=\"form\" role=\"form\"><div class=\"input-group\">";
 hpxb=hpxb+"<input type=\"text\" class=\"form-control\" placeholder=\"Search...\" id=\"sbox\" onkeypress=\"handleKeyPressFeed(event,this.form)\">";
-hpxb=hpxb+" <span class=\"input-group-btn\"><button class=\"btn btn-default\" type=\"button\" onclick=\"setSSFeed(document.getElementById('sbox').value);\"><i class=\"fa fa-search\"></i>se</button> </span>";
+hpxb=hpxb+" <span class=\"input-group-btn in-sp\"><button class=\"btn btn-default\" type=\"button\" onclick=\"setSSFeed(document.getElementById('sbox').value);\"><i class=\"fa fa-search\"></i>searchsearchsearchsearch</button> </span>";
 hpxb=hpxb+"</div></form></div></div></div>";
 hpxb=hpxb+"</div>";
 
@@ -1416,14 +1416,14 @@ hpb=hpb+"<div class=\"col-md-4 col-sm-4\"><!-- Header top right content search b
 hpb=hpb+"<form class=\"form\" role=\"form\"><div class=\"input-group\">";
 hpb=hpb+"<input type=\"text\" class=\"form-control\" placeholder=\"Search...\" id=\"sibox\" onkeypress=\"handleKeyPressFeed(event,this.form)\">";
 //hpb=hpb+" <span class=\"input-group-btn in-sp\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getMatchJE(document.getElementById('sibox').value);\"><i class=\"fa fa-search\"></i>Press</button> </span>";
-hpb=hpb+"<span class=\"input-group-btn\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getMatchJE(document.getElementById('sibox').value);\"><i class=\"fa fa-search\"></i>Press</button> </span>";
-hpb=hpb+" <span class=\"in-sp\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getScrollAn('sibox');\"><i class=\"fa fa-search\"></i>Scrolle</button> </span><br>";
+hpb=hpb+"<span class=\"in-sp input-group-btn \"><button class=\"btn btn-default\" type=\"button\" onclick=\"getMatchJE(document.getElementById('sibox').value);\"><i class=\"fa fa-search\"></i>Press</button> </span>";
+hpb=hpb+" <span class=\" in-sp\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getScrollAn('sibox');\"><i class=\"fa fa-search\"></i>Scrolle</button> </span><br>";
 
 
 
 hpb=hpb+"</div></form></div></div></div>";
 hpb=hpb+"</div>";
-    document.getElementById("cartButton").innerHTML=hpxb;
+    document.getElementById("cartButton").innerHTML=hpb;
 
 
 
@@ -1465,11 +1465,11 @@ hpxb=hpxb+"<div class=\"col-md-4 col-sm-4\">";
 hpxb=hpxb+"<!-- Header top left content contact -->";
 hpxb=hpxb+"<div class=\"header-contact\">";
 hpxb=hpxb+"<!-- Contact number -->";
-hpxb=hpxb+"<span><i class=\"fa fa-phone red\"></i> 888-888-8888</span>";
+hpxb=hpxb+"<span><i class=\"fa fa-phone red\"></i> 888-888-555</span>";
 hpxb=hpxb+"</div></div><div class=\"col-md-4 col-sm-4\"><!-- Header top right content search box --><div class=\" header-search\">";
 hpxb=hpxb+"<form class=\"form\" role=\"form\"><div class=\"input-group\">";
 hpxb=hpxb+"<input type=\"text\" class=\"form-control\" placeholder=\"Search...\" id=\"sbox\" onkeypress=\"handleKeyPressFeed(event,this.form)\">";
-hpxb=hpxb+" <span class=\"input-group-btn\"><button class=\"btn btn-default\" type=\"button\" onclick=\"setSSFeed(document.getElementById('sbox').value);\"><i class=\"fa fa-search\"></i>se</button> </span>";
+hpxb=hpxb+" <span class=\"input-group-btn \"><button class=\"btn btn-default\" type=\"button\" onclick=\"setSSFeed(document.getElementById('sbox').value);\"><i class=\"fa fa-search\"></i>se</button> </span>";
 hpxb=hpxb+"</div></form></div></div></div>";
 hpxb=hpxb+"</div>";
 
@@ -2915,7 +2915,8 @@ var liStringEttb="-</a></span><div class=\"clearfix\"></div></div>";
 //replace with div p			$('#cartd ul').append(liString+$(item).html() +liStringESpan+"<a class=\"tooltipp\">detail"+$($(elema).find("p").children("span").remove().end()).wrapInner("<span></span>").html()+"</a>"+liStringEtt+"</li>");
 //change details			$('#cartd ul').append(liString+$(item).html() +liStringESpan+"<a class=\"tooltipp\">detail"+$($(elema).find("p").children("span").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+"</a>"+liStringEtt+"</li>");
 //change elemk			$('#cartd ul').append(liString+$(item).html() +liStringESpan+"<a class=\"tooltipp\">detail"+$($(elema).find("p").children("span").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+"</a>"+liStringEtta+ $($(elemk).find("p").children("span").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+liStringEttb+"</li>");
-			$('#cartd ul').append(liString+$(item).html() +liStringESpan+"<a class=\"tooltipp\">detail"+$($(elema).find("p").children("span").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+"</a>"+liStringEtta+ $($(elemk).children("div[class*=ftx]").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+liStringEttb+"</li>");
+//poposite			$('#cartd ul').append(liString+$(item).html() +liStringESpan+"<a class=\"tooltipp\">detail"+$($(elema).find("p").children("span").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+"</a>"+liStringEtta+ $($(elemk).children("div[class*=ftx]").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+liStringEttb+"</li>");
+			$('#cartd ul').append(liString+$(item).html() +liStringESpan+"<a class=\"tooltipp\">detail"+$($(elema).find("p").children("span").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+"</a>"+liStringEtta+ $($(elemk).children("div[class*=ftx]")).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+liStringEttb+"</li>");
 //			$('#cartd ul').append(liString+$(item).html()+liStringEt +$($(elema).find("p").children("span").remove().end()).wrapInner("<a class=\"tooltipp\">detail<span></span></a>").html()+"</li>");
 //			$('#cartd ul').append(liString+"hello"+liStringE);
 //			$('#cartd ul').append(liStrin);
@@ -4298,7 +4299,7 @@ alert("what");
 
     document.getElementById("imagesky").innerHTML="";
 
-
+	getEvents("hi");
 //    setRPic(0);
 
 
