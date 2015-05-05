@@ -277,7 +277,7 @@ $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?
     format: "json"
  },
   function(data) {
-      $("#images").html("");
+//      $("#images").html("");
 //	alert("hello"+pId);
       $.each(data.items, function(i,item){
 
@@ -449,8 +449,16 @@ function boardDoublerCF(pI)
 //	alert("return"+pI);
 	var pAA = null;
 	pAA = new Array();
+/*
+	if (typeof(document.getElementById("imagesp"))!=null)
+	{	document.getElementById("imagesp").innerHTML="";
+	}
+*/
 
-	document.getElementById("imagesp").innerHTML="";
+	if (window.document.getElementById("imagesp")!=undefined)
+	{	document.getElementById("imagesp").innerHTML="";
+	}
+
 
 
 	$.each(pI, function (i,item){
@@ -1417,7 +1425,7 @@ hpb=hpb+"<form class=\"form\" role=\"form\"><div class=\"input-group\">";
 hpb=hpb+"<input type=\"text\" class=\"form-control\" placeholder=\"Search...\" id=\"sibox\" onkeypress=\"handleKeyPressFeed(event,this.form)\">";
 //hpb=hpb+" <span class=\"input-group-btn in-sp\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getMatchJE(document.getElementById('sibox').value);\"><i class=\"fa fa-search\"></i>Press</button> </span>";
 hpb=hpb+"<span class=\"in-sp input-group-btn \"><button class=\"btn btn-default\" type=\"button\" onclick=\"getMatchJE(document.getElementById('sibox').value);\"><i class=\"fa fa-search\"></i>Press</button> </span>";
-hpb=hpb+" <span class=\" in-sp\"><button class=\"btn btn-default\" type=\"button\" onclick=\"getScrollAn('sibox');\"><i class=\"fa fa-search\"></i>Scrolle</button> </span><br>";
+hpb=hpb+" <span class=\" in-sp input-group-btn \"><button class=\"btn btn-default\" type=\"button\" onclick=\"getScrollAn('sibox');\"><i class=\"fa fa-search\"></i>Scrolle</button> </span><br>";
 
 
 
@@ -1470,6 +1478,8 @@ hpxb=hpxb+"</div></div><div class=\"col-md-4 col-sm-4\"><!-- Header top right co
 hpxb=hpxb+"<form class=\"form\" role=\"form\"><div class=\"input-group\">";
 hpxb=hpxb+"<input type=\"text\" class=\"form-control\" placeholder=\"Search...\" id=\"sbox\" onkeypress=\"handleKeyPressFeed(event,this.form)\">";
 hpxb=hpxb+" <span class=\"input-group-btn \"><button class=\"btn btn-default\" type=\"button\" onclick=\"setSSFeed(document.getElementById('sbox').value);\"><i class=\"fa fa-search\"></i>se</button> </span>";
+hpxb=hpxb+" <span class=\"in-sp input-group-btn \"><button class=\"btn btn-default\" type=\"button\" onclick=\"setSSFeed(document.getElementById('sbox').value);\"><i class=\"fa fa-search\"></i>se</button> </span>";
+
 hpxb=hpxb+"</div></form></div></div></div>";
 hpxb=hpxb+"</div>";
 
@@ -2204,7 +2214,7 @@ function getAniM(sId)
 //	ln=$("div[id*=qw]").length();
 	ln=$("div[class*=qww]").length;
 
-	alert("length qww:"+ln);
+//	alert("length qww:"+ln);
 	divv =$("div[class*=qww]");
 //	$(divv).each(function(i,v){$(v).addClass('hidy'); $(v).find('a').attr('style','auto');});
 	$(divv).each(function(i,v){$(v).addClass('hidy'); $(v).filter('a').each($(this).hover($(this).css({cursor:'crosshair'})));});
@@ -2289,7 +2299,7 @@ function getAniMPos(sId)
 	var leftS=null;
 	var topS=null;
 	var l=0,t=0;
-
+	var vHide=0;
 //	var turnn=1;
 //	ln=$("div[id*=qw]").length();
 	ln=$("div[class*=qww]").length;
@@ -2297,7 +2307,8 @@ function getAniMPos(sId)
 //	alert("length qww:"+ln);
 	divv =$("div[class*=qww]");
 //	$(divv).each(function(i,v){$(v).addClass('hidy'); $(v).find('a').attr('style','auto');});
-	$(divv).each(function(i,v){$(v).addClass('hidy'); $(v).filter('a').each($(this).hover($(this).css({cursor:'crosshair'})));});
+	$(divv).each(function(i,v){if (!$(v).hasClass('hidy')){$(v).addClass('hidy');}else{vHide=1;} $(v).filter('a').each($(this).hover($(this).css({cursor:'crosshair'})));}); 
+	//alert('hidden::'+vHide);
 //	$(divv).each(function(i,v){ $(i).hover($(this).unwrap('<a></a>'));});
 //        $(divv).map(function(i,v){qwray.push([i,$($(divv)[i]).css("left")]);});
 //	alert("last qw:"+qwray);
@@ -2306,7 +2317,7 @@ function getAniMPos(sId)
 	ln=ln-1;
 	lastp=$($(divv)[0]).css("top");
 	lastpos=$($(divv)[0]).position();
-	alert("lasddt qw:"+$($(divv)[ln]).attr("class")+"top:"+lastpos.top+":");
+//	alert("lasddt qw:"+$($(divv)[ln]).attr("class")+"top:"+lastpos.top+":");
 //	alert("lasddt qw:"+$($(divv)[ln]).attr("class")+$($(divv)[0]).css("top")+$($(divv)[5]).css("top")+"left"+$($(divv)[0]).css("left"));
 //	$($(divv)[ln]).animate({bottom: '-=140'},200);
 //	$($(divv)[ln]).animate({top: '10',left:'10'},200);
@@ -2389,15 +2400,16 @@ function getIniAniM(sId)
 //	alert("length qww:"+ln);
 	divv =$("div[class*=qww]");
 //        $(divv).map(function(i,v){qwray.push([i,$($(divv)[i]).css("left")]);});
+	$(divv).each(function(i,v){$(v).addClass('hidy'); $(v).filter('a').each($(this).hover($(this).css({cursor:'crosshair'})));});
 //	alert("last qw:"+qwray);
 //	alert("last qw:"+$(qwray[6])[0]+"::"+qwray[6][1]);
 //	alert("last qw:"+$($(divv)[0]).attr("class")+$($(divv)[0]).css("top"));
-	ln=ln-1;
-	lastp=$($(divv)[0]).css("top");
+//	ln=ln-1;
+//	lastp=$($(divv)[0]).css("top");
 //	alert("lasddt qw:"+$($(divv)[ln]).attr("class")+$($(divv)[0]).css("top")+$($(divv)[5]).css("top")+"left"+$($(divv)[0]).css("left"));
 //	$($(divv)[ln]).animate({bottom: '-=140'},200);
 //	$($(divv)[ln]).animate({top: '10',left:'10'},200);
-	for (i=0;i<ln+1;i++)
+/*	for (i=0;i<ln+1;i++)
 	{
 		
 		turntp = (turntp+1) % turn;
@@ -2435,6 +2447,7 @@ function getIniAniM(sId)
 		turnlp = (turnlp) %turn;
 		turnlp = Math.floor(Math.random()* (turn-1))+2;
 	}
+*/
 /*	for (i=0;i<ln+1;i++)
 		$($(divv)[i]).animate({top:'0',left:'0'},1200);
 */
