@@ -2228,6 +2228,9 @@ function getAniM(sId)
 //	alert("lasddt qw:"+$($(divv)[ln]).attr("class")+$($(divv)[0]).css("top")+$($(divv)[5]).css("top")+"left"+$($(divv)[0]).css("left"));
 //	$($(divv)[ln]).animate({bottom: '-=140'},200);
 //	$($(divv)[ln]).animate({top: '10',left:'10'},200);
+
+
+	//attempt to randmize direction of flying card animations
 	for (i=0;i<ln+1;i++)
 	{
 		
@@ -2377,7 +2380,10 @@ function getAniMPos(sId)
 //--	getCachM(htReal);
 }
 
-
+/**
+* Intialize hiding of cards
+*
+**/
 function getIniAniM(sId)
 {
 
@@ -2460,7 +2466,11 @@ function getIniAniM(sId)
 //--	getCachM(htReal);
 }
 
-
+/**
+* End animation of flying cards by unhiding and specifying final
+* positions.(generic 0,0 seems to work)
+*
+**/
 function getEndAniM(sId)
 {
 
@@ -2543,7 +2553,11 @@ function getEndAniM(sId)
 //--	getCachM(htReal);
 }
 
-
+/**
+* Use list of site names to pass to json php bridge file to acquire
+* site text data and keep on server up to date.
+*
+**/
 function getCachM(sId)
 {
 //	alert(htReal[2].substr(0,-1));
@@ -3984,8 +3998,9 @@ function getListDBB(dbId)
 	var tab1;
 	var tab2;
 	var tab3;
-				//variable determines whether to append.
-				//0:dont change, 2:insert cell values, 1:append
+
+	//variable determines whether to append.
+	//0:dont change, 2:insert cell values, 1:append
 	var pending = 0;
 
 	alert("pre jquery");
