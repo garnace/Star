@@ -3704,7 +3704,7 @@ function tableFillT(i,item)
 		}
 		else
 		{
-			$('#lblTR'+i).html('table'+(i+1)+':('+item[1]+'seats left)');	
+			$('#lblTR'+i).html('<span class=\"price-tag br-white\">table'+(i+1)+':('+item[1]+'<br/>seatsz left) </span>');	
 		}
 }
 
