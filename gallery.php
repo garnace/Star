@@ -440,16 +440,17 @@ include ('./header.php');
 							</nav>
 						</div>
 					</div>
+					<div class="clearfix"></div>
 //---------------------------------------------------------------
 				</div> <!-- / .container -->
 			</div>
-			
+								<div class="clearfix"></div>
 			<!-- Header End -->
 			
 			<!-- Banner Start -->
 			
 			<div class="banner padd">
-				<div class="container">
+				<div class="container col-sm-12">
 					<!-- Image -->
 					<img class="img-responsive" src="img/crown-white.png" alt="" />
 					<!-- Heading -->
@@ -461,7 +462,7 @@ include ('./header.php');
 					<div class="clearfix"></div>
 				</div>
 			</div>
-			
+								<div class="clearfix"></div>
 			<!-- Banner End -->
 			
 			

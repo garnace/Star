@@ -1430,7 +1430,7 @@ hpb=hpb+" <span class=\" in-sp input-group-btn \"><button class=\"btn btn-defaul
 
 
 hpb=hpb+"</div></form></div></div></div>";
-hpb=hpb+"</div>";
+hpb=hpb+"<div class=\"clearfix\"></div>  </div>";
     document.getElementById("cartButton").innerHTML=hpb;
 
 

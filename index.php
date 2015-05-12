@@ -15,7 +15,7 @@ include ('./header.php');
 
 
 
-<div id="imdiv">
+<div id="imdiv" style="display:none;">
 	<!--div class="quickflip-wrapper"-->
 	<!--div ><a href="#" class="quickFlipCta"><img src="images/Yoursky.gif" /></a></div-->
 	<!--div ><a href="#" class="quickFlipCta"> <img src="images/ss036.gif" /></a>  </div-->
@@ -33,7 +33,7 @@ include ('./header.php');
 	</div>
 </div>
 
-<div id="imdivp" >
+<div id="imdivp" style="display:none;">
 
 
 <div id="imagesp">
@@ -44,8 +44,8 @@ include ('./header.php');
 
 
 
-<a id="fb2" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="getSitesM(2);">Banner</a>
-<a id="fb3" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="getAniM(2);">Animate</a>
+<!--a id="fb2" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="getSitesM(2);">Banner</a-->
+<!--a id="fb3" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="getAniM(2);">Animate</a-->
 <!--a class="btn btn-large btn-success" onclick="setTim(0);">Start</a-->
 
         
@@ -53,83 +53,6 @@ include ('./header.php');
 </div> <!--end hero-->
 			<!-- Header Start -->
 			
-			<div class="header">
-				<!--div class="container"-->
-					<!-- Header top area content -->
-					<div class="header-top">
-						<div class="row">
-							<div class="col-md-4 col-sm-4">
-								<!-- Button Kart -->
-								<div class="btn-cart-md">
-									<a class="cart-link" href="#">
-										<!-- Image -->
-										<img class="img-responsive" src="images/Yoursky.gif" alt="" />
-										<!-- Heading -->
-										<h4>Shopping Cart</h4>
-										<span>3 items $489/-</span>
-										<div class="clearfix"></div>
-									</a>
-									<ul class="cart-dropdown" role="menu">
-										<li>
-											<!-- Cart items for shopping list -->
-											<div class="cart-item">
-												<!-- Item remove icon -->
-												<a href="#"><i class="fa fa-times"></i></a>
-												<!-- Image -->
-												<img class="img-responsive img-rounded" src="img/nav-menu/nav1.jpg" alt="" />
-												<!-- Title for purchase item -->
-												<span class="cart-title"><a href="#">Exception Reins Evocative</a></span>
-												<!-- Cart item price -->
-												<span class="cart-price pull-right red">$200/-</span>
-												<div class="clearfix"></div>
-											</div>
-										</li>
-										<li>
-											<!-- Cart items for shopping list -->
-											<div class="cart-item">
-												<!-- Item remove icon -->
-												<a href="#"><i class="fa fa-times"></i></a>
-												<!-- Image -->
-												<img class="img-responsive img-rounded" src="img/nav-menu/nav2.jpg" alt="" />
-												<!-- Title for purchase item -->
-												<span class="cart-title"><a href="#">Taut Mayorefffss Alias Appendicitis</a></span>
-												<!-- Cart item price -->
-												<span class="cart-price pull-right red">$190/-</span>
-												<div class="clearfix"></div>
-											</div>
-										</li>
-										<li>
-											<!-- Cart items for shopping list -->
-											<div class="cart-item">
-												<!-- Item remove icon -->
-												<a href="#"><i class="fa fa-times"></i></a>
-												<!-- Image -->
-												<img class="img-responsive img-rounded" src="img/nav-menu/nav3.jpg" alt="" />
-												<!-- Title for purchase item -->
-												<span class="cart-title"><a href="#">Sinter et Molests Perfectionist</a></span>
-												<!-- Cart item price -->
-												<span class="cart-price pull-right red">$99/-</span>
-												<div class="clearfix"></div>
-											</div>
-										</li>
-										<li>
-											<!-- Cart items for shopping list -->
-											<div class="cart-item">
-												<a class="btn btn-danger" data-toggle="modal" href="#shoppingcart1">Checkout</a>
-											</div>
-										</li>
-									</ul>
-									<div class="clearfix"></div>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-						</div><!--   row-->
-					</div><!--top-->
-<!--container-->
-</div>
-
-
-
 
 <!-- ############# TABS ############################-->
 <div id="tabs" >
@@ -265,51 +188,11 @@ include ('./header.php');
 
 										<li>
 											<!-- Cart items for shopping list -->
-											<div class="car-item">
-												<!-- Item remove icon -->
-												<a href="#"><i class="fa fa-times"></i></a>
-												<!-- Image -->
-												<img class="img-responsive img-rounded" src="img/nav-menu/nav1.jpg" alt="" />
-												<!-- Title for purchase item -->
-												<span class="car-title"><a href="#">Exception Reins Evocative</a></span>
-												<!-- Cart item price -->
-												<span class="car-price pull-right red">$200/-</span>
-												<div class="clearfix"></div>
-											</div>
-										</li>
-										<li>
-											<!-- Cart items for shopping list -->
-											<div class="car-item">
-												<!-- Item remove icon -->
-												<a href="#"><i class="fa fa-times"></i></a>
-												<!-- Image -->
-												<img class="img-responsive img-rounded" src="img/nav-menu/nav2.jpg" alt="" />
-												<!-- Title for purchase item -->
-												<span class="car-title"><a href="#">Taut Mayoress Alias Appendicitis</a></span>
-												<!-- Cart item price -->
-												<span class="cart-price pull-right red">$190/-</span>
-												<div class="clearfix"></div>
-											</div>
-										</li>
-										<li>
-											<!-- Cart items for shopping list -->
-											<div class="car-item">
-												<!-- Item remove icon -->
-												<a href="#"><i class="fa fa-times"></i></a>
-												<!-- Image -->
-												<img class="img-responsive img-rounded" src="img/nav-menu/nav3.jpg" alt="" />
-												<!-- Title for purchase item -->
-												<span class="car-title"><a href="#">Sinter et Molests Perfectionist</a></span>
-												<!-- Cart item price -->
-												<span class="car-price pull-right red">$99/-</span>
-												<div class="clearfix"></div>
-											</div>
-										</li>
-										<li>
-											<!-- Cart items for shopping list -->
 											<div class="cart-item" id="cartButton">
 												<a class="btn btn-danger"  href="#cartd" onclick="getEvents(1)">Checkout</a>
+												<div class="clearfix"></div>
 											</div>
+    <div class="clearfix"></div>
 										</li>
 									</ul>
 
@@ -507,9 +390,11 @@ include ('./header.php');
 </div>
 <!--end first tab-->
 
-<div id="tabs-2"><a href="#" class="tooltipe"><strong>--Days Available next 2 weeks </strong><span>Tools and tippppppppptidds</span></a>
-</br>
-<div class="dih"><div class="img-frame"> <img src="images/Yoursky.gif" class="img-responsive" /><div class="img-frame-hover"><a href="#"><i class="fa fa-cutlery"></i></a></div> </div> </div>
+<div id="tabs-2">
+
+<!--a href="#" class="tooltipe"><strong>--Days Available next 2 weeks </strong><span>Tools and tippppppppptidds</span></a-->
+<!--/br-->
+<!--div class="dih"><div class="img-frame"> <img src="images/Yoursky.gif" class="img-responsive" /><div class="img-frame-hover"><a href="#"><i class="fa fa-cutlery"></i></a></div> </div> </div-->
 
 
 <!--# img src="images/Yoursky.gif" width="50" height="50" /-->
@@ -517,13 +402,13 @@ include ('./header.php');
 <!--***************** cal ****************-->
 <div id="cal">&nbsp;</div>
 <div id="calm"> 
-   <label id="ldshow" for="dshow">date picked:</label>
+   <label id="ldshow" for="dshow">date pickeddd:</label>
     <input id="dshow"></input>
      <div id="cmpick">
      <!--input type="text" id="cmpick"></input-->
     </div>
 </div>
-
+<br>
 <div id="chkRes">
 <form action="tag.php" class="form-inline" method="post"  id="chkResf" name="chkResf">
 <fieldset>
@@ -1081,7 +966,7 @@ onsubmit="return valReservation(this)">
 
 	<p>
 
-		<input  type="checkbox" name="membChk[]" id="chk1" value="classic"/>
+		<input  type="checkbox" name="membChk[]" id="chk1" value="classic">
 
 
 		<label class="mem" for="chk1">Classic</label>

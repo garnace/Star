@@ -160,12 +160,9 @@ function getM()
 
 
     <!--TWITTER BOOTSTRAP TUTORIAL</h1-->
-<div id="head" style="text-align: center;" >FoodieSsf<br>
-<div id="yCarousel" >
+<!--div id="head" style="text-align: center;" >FoodieSsf<br-->
 
-</div> <!--yCarousel-->
-
-</div>
+<!--/div-->
 
 			
 		<!-- Shopping cart Modal -->
@@ -316,6 +313,131 @@ function getM()
 							</div>
 						</div>
 					</div><!--   row-->
+					<div class="row">
+						<div class="col-md-4 col-sm-5">
+							<!-- Link -->
+							<a href="index.html">
+								<!-- Logo area -->
+								<div class="logo">
+									<img class="img-responsive" src="i/img/logo.png" alt="" />
+									<!-- Heading -->
+									<h1>CakeFactory</h1>
+									<!-- Paragraph -->
+									<p>Facility ester expedite instinct.</p>
+<a id="fb3" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="getIniAniM(2);">Start</a>
+<a id="fb3" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="getEndAniM(2);">Reshuffle</a>
+<a id="fb3" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="getAniMPos(2);">Reshuffle</a>
+
+								</div>
+							</a>
+						</div>
+						<div class="col-md-8 col-sm-7">
+							<!-- Navigation -->
+							<nav class="navbar navbar-default navbar-right" role="navigation">
+								<div class="container-fluid">
+									<!-- Brand and toggle get grouped for better mobile display -->
+									<div class="navbar-header">
+										<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+											<span class="sr-only">Toggle navigation</span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+										</button>
+									</div>
+
+									<!-- Collect the nav links, forms, and other content for toggling -->
+									<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+										<ul class="nav navbar-nav">
+    <li><a href="index.php" onclick="load(0);"><img src="img/nav-menu/nav1.jpg" class="img-responsive" alt="" /> Home</a></li>
+											<li class="dropdown hidden-xs">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown"  onclick="getSFeedTerm(2);"><img src="img/nav-menu/nav2.jpg" class="img-responsive" alt="" /> Menu <b class="caret"></b></a>
+												<ul class="dropdown-menu dropdown-md">
+													<li>
+														<div class="row">
+															<div class="col-md-4 col-sm-6">
+																<!-- Menu Item -->
+																<div class="menu-item">
+																	<!-- Heading -->
+																	<h3>Vegetarian</h3>
+																	<!-- Image -->
+																	<img src="../cf/theme/img/dish/dish1.jpg" class="img-responsive" alt="" />
+																	<!-- Paragraph -->
+																	<p>Sea nut perspicacity under omni piste natures mirror of there with consequent.</p>
+																	<!-- Button -->
+																	<a href="#tabs-2"  onclick="getSFeedTerm(2);" class="btn btn-danger btn-xs">View Menu</a>
+																</div>
+															</div>
+															<div class="col-md-4 col-sm-6">
+																<!-- Menu Item -->
+																<div class="menu-item">
+																	<!-- Heading -->
+																	<h3>Non-Vegetarian</h3>
+																	<!-- Image -->
+																	<img src="../cf/theme/img/dish/dish2.jpg" class="img-responsive" alt="" />
+																	<!-- Paragraph -->
+																	<p>Sea nut perspicacity under omni piste natures mirror as precode consequent.</p>
+																	<!-- Button -->
+																	<a href="menu.html" class="btn btn-danger btn-xs">View Menu</a>
+																</div>
+															</div>
+															<div class="col-md-4">
+																<!-- Menu Item -->
+																<div class="menu-item">
+																	<!-- Heading -->
+																	<h3>Special Menu</h3>
+																	<!-- Image -->
+																	<img src="../cf/theme/img/dish/dish3.jpg" class="img-responsive" alt="" />
+																	<!-- Paragraph -->
+																	<p>Sea nut perspicacity under omni piste natures mirror consequent.</p>
+																	<!-- Button -->
+																	<a href="menu.html" class="btn btn-danger btn-xs">View Menu</a>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</li>
+											<li class="dropdown visible-xs">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="getSFeedTerm(2);"> Menu <b class="caret"></b></a>
+												<ul class="dropdown-menu">
+													<li><a href="#" onclick="getSFeedTerm(2);">Vegetarian</a></li>
+													<li><a href="menu.html">Non Vegetarian</a></li>
+													<li><a href="menu.html">Special Menu</a></li>
+												</ul>
+											</li>
+											<li><a href="gallery.php"><img src="images/Yoursky.gif" class="img-responsive" alt="" /> Gallery</a></li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="img/nav-menu/nav4.jpg" class="img-responsive" alt="" /> Shop <b class="caret"></b></a>
+												<ul class="dropdown-menu">
+													<li><a href="items.html">Shopping</a></li>
+													<li><a href="item-single.html">Order Now</a></li>
+													<li><a href="checkout.html">Checkout</a></li>
+													<li><a href="reserve-seats.html">Reservation</a></li>
+													<li><a href="contact.html">Contact Us</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="listSites(0);"><img src="img/nav-menu/nav5.jpg" class="img-responsive" alt="" />Events  Pages <b class="caret"></b></a>
+												<ul class="dropdown-menu">
+													<li><a href="error.html">404 Error</a></li>
+													<li><a href="0-base.html">Blank Page</a></li>
+													<li><a href="blog.html">Blog</a></li>
+													<li><a href="blog-single.html">Blog Single</a></li>
+													<li><a href="components.html">Components</a></li>
+													<li><a href="general.html">General</a></li>
+													<li><a href="nutrition-info.html">Nutrition Info</a></li>
+													<li><a href="recipe.html">Recipes</a></li>
+												</ul>
+											</li>
+											<li><a  href="#formstar" onclick="getSFeedTerm(4);" ><img src="images/Yoursky.gif" class="img-responsive" alt="" /><span class="glyphicon glyphicon-user pull-right"></span> Login</a></li>
+										</ul>
+									</div><!-- /.navbar-collapse -->
+								</div><!-- /.container-fluid -->
+							</nav>
+						</div>
+					</div>
+
+
 </div><!--top-->
 </div><!--container-->
 
@@ -325,29 +447,40 @@ function getM()
 
 <!--twitter bootstrap top menu followed by bootstrap containers-->
 
-    <div class='navbar fixed-top navbar-inverse' role="navigation">
-      <div class='container' >
-      <div class='navbar-header' >
+
+    <!--div class='navbar fixed-top navbar-inverse' role="navigation"-->
+     <!--div class='container' -->
+      <!--div class='navbar-header' -->
        
-          <a href="#" onclick="load(0);" class="navbar-brand"><i class="glyphicon glyphicon-leaf "></i> Home</a><
+          <!--a href="#" onclick="load(0);" class="navbar-brand"><i class="glyphicon glyphicon-leaf "></i> Home</a!-->
        
       </div><!--head-->
-      <div class='collapse navbar-collapse' >
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#" onclick="load(0);"><span class="glyphicon glyphicon-leaf"></span> Home</a></li>
-          <li><a href="#tabs-2" onclick="getSFeedTerm(2);"><span class="glyphicon glyphicon-glass"> </span>Choose Meal</a></li>
-          <li><a href="#tabs-2" onclick="getSFeedTerm(2);"><span class="glyphicon glyphicon-glass"> </span>Choose Meal</a></li>
+      <!--div class='collapse navbar-collapse' -->
+        <!--ul class="nav navbar-nav"-->
+          <!--li class="active"><a href="#" onclick="load(0);"><span class="glyphicon glyphicon-leaf"></span> Home</a></li-->
+          <!--li><a href="#tabs-2" onclick="getSFeedTerm(2);"><span class="glyphicon glyphicon-glass"> </span>Choose Meal</a></li-->
+          <!--li><a href="#tabs-2" onclick="getSFeedTerm(2);"><span class="glyphicon glyphicon-glass"> </span>Choose Meal</a></li-->
 
-          <li><a href="#tabs-2" onclick="listSites(0);"><span class="glyphicon glyphicon-pencil"> </span> Meal List Events</a></li>
-          <li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-          <li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-          <li><a href="#formstar" onclick="getSFeedTerm(4);" style="float:right;"><span class="glyphicon glyphicon-user"> Login/Sign-up</a></li>
+          <!--li><a href="#tabs-2" onclick="listSites(0);"><span class="glyphicon glyphicon-pencil"> </span> Meal List Events</a></li-->
+          <!--li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li-->
+          <!--li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li-->
+          <!--li><a href="#formstar" onclick="getSFeedTerm(4);" style="float:right;"><span class="glyphicon glyphicon-user pull-right"> Login/Sign-up</a></li-->
 
-        </ul>
-      </div><!--nav-collapse-->
+        <!--/ul-->
+        <!--ul class="nav navbar-nav pull-right"-->
+          <!--li class="active"><a href="#" onclick="load(0);"><span class="glyphicon glyphicon-leaf"></span> Home</a></li-->
+    <!--/ul-->
+      <!--/div><!--nav-collapse---->
 
-    </div><!--container-->
-    </div><!--navbar-->
+    <!--/div><!--container---->
+    <!--/div><!--navbar---->
+
+<div id="yCarousel" >
+
+</div> <!--yCarousel-->
+
+
+
   <div class='container'>
   <!--div class='container'-->
 <!-- #content div -->
