@@ -1,5 +1,5 @@
 <?php 
-include ('./header.php');
+include ('./headerg.php');
 ?>
 <div id="hero" class="hero-unit" >
 <!--h1>Flickr</h1-->
@@ -1089,4 +1089,4 @@ onsubmit="return valReservation(this)">
 
 
 
-<?php include ('./footer.php')  ?>
+<?php include ('./footerg.php')  ?>

@@ -4611,4 +4611,19 @@ function handleKeyPressFeed(e,form){
 
 	}
 }
+function handleKeyPressFeedz(e,form){
+
+	var key=e.keyCode;
+	if (key==13)
+	    {//alert("HiJ");
+
+
+
+
+//     setSFeed(document.getElementById('sbox').value);
+     setSSFeed(document.getElementById('zbox').value);
+
+
+	}
+}
 
