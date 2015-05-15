@@ -46,7 +46,7 @@ function valReservation(oForm)
 
 	if (showErr==1)
 	{
-		//alert("Err"+showErr);	
+		alert("Err"+showErr);	
 
         	return false;
 	}

@@ -118,7 +118,7 @@ a.tooltipe:hover > span
 	border:1px solid #dca;
 	overflow-y:visible;
 	overflow-x:visible;
-	background:0f0af0;
+//	background:0f0af0;
 	box-shadow:15px 15px 25px #888;
 }
 
@@ -181,10 +181,10 @@ a.tooltipe span
 span.price-tag{
 	display: block;
 	padding-top: 10px;
-	width: 100px;
-	height: 100px;
+	width: 110px;
+	height: 110px;
 //	line-height: 35px;
-//	text-align: center;
+	text-align: center;
 //	font-size: 30px;
 //	font-weight: 700;
 	font-family: 'Droid Serif', serif;
@@ -194,7 +194,8 @@ span.price-tag{
 }
 
 #cal, #calm{
-	width:40%;
+//	width:45%;
+	width:auto%;
 	margin: 0 0 0 20px;
 	padding: 0 0 0 20px;
 	background-color:#447744;
@@ -1507,7 +1508,7 @@ p label
 	display:block;
 	clear:both;
 }
-.ui-widget #tabs-2 #calm:after{
+.ui-widget #tabs-2 #cal:after,.ui-widget #tabs-2 #calm:after, .ui-widget #tabs-2 #cmpick:after{
 	content:"";!important;
 	width:0;!important;
 	height:0;!important;
@@ -1515,7 +1516,7 @@ p label
 	display:block;!important;
 	clear:both;!important;
 }
-.ui-widget #tabs-2 #calm br{
+.ui-widget #tabs-2 hr{
 	content:"";!important;
 	width:0;!important;
 	height:0;!important;

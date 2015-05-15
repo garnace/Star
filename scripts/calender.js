@@ -38,7 +38,7 @@ function calendarInit(d){
 	var monthName;
 	var dayName=day.toDateString().split(" ").slice(0,1);
 
-	alert("mon"+calMonth.toString()+day.toDateString()+calYear.toString());
+//MAINALERT	alert("mon"+calMonth.toString()+day.toDateString()+calYear.toString());
 //	alert("calSD"+curMonthStartDay+"::"+curMonthStart.toDateString());	
 //	alert("calSD"+calDay);	
 //	$("#cal").append("<table id=\"tabCal\" style=\"width:200;height:100;color:#3344ff;\" border=\"1\" cellspacing=\"2\" cellpadding=\"2\" >");

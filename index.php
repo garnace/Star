@@ -408,7 +408,7 @@ include ('./headerg.php');
      <!--input type="text" id="cmpick"></input-->
     </div>
 </div>
-<br>
+<hr/>
 <div id="chkRes">
 <form action="tag.php" class="form-inline" method="post"  id="chkResf" name="chkResf">
 <fieldset>
@@ -505,8 +505,8 @@ include ('./headerg.php');
 
 
 <div id="formres" >
-<form  action="insertres.php" method="post" id="regform" name="regform"
-onsubmit="return valReservation(this)">
+<form  action="insertres.php" method="post" id="regform" name="regform" onsubmit="return valReservation(this)">
+<!--form  action="insertres.php" method="post" id="regform" name="regform" -->
 
 <!--*****************formres field 0 ****************-->
 <div id="field0">
@@ -575,7 +575,7 @@ onsubmit="return valReservation(this)">
 		<label for="about" style="display:inline;" > about seat</label>
 		<br/>
 		<br/>
-		<input type="button" id="avail" name="about" value="aboutT" onclick="getSectionT(0);"/>
+		<input type="button" id="avail" name="about" value="aboutT" onclick=" getSectionT(0); return false;">
 		<label for="about" style="display:inline;" > available</label>
 		<br/>
 
@@ -590,7 +590,11 @@ onsubmit="return valReservation(this)">
 
 <!--                     ############################-->
 
+<!--?php if ($action != "showresT"): ?-->
 <div id="fieldT1" style="display:none;">
+<!--?php else: ?-->
+<!--div id="fieldT1" -->
+<!--?php endif; ?-->
 	<fieldset>
 	<legend>Tables Available</legend>
 

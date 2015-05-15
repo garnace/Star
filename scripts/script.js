@@ -1311,15 +1311,30 @@ function getLoc(tId)
 //http://code.tutsplus.com/tutorials/use-jquery-mobile-to-build-a-native-android-news-reader-app-part-2--mobile-4775
 //http://code.tutsplus.com/tutorials/use-jquery-mobile-to-build-a-native-android-news-reader-app-part-3--mobile-4886
 //	alert("hello");
-//	$("#tabs").tabs({selected:2});
+
 	$(function (){
 	var EMPTY = '';
 //	alert ("echange");
-	$.get(EMPTY,function(){
-	location.href="index.php?action=showres#chkRes";
+//	$('#tabs').tabs({selected:1});		
+	if (tId ==null)
+	{
+		$.get(EMPTY,function(){
+		location.href="index.php?action=showres#chkRes";
+		});
+	}
+	else
+	{
+	location.href="#fieldT1";
+//	location.href="index.php?action=showres"+tId+"";
+//		$.get(EMPTY,function(){
+//		location.href="index.php?action=showresT"+tId+"";
+//		});
+	}
+//	$("#tabs").tabs({selected:2});
 	});
-	});
+//	$("#tabs").tabs({selected:'2'});
 //	location.href="index.php?action=showres#chkRes";
+
 }
 function getEvents(tId)
 {
@@ -3311,26 +3326,27 @@ function getSectionT(tId)
 
     document.getElementById("fieldT1").style.display="";
 
-    document.getElementById("imagesky").innerHTML="";
-    document.getElementById("son").innerHTML="";
+//--    document.getElementById("imagesky").innerHTML="";
+//--    document.getElementById("son").innerHTML="";
 //    document.getElementById("son").before="";
   //  document.getElementById("fbox").style.display="none";
 
-    hpb="<div id=\"searchDi\"><p>Enter terms to list sites listed on StarServer's cached sites:  Cornell.edu and Stargazing.net</p> <input type=\"text\" id=\"sbox\" onkeypress=\"handleKeyPressJ(event,this.form)\"/>";
+//--    hpb="<div id=\"searchDi\"><p>Enter terms to list sites listed on StarServer's cached sites:  Cornell.edu and Stargazing.net</p> <input type=\"text\" id=\"sbox\" onkeypress=\"handleKeyPressJ(event,this.form)\"/>";
     //    hpb=hpb+"<div id=\"sbutton\"> <button onclick=\"getMatchJ(document.getElementById(\"sbox\").value)\">Search Now</button>";
-     hpb=hpb+"<div id=\"sbutton\"> <button onclick=\"getMatchJ(document.getElementById('sbox').value);\">Search Now</button>";
-    hpb=hpb+"</div></div>";
+//--     hpb=hpb+"<div id=\"sbutton\"> <button onclick=\"getMatchJ(document.getElementById('sbox').value);\">Search Now</button>";
+//--    hpb=hpb+"</div></div>";
     //    alert("pageBar");
-    document.getElementById("pageBar").innerHTML=hpb;
-    document.getElementById("journ").innerHTML="";
-    document.getElementById("imagesky").innerHTML="";
-    document.getElementById("journ").style.display="none";
-    document.getElementById("imagesky").style.display="none";
+//--    document.getElementById("pageBar").innerHTML=hpb;
+//--    document.getElementById("journ").innerHTML="";
+//--    document.getElementById("imagesky").innerHTML="";
+//--    document.getElementById("journ").style.display="none";
+//--    document.getElementById("imagesky").style.display="none";
 
 	$(function(){
     		getListTable(0);	    
+//		return false;
 	});
-
+//		return false;
 }
 
 
@@ -3700,11 +3716,11 @@ function tableFillT(i,item)
 		//seat(s) instead of seats
 		if (item[1] == 1)
 		{
-			$('#lblTR'+i).html('table'+(i+1)+':('+item[1]+'seat left)');	
+			$('#lblTR'+i).html('<span class=\"price-tag br-white\">table'+(i+1)+': ('+item[1]+'<br/>seat left) </span>');	
 		}
 		else
 		{
-			$('#lblTR'+i).html('<span class=\"price-tag br-white\">table'+(i+1)+':('+item[1]+'<br/>seatsz left) </span>');	
+			$('#lblTR'+i).html('<span class=\"price-tag br-white\">table'+(i+1)+': ('+item[1]+'<br/>seatsz left) </span>');	
 		}
 }
 
@@ -3925,17 +3941,21 @@ function getListTable(dbID)
 {
 	$(document).ready(function(){
 //	alert("listtable");
+//	getLoc('#fieldT1');
 	$.getJSON("http://localhost:8280/StarAdvisor/readTable.php?callback=?",
 		function(data){
 			$.each(data.tables,function(i,item){
 //			alert("talist");
 				tableFillT(i,item);
 			});
-			
+//	return false;			
 		});	
+//	return false;
 	});
+//	getLoc();
+	getLoc('#fieldT1');
 
-
+//	return false;
 }// end getListTable
 
 
@@ -4307,7 +4327,7 @@ function getSectionBlog(dId)
 function load()
     {
 
-alert("what");
+//alert("what");
 //    setRPic(0);
     setRPik(0);
     document.getElementById("hero").style.display="";
