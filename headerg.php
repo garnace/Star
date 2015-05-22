@@ -22,17 +22,21 @@
 
 ?>
 <!--CTYPE html-->
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html >
+<!--!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/loose.dtd"-->
+<html >
+<!--html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"-->
 
 
 <head>
+<!--meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"-->
+<meta charset="utf-8">
 <title>StarAdvisor</title>
-<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
-<link href="css/style.css" rel="stylesheet" type="text/css" title="starA">
-<link href="cf/theme/css/less-style.css" rel="stylesheet" type="text/css">
-<link href="cf/theme/css/bootstrap.css" rel="stylesheet" type="text/css" title="starA">
-<link href="b320/css/bootstrap.css" rel="stylesheet" type="text/css" title="starvA">
+
+
+<!--link href="cf/theme/css/bootstrap.css" rel="stylesheet" type="text/css" title="starA"-->
+<link href="cf/theme/css/bootstrap.min.css" rel="stylesheet" type="text/css" title="starA">
+<!--link href="b320/css/bootstrap.css" rel="stylesheet" type="text/css" title="starvA"-->
 <!--link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" rel="stylesheet"-->
 
 <!--################################3##3##########33#####33#-->
@@ -49,6 +53,10 @@
 <link href="cf/theme/css/flexslider.css" rel="stylesheet">
 <link href="css/prettyPhoto.css" rel="stylesheet">
 <link href="cf/theme/css/font-awesome.min.css" rel="stylesheet">
+
+<link href="cf/theme/css/less-style.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css" title="starA">
+
 <!--link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"-->
 <link href="css/bootstrap-glyphicons.css" rel="stylesheet">
 <!--link href="css/jqm/jquery.mobile-1.4.5.min.css" rel="stylesheet"-->
@@ -122,7 +130,7 @@ function getM()
      if ($action == "showres")
          {
          echo("<script type=\"text/javascript\">");
-//         echo("alert (\"hi\");");
+         echo("alert (\"hi\");");
          echo("$(function(){");
          echo("$('#tabs').tabs({selected:2});");
          echo("});");
