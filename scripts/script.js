@@ -1246,7 +1246,7 @@ $(document).ready(function(){
 
 }
 
-/** function setRPic
+/** function setRPik
 *
 * Function to setup random picture cards for quickflip
 *
@@ -1318,14 +1318,17 @@ function getLoc(tId)
 //	$('#tabs').tabs({selected:1});		
 	if (tId ==null)
 	{
-		$.get(EMPTY,function(){
-		location.href="index.php?action=showres#chkRes";
-		});
+		location.href="index.php?action=showres&n="+new Date().getTime()+"#shwres";
+//		$.get(EMPTY,function(){
+//		location.href="index.php?action=showres#chkRes";
+
+//		});
 	}
 	else
 	{
-	location.href="#fieldT1";
+//	location.href="#fieldT1";
 //	location.href="index.php?action=showres"+tId+"";
+	location.href="index.php?action="+tId+"";
 //		$.get(EMPTY,function(){
 //		location.href="index.php?action=showresT"+tId+"";
 //		});
@@ -3953,7 +3956,7 @@ function getListTable(dbID)
 //	return false;
 	});
 //	getLoc();
-	getLoc('#fieldT1');
+	getLoc('showTab#fieldT1');
 
 //	return false;
 }// end getListTable

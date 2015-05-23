@@ -590,11 +590,11 @@ include ('./headerg.php');
 
 <!--                     ############################-->
 
-<!--?php if ($action != "showresT"): ?-->
+<?php if ($action != "showTab"): ?>
 <div id="fieldT1" style="display:none;">
-<!--?php else: ?-->
-<!--div id="fieldT1" -->
-<!--?php endif; ?-->
+<?php else: ?>
+<div id="fieldT1" >
+<?php endif; ?>
 	<fieldset>
 	<legend>Tables Available</legend>
 

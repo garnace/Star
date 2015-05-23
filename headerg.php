@@ -133,9 +133,22 @@ function getM()
          echo("alert (\"hi\");");
          echo("$(function(){");
          echo("$('#tabs').tabs({selected:2});");
+         echo("location.href=\"#chkRes\";");
          echo("});");
          echo("</script>");
          }
+     else if ($action == "showTab")
+         {
+         echo("<script type=\"text/javascript\">");
+         echo("alert (\"hi\");");
+         echo("$(function(){");
+         echo("$('#tabs').tabs({selected:2});");
+         echo("location.href=\"#fieldT1\";");
+         echo("});");
+         echo("</script>");
+         }
+
+
 ?>
 <!--   -------------Make tabs------>
 
