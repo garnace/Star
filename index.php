@@ -829,16 +829,44 @@ include ('./headerg.php');
 </div>
 <!--end second tab-->
 <div id="tabs-4">Login
+<!--************************formlog ****************************-->
+
+<div id="formlog" name="formlog">
+<form id="user_log" class="form-inline" action="admintag.php" method="post" name="logform" onsubmit="return valLog(this);" role="form">
+<fieldset>
+<legend>Login Existing</legend>
+<div id="rwL1" class="row">
+    <div class="form-group col-sm-3">
+        <label class="control-label" for="yourle"><span class="espan" id="espanle"></span></label>                          
+        <div class="input-group">                           
+             <input id="yourle" name="yourle">                         
+        </div><!--input group-->
 
 
+    </div>                      
+    <div class="form-group col-sm-3">
+
+        <label class="control-label" for="yourlps"></label>     
+        <div class="input-group">                                     
+             <input id="yourlps" name="yourlps">                         
+        </div><!--input group-->                           
+
+    </div>                      
+
+
+</div><!--row-->
+</fieldset>
+</form>
+</div><!--formlog-->
 <!--************************formstar starform****************************-->
+
 <div id="formstar" name="formstar">
 
 <form id="user_check" class="form-inline" action="insertfo.php" method="post" name="starform" onsubmit="return valUser(this);" role="form">
 
 
 	<fieldset>
-	<legend>Names</legend>
+	<legend>Register New Account</legend>
 	<div id="rw1"  class="row"  >
 	<div  class="form-group col-sm-3"  >
 

@@ -130,7 +130,7 @@ function getM()
      if ($action == "showres")
          {
          echo("<script type=\"text/javascript\">");
-         echo("alert (\"hi\");");
+//         echo("alert (\"hi\");");
          echo("$(function(){");
          echo("$('#tabs').tabs({selected:2});");
          echo("location.href=\"#chkRes\";");
@@ -140,7 +140,7 @@ function getM()
      else if ($action == "showTab")
          {
          echo("<script type=\"text/javascript\">");
-         echo("alert (\"hi\");");
+         //       echo("alert (\"hi\");");
          echo("$(function(){");
          echo("$('#tabs').tabs({selected:2});");
          echo("location.href=\"#fieldT1\";");

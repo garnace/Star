@@ -3933,6 +3933,41 @@ function writeDBB(dbId)
 //--End writeDBB---------------------------
 
 
+/*************getAdminSession
+*Function to write database contact entry by way of
+*json helper file write.php using email
+*
+**/
+
+
+function getAdminSession(dbId,passId)
+{
+	var errLabel;
+
+//	alert("writedb");
+	$(document).ready(function(){
+	$.getJSON("http://localhost:8280/StarAdvisor/admintag.php?emaild="+dbId+"&pass="+passId+"&callback=?",
+	function(data){
+
+		$.each(data.admins,function(i,item){//should only show error item
+
+
+			$("#espanEmail").html(item.message);
+		
+		});
+
+			
+
+
+
+	});
+
+	});//document ready
+}
+//--End writeDBB---------------------------
+
+
+
 /**************getListTable*************************
 *
 *Function to read table of reservations and count
