@@ -218,31 +218,34 @@ function valUser(oForm)
 	@param object oForm form object form Log.html
 	@returns boolean 
 **/
-function valUserLog(oForm)
+//function valUserLog(oForm,usr,usrpw)
+function valUserLog(usr,usrpw)
 {
     var dat= "1234";
     var showErr=0;
 
-    var usr= oForm.elements['youre'].value;
+//    var usr= oForm.elements['yourle'].value;
 
-    var usrpw= oForm.elements['yourpw'].value;
+  //  var usrpw= oForm.elements['yourlps'].value;
 	//email reg
-    var regm=/^[0-9]@[A-Za-z]+[\.][A-Za-z]{3}$/;
+    var regm=/^([0-9A-Za-z]+)@[A-Za-z]+[\.][A-Za-z]{3}$/;
 	//mobile phone or phone reg
     var regmp=/^(\([0-9]{3}\)-|[0-9]{3}[-])?[0-9]{3}-[0-9]{4}$/;
 
 //	if (usr != dat)
+	$(document).ready(function(){
+
 	if (!regm.test(usr) || usr=="")
 	    {
 //	        window.document.starform.yournamel.value="lastVal";
-		window.document.getElementById("espanEmail").innerHTML="* Invalid";
+		window.document.getElementById("espanle").innerHTML="* Invalid";
 
 		showErr=1;
 
             }
 	else
 	{
-		window.document.getElementById("espanEmail").innerHTML="";
+		window.document.getElementById("espanle").innerHTML="";
 
 	}
 
@@ -251,7 +254,7 @@ function valUserLog(oForm)
 	if (usrpw=="")
 	    {
 
-		window.document.getElementById("espanPass").innerHTML="* Required";
+		window.document.getElementById("espanlps").innerHTML="* Required";
 
 
 		showErr=1;
@@ -259,7 +262,7 @@ function valUserLog(oForm)
             }
 	else
 	{
-		window.document.getElementById("espanPass").innerHTML="";
+		window.document.getElementById("espanlps").innerHTML="";
 
 	}
 //alert("Err"+showErr);	
@@ -273,7 +276,25 @@ function valUserLog(oForm)
 	}
 
 		//else proceed to Log.php
-        	return true;
+//        	return true;
+
+	$.getJSON("http://localhost:8280/StarAdvisor/adminperm.php?emaild="+usr+"&pass="+usrpw+"&callback=?",
+	function(data){
+
+		$.each(data.admins,function(i,item){//should only show error item
+
+
+			$("#espanle").html(item.message);
+		
+		});
+
+			
+
+
+
+	});
+
+	});//document ready
 
 
 

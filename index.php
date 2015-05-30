@@ -832,26 +832,38 @@ include ('./headerg.php');
 <!--************************formlog ****************************-->
 
 <div id="formlog" name="formlog">
-<form id="user_log" class="form-inline" action="admintag.php" method="post" name="logform" onsubmit="return valLog(this);" role="form">
+<!--form id="user_log" class="form-inline" action="adminperm.php" method="post" name="logform" onsubmit="return valUserLog(this);" role="form"-->
+<form id="user_log" class="form-inline" action="adminperm.php" method="post" name="logform" role="form">
 <fieldset>
 <legend>Login Existing</legend>
 <div id="rwL1" class="row">
     <div class="form-group col-sm-3">
-        <label class="control-label" for="yourle"><span class="espan" id="espanle"></span></label>                          
-        <div class="input-group">                           
-             <input id="yourle" name="yourle">                         
+        <label class="control-label" for="yourle">Email ID:<span class="espan" id="espanle"></span></label>                          
+        <div class="controls">                           
+             <input id="yourle" type="text" class="form-control col-sm-12" name="yourle">                         
         </div><!--input group-->
 
 
     </div>                      
     <div class="form-group col-sm-3">
 
-        <label class="control-label" for="yourlps"></label>     
-        <div class="input-group">                                     
-             <input id="yourlps" name="yourlps">                         
+        <label class="control-label" for="yourlps">password<span class="espan" id="espanlps"></span> </label>     
+        <div class="controls">                                     
+             <input id="yourlps" type="text" class="form-control col-sm-12" name="yourlps">                         
         </div><!--input group-->                           
 
     </div>                      
+	<div  class="form-group col-sm-3"  >
+
+		
+
+		<!--input class="btn btn-large btn-success" type="submit" value="Submit!" -->
+		<!--input class="btn btn-large btn-success col-sm-12" value="Display it!" onclick="getListDBB(0);"-->
+		<input class="btn btn-large btn-success"  value="Check Log" onclick="valUserLog(document.getElementById('yourle').value,document.getElementById('yourlps').value);">
+
+
+		
+	</div><!--form-group-->
 
 
 </div><!--row-->
