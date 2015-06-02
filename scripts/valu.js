@@ -234,7 +234,7 @@ function valUserLog(usr,usrpw)
 
 //	if (usr != dat)
 	$(document).ready(function(){
-
+//	alert("valul::"+usr+":"+usrpw);
 	if (!regm.test(usr) || usr=="")
 	    {
 //	        window.document.starform.yournamel.value="lastVal";
@@ -284,7 +284,8 @@ function valUserLog(usr,usrpw)
 		$.each(data.admins,function(i,item){//should only show error item
 
 
-			$("#espanle").html(item.message);
+//			$("#espanle").html(item.message);
+			$("#espanle").html(item[0]+":"+item[1]);
 		
 		});
 

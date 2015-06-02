@@ -1,7 +1,7 @@
 <?php
 include("classes/user.php");
 include("./database.php");
-header('Content-type: application/json');
+//header('Content-type: application/json');
 
 
 
@@ -69,15 +69,17 @@ catch(PDOException $e){
 
 $callback= (empty($_GET["callback"])) ? 'callback' : $_GET["callback"];
 $jsonData=$callback.'('.json_encode($iB).');';
+
+$_SESSION["user"]=$iB["admins"][0][1];
+$_SESSION["user"]["name"]=$iB["admins"][0][1];
+$_SESSION["user"]["type"]="admin";
+echo $iB."::".$_SESSION["user"];
 //return $jsonData;
-//$_SESSION["user"]=$iB["admins"][0][1];
-//$_SESSION["user"]["name"]=$iB["admins"][0][1];
-//$_SESSION["user"]["type"]="admin";
-
-
-
-echo $jsonData;
-
+//echo $jsonData;
+//             header("Cache-Control: no-cache,must-revalidate");
+//           header("Expires: Sat, 26 July 1997, 05:00:00 GMT");
+//           header("Location:index.php?action=showres#chkRes");
+//exit();
 
 function check_input($data,$problem="")
 {

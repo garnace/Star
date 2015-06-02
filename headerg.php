@@ -1,6 +1,10 @@
 <?php 
 //include ('./header.php');  
+$lifetime= 60*60*24*1;
+session_set_cookie_params($lifetime,'/');
+session_start();
 
+if (empty ($_SESSION['user'])) $_SESSION['user']= array();
     if (isset($_POST['action']))
         {
             $action=$_POST['action'];
@@ -450,7 +454,7 @@ function getM()
 													<li><a href="recipe.html">Recipes</a></li>
 												</ul>
 											</li>
-											<li><a  href="#formstar" onclick="getSFeedTerm(4);" ><img src="images/Yoursky.gif" class="img-responsive" alt="" /><span class="glyphicon glyphicon-user pull-right"></span> Login</a></li>
+    <li><a  href="#formstar" onclick="getSFeedTerm(4);" ><img src="images/Yoursky.gif" class="img-responsive" alt="" /><span class="glyphicon glyphicon-user pull-right"></span> <?php if (isset($_SESSION["user"]) && ($_SESSION["user"]["type"]=='admin')): ?><?php echo $_SESSION["user"]["name"]; ?>Logout<?php else: ?>Login<?php endif; ?></a></li>
 										</ul>
 									</div><!-- /.navbar-collapse -->
 								</div><!-- /.container-fluid -->

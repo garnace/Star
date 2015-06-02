@@ -828,12 +828,18 @@ include ('./headerg.php');
 
 </div>
 <!--end second tab-->
+
+
 <div id="tabs-4">Login
+
 <!--************************formlog ****************************-->
 
 <div id="formlog" name="formlog">
+
 <!--form id="user_log" class="form-inline" action="adminperm.php" method="post" name="logform" onsubmit="return valUserLog(this);" role="form"-->
-<form id="user_log" class="form-inline" action="adminperm.php" method="post" name="logform" role="form">
+
+<form id="user_log" class="form-inline" action="adminpermf.php" method="post" name="logform" role="form">
+
 <fieldset>
 <legend>Login Existing</legend>
 <div id="rwL1" class="row">
@@ -860,6 +866,17 @@ include ('./headerg.php');
 		<!--input class="btn btn-large btn-success" type="submit" value="Submit!" -->
 		<!--input class="btn btn-large btn-success col-sm-12" value="Display it!" onclick="getListDBB(0);"-->
 		<input class="btn btn-large btn-success"  value="Check Log" onclick="valUserLog(document.getElementById('yourle').value,document.getElementById('yourlps').value);">
+
+
+		
+	</div><!--form-group-->
+	<div  class="form-group col-sm-3"  >
+
+		
+
+		<input class="btn btn-large btn-success" type="submit" value="Submit!">
+		<!--input class="btn btn-large btn-success col-sm-12" value="Display it!" onclick="getListDBB(0);"-->
+		<!--input class="btn btn-large btn-success"  value="Check Log" onclick="valUserLog(document.getElementById('yourle').value,document.getElementById('yourlps').value);"-->
 
 
 		
