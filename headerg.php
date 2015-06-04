@@ -1,10 +1,12 @@
 <?php 
 //include ('./header.php');  
-$lifetime= 60*60*24*1;
-session_set_cookie_params($lifetime,'/');
+//$lifetime= 60*60*24*1;
+//session_set_cookie_params($lifetime,'/');
 session_start();
-
-if (empty ($_SESSION['user'])) $_SESSION['user']= array();
+//set_include_path(get_include_path().PATH_SEPARATOR.$_SERVER["DOCUMENT_ROOT"]."/StarAdvisor");
+//if (!is_array ($_SESSION['user'])) $_SESSION['user']= array();
+//$user= isset ($_SESSION['user']['email']) ? $_SESSION['user']['email'] : "nan";
+$user= isset ($_SESSION['email']) ? $_SESSION['email'] : "nane";
     if (isset($_POST['action']))
         {
             $action=$_POST['action'];

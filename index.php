@@ -460,12 +460,14 @@ include ('./headerg.php');
 <?php  endif; ?>
 
 
-<!--/?php
-     if ($action == "shwres")
+<?php
+     if ($action == "showres")
      {
-         echo "<h3>show</h3>";
+//         echo "<h3>show::".print_r($_SESSION["user"])."</h3>";
+         echo "<h3>".$_SERVER["DOCUMENT_ROOT"].PATH_SEPARATOR."show".$user."i::".print_r($user,1)."</h3>";
+//         echo "<h3>show::".$_SESSION["user"]["email"]."</h3>";
      }
-?/-->
+?>
 <?php
     if ($action == "shwres"):
 ?>

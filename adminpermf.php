@@ -43,7 +43,7 @@ try{
                 $iB['admins']=array(array("message"=>"Error User cred"));
             }else
             {
-        $iB['admins']=$iA;
+                $iB['admins']=$iA;
             }
 
 //        $iB['admins']=$iA;
@@ -70,16 +70,26 @@ catch(PDOException $e){
 $callback= (empty($_GET["callback"])) ? 'callback' : $_GET["callback"];
 $jsonData=$callback.'('.json_encode($iB).');';
 
-$_SESSION["user"]=$iB["admins"][0][1];
-$_SESSION["user"]["name"]=$iB["admins"][0][1];
-$_SESSION["user"]["type"]="admin";
-echo $iB."::".$_SESSION["user"];
+//$_SESSION["user"]=$iB["admins"][0][1];
+$_SESSION["user"]=array();
+$_SESSION["name"]=$iB["admins"][0][0];
+$_SESSION["email"]=$iB["admins"][0][1];
+$_SESSION["type"]="admin";
+session_write_close();
+//echo $jsonData."::".$_SESSION["user"]["email"]."::".$_SESSION["user"]["name"];
+//echo $jsonData;
 //return $jsonData;
 //echo $jsonData;
-//             header("Cache-Control: no-cache,must-revalidate");
-//           header("Expires: Sat, 26 July 1997, 05:00:00 GMT");
-//           header("Location:index.php?action=showres#chkRes");
-//exit();
+//usleep(2000000);
+
+//      header("Last-Modified: Wed, 03 June 2015, 05:00:00 GMT");
+       header("Expires: Sat, 26 July 1997, 05:00:00 GMT");
+header("Pragma: no-cache");
+      header("Cache-Control: no-cache,must-revalidate");
+//header("Location:index.php?action=showres#chkRes");
+header("Location:index.php?action=showres#chkRes");
+
+exit();
 
 function check_input($data,$problem="")
 {
