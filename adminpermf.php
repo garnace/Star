@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("classes/user.php");
 include("./database.php");
 //header('Content-type: application/json');
@@ -72,8 +73,8 @@ $jsonData=$callback.'('.json_encode($iB).');';
 
 //$_SESSION["user"]=$iB["admins"][0][1];
 $_SESSION["user"]=array();
-$_SESSION["name"]=$iB["admins"][0][0];
-$_SESSION["email"]=$iB["admins"][0][1];
+$_SESSION["email"]=$iB["admins"][0][0];
+$_SESSION["name"]=$iB["admins"][0][1];
 $_SESSION["type"]="admin";
 session_write_close();
 //echo $jsonData."::".$_SESSION["user"]["email"]."::".$_SESSION["user"]["name"];

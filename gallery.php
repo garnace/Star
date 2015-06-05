@@ -1,5 +1,5 @@
 <?php 
-include ('./header.php');
+include ('./headerg.php');
 ?>
 		
 		<!-- Page Wrapper -->
@@ -229,4 +229,4 @@ include ('./header.php');
 				
 			</div><!-- / Inner Page Content End -->	
 			
-<?php include ('./footer.php')  ?>
+<?php include ('./footerg.php')  ?>

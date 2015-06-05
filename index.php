@@ -57,11 +57,11 @@ include ('./headerg.php');
 <!-- ############# TABS ############################-->
 <div id="tabs" >
 <ul>
-	<li><a href="#tabs-h">Welcome</a></li>
-	<li><a href="#tabs-1">Administrator</a></li>
-	<li><a href="#tabs-2">Choose Meal & Time</a></li>
-	<li><a href="#tabs-3">Upload</a></li>
-	<li><a href="#tabs-4">Login</a></li>
+	<li style="display:none;"><a href="#tabs-h">Welcome</a></li>
+	<li style="display:none;"><a href="#tabs-1">Administrator</a></li>
+	<li style="display:none;"><a href="#tabs-2">Choose Meal & Time</a></li>
+	<li style="display:none;"><a href="#tabs-3">Upload</a></li>
+	<li style="display:none;"><a href="#tabs-4">Login</a></li>
 </ul>
 
 <div id="tabs-1">First container

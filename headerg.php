@@ -456,7 +456,7 @@ function getM()
 													<li><a href="recipe.html">Recipes</a></li>
 												</ul>
 											</li>
-    <li><a  href="#formstar" onclick="getSFeedTerm(4);" ><img src="images/Yoursky.gif" class="img-responsive" alt="" /><span class="glyphicon glyphicon-user pull-right"></span> <?php if (isset($_SESSION["user"]) && ($_SESSION["user"]["type"]=='admin')): ?><?php echo $_SESSION["user"]["name"]; ?>Logout<?php else: ?>Login<?php endif; ?></a></li>
+    <li><a  href="#formstar" onclick="getSFeedTerm(4);" ><img src="images/Yoursky.gif" class="img-responsive" alt="" /><span class="glyphicon glyphicon-user pull-right"></span> <?php if (isset($_SESSION["name"]) && ($_SESSION["type"]=='admin')): ?><?php echo $_SESSION["name"]; ?><br/>Logout<?php else: ?>Login<?php endif; ?></a></li>
 										</ul>
 									</div><!-- /.navbar-collapse -->
 								</div><!-- /.container-fluid -->
@@ -508,10 +508,11 @@ function getM()
 
 
 
-  <div class='container'>
+
   <!--div class='container'-->
 <!-- #content div -->
-    <!--div id='content' class='row-fluid'-->
-    <div id='content' class='row row-offcanvas row-offcanvas-right'>
+    <div id='content' class='main-content'>
+  <div class='container'>
+    <!--div id='content' class='row row-offcanvas row-offcanvas-right'-->
       <div class='col-sm-9 main'>
         <!--h2>Main Content Section</h2-->
