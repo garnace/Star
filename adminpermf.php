@@ -7,6 +7,7 @@ include("./database.php");
 
 
     $email=isset($_GET["emaild"]) ? check_input($_GET["emaild"],"write email adress".$_GET["emaild"]): (isset($_POST["yourle"]) ? check_input($_POST["yourle"],"write ema address") : "");
+
 $pass=isset($_GET["pass"]) ? check_input($_GET["pass"],"write email") : (isset($_POST["yourlps"]) ? check_input($_POST["yourlps"],"write password") : "");
 
 $query ="SELECT u.email,u.accounthandle FROM uaccount u WHERE (u.accountpass = :pass)";
@@ -41,7 +42,7 @@ try{
 
         if ($num == 0)
             {
-                $iB['admins']=array(array("message"=>"Error User cred"));
+                $iB['admins']=array(array("message"=>"Error User credential"));
             }else
             {
                 $iB['admins']=$iA;
@@ -72,10 +73,13 @@ $callback= (empty($_GET["callback"])) ? 'callback' : $_GET["callback"];
 $jsonData=$callback.'('.json_encode($iB).');';
 
 //$_SESSION["user"]=$iB["admins"][0][1];
-$_SESSION["user"]=array();
-$_SESSION["email"]=$iB["admins"][0][0];
-$_SESSION["name"]=$iB["admins"][0][1];
-$_SESSION["type"]="admin";
+if (!isset ($_SESSION["user"])) 
+    {
+        $_SESSION["user"]=array();
+    }
+$_SESSION["user"]["email"]=$iB["admins"][0][0];
+$_SESSION["user"]["name"]=$iB["admins"][0][1];
+$_SESSION["user"]["type"]="admin";
 session_write_close();
 //echo $jsonData."::".$_SESSION["user"]["email"]."::".$_SESSION["user"]["name"];
 //echo $jsonData;
@@ -84,9 +88,9 @@ session_write_close();
 //usleep(2000000);
 
 //      header("Last-Modified: Wed, 03 June 2015, 05:00:00 GMT");
-       header("Expires: Sat, 26 July 1997, 05:00:00 GMT");
+header("Expires: Sat, 26 July 1997, 05:00:00 GMT");
 header("Pragma: no-cache");
-      header("Cache-Control: no-cache,must-revalidate");
+header("Cache-Control: no-cache,must-revalidate");
 //header("Location:index.php?action=showres#chkRes");
 header("Location:index.php?action=showres#chkRes");
 

@@ -6,7 +6,8 @@ session_start();
 //set_include_path(get_include_path().PATH_SEPARATOR.$_SERVER["DOCUMENT_ROOT"]."/StarAdvisor");
 //if (!is_array ($_SESSION['user'])) $_SESSION['user']= array();
 //$user= isset ($_SESSION['user']['email']) ? $_SESSION['user']['email'] : "nan";
-$user= isset ($_SESSION['email']) ? $_SESSION['email'] : "nane";
+//$user= isset ($_SESSION['email']) ? $_SESSION['email'] : "nane";
+$user= !empty ($_SESSION['user']) ? $_SESSION['user'] : array();
     if (isset($_POST['action']))
         {
             $action=$_POST['action'];
@@ -456,7 +457,27 @@ function getM()
 													<li><a href="recipe.html">Recipes</a></li>
 												</ul>
 											</li>
-    <li><a  href="#formstar" onclick="getSFeedTerm(4);" ><img src="images/Yoursky.gif" class="img-responsive" alt="" /><span class="glyphicon glyphicon-user pull-right"></span> <?php if (isset($_SESSION["name"]) && ($_SESSION["type"]=='admin')): ?><?php echo $_SESSION["name"]; ?><br/>Logout<?php else: ?>Login<?php endif; ?></a></li>
+<?php  
+    if (isset($_SESSION["user"]["name"]) && ($_SESSION["user"]["type"]=='admin'))
+{
+echo <<< EOT
+											<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="listSites(0);"><img src="img/nav-menu/nav5.jpg" class="img-responsive" alt="" /> $user[email]  <b class="caret"></b></a>
+												<ul class="dropdown-menu">
+													<li><a href="error.html">Logout</a></li>
+
+													<li><a href="recipe.html">Recipes</a></li>
+												</ul>
+											</li>
+EOT;
+}else
+        {
+echo <<< EOT
+    <li><a  href="#formstar" onclick="getSFeedTerm(4);" ><img src="images/Yoursky.gif" class="img-responsive" alt="" /><span class="glyphicon glyphicon-user pull-right"></span> Login</a></li>
+EOT;
+        }
+?>
+    <li><a  href="#formstar" onclick="getSFeedTerm(4);" ><img src="images/Yoursky.gif" class="img-responsive" alt="" /><span class="glyphicon glyphicon-user pull-right"></span> <?php if (isset($_SESSION["user"]["name"]) && ($_SESSION["user"]["type"]=='admin')): ?><?php echo $_SESSION["user"]["name"]; ?><br/>Logout<?php else: ?>Login<?php endif; ?></a></li>
 										</ul>
 									</div><!-- /.navbar-collapse -->
 								</div><!-- /.container-fluid -->
