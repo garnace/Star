@@ -425,15 +425,15 @@ function getM()
 													</li>
 												</ul>
 											</li>
-											<li class="dropdown visible-xs">
-												<a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="getSFeedTerm(2);"> Menu <b class="caret"></b></a>
-												<ul class="dropdown-menu">
-													<li><a href="#" onclick="getSFeedTerm(2);">Vegetarian</a></li>
-													<li><a href="menu.html">Non Vegetarian</a></li>
-													<li><a href="menu.html">Special Menu</a></li>
-												</ul>
-											</li>
-											<li><a href="gallery.php"><img src="images/Yoursky.gif" class="img-responsive" alt="" /> Gallery</a></li>
+											<!--li class="dropdown visible-xs"-->
+												<!--a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="getSFeedTerm(2);"> Me <b class="caret"></b></a-->
+												<!--ul class="dropdown-menu"-->
+													<!--li><a href="#" onclick="getSFeedTerm(2);">Vegetarian</a></li-->
+													<!--li><a href="menu.html">Non Vn</a></li-->
+													<!--li><a href="menu.html">Special Menu</a></li-->
+												<!--/ul-->
+											<!--/li-->
+											<li><a href="gallery.php"><img src="images/Yoursky.gif" class="img-responsive" alt="" /> Gallefry</a></li>
 											<li class="dropdown">
 												<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="img/nav-menu/nav4.jpg" class="img-responsive" alt="" /> Shop <b class="caret"></b></a>
 												<ul class="dropdown-menu">
@@ -447,7 +447,7 @@ function getM()
 											<li class="dropdown">
 												<a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="listSites(0);"><img src="img/nav-menu/nav5.jpg" class="img-responsive" alt="" />Events  Pages <b class="caret"></b></a>
 												<ul class="dropdown-menu">
-													<li><a href="error.html">404 Error</a></li>
+													<li><a href="#" onclick="getSFeedTerm(1)">Admin</a></li>
 													<li><a href="0-base.html">Blank Page</a></li>
 													<li><a href="blog.html">Blog</a></li>
 													<li><a href="blog-single.html">Blog Single</a></li>

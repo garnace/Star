@@ -32,7 +32,7 @@ $querydP="DROP TABLE IF EXISTS uaccount";
 $querydR="DROP TABLE IF EXISTS reserve";
 $querydT="DROP TABLE IF EXISTS tables";
 
-$queryPassP=" CREATE TABLE uaccount (id int(6) NOT NULL auto_increment ,accounthandle varchar(30) NOT NULL,email varchar(30) NOT NULL,accountpass varchar(30) NOT NULL,PRIMARY KEY (email),UNIQUE id_e (accounthandle),KEY id_2 (id))";
+$queryPassP=" CREATE TABLE uaccount (id int(6) NOT NULL auto_increment ,accounthandle varchar(30) NOT NULL,email varchar(30) NOT NULL,accountpass varchar(30) NOT NULL,userType enum('user','trial','admin') DEFAULT 'user',PRIMARY KEY (email),UNIQUE id_e (accounthandle),KEY id_2 (id))";
 
 $query=" CREATE TABLE contacts (id int(6) NOT NULL auto_increment,first varchar(30) NOT NULL,last varchar(30) NOT NULL,phone varchar(20) NOT NULL,mobile varchar(20) NOT NULL,fax varchar(20) NOT NULL,email varchar(30) NOT NULL,web varchar(30) NOT NULL,dateAdd TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,PRIMARY KEY (id),UNIQUE id (id),KEY id_2 (id),FOREIGN KEY (email) REFERENCES uaccount(email) ON DELETE CASCADE)";
 
@@ -90,12 +90,12 @@ $pdo->query($queryPassP);
 $pdo->query($query);
 $pdo->query($queryTables);
 $pdo->query($queryReserve);
-$pdo->exec("INSERT INTO uaccount (id,accounthandle,email,accountpass) VALUES (NULL,'jsoolffe','johnsmith@gowansnet.com','smith1234')");
-$pdo->exec("INSERT INTO uaccount (id,accounthandle,email,accountpass) VALUES (NULL,'2@net.net','2@net.net','Squiggle')");
-$pdo->exec("INSERT INTO uaccount (id,accounthandle,email,accountpass) VALUES (NULL,'2@zed.nez','2@zed.nez','Squiggle')");
-$pdo->exec("INSERT INTO uaccount (id,accounthandle,email,accountpass) VALUES (NULL,'3@zed.nez','3@zed.nez','Squiggle')");
-$pdo->exec("INSERT INTO uaccount (id,accounthandle,email,accountpass) VALUES (NULL,'4@zed.nez','4@zed.nez','Squiggle')");
-$pdo->exec("INSERT INTO uaccount (id,accounthandle,email,accountpass) VALUES (NULL,'5@zed.nez','5@zed.nez','Squiggle')");
+$pdo->exec("INSERT INTO uaccount (id,accounthandle,email,accountpass,userType) VALUES (NULL,'jsoolffe','johnsmith@gowansnet.com','smith1234','admin')");
+$pdo->exec("INSERT INTO uaccount (id,accounthandle,email,accountpass,userType) VALUES (NULL,'2@net.net','2@net.net','Squiggle','user')");
+$pdo->exec("INSERT INTO uaccount (id,accounthandle,email,accountpass,userType) VALUES (NULL,'2@zed.nez','2@zed.nez','Squiggle','user')");
+$pdo->exec("INSERT INTO uaccount (id,accounthandle,email,accountpass,userType) VALUES (NULL,'3@zed.nez','3@zed.nez','Squiggle','user')");
+$pdo->exec("INSERT INTO uaccount (id,accounthandle,email,accountpass,userType) VALUES (NULL,'4@zed.nez','4@zed.nez','Squiggle','user')");
+$pdo->exec("INSERT INTO uaccount (id,accounthandle,email,accountpass,userType) VALUES (NULL,'5@zed.nez','5@zed.nez','Squiggle','user')");
 $pdo->exec("INSERT INTO contacts (id,first,last,phone,mobile,fax,email,web,dateAdd) VALUES (NULL,'BooffC','Candy','01233 567890','30112 334455','01234 457891','johnsmith@gowansnet.com','http://www.gowansnet.com','NULL')");
 $pdo->exec("INSERT INTO contacts (id,first,last,phone,mobile,fax,email,web,dateAdd) VALUES (NULL,'George','HILL','(111)-123-4545','(111)-222-2222','fa@nak','2@net.net','website','NULL')");
 $pdo->exec("INSERT INTO contacts (id,first,last,phone,mobile,fax,email,web) VALUES (NULL,'mary','jane','(555)-444-4444','(777)-444-4444','fa@mak','2@zed.nez','website')");
