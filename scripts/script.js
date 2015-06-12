@@ -2020,7 +2020,7 @@ function getMatchCi(mId)
 		     //		     alert(htsamp);
 
 	 document.getElementById("journ").style.display="";
-	 document.getElementById("journ").innerHTML=htsamp;
+	 document.getElementById("journ").innerHTML =htsamp;
 
 			//      $("<p><b><font color=#ffee22 >hello</font></b></p>").appendTo("#journ");		
 
@@ -4387,8 +4387,9 @@ function load()
 
 	getEvents("hi");
 //    setRPic(0);
-
-
+	$(function(){
+	$('#tabs').tabs({selected:0});
+	});
 
 }
 //--end  load()---------------
@@ -4424,7 +4425,7 @@ function getSectionSky(dId)
 
     document.getElementById("imagesky").style.display="";
 
-
+	$('#tabs').tabs({selected:0});
 
 }
 //---end getSectionSky--------------------

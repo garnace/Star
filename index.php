@@ -63,7 +63,23 @@ include ('./headerg.php');
 	<li style="display:none;"><a href="#tabs-3">Upload</a></li>
 	<li style="display:none;"><a href="#tabs-4">Login</a></li>
 </ul>
+<div id="tabs-h">
+<div id="pageBar" >
+<!--end welcome tab-->
 
+
+</div><!--pagebar-->
+<div id="journ">
+
+</div><!--journ-->
+
+
+<div id="imagesky">
+
+</div> <!--imagesky-->
+
+
+</div>
 <div id="tabs-1">First container
 
 <!-- # dbTable start-->
@@ -1118,15 +1134,8 @@ include ('./headerg.php');
 
 
 
-<div id="pageBar" >
-
-
-</div><!--pagebar-->
 </p>
 
-<div id="journ">
-
-</div><!--journ-->
 
 
 <div id="son">
@@ -1140,9 +1149,6 @@ include ('./headerg.php');
 
 
 
-<div id="imagesky">
-
-</div> <!--imagesky-->
 
 
 

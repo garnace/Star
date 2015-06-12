@@ -95,7 +95,15 @@ $user= !empty ($_SESSION['user']) ? $_SESSION['user'] : array();
 <!--   -------------Make random flickr pics------>
 
 <script>
+        var wtags=window.location.href.split('#');
 
+var htag=wtags[1];
+$(function(){
+if (htag=='pageBar')
+    {
+        $('#tabs').tabs({selected:0});
+    }
+});
 //var $= jQuery.noConflict();
 $(document).ready(function(){
 	var blis= "b1news b2headline";
@@ -160,10 +168,10 @@ function getM()
 <!--   -------------Make tabs------>
 
 <script type="text/javascript">
-//$(function(){
-//$("#tabs").tabs();
-
-//});
+$(function(){
+    $('#tabs').tabs({selected:0});
+    alert("hi");
+});
 </script>
 
 
@@ -445,13 +453,13 @@ function getM()
 												</ul>
 											</li>
 											<li class="dropdown">
-												<a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="listSites(0);"><img src="img/nav-menu/nav5.jpg" class="img-responsive" alt="" />Events  Pages <b class="caret"></b></a>
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="listSites(0);"><img src="img/nav-menu/nav5.jpg" class="img-responsive" alt="" />Pages <b class="caret"></b></a>
 												<ul class="dropdown-menu">
 													<li><a href="#" onclick="getSFeedTerm(1)">Admin</a></li>
-													<li><a href="0-base.html">Blank Page</a></li>
-													<li><a href="blog.html">Blog</a></li>
-													<li><a href="blog-single.html">Blog Single</a></li>
-													<li><a href="components.html">Components</a></li>
+													<li><a href="#cartd" onclick="getSFeedTerm(1)">Events</a></li>
+													<li><a href="#journ" onclick="listSites(0);">Cached Sites</a></li>
+													<li><a href="#pageBar" onclick="getSectionBlog(0);">Blog Single</a></li>
+													<li><a href="#pageBar" onclick="getSectionSky(0);">Sky for Area</a></li>
 													<li><a href="general.html">General</a></li>
 													<li><a href="nutrition-info.html">Nutrition Info</a></li>
 													<li><a href="recipe.html">Recipes</a></li>
