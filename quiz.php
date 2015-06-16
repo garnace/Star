@@ -266,6 +266,10 @@ include ('./headerg.php');
 
 
 	</div><!--row-->
+        <div>
+
+        </div>
+
 </fieldset>
 </form>
 </div>
@@ -282,15 +286,18 @@ include ('./headerg.php');
 <form action="#" class="form-inline" method="post"  id="chkResf" name="chkResf">
 <fieldset>
 <legend>Take Quiz</legend>
-	<div class="controls-row">
+    <div class="row">
+<p>this is for callout timer</p>
+    </div> <!-- /.row-->
+	<div class="row">
 
 	<div  class="form-group col-sm-3"  >
 
 		<div class="controls">
         <p>What planet did Russian probes visit in 1977?
 		<input type="hidden" name="action" value="showres">
-		<input class="btn btn-large btn-info" type="button" value="Venus" />
-		<input class="btn btn-large btn-info" type="button" value="Venus" />
+
+
 
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfjtDBB('co.txt');"-->
@@ -316,6 +323,64 @@ include ('./headerg.php');
 
 
 	</div><!--row-->
+    <div class="row">
+	<div  class="form-group col-sm-3"  >
+
+		<div class="controls">
+        <p>
+		<input type="hidden" name="action" value="showres">
+		<input class="btn btn-large btn-info qin-1" type="button" value="Mars" />
+
+
+		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
+		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfjtDBB('co.txt');"-->
+		<!--input class="btn btn-large btn-success col-sm-12" value="ReadF!" onclick="readfjTest('co.txt');"-->
+
+        </p>
+		</div><!--controls-->
+	</div><!--/. form-group-->
+
+    </div><!--/.row-->
+
+    <div class="row">
+	<div  class="form-group col-sm-3"  >
+
+		<div class="controls">
+        <p>
+		<input type="hidden" name="action" value="showres">
+
+		<input class="btn btn-large btn-info qin-2" type="button" value="Mercury" />
+
+		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
+		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfjtDBB('co.txt');"-->
+		<!--input class="btn btn-large btn-success col-sm-12" value="ReadF!" onclick="readfjTest('co.txt');"-->
+
+        </p>
+		</div><!--controls-->
+	</div><!--/. form-group-->
+
+    </div><!--/.row-->
+
+    <div class="row">
+	<div  class="form-group col-sm-3"  >
+
+		<div class="controls">
+        <p>
+		<input type="hidden" name="action" value="showres">
+
+		<input class="btn btn-large btn-info qin-3" type="button" value="Pluto" />
+
+		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
+		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfjtDBB('co.txt');"-->
+		<!--input class="btn btn-large btn-success col-sm-12" value="ReadF!" onclick="readfjTest('co.txt');"-->
+
+        </p>
+		</div><!--controls-->
+	</div><!--/. form-group-->
+
+    </div><!--/.row-->
+
+
 </fieldset>
 </form>
 </div>
@@ -331,7 +396,7 @@ include ('./headerg.php');
 									<!-- Image -->
 									<img class="img-responsive" src="img/fruit3.png" alt="" />
 									<!-- Heading -->
-									<h3><a href="#">Equine Porno Sumos</a></h3>
+									<h3><a href="#">Equine Sumos</a></h3>
 									<!-- Paragraph -->
 									<p>Nam libero tempore, cum soluta nobis est minis voluptas assum simple and easy to distinguis quo.</p>
 									<div class="clearfix"></div>

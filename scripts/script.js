@@ -2328,7 +2328,19 @@ function getAniMPos(sId)
 //	alert("length qww:"+ln);
 	divv =$("div[class*=qww]");
 //	$(divv).each(function(i,v){$(v).addClass('hidy'); $(v).find('a').attr('style','auto');});
-	$(divv).each(function(i,v){if (!$(v).hasClass('hidy')){$(v).addClass('hidy');}else{vHide=1;} $(v).filter('a').each($(this).hover($(this).css({cursor:'crosshair'})));}); 
+	$(divv).each(function(i,v)
+		{
+			if (!$(v).hasClass('hidy'))
+			{
+				$(v).addClass('hidy');
+			}else
+			{
+				vHide=1;
+			} 
+			$(v).filter('a').each(
+				$(this).hover(
+					$(this).css({cursor:'crosshair'})));
+	}); 
 	//alert('hidden::'+vHide);
 //	$(divv).each(function(i,v){ $(i).hover($(this).unwrap('<a></a>'));});
 //        $(divv).map(function(i,v){qwray.push([i,$($(divv)[i]).css("left")]);});
@@ -2344,7 +2356,7 @@ function getAniMPos(sId)
 //	$($(divv)[ln]).animate({top: '10',left:'10'},200);
 	for (i=0;i<ln+1;i++)
 	{
-		
+		//use turnt(op)p turnl(eft)p variable to randomize in 4 directions relative to top and left.	
 		turntp = (turntp+1) % turn;
 		turntp = Math.floor(Math.random()* (turn-1))+2;
 		if (turntp < 3 || turnlp >3)
@@ -2397,7 +2409,23 @@ function getAniMPos(sId)
 //	getCach(htReal[2]);
 //--	getCachM(htReal);
 }
+function getQuiz()
+{
 
+	var qb = $('input[class*=qin]');
+
+	var qblen= $(qb).length;	
+//	var qblen= qb.length;	
+
+	var i=0;
+	var j=0;
+	alert('length'+qblen);
+	for (i=0;i<qblen;i++)
+	{
+		$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=50',width: '+=50'},200);
+	}
+
+}
 /**
 * Intialize hiding of cards
 *
