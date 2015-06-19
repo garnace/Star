@@ -460,7 +460,7 @@ $(function(){
 													<li><a href="#journ" onclick="listSites(0);">Cached Sites</a></li>
 													<li><a href="#pageBar" onclick="getSectionBlog(0);">Blog Single</a></li>
 													<li><a href="#pageBar" onclick="getSectionSky(0);">Sky for Area</a></li>
-													<li><a href="general.html">General</a></li>
+													<li><a href="quiz.php">Quiz</a></li>
 													<li><a href="nutrition-info.html">Nutrition Info</a></li>
 													<li><a href="recipe.html">Recipes</a></li>
 												</ul>
@@ -468,6 +468,8 @@ $(function(){
 <?php  
     if (isset($_SESSION["user"]["name"]) && ($_SESSION["user"]["type"]=='admin'))
 {
+
+
 echo <<< EOT
 											<li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="listSites(0);"><img src="img/nav-menu/nav5.jpg" class="img-responsive" alt="" /> $user[email]  <b class="caret"></b></a>
@@ -478,11 +480,18 @@ echo <<< EOT
 												</ul>
 											</li>
 EOT;
+
+
 }else
         {
+
+
 echo <<< EOT
     <li><a  href="#formstar" onclick="getSFeedTerm(4);" ><img src="images/Yoursky.gif" class="img-responsive" alt="" /><span class="glyphicon glyphicon-user pull-right"></span> Login</a></li>
 EOT;
+
+
+
         }
 ?>
     <li><a  href="#formstar" onclick="getSFeedTerm(4);" ><img src="images/Yoursky.gif" class="img-responsive" alt="" /><span class="glyphicon glyphicon-user pull-right"></span> <?php if (isset($_SESSION["user"]["name"]) && ($_SESSION["user"]["type"]=='admin')): ?><?php echo $_SESSION["user"]["name"]; ?><br/>Logout<?php else: ?>Login<?php endif; ?></a></li>

@@ -189,9 +189,9 @@ include ('./headerg.php');
 
 		<div class="controls">
 		<input type="hidden" name="action" value="startq">
-		<input class="btn btn-large btn-success" type="submit" value="Start Quiz" />
+		<!--input class="btn btn-large btn-success" type="submit" value="Start Quiz" /-->
 
-		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
+		<input class="btn btn-large btn-success col-sm-12" value="hide" onclick="hideQuiz();">
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfjtDBB('co.txt');"-->
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadF!" onclick="readfjTest('co.txt');"-->
 

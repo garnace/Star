@@ -455,6 +455,8 @@ function boardDoublerCF(pI)
 	}
 */
 
+	//clear div if filled
+
 	if (window.document.getElementById("imagesp")!=undefined)
 	{	document.getElementById("imagesp").innerHTML="";
 	}
@@ -2409,6 +2411,39 @@ function getAniMPos(sId)
 //	getCach(htReal[2]);
 //--	getCachM(htReal);
 }
+
+function hideQuiz()
+{
+	var qb = $('input[class*=qin]');
+	var qblen = $(qb).length;
+
+	var i=0,j=0;
+
+	for (i=0;i<qblen;i++)
+	{
+		$((qb)[i]).animate({left:'+=700'},function(){
+//			if (!$((qb)[i]).hasClass('hidy'))
+			if (!$(this).hasClass('hidy'))
+				{
+//					$((qb)[i]).addClass('hidy');			
+					$(this).addClass('hidy');			
+				}
+		
+		});
+	}
+
+}
+
+/**getQuiz
+*
+*Function to initialize quiz with timer
+*
+*@param dbId -- text file name to read from
+*
+*@var qb list of inputs for question
+*/
+
+
 function getQuiz()
 {
 
@@ -2419,11 +2454,30 @@ function getQuiz()
 
 	var i=0;
 	var j=0;
-	alert('length'+qblen);
+	var t=0;
+	var l=0;
+//	alert('length'+qblen);
 	for (i=0;i<qblen;i++)
 	{
-		$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=50',width: '+=50'},200);
+
+		if ($((qb)[i]).hasClass('hidy'))
+		{
+			$((qb)[i]).removeClass('hidy');
+		}
 	}
+//	$(qb).lenth=qblen;
+//		$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});
+//		$((qb)[i]).timer= setTimeout(function(){$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'})},500);
+//		t= setTimeout(function(){$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'})},500);
+//		t= setInterval(function(){$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});i= (i+1) %lblen;if (i==0) clearInterval(t);},500);
+		i=0;
+//		t= setInterval(function(){i= (i+1) %lblen; if (i==0){clearInterval(t);exit();}$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});},500);
+		t= setInterval(function(){l=$(qb).length;$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});i= ((i+1)%(l));if (i==0) {clearInterval(t);}},500);
+//t=setTimeout(2200);
+//	if (t) t=clearTimeout(t);
+
+//	wait(20);
+//	}
 
 }
 /**
