@@ -183,7 +183,8 @@ include ('./headerg.php');
 <form action="#" class="form-inline" method="post"  id="chkTResf" name="chkTResf">
 <fieldset>
 <legend>Timed Quiz</legend>
-	<div class="controls-row">
+	<!--div class="controls-row"-->
+	<div class="row">
 
 	<div  class="form-group col-sm-3"  >
 
@@ -209,7 +210,9 @@ include ('./headerg.php');
 		<!--input class="btn btn-large btn-success col-sm-12" value="htref res" onclick="getLoc();"-->
 		<input class="btn btn-large btn-success col-sm-12" value="get quiz" onclick="getQuiz();">
 
-
+    <p class="tbl">
+hlhklh
+    </p>
 		</div><!--controls-->
 	</div><!--form-group-->
 
