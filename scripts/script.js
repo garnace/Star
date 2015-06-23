@@ -172,14 +172,14 @@ $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?
 
       if ( i == 8 ) 
 	  {
-        $("#images> img").each(function()
+             $("#images> img").each(function()
 		{
 		  //  alert ("IIimage:"+this.src);
 		    var iE=$(this);
 		//    iE.wrap("<a href=' "+iE.attr("src")+"' </a>");
 		    iE.wrap("<a href=\"i/img/dish/dish4.jpg \"> </a>");
 		});
-	  return false;
+              return false;
           }
     });
   });
@@ -1331,6 +1331,7 @@ function getLoc(tId)
 //	location.href="#fieldT1";
 //	location.href="index.php?action=showres"+tId+"";
 	location.href="index.php?action="+tId+"";
+//	location.href="index.php?action="+tId+"&n="+new Date().getTime();
 //		$.get(EMPTY,function(){
 //		location.href="index.php?action=showresT"+tId+"";
 //		});
@@ -4073,7 +4074,10 @@ function getListTable(dbID)
 //	return false;
 	});
 //	getLoc();
-	getLoc('showTab#fieldT1');
+
+//	getLoc('showTab#fieldT1');
+
+//	getLoc('?action=showTab#fieldT1');
 
 //	return false;
 }// end getListTable
@@ -4467,12 +4471,12 @@ function load()
 
     document.getElementById("imagesky").innerHTML="";
 
-	getEvents("hi");
+//	getEvents("hi");
 //    setRPic(0);
-	$(function(){
+/*	$(function(){
 	$('#tabs').tabs({selected:0});
 	});
-
+*/
 }
 //--end  load()---------------
 

@@ -95,7 +95,7 @@ $user= !empty ($_SESSION['user']) ? $_SESSION['user'] : array();
 <!--   -------------Make random flickr pics------>
 
 <script>
-        var wtags=window.location.href.split('#');
+/*        var wtags=window.location.href.split('#');
 
 var htag=wtags[1];
 $(function(){
@@ -104,7 +104,7 @@ if (htag=='pageBar')
         $('#tabs').tabs({selected:0});
     }
 });
-//var $= jQuery.noConflict();
+
 $(document).ready(function(){
 	var blis= "b1news b2headline";
 	var bray = (blis).split(' ');
@@ -113,17 +113,17 @@ $(document).ready(function(){
     var mtimer =0;
 
 
-//	("#b1 a").click(function(){alert('jquery');});
+
 	$("#a3").click(function(){alert('jquery'); if (mtimer) clearInterval(mtimer);});
-//	$("#m").click(function(){alert(bray[1]);
+
 	uline.click(function(){alert(bray[1]);
 	mtimer =setInterval(function(){
-//		alert("hi");
+
 		lcount = (lcount +1) % (bray.length) ;
 		uline.fadeOut();
 
 
-//		uline.html('yello'+lcount);
+
 		uline.html(bray[lcount]+bray.length+lcount);
 		uline.fadeIn();
 
@@ -138,7 +138,7 @@ function getM()
 {
 	alert('button');
 }
-
+*/
 </script>
 <!--   -------------------------------------------->
 <?php
@@ -155,23 +155,27 @@ function getM()
      else if ($action == "showTab")
          {
          echo("<script type=\"text/javascript\">");
-         //       echo("alert (\"hi\");");
          echo("$(function(){");
+                echo("alert (\"hi\");");
+
          echo("$('#tabs').tabs({selected:2});");
          echo("location.href=\"#fieldT1\";");
-         echo("});");
+                echo("});");
          echo("</script>");
          }
-
+     else 
+         {
+             echo ("alert(\"no action\")");
+         }
 
 ?>
 <!--   -------------Make tabs------>
 
 <script type="text/javascript">
-$(function(){
-    $('#tabs').tabs({selected:0});
-    alert("hi");
-});
+//$(function(){
+    //  $('#tabs').tabs({selected:0});
+//    alert("hi");
+//});
 </script>
 
 
