@@ -2439,6 +2439,8 @@ function hideQuiz()
 *
 *Function to initialize quiz with timer
 *
+*Adds 'hiddy class with animation for list of input buttons.
+*
 *@param dbId -- text file name to read from
 *
 *@var qb list of inputs for question
@@ -2473,7 +2475,19 @@ function getQuiz()
 //		t= setInterval(function(){$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});i= (i+1) %lblen;if (i==0) clearInterval(t);},500);
 		i=0;
 //		t= setInterval(function(){i= (i+1) %lblen; if (i==0){clearInterval(t);exit();}$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});},500);
-		t= setInterval(function(){l=$(qb).length;$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});i= ((i+1)%(l));if (i==0) {clearInterval(t);}},500);
+		t= setInterval(function(){
+			l=$(qb).length;
+
+			//elongate to place then set size to normal width
+			$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});
+
+			//check mod count of list length of inputs reaches 0
+			i= ((i+1)%(l));
+			if (i==0) 
+			{
+				clearInterval(t);
+			}
+		},500);
 //t=setTimeout(2200);
 //	if (t) t=clearTimeout(t);
 

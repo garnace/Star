@@ -1312,6 +1312,42 @@ http://www.richardshepherd.com/flickr.html
 	padding-right:5pt;
 	background-color:#FF0000;
 }
+.tblb
+{
+	color:#000000;
+//	indentation:5px;
+	padding-left:5pt;
+	padding-right:5pt;
+	background-color:#00FF00;
+}
+
+.spout{
+	background-color:#0000FF;
+	display:inline;
+//	width:auto;
+//	height:auto;
+	width:20%;
+//	height:20%;
+	float:left;
+	position:relative;
+	margin: 3px 3px 3px 0;
+
+}
+.spin{
+	
+	blackground-color:#0000AA;
+	display:inline;
+	float:left;
+//	width:auto;
+//	height:auto;
+	width:50%;
+//	height:20%;
+
+	position:relative;
+	margin: 3px 0 3px 3px;
+
+}
+
 #imagesky{
 //    height:1165px;
 //    width:1165px;

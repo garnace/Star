@@ -219,6 +219,30 @@ hlhklh
 
 
 	</div><!--row-->
+
+    <div class="row">
+        <div class="form-group col-sm-3">
+           <img class="img-responsive" src="images/Yoursky.gif"/>
+
+        </div>
+        <div class="form-group col-sm-3">
+         <div class="row">
+           <p class="tbl">
+hlhklh
+           </p>
+         </div><!-- /.row inner-->
+         <div class="row">
+           <p class="tblb">
+              <span class="spin">bar</span><span class="spout">hlhklh</span>
+           </p>
+         </div><!-- /.row inner-->
+
+
+        </div><!-- /.form-group-->
+
+
+    </div><!-- /.row-->
+
 </fieldset>
 </form>
 </div>
@@ -288,9 +312,9 @@ hlhklh
 <div id="chkQRes">
 <form action="#" class="form-inline" method="post"  id="chkResf" name="chkResf">
 <fieldset>
-<legend>Take Quiz</legend>
+<legend style="text-align:center;">Take Quiz</legend>
     <div class="row">
-<p>this is for callout timer</p>
+<p><a href="#">this is for callout timer</a></p>
     </div> <!-- /.row-->
 	<div class="row">
 
