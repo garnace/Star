@@ -1318,7 +1318,8 @@ http://www.richardshepherd.com/flickr.html
 //	indentation:5px;
 	padding-left:5pt;
 	padding-right:5pt;
-	background-color:#00FF00;
+	padding-bottom:5pt;
+	background-color:#F0FF00;
 }
 
 .spout{
@@ -1330,17 +1331,32 @@ http://www.richardshepherd.com/flickr.html
 //	height:20%;
 	float:left;
 	position:relative;
-	margin: 3px 3px 3px 0;
+	margin: 3px 3px 3px 20px;
+//	padding: 3px 3px 3px 0;
 
 }
-.spin{
+
+.spout:after{
+	width:0;
+	height:0;
+	content:"";
+	position:absolute;
+	right:100%;	
+	top:50%;
+	margin-top:-8px;
+	border-right:18px solid #FF0000;
+	border-top:8px solid transparent;
+	border-bottom:8px solid transparent;
 	
-	blackground-color:#0000AA;
+}
+.spinn{
+	
+	background-color:#00AA00;
 	display:inline;
 	float:left;
 //	width:auto;
 //	height:auto;
-	width:50%;
+	width:40%;
 //	height:20%;
 
 	position:relative;

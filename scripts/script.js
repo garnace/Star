@@ -2435,7 +2435,7 @@ function hideQuiz()
 
 }
 
-/**getQuiz
+/**getQuizTimer
 *
 *Function to initialize quiz with timer
 *
@@ -2447,7 +2447,7 @@ function hideQuiz()
 */
 
 
-function getQuiz()
+function getQuizTimer()
 {
 
 	var qb = $('input[class*=qin]');
@@ -2460,6 +2460,7 @@ function getQuiz()
 	var t=0;
 	var l=0;
 //	alert('length'+qblen);
+//	hideQuiz();
 	for (i=0;i<qblen;i++)
 	{
 
@@ -2495,6 +2496,12 @@ function getQuiz()
 //	}
 
 }
+
+
+
+
+
+
 /**
 * Intialize hiding of cards
 *
@@ -2868,6 +2875,69 @@ function getMatchJ(mId)
 	//    alert ("getMatch");
 }
 
+/**getQuiz
+*
+*Function to initialize quiz with timer
+*
+*Adds 'hiddy class with animation for list of input buttons.
+*
+*@param dbId -- text file name to read from
+*
+*@var qb list of inputs for question
+*/
+
+
+function getQuiz()
+{
+
+	var qb = $('input[class*=qin]');
+
+	var qblen= $(qb).length;	
+//	var qblen= qb.length;	
+
+	var i=0;
+	var j=0;
+	var t=0;
+	var l=0;
+//	alert('length'+qblen);
+	for (i=0;i<qblen;i++)
+	{
+
+		if ($((qb)[i]).hasClass('hidy'))
+		{
+			$((qb)[i]).removeClass('hidy');
+		}
+	}
+//	$(qb).lenth=qblen;
+//		$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});
+//		$((qb)[i]).timer= setTimeout(function(){$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'})},500);
+//		t= setTimeout(function(){$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'})},500);
+//		t= setInterval(function(){$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});i= (i+1) %lblen;if (i==0) clearInterval(t);},500);
+		i=0;
+//		t= setInterval(function(){i= (i+1) %lblen; if (i==0){clearInterval(t);exit();}$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});},500);
+		t= setInterval(function(){
+			l=$(qb).length;
+
+			//elongate to place then set size to normal width
+			$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});
+
+			//check mod count of list length of inputs reaches 0
+			i= ((i+1)%(l));
+			if (i==0) 
+			{
+				clearInterval(t);
+				getQuizTimer();
+			}
+		},500);
+//t=setTimeout(2200);
+//	if (t) t=clearTimeout(t);
+
+//	wait(20);
+//	}
+
+}
+
+
 /*****************************************
 Function: getMatchJE:
 
@@ -2984,7 +3054,19 @@ var liStringEttb="-</a></span><div class=\"clearfix\"></div></div>";
 	//seperate heading spans and description paragraph
 	//produce summary of paragraph with toggle for full description.
 
-	$(datC).map(function(value,index){ elemr= $(index).clone();elema= $(index).clone();elemk= $(index).clone();elemc= $(index).clone(); return $($(index).html($(index).children("p").children("span"))).html($(index).children("span:first").html()+"<br/>"+$(index).children("span:last").html()+":<br/>"+ $($(elemc).find("p").children("span").remove().end()).unwrap("<span></span>").html().split(" ").slice(0,20).join(" ")+"<a href=\"#\"  onclick=\"return getTog("+value+");\"><i class=\"fa fa-plus sen\">...</i></a>:<br/>"+$($(elemr).find("p").children("span").remove().end()).wrapInner("<div class=\"hidden ftx"+value+"\"></div>").html());});
+	$(datC).map(function(value,index){ 
+		//clone values for later usages/manipulations.
+
+		elemr= $(index).clone();
+		elema= $(index).clone();
+		elemk= $(index).clone();
+		elemc= $(index).clone();
+		//index contains 2 spans (date,title) in p plus extra text within p describing event.
+
+		//return value (labeled index for some reason) with spans removed, but broken with <br> delimiters like an array with the description hidden for later use in callout.
+		 return $($(index).html($(index).children("p").children("span"))).html($(index).children("span:first").html()+"<br/>"+$(index).children("span:last").html()+":<br/>"+ $($(elemc).find("p").children("span").remove().end()).unwrap("<span></span>").html().split(" ").slice(0,20).join(" ")+"<a href=\"#\"  onclick=\"return getTog("+value+");\"><i class=\"fa fa-plus sen\">...</i></a>:<br/>"+$($(elemr).find("p").children("span").remove().end()).wrapInner("<div class=\"hidden ftx"+value+"\"></div>").html());
+
+	});  //  $(datC).map
 /*############with tooltipp
 	$(datC).map(function(value,index){ elemr= $(index).clone();elema= $(index).clone();elemc= $(index).clone(); return $($(index).html($(index).children("p").children("span"))).html($(index).children("span:first").html()+"<br/>"+$(index).children("span:last").html()+":<br/>"+ $($(elemc).find("p").children("span").remove().end()).unwrap("<span></span>").html().split(" ").slice(0,20).join(" ")+"<a href=\"#\" class=\"tooltipp\" onclick=\"return getTog("+value+");\"><i class=\"fa fa-plus sen\">...</i>"+ $($(elema).find("p").children("span").remove().end()).wrapInner("<span></span>").html()+"</a>:<br/>"+$($(elemr).find("p").children("span").remove().end()).wrapInner("<div class=\"hidden ftx"+value+"\"></div>").html());});
 
@@ -3058,11 +3140,11 @@ var liStringEttb="-</a></span><div class=\"clearfix\"></div></div>";
 //change details			$('#cartd ul').append(liString+$(item).html() +liStringESpan+"<a class=\"tooltipp\">detail"+$($(elema).find("p").children("span").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+"</a>"+liStringEtt+"</li>");
 //change elemk			$('#cartd ul').append(liString+$(item).html() +liStringESpan+"<a class=\"tooltipp\">detail"+$($(elema).find("p").children("span").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+"</a>"+liStringEtta+ $($(elemk).find("p").children("span").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+liStringEttb+"</li>");
 //poposite			$('#cartd ul').append(liString+$(item).html() +liStringESpan+"<a class=\"tooltipp\">detail"+$($(elema).find("p").children("span").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+"</a>"+liStringEtta+ $($(elemk).children("div[class*=ftx]").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+liStringEttb+"</li>");
-			$('#cartd ul').append(liString+$(item).html() +liStringESpan+"<a class=\"tooltipp\">detail"+$($(elema).find("p").children("span").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+"</a>"+liStringEtta+ $($(elemk).children("div[class*=ftx]")).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+liStringEttb+"</li>");
+			$('#cartd ul').append(liString+$(item).html() +liStringESpan+"<a class=\"tooltipp\">detaill"+$($(elema).find("p").children("span").remove().end()).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+"</a>"+liStringEtta+ $($(elemk).children("div[class*=ftx]")).wrapInner("<span><span style=\"display:block;\"></span></span>").html()+liStringEttb+"</li>");
 //			$('#cartd ul').append(liString+$(item).html()+liStringEt +$($(elema).find("p").children("span").remove().end()).wrapInner("<a class=\"tooltipp\">detail<span></span></a>").html()+"</li>");
 //			$('#cartd ul').append(liString+"hello"+liStringE);
 //			$('#cartd ul').append(liStrin);
-		});
+		}); //datC each
 //		$('#cartd').append('</ul><br/>');
 	 //	 var rPos=data.toUpperCase().search(term);
 	 //	 	       $("<ul >").appendTo("#journ");		
@@ -3099,7 +3181,7 @@ var liStringEttb="-</a></span><div class=\"clearfix\"></div></div>";
 			     {
 				 //update array result and imcrement
 
-				 htarr[htcount]=htshow;htcount++
+				 htarr[htcount]=htshow;htcount++;
 			     }
 			 }
 			 //alert(htshow);
@@ -3132,8 +3214,11 @@ var liStringEttb="-</a></span><div class=\"clearfix\"></div></div>";
 		    		    document.getElementById("imagesky").style.display="none";
 				    //NO ALERalert(htsamp);
 	      }).error(function(){alert("An error has occurreddddd");return;}).complete(function()
-	     {    });
-    }
+	     {    });  // $.get
+
+    }   // for urlArr
+
+
 	//		     htsamp=htsamp+"</ul>";
 	//htele=document.getElementById("journ");
 
