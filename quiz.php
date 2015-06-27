@@ -208,7 +208,8 @@ include ('./headerg.php');
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfjtDBB('co.txt');"-->
 		<!--input class="btn btn-large btn-success col-sm-12" value="htref res" onclick="getLoc();"-->
-		<input class="btn btn-large btn-success col-sm-12" value="get quiz" onclick="getQuiz();">
+		<!--input class="btn btn-large btn-success col-sm-12"  value="get quiz" onclick="getQuiz();"-->
+		<input class="btn btn-large btn-success col-sm-12" id="gQ" value="get quiz">
 								<!--div class="clearfix"></div-->
     <br/>
     <br/>

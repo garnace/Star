@@ -363,7 +363,50 @@ $(function(){
 //overlay for about
 $("input[rel]").overlay();
 
+$("#gQ").click(function(){
 
+	var qb = $('input[class*=qin]');
+
+	var qblen= $(qb).length;	
+//	var qblen= qb.length;	
+
+	var i=0;
+	var j=0;
+	var t=0;
+	var l=0;
+	var th;
+	alert('length'+qblen);
+	for (i=0;i<qblen;i++)
+	{
+
+		if ($((qb)[i]).hasClass('hidy'))
+		{
+			$((qb)[i]).removeClass('hidy');
+		}
+	}
+
+	i=0;
+	th=this;
+	$(th).timer =setInterval(function(){
+
+			l=$(qb).length;
+
+			//elongate to place then set size to normal width
+			$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});
+
+			//check mod count of list length of inputs reaches 0
+			i= ((i+1)%(l));
+			if (i==0) 
+			{
+				clearInterval($(th).timer);
+//				getQuizTimer();
+			}
+		},500);
+
+
+//	});
+
+}); // --.gQ
 //display addition addguest info checkboxes
 $('#addguest').click(function()
 	{

@@ -2460,7 +2460,7 @@ function getQuizTimer()
 	var t=0;
 	var l=0;
 //	alert('length'+qblen);
-//	hideQuiz();
+	hideQuiz();
 	for (i=0;i<qblen;i++)
 	{
 
@@ -2926,7 +2926,7 @@ function getQuiz()
 			if (i==0) 
 			{
 				clearInterval(t);
-				getQuizTimer();
+				//getQuizTimer();
 			}
 		},500);
 //t=setTimeout(2200);
