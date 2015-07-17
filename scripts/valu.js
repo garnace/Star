@@ -375,7 +375,7 @@ $("#gQ").click(function(){
 	var t=0;
 	var l=0;
 	var th;
-	alert('length'+qblen);
+	alert('length'+qblen+':'+$(this).val());
 	for (i=0;i<qblen;i++)
 	{
 
@@ -387,7 +387,10 @@ $("#gQ").click(function(){
 
 	i=0;
 	th=this;
-	$(th).timer =setInterval(function(){
+//	$(th).timer =setInterval(function(){
+//	$('#gQ').timer =setInterval(function(){
+//	$('#gQ').dataset.timer =setInterval(function(){
+	$('#gQ').data('timer',setInterval(function(){
 
 			l=$(qb).length;
 
@@ -398,10 +401,13 @@ $("#gQ").click(function(){
 			i= ((i+1)%(l));
 			if (i==0) 
 			{
-				clearInterval($(th).timer);
+//				clearInterval($(th).timer);
+//				clearInterval($('#gQ').timer);
+				clearInterval($('#gQ').data('timer'));
 //				getQuizTimer();
 			}
-		},500);
+//		},500);
+		},500));
 
 
 //	});
