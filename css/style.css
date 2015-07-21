@@ -267,7 +267,8 @@ a.tooltipe > span:after
 	height:0px;
 	position:absolute;
 	top:50%;
-	margin-top:-50px;
+//leave out to see edge corner on top
+//	margin-top:-50px;
 	right:100%;
 //	left:-20%;
 //	background:#ffaa0a;
@@ -1349,6 +1350,37 @@ http://www.richardshepherd.com/flickr.html
 	border-bottom:8px solid transparent;
 	
 }
+
+.spoutt{
+	background-color:#0000FF;
+	display:inline;
+//	width:auto;
+//	height:auto;
+	width:20%;
+//	height:20%;
+	float:left;
+	position:relative;
+	margin: 3px 3px 3px 20px;
+//	padding: 3px 3px 3px 0;
+
+}
+
+.spoutt:after{
+	width:0;
+	height:0;
+	content:"";
+	position:absolute;
+	right:100%;	
+	top:50%;
+	margin-top:-8px;
+	border-right:18px solid #FF0000;
+	border-top:14px solid transparent;
+	border-bottom:8px solid transparent;
+	
+}
+
+
+
 .spinn{
 	
 	background-color:#00AA00;
@@ -2113,8 +2145,8 @@ a.tooltipp > span:after
 	width:0px;
 	height:0px;
 	position:absolute;
-//	top:50%;
-	top:10%;
+	top:50%;
+//	top:10%;
 	margin-top:-50px;
 //instead of center
 //	bottom:10%;
@@ -2141,8 +2173,8 @@ a.tooltipp > span:before
 	width:0px;
 	height:0px;
 	position:absolute;
-//	top:50%;
-	top:10%;
+	top:50%;
+//	top:10%;
 	margin-top:-50px;
 //instead of center
 //	bottom:10%;
@@ -2153,8 +2185,8 @@ a.tooltipp > span:before
 //	left:-20%;
 //	background:#ffaa0a;
 //	border-right:20px solid #fffa30;
-	border-right:20px solid #ffaa0a;
-	border-top:50px solid transparent;
+	border-right:17px solid #ffccca;
+	border-top:60px solid transparent;
 //	overflow:visible;
 	border-bottom:50px solid transparent;
 	z-index:22;

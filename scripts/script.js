@@ -2451,6 +2451,9 @@ function getQuizTimer()
 {
 
 	var qb = $('input[class*=qin]');
+	var qs= $('.spinn');
+//	var qso= $('.spout');
+	var qso= $('.spoutt');
 
 	var qblen= $(qb).length;	
 //	var qblen= qb.length;	
@@ -2460,7 +2463,7 @@ function getQuizTimer()
 	var t=0;
 	var l=0;
 //	alert('length'+qblen);
-	hideQuiz();
+//	hideQuiz();
 	for (i=0;i<qblen;i++)
 	{
 
@@ -2480,12 +2483,16 @@ function getQuizTimer()
 			l=$(qb).length;
 
 			//elongate to place then set size to normal width
-			$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});
+//			$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});
+			$(qs).animate({width: '-=5'},200).animate({width:'-=20'},200);
 
 			//check mod count of list length of inputs reaches 0
 			i= ((i+1)%(l));
+//			$(qs).html(i.toString());
+			$(qso).html(i.toString()).wrapInner("<center></center>");
 			if (i==0) 
 			{
+//			$(qs).animate({width: '-=5'},200).animate({width:'+=20'},200);
 				clearInterval(t);
 			}
 		},500);

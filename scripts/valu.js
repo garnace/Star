@@ -404,7 +404,7 @@ $("#gQ").click(function(){
 //				clearInterval($(th).timer);
 //				clearInterval($('#gQ').timer);
 				clearInterval($('#gQ').data('timer'));
-//				getQuizTimer();
+				getQuizTimer();
 			}
 //		},500);
 		},500));

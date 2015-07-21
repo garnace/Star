@@ -238,7 +238,7 @@ hlhklh
           <div class="controls">
 <p class="tblb">
 		<!--input class="btn btn-large btn-success col-sm-12" value="get quiz" onclick="getQuiz();"-->
-           <span class="spinn">bar</span><span class="spout">hlhklh</span>&nbsp;
+           <span class="spinn">bar</span><span class="spoutt">hlhklh</span>&nbsp;
 
            </p>
           </div>
