@@ -363,6 +363,8 @@ $(function(){
 //overlay for about
 $("input[rel]").overlay();
 
+
+// Quiz timer
 $("#gQ").click(function(){
 
 	var qb = $('input[class*=qin]');

@@ -1127,6 +1127,23 @@ background-image:url('../images/ss054.gif');
 	padding:10px 25px 15px 10px;
 //	padding: 0 5px 0 5px;
 }
+
+.regTRadx11
+{
+	float:left;
+	display:inline;
+//	width:200px;
+	width:20%;
+//	width:auto;
+	background-color:yellow;
+//	margin: 0 5px 5px 20px;
+	margin: 0 auto 0 0;
+//	margin: 0 auto 0 auto;
+	padding:10px 25px 15px 10px;
+//	padding: 0 5px 0 5px;
+}
+
+
 .regTRadx2
 {
 	float:left;
@@ -1352,18 +1369,47 @@ http://www.richardshepherd.com/flickr.html
 }
 
 .spoutt{
-	background-color:#0000FF;
+	background-color:#00faFF;
+//ch	display:inline;
 	display:inline;
-//	width:auto;
-//	height:auto;
-	width:20%;
-//	height:20%;
+	width:auto;
+	height:auto;
+//	width:20%;
+//	height:100%;
+//ch	float:left;
 	float:left;
+//ch	position:relative;
+	overflow:visible;
 	position:relative;
 	margin: 3px 3px 3px 20px;
+//ch	padding: 3px 3px 3px 0;
+	padding: 28px 13px 13px 20px;
+//	border: 12px 13px 13px 13px;
+}
+
+.spouti{
+	background-color:#0000FF;
+//ch	display:inline;
+	display:block;
+//	width:auto;
+//	height:auto;
+
+
+//	width:20px;
+//	height:25px;
+
+	width:80%;
+	height:80%;
+	top: 0;
+	left:0;
+//	float:left;
+//ch	position:relative;
+	position:absolute;
+	margin: 3px 3px 3px 3px;
 //	padding: 3px 3px 3px 0;
 
 }
+
 
 .spoutt:after{
 	width:0;
@@ -1372,10 +1418,10 @@ http://www.richardshepherd.com/flickr.html
 	position:absolute;
 	right:100%;	
 	top:50%;
-	margin-top:-8px;
+	margin-top:-24px;
 	border-right:18px solid #FF0000;
-	border-top:14px solid transparent;
-	border-bottom:8px solid transparent;
+	border-top:24px solid transparent;
+	border-bottom:18px solid transparent;
 	
 }
 
@@ -1388,7 +1434,7 @@ http://www.richardshepherd.com/flickr.html
 	float:left;
 //	width:auto;
 //	height:auto;
-	width:40%;
+	width:60%;
 //	height:20%;
 
 	position:relative;

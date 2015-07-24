@@ -238,13 +238,72 @@ hlhklh
           <div class="controls">
 <p class="tblb">
 		<!--input class="btn btn-large btn-success col-sm-12" value="get quiz" onclick="getQuiz();"-->
-           <span class="spinn">bar</span><span class="spoutt">hlhklh</span>&nbsp;
+           <span class="spinn">bar</span><span class="spoutt"><span class="spouti">hlhklh</span></span><!--span class="spinn">bar</span><span class="spoutt">hhhhh</span-->&nbsp;
 
            </p>
-          </div>
+
+
+          </div> <!-- /.controls-->
          </div><!-- /.row inner-->
+             <div class="row">
+
+//--------------
+
+	<div class="regTRadx1">
+	  <p  class="tbl">
+		<input type="radio" id="regTRad2" name="regTable" value="yellow"  />
+		<label for="regTRad2" style="display:inline;" id="lblTR2">Table 3(2 seats left)</label>
+
+</br>
+</br>
+	</p>
+	  <p  class="tbl">
+		<input type="radio" id="regTRad3" name="regTable" value="orange" />
+		<label for="regTRad3" style="display:inline;" id="lblTR3">Table 4 (3 Seats Left)</label>
+
+		<br/>
+		<br/>
+	</p>
+
+		<!--input type="button" id="regTxBut1" name="regTxBut1" value="Select Dish" onclick="getSectionLO(0);" style="font-size:12px;"/-->
 
 
+
+
+
+
+
+	</div><!-- .regRadx1-->
+
+	<div class="regTRadx11">
+	  <p  class="tbl">
+		<input type="radio" id="regTRad2" name="regTable" value="yellow"  />
+		<label for="regTRad2" style="display:inline;" id="lblTR2">Table 3(2 seats left)</label>
+
+</br>
+</br>
+	</p>
+	  <p  class="tbl">
+		<input type="radio" id="regTRad3" name="regTable" value="orange" />
+		<label for="regTRad3" style="display:inline;" id="lblTR3">Table 4 (3 Seats Left)</label>
+
+		<br/>
+		<br/>
+	</p>
+
+		<!--input type="button" id="regTxBut1" name="regTxBut1" value="Select Dish" onclick="getSectionLO(0);" style="font-size:12px;"/-->
+
+
+
+
+
+
+
+	</div><!-- .regRadx11-->
+
+
+
+</div> <!-- /.row inner-->
         </div><!-- /.form-group-->
 
 

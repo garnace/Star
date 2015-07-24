@@ -2454,14 +2454,19 @@ function getQuizTimer()
 	var qs= $('.spinn');
 //	var qso= $('.spout');
 	var qso= $('.spoutt');
+	var qsoi= $('.spouti');
 
 	var qblen= $(qb).length;	
 //	var qblen= qb.length;	
-
+	var dne=0;
 	var i=0;
+	var ij=0;
 	var j=0;
 	var t=0;
 	var l=0;
+	var lj=5;
+	var cd = 0;
+
 //	alert('length'+qblen);
 //	hideQuiz();
 	for (i=0;i<qblen;i++)
@@ -2478,24 +2483,55 @@ function getQuizTimer()
 //		t= setTimeout(function(){$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'})},500);
 //		t= setInterval(function(){$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});i= (i+1) %lblen;if (i==0) clearInterval(t);},500);
 		i=0;
+
+		//30 seconds
+//		l=$(qb).length *10;
+		l=$(qb).length *50;
+
+		//count down to be 30
+		cd = (l/10);
+
+
 //		t= setInterval(function(){i= (i+1) %lblen; if (i==0){clearInterval(t);exit();}$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});},500);
 		t= setInterval(function(){
-			l=$(qb).length;
-
+			
 			//elongate to place then set size to normal width
 //			$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});
-			$(qs).animate({width: '-=5'},200).animate({width:'-=20'},200);
+//			$(qs).animate({width: '-=5'},200).animate({width:'-=20'},200);
+//			$(qs).animate({width: '-=5'},200);
+			if (dne ==0)
+				$(qs).animate({width: '-=2'});
 
-			//check mod count of list length of inputs reaches 0
+			// check mod count of list length of inputs reaches 0
+			// every 30 (or 150) pseudoseconds
 			i= ((i+1)%(l));
+			
+			// counter decrements every 5 seconds.
+			ij = ( i % lj);
 //			$(qs).html(i.toString());
-			$(qso).html(i.toString()).wrapInner("<center></center>");
+			if (ij == 0)
+			{
+//				$(qso).html(i.toString()).wrapInner("<center></center>");
+//				$(qso).html(cd.toString()).wrapInner("<center></center>");
+			$(qsoi).html(cd.toString()).wrapInner("<center></center>");
+
+				cd--;
+			}
+//			$(qsoi).html(i.toString()).wrapInner("<center></center>");
 			if (i==0) 
 			{
 //			$(qs).animate({width: '-=5'},200).animate({width:'+=20'},200);
+				dne=1;
+				alert("done");
+
 				clearInterval(t);
 			}
-		},500);
+			if (dne == 1)
+			{
+				alert("dne");
+			}
+//		},500);
+		},100);
 //t=setTimeout(2200);
 //	if (t) t=clearTimeout(t);
 
