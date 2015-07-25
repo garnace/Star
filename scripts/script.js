@@ -2451,6 +2451,7 @@ function getQuizTimer()
 {
 
 	var qb = $('input[class*=qin]');
+	var qbd= $('div[class*=regTRadx1]');
 	var qs= $('.spinn');
 //	var qso= $('.spout');
 	var qso= $('.spoutt');
@@ -2500,7 +2501,9 @@ function getQuizTimer()
 //			$(qs).animate({width: '-=5'},200).animate({width:'-=20'},200);
 //			$(qs).animate({width: '-=5'},200);
 			if (dne ==0)
-				$(qs).animate({width: '-=2'});
+				$(qbd).animate({width: '-=2'});
+//				$(qs).animate({width: '-=2'});
+
 
 			// check mod count of list length of inputs reaches 0
 			// every 30 (or 150) pseudoseconds

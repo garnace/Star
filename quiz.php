@@ -228,7 +228,7 @@ hlhklh
            <img class="img-responsive" src="images/Yoursky.gif"/>
 
         </div>
-        <div class="form-group col-sm-3">
+        <div class="form-group col-sm-4">
          <div class="row">
            <p class="tbl">
 hlhklh
@@ -247,7 +247,7 @@ hlhklh
          </div><!-- /.row inner-->
              <div class="row">
 
-//--------------
+//----
 
 	<div class="regTRadx1">
 	  <p  class="tbl">
@@ -275,7 +275,7 @@ hlhklh
 
 	</div><!-- .regRadx1-->
 
-	<div class="regTRadx11">
+	<div class="regTRadx9">
 	  <p  class="tbl">
 		<input type="radio" id="regTRad2" name="regTable" value="yellow"  />
 		<label for="regTRad2" style="display:inline;" id="lblTR2">Table 3(2 seats left)</label>
@@ -283,14 +283,22 @@ hlhklh
 </br>
 </br>
 	</p>
+
+
+<span class="spoutt"><span class="spouti">hlhklh</span></span>
+<br/>
+<br/>
+									<div class="clearfix"></div>
+
 	  <p  class="tbl">
+		<input class="btn btn-large btn-info" type="button" value="Mars" />
 		<input type="radio" id="regTRad3" name="regTable" value="orange" />
 		<label for="regTRad3" style="display:inline;" id="lblTR3">Table 4 (3 Seats Left)</label>
 
 		<br/>
 		<br/>
 	</p>
-
+<span class="spoutt"><span class="spouti">hlhklh</span></span>
 		<!--input type="button" id="regTxBut1" name="regTxBut1" value="Select Dish" onclick="getSectionLO(0);" style="font-size:12px;"/-->
 
 
