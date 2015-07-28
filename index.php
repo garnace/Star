@@ -832,7 +832,7 @@ include ('./headerg.php');
 <div id="tabs-3">Upload
 
 <div id="frmUpload">
-<form action = "." method="post" id="starUp" name="starUp" enctype="multipart/form-data">
+<form action = "up.php" method="post" id="starUp" name="starUp" enctype="multipart/form-data">
     <fieldset>
         <legend>Upload picture</legend>
 	        <p>

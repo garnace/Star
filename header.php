@@ -424,6 +424,7 @@ function getM()
 												<a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="listSites(0);"><img src="img/nav-menu/nav5.jpg" class="img-responsive" alt="" />Events  Pages <b class="caret"></b></a>
 												<ul class="dropdown-menu">
 													<li><a href="error.html">404 Error</a></li>
+													<li><a href="#tabs-3" onclick="getSFeedTerm(3)">Upload</a></li>
 													<li><a href="0-base.html">Blank Page</a></li>
 													<li><a href="blog.html">Blog</a></li>
 													<li><a href="blog-single.html">Blog Single</a></li>
