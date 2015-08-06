@@ -3260,7 +3260,7 @@ var liStringEttb="-</a></span><div class=\"clearfix\"></div></div>";
 		    		    document.getElementById("imagesky").style.display="none";
 				    //NO ALERalert(htsamp);
 //	      }).error(function(){alert("An ror has occurreddddd");return;}).complete(function()
-	      }).fail(function(xhr,text,error){alert("An rordd"+error);return;}).always(function()
+	      }).fail(function(xhr,text,error){alert("An "+xhr.status+"rordd"+error);return;}).always(function()
 	     {    });  // $.get
 
     }   // for urlArr
