@@ -1,0 +1,9 @@
+
+Review the following information, then click Create Group to proceed.
+Group Name
+Administrators
+Edit Group Name
+Policies
+arn:aws:iam::aws:policy/AdministratorAccess
+Edit Policies
+

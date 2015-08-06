@@ -3259,7 +3259,7 @@ var liStringEttb="-</a></span><div class=\"clearfix\"></div></div>";
 
 		    		    document.getElementById("imagesky").style.display="none";
 				    //NO ALERalert(htsamp);
-	      }).error(function(){alert("An error has occurreddddd");return;}).complete(function()
+	      }).error(function(){alert("An ror has occurreddddd");return;}).complete(function()
 	     {    });  // $.get
 
     }   // for urlArr
