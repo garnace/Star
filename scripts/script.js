@@ -2998,7 +2998,8 @@ function getMatchJE(mId)
     var urlAL=0;
     var urlM="http://localhost:8280/StarServer/journals-and-newsletters.html";
 //    var urlA="http://localhost:8280/StarServer/stargazing.htm";
-    var urlA="http://localhost:8280/StarAdvisor/calendr.html";
+//    var urlA="http://localhost:8280/StarAdvisor/calendr.html";
+    var urlA="http://54.68.234.173:8280/StarAdvisor/calendr.html";
 	    
     var htr="";
     //        var term="ature";
