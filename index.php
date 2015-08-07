@@ -376,6 +376,20 @@ include ('./headerg.php');
 
 		</div><!--controls-->
 	</div><!--form-group-->
+
+	<div  class="form-group col-sm-3"  >
+
+		<div class="controls">
+
+		<!--input class="btn btn-large btn-success" type="submit" value="Submit!" -->
+		<!--input class="btn btn-large btn-success"  value="Display it!" onclick="getListDBB(0);"-->
+                           <p><span id="espanEmail" class="espan"></span></p>
+
+
+		</div><!--controls-->
+	</div><!--form-group-->
+
+
 	</div><!--row-->
 	<div class="controls-row">
 

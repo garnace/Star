@@ -81,7 +81,7 @@ try{
     $pdo->query($querydR);
     $pdo->query($querydP);
     $pdo->query($querydT);
-//    $pdo->query($querydTT);
+    $pdo->query($querydTT);
 
     //create
     $pdo->query($queryTTables);
