@@ -26,11 +26,12 @@ $winQuerylR="LOAD DATA INFILE 'C:/StarGit/Star/res.txt' INTO TABLE reserve FIELD
 $querydP="DROP TABLE IF EXISTS uaccount";
 $querydR="DROP TABLE IF EXISTS reserve";
 $querydT="DROP TABLE IF EXISTS tables";
-
+$querydTT="DROP TABLE IF EXISTS Ttables";
 
 $queryReserve=" CREATE TABLE reserve (id int(6) NOT NULL auto_increment ,email varchar(30) NOT NULL,tableN varchar(30) NOT NULL,seatN varchar(30) NOT NULL,meal varchar(30) NOT NULL,resTime DATETIME NOT NULL,resFee DECIMAL(10,2) NOT NULL,PRIMARY KEY (id),FOREIGN KEY (email) REFERENCES uaccount (email),KEY id_2 (id))";
 
 $queryTables="CREATE TABLE tables (id int(6) NOT NULL auto_increment ,tableN varchar(30) NOT NULL,seatN varchar(30) NOT NULL,seatAvail varchar(10) NOT NULL,PRIMARY KEY (id),KEY id_2 (id))";
+$queryTTables="CREATE TABLE Ttables (id int(6) NOT NULL auto_increment ,tableN varchar(30) NOT NULL,seatN varchar(30) NOT NULL,seatAvail varchar(10) NOT NULL,PRIMARY KEY (id),KEY id_2 (id))";
 
 
 //$queryP=" CREATE TABLE contacts (id int(6) NOT NULL auto_increment,first varchar(15) NOT NULL,last varchar(15) NOT NULL,phone varchar(20) NOT NULL,mobile varchar(20) NOT NULL,fax varchar(20) NOT NULL,email varchar(30) NOT NULL,web varchar(30) NOT NULL,PRIMARY KEY (id, email),UNIQUE id (id),KEY id_2 (id))";
@@ -80,8 +81,10 @@ try{
     $pdo->query($querydR);
     $pdo->query($querydP);
     $pdo->query($querydT);
+    $pdo->query($querydTT);
 
     //create
+    $pdo->query($queryTTables);
     $pdo->query($queryPassP);
     $pdo->query($query);
     $pdo->query($queryTables);

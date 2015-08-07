@@ -3783,7 +3783,7 @@ if (window.File && window.FileReader && window.Blob)
 	}
 
 }
-*/
+
 
 	var file = new XMLHttpRequest();
 	file = open("GET","co.txt",false);
@@ -3800,7 +3800,7 @@ if (window.File && window.FileReader && window.Blob)
 		}
 	}
 
-
+*/
 	$.getJSON("http://localhost:8280/StarAdvisor/readph.php?fName="+dbId+"&callback=?",function(data){
    alert ("hi");
 		$.each(data.file,function(i,item){
@@ -3903,7 +3903,7 @@ if (window.File && window.FileReader && window.Blob)
 	}
 
 }
-*/
+
 
 	var file = new XMLHttpRequest();
 	file = open("GET","co.txt",false);
@@ -3919,7 +3919,7 @@ if (window.File && window.FileReader && window.Blob)
 
 		}
 	}
-
+*/
 
 	$.getJSON("http://localhost:8280/StarAdvisor/readph.php?fName="+dbId+"&callback=?",function(data){
    alert ("hi");
