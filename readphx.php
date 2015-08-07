@@ -12,7 +12,9 @@ header('Content-type: application/json');
 
 
 //$fileNames[] = (isset ($_GET["fName[]"]) && !empty($_GET["fName[]"])) ? $_GET["fName[]"] : null;
-$fileNames = (isset ($_GET["fName"]) && !empty($_GET["fName"])) ? $_GET["fName"] : null;
+//$fileNames = (isset ($_GET["fName"]) && !empty($_GET["fName"])) ? $_GET["fName"] : null;
+$fileNames = array('file0'=> 'co.txt','file1' => 'ac.txt'):
+
 $fc=0;
 
 foreach ($fileNames as $fileName){

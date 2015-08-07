@@ -459,7 +459,7 @@ function getM()
 											<li class="dropdown">
 												<a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="listSites(0);"><img src="img/nav-menu/nav5.jpg" class="img-responsive" alt="" />Pages <b class="caret"></b></a>
 												<ul class="dropdown-menu">
-													<li><a href="#" onclick="getSFeedTerm(1)">Admin</a></li>
+													<li><a href="index.php#tabs-1" onclick="getSFeedTerm(1)">Admin</a></li>
 													<li><a href="#tabs-3" onclick="getSFeedTerm(3)">Upload</a></li>
 													<li><a href="#cartd" onclick="getSFeedTerm(1)">Events</a></li>
 													<li><a href="#journ" onclick="listSites(0);">Cached Sites</a></li>
