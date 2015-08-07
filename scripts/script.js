@@ -3677,7 +3677,8 @@ function getListDel(dbId)
 
 function loadDBB(dbId)
 {
-	$.getJSON("http://localhost:8280/StarAdvisor/read.php?emaild="+dbId+"&callback=?",
+//	$.getJSON("http://localhost:8280/StarAdvisor/read.php?emaild="+dbId+"&callback=?",
+	$.getJSON("http://54.68.234.173:8280/StarAdvisor/read.php?emaild="+dbId+"&callback=?",
 	function(data){
 		$.each(data.users ,function(i,item){
 			$("#espanEmail").html(item.message);
