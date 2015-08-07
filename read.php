@@ -81,7 +81,7 @@ try{
     $pdo->query($querydR);
     $pdo->query($querydP);
     $pdo->query($querydT);
-    $pdo->query($querydTT);
+//    $pdo->query($querydTT);
 
     //create
     $pdo->query($queryTTables);
@@ -115,7 +115,7 @@ try{
         }
 
 $iB=array();
-$iB['users']=array(array("message"=>"DtaBase loaded"));
+$iB['users']=array(array("message"=>":".$_SERVER['DOCUMENT_ROOT']."DtaBase loaded"));
 //$iB['users']=$iA;
 
 
