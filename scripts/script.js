@@ -2737,7 +2737,7 @@ function getEndAniM(sId)
 function getCachM(sId)
 {
 //	alert(htReal[2].substr(0,-1));
-	alert(htReal[2].substr(0,htReal[2].length-1));
+	alert(hostUrl+htReal[2].substr(0,htReal[2].length-1));
 
 	var urlTerms = '';
 	for (var i=0;i< sId.length;i++)
