@@ -57,7 +57,7 @@ $curlp=NULL;
 unset($fp);
 unset($curlp);
 }catch (Exception $e){
-    $result = 'err site:'.$snameI.'::'.$e->getMessage().$fnames;
+    $result = 'err'.$SERVER['DOCUMENT_ROOT'].' site:'.$snameI.'::'.$e->getMessage().$fnames;
 
     break;//break foreach loop
     }
