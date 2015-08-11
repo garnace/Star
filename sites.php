@@ -7,7 +7,22 @@ header("Content-type:application/json");
 $sname= isset ($_POST["sName"]) ? $_POST["sName"]: (isset($_GET["sName"]) ? $_GET["sName"] : "");
 
 $fname="x.txt";
+try{
+    $ft="test.txt";
+if (!$fp = @fopen($ft,'w')){
+    throw new Exception("could not write");
+}
+if (!@fwrite($fp,'w')){
+    throw new Exception("could not write");
+}
 
+
+fclose($fp);
+$fp=NULL;
+unset($fp);
+}catch(Exception $ee){
+    $res=$ee->getMessage();
+}
 
 //++begin multiple
 foreach ($sname as $snameI){
@@ -71,6 +86,7 @@ unset($curlp);
 $iB = array();
 $iB['users']= array($result);
 $iB['users']= $SERVER['DOCUMENT_ROOT'];
+$iB['users']= array($res);
 
 $callback = (empty($_GET["callback"])) ? 'callback' : $_GET["callback"];
 
