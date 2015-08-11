@@ -10,10 +10,10 @@ $fname="x.txt";
 try{
     $ft="test.txt";
 if (!$fp = @fopen($ft,'w')){
-    throw new Exception("could not write");
+    throw new Exception("Copencould not write");
 }
 if (!@fwrite($fp,'w')){
-    throw new Exception("could not write");
+    throw new Exception("cWriould not write");
 }
 
 
