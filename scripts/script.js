@@ -6,9 +6,12 @@
 //Project: Star Advisor
 //----------------------------
 
+hostUrl = window.location.href.split('\/')[2];
 
-var serverLocOrig="http://localhost:8280/StarServer/";
-var serverLoc="http://localhost:8280/StarServer/";
+//var serverLocOrig="http://localhost:8280/StarServer/";
+var serverLocOrig="http://"+hostUrl+"/StarServer/";
+//var serverLoc="http://localhost:8280/StarServer/";
+var serverLoc="http://"+hostUrl+"/StarServer/";
 var blog1="blogs.html";
 var cornell="journals-and-newsletters.html";
 var starg="stargazing.htm";
@@ -1867,15 +1870,18 @@ function getMatchCi(mId)
     var urlArr=[];
     var urlAL=0;
 
-    var urlM="http://localhost:8280/StarServer/journals-and-newsletters.html";
-    var urlA="http://localhost:8280/StarServer/stargazing.htm";
+  //  var urlM="http://localhost:8280/StarServer/journals-and-newsletters.html";
+    var urlM="http://"+hostUrl+"/StarServer/journals-and-newsletters.html";
+//    var urlA="http://localhost:8280/StarServer/stargazing.htm";
+    var urlA="http://"+hostUrl+"/StarServer/stargazing.htm";
 
 
     //    var urlM=htSarr[0];
     //    var urlA=htSArr[2];
 
 	  //	  	    var urlBl=htSarr[1];
-    var urlBl="http://localhost:8280/StarServer/cities.html";
+  //  var urlBl="http://localhost:8280/StarServer/cities.html";
+    var urlBl="http://"+hostUrl+"/StarServer/cities.html";
     var htr="";
     //        var term="ature";
     var term=mId;
@@ -2060,8 +2066,10 @@ function getMatchBl(mId)
     var urlArr=[];
     var urlAL=0;
 
-    var urlM="http://localhost:8280/StarServer/journals-and-newsletters.html";
-    var urlA="http://localhost:8280/StarServer/stargazing.htm";
+  //  var urlM="http://localhost:8280/StarServer/journals-and-newsletters.html";
+    var urlM="http://"+hostUrl+"/StarServer/journals-and-newsletters.html";
+//    var urlA="http://localhost:8280/StarServer/stargazing.htm";
+    var urlA="http://"+hostUrl+"/StarServer/stargazing.htm";
 
 
     //    var urlM=htSarr[0];
@@ -2738,12 +2746,14 @@ function getCachM(sId)
 	}	
 	if (urlTerms.substr(-1) == '&')
 		urlTerms = urlTerms.substr(0,urlTerms.length-1);
-	alert(urlTerms);
+	alert("TERMS"+urlTerms);
 //	return;
-	$.getJSON("http://localhost:8280/StarAdvisor/sites.php?"+urlTerms+"&callback=?",function(data){
+//	$.getJSON("http://localhost:8280/StarAdvisor/sites.php?"+urlTerms+"&callba//ck=?",function(data){
+	$.getJSON("http://"+hostUrl+"/StarAdvisor/sites.php?"+urlTerms+"&callback=?",function(data){
 
-//	$.getJSON("http://localhost:8280/StarAdvisor/sites.php?sName="+sId+"&callback=?",function(data){
-		alert(data.users);
+//	$.getJSON("http://localhost:8280/StarAdvisor/sites.php?sName="+sId+"&cal//lback=?",function(data){
+//	$.GETJSON("HTTP://:8280/StarAdvisor/sites.php?sName="+sId+"&callback=?",function(data){
+		alert(hostUrl+data.users);
 
 	});
 
@@ -3677,8 +3687,14 @@ function getListDel(dbId)
 
 function loadDBB(dbId)
 {
+//	var hostUrl = substr(window.location.href());
+	alert ("here");
+//	var hostUrl = window.location.href.split('\/')[2];
+	
+	alert (hostUrl);
 //	$.getJSON("http://localhost:8280/StarAdvisor/read.php?emaild="+dbId+"&callback=?",
-	$.getJSON("http://54.68.234.173:8280/StarAdvisor/read.php?emaild="+dbId+"&callback=?",
+	$.getJSON("http://"+hostUrl+"/StarAdvisor/read.php?emaild="+dbId+"&callback=?",	
+//	$.getJSON("http://54.68.234.173:8280/StarAdvisor/read.php?emaild="+dbId+"&callback=?",
 	function(data){
 		$.each(data.users ,function(i,item){
 			$("#espanEmail").html(item.message);
@@ -3802,7 +3818,8 @@ if (window.File && window.FileReader && window.Blob)
 	}
 
 */
-	$.getJSON("http://localhost:8280/StarAdvisor/readph.php?fName="+dbId+"&callback=?",function(data){
+//	$.getJSON("http://localhost:8280/StarAdvisor/readph.php?fName="+dbId+"&callback=?",function(data){
+	$.getJSON("http://"+hostUrl+"/StarAdvisor/readph.php?fName="+dbId+"&callback=?",function(data){
    alert ("hi");
 		$.each(data.file,function(i,item){
 			
@@ -3922,7 +3939,8 @@ if (window.File && window.FileReader && window.Blob)
 	}
 */
 
-	$.getJSON("http://localhost:8280/StarAdvisor/readph.php?fName="+dbId+"&callback=?",function(data){
+//	$.getJSON("http://localhost:8280/StarAdvisor/readph.php?fName="+dbId+"&callback=?",function(data){
+	$.getJSON("http://"+hostUrl+"/StarAdvisor/readph.php?fName="+dbId+"&callback=?",function(data){
    alert ("hi");
 		$.each(data.file,function(i,item){
 			
@@ -4143,7 +4161,8 @@ function writeDBB(dbId)
 
 	alert("writedb");
 	$(document).ready(function(){
-	$.getJSON("http://localhost:8280/StarAdvisor/write.php?emaild="+dbId+"&callback=?",
+//	$.getJSON("http://localhost:8280/StarAdvisor/write.php?emaild="+dbId+"&callback=?",
+	$.getJSON("http://"+hostUrl+"/StarAdvisor/write.php?emaild="+dbId+"&callback=?",
 	function(data){
 
 		$.each(data.users,function(i,item){//should only show error item
@@ -4177,7 +4196,8 @@ function getAdminSession(dbId,passId)
 
 //	alert("writedb");
 	$(document).ready(function(){
-	$.getJSON("http://localhost:8280/StarAdvisor/admintag.php?emaild="+dbId+"&pass="+passId+"&callback=?",
+//	$.getJSON("http://localhost:8280/StarAdvisor/admintag.php?emaild="+dbId+"&pass="+passId+"&callback=?",
+	$.getJSON("http://"+hostUrl+"/StarAdvisor/admintag.php?emaild="+dbId+"&pass="+passId+"&callback=?",
 	function(data){
 
 		$.each(data.admins,function(i,item){//should only show error item
@@ -4211,7 +4231,8 @@ function getListTable(dbID)
 	$(document).ready(function(){
 //	alert("listtable");
 //	getLoc('#fieldT1');
-	$.getJSON("http://localhost:8280/StarAdvisor/readTable.php?callback=?",
+//	$.getJSON("http://localhost:8280/StarAdvisor/readTable.php?callback=?",
+	$.getJSON("http://"+hostUrl+"/StarAdvisor/readTable.php?callback=?",
 		function(data){
 			$.each(data.tables,function(i,item){
 //			alert("talist");
@@ -4261,7 +4282,8 @@ $("#yournameb").val("hello");
 $("#yournamea").val("hello");
 
 
-$.getJSON("http://localhost:8280/StarAdvisor/myf3.php?callback=?",
+//$.getJSON("http://localhost:8280/StarAdvisor/myf3.php?callback=?",
+$.getJSON("http://"+hostUrl+"/StarAdvisor/myf3.php?callback=?",
 function(data){
 
 
@@ -4344,7 +4366,8 @@ $("#yournamea").val("hello");
 
 //$.getJSON($phURL,function(data){
 //$.getJSON("http://localhost:8280/StarAdvisor/myf3.php",
-$.getJSON("http://localhost:8280/StarAdvisor/myf3.php?callback=?",
+//$.getJSON("http://localhost:8280/StarAdvisor/myf3.php?callback=?",
+$.getJSON("http://"+hostUrl+"/StarAdvisor/myf3.php?callback=?",
 function(data){
 //    $.each(data.items,function(i,item){
 //$("#yournamea").val("hello");
@@ -4713,7 +4736,8 @@ function getMatchSkyFull(skId)
     //    htski=htski+"<img alt=\"alter\" src=\""+serverLoc+"Yoursky"+skId+"_files/Yoursky.gif\" height=\"340\" width=\"340\"/>";
 
 
-    var urlM="http://localhost:8280/StarServer/journals-and-newsletters.html";
+//    var urlM="http://localhost:8280/StarServer/journals-and-newsletters.html";
+    var urlM="http://"+hostUrl+"/StarServer/journals-and-newsletters.html";
     //    var urlSk="http://localhost:8280/s/journals-and-newsletters.html";
     var urlSk=serverLoc+"Yoursky"+skId+".html";
     var htr="";

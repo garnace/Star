@@ -408,6 +408,21 @@ include ('./headerg.php');
 	</div><!--form-group-->
 
 
+	<div  class="form-group col-sm-3"  >
+
+		<div class="controls">
+
+		<!--input class="btn btn-large btn-success" type="submit" value="Submit!" -->
+		<!--input class="btn btn-large btn-success"  value="Display it!" onclick="getListDBB(0);"-->
+		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
+		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfjtDBB('co.txt');"-->
+		<!--input class="btn btn-large btn-success col-sm-12" value="ReadF!" onclick="readfjTest('co.txt');"-->
+<a id="fb2" class="btn btn-large btn-success" style="padding:15px 10 8px 10; padding-top:20;" onclick="getSitesM(2);">Banner</a>
+
+		</div><!--controls-->
+	</div><!--form-group-->
+
+
 
 	</div><!--row-->
 
