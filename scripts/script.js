@@ -2746,7 +2746,7 @@ function getCachM(sId)
 	}	
 	if (urlTerms.substr(-1) == '&')
 		urlTerms = urlTerms.substr(0,urlTerms.length-1);
-	alert("TERMS"+urlTerms);
+	alert("TERMS"+urlTerms+"::"+hostUrl);
 //	return;
 //	$.getJSON("http://localhost:8280/StarAdvisor/sites.php?"+urlTerms+"&callba//ck=?",function(data){
 	$.getJSON("http://"+hostUrl+"/StarAdvisor/sites.php?"+urlTerms+"&callback=?",function(data){
