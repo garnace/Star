@@ -70,6 +70,7 @@ unset($curlp);
 
 $iB = array();
 $iB['users']= array($result);
+$iB['users']= $SERVER['DOCUMENT_ROOT'];
 
 $callback = (empty($_GET["callback"])) ? 'callback' : $_GET["callback"];
 
