@@ -2458,12 +2458,17 @@ function hideQuiz()
 function getQuizTimer()
 {
 
+	//input button
 	var qb = $('input[class*=qin]');
+
+	//input framed in div
 	var qbd= $('div[class*=regTRadx1]');
 	var qs= $('.spinn');
 //	var qso= $('.spout');
+
+
 	var qso= $('.spoutt');
-	var qsoi= $('.spouti');
+	var qsoi= $('.spouti'); //spouti class within spoutt
 
 	var qblen= $(qb).length;	
 //	var qblen= qb.length;	
@@ -3009,7 +3014,8 @@ function getMatchJE(mId)
     var urlM="http://localhost:8280/StarServer/journals-and-newsletters.html";
 //    var urlA="http://localhost:8280/StarServer/stargazing.htm";
 //    var urlA="http://localhost:8280/StarAdvisor/calendr.html";
-    var urlA="http://54.68.234.173:8280/StarAdvisor/calendr.html";
+//    var urlA="http://54.68.234.173:8280/StarAdvisor/calendr.html";
+    var urlA="http://"+hostUrl+"/StarAdvisor/calendr.html";
 	    
     var htr="";
     //        var term="ature";
@@ -3170,7 +3176,12 @@ var liStringEttb="-</a></span><div class=\"clearfix\"></div></div>";
 //			var ite=item.getElementByTagName("span")[0];
 //			$('#cartd').append(liString+item+liStringE);
 			elemk=$(item).clone();
-			if (i == 5){ return false;}
+//uncomment to limmit results
+//			if (i == 5){ return false;}
+
+
+
+
 //startgood			$('#cartd').append($(liStrin).children().children()[0]);
 //			$('#cartd').append($(liStrin).children().children()[0]);
 //			$('#cartd').append($(liStrin).children().children()[0]);

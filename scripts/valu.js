@@ -387,6 +387,8 @@ $("#gQ").click(function(){
 		}
 	}
 
+	// reset counter
+
 	i=0;
 	th=this;
 //	$(th).timer =setInterval(function(){

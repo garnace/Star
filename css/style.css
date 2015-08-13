@@ -2204,14 +2204,18 @@ a.tooltipp > span:after
 //	margin-top:-20%;
 
 
-	right:100%;
+	right:101%;
 //	left:-20%;
 //	background:#ffaa0a;
 //	border-right:20px solid #fffa30;
-	border-right:20px solid #ffaa0a;
-	border-top:50px solid transparent;
+	border-right:15px solid #ffaa0a;
+//	left:50%;
+//	margin-left:-15px solid #ffaa0a;
+//	border-top:50px solid transparent;
+	border-top:48px solid transparent;
 //	overflow:visible;
-	border-bottom:50px solid transparent;
+//	border-bottom:50px solid transparent;
+	border-bottom:48px solid transparent;
 	z-index:21;
 }
 
@@ -2227,6 +2231,7 @@ a.tooltipp > span:before
 	top:50%;
 //	top:10%;
 	margin-top:-50px;
+//	margin-top:-28px;
 //instead of center
 //	bottom:10%;
 //	margin-top:-20%;
@@ -2236,10 +2241,11 @@ a.tooltipp > span:before
 //	left:-20%;
 //	background:#ffaa0a;
 //	border-right:20px solid #fffa30;
-	border-right:17px solid #ffccca;
-	border-top:60px solid transparent;
+	border-right:15px solid #ffccca;
+//	border-right:18px solid #0000ca;
+	border-top:48px solid transparent;
 //	overflow:visible;
-	border-bottom:50px solid transparent;
+	border-bottom:48px solid transparent;
 	z-index:22;
 }
 
