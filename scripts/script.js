@@ -2734,6 +2734,14 @@ function getEndAniM(sId)
 //--	getCachM(htReal);
 }
 
+function getTokenToFile(tId)
+{
+	$.getJSON("http://"+hostUrl+"/StarAdvisor/axtok.php?tkName="+tId+"&callback=?",function(data){
+
+	});
+
+}
+
 /**
 * Use list of site names to pass to json php bridge file to acquire
 * site text data and keep on server up to date.
