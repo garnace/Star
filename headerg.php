@@ -230,10 +230,10 @@ function getM()
     });
   }
 
-/*function logOut()
+function logOut()
 {
-    FB.logout(function(response){});
-    }*/
+    FB.logout(function(response){console.log("Please log in");});
+}
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '937681792957711',
@@ -283,6 +283,7 @@ function getM()
     console.log('Welcome!  Fetching your information.... ');
 //    getTokenToFile(response.authResponse.accessToken);
     FB.api('/me', function(response) {
+//    getTokenToFile(response.authResponse.accessToken);
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
