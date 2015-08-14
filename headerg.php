@@ -230,10 +230,10 @@ function getM()
     });
   }
 
-function logOut()
+/*function logOut()
 {
     FB.logout(function(response){});
-}
+    }*/
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '937681792957711',
@@ -281,7 +281,7 @@ function logOut()
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
-    getTokenToFile(response.authResponse.accessToken);
+//    getTokenToFile(response.authResponse.accessToken);
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
@@ -314,7 +314,7 @@ function logOut()
   data-show-faces="true">
 </div>
 
-<button type="button" class="btn btn-info" onclick="logOut();">Logout</button>
+<!--button type="button" class="btn btn-info" onclick="logOut();">Logout</button-->
     <!--TWITTER BOOTSTRAP TUTORIAL</h1-->
 <!--div id="head" style="text-align: center;" >FoodieSsf<br-->
 
