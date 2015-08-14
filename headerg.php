@@ -315,7 +315,7 @@ function logOut()
   data-show-faces="true">
 </div>
 
-<!--button type="button" class="btn btn-info" onclick="logOut();">Logout</button-->
+<button type="button" class="btn btn-info" onclick="logOut();">Logout</button>
     <!--TWITTER BOOTSTRAP TUTORIAL</h1-->
 <!--div id="head" style="text-align: center;" >FoodieSsf<br-->
 
