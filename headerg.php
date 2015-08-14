@@ -232,7 +232,7 @@ function getM()
 
 function logOut()
 {
-    FB.logout(function(response){console.log("Please log in");});
+    FB.logout(function(response){document.getElementById('status').innerHTML="Please log in";console.log("Please log in");});
 }
   window.fbAsyncInit = function() {
     FB.init({
