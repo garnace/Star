@@ -205,4 +205,480 @@ urchinTracker();
 </script>
 </body>
 </html>
+-----------------------------------
 
+<html>
+ JavaSrcipt Form Validation<head>
+ <script language="JavaScript" type="text/javascript">
+ function validateForm(oForm)
+ {
+ 	//oForm refers to the form which you want to validate
+ 	oForm.onsubmit = function() // attach the function to onsubmit event
+ 	{
+ 		var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+ 		if(oForm.elements['email'].value.length<1)
+ 		{
+ 			alert("You cannot leave the email field empty");
+ 			return false;
+ 		}
+ 		else if(!regex.test(oForm.elements['email'].value))
+ 		{
+ 			alert("Invalid email address format");
+ 			return false;
+ 		}
+ 		return true;
+ 	}
+ }
+ </script>
+ </head>
+ <body>
+ <form name="email_check" method="post">
+ Enter email : <input type="text" name="email" />
+ 
+ <input type="submit" value="Check & Submit" />
+ </form>
+ <script language="JavaScript">
+ new validateForm(document.forms['email_check']);
+ </script>
+ </body>
+ </html>
+
+In the second case, we'll use XMLHTTP to validate the form with the server before submitting.
+Hete the example is a registration form, where we'll validate the existance of the entered username, if the username already exists we'll show an alert else, proceed with form submission.
+
+The HTML code:
+HTML Code:
+
+ <html>
+ JavaSrcipt Form Validation<head>
+ <script language="JavaScript" type="text/javascript">
+ function RemoteRequestObject()
+ {
+ 	var A = false;
+ 	
+ 	try
+ 	{
+ 		A = new ActiveXObject("Msxml2.XMLHTTP");
+ 	}
+ 	catch(e)
+ 	{
+ 		try
+ 		{
+ 			A = new ActiveXObject("Microsoft.XMLHTTP");
+ 		}
+ 		catch(err)
+ 		{
+ 			A = false;
+ 		}
+ 	}
+ 	
+ 	if(!A && typeof(XMLHttpRequest) != 'undefined')
+ 		A = new XMLHttpRequest();
+ 		
+ 	return A;
+ }
+ 
+ function validateUser(oForm)
+ {
+ 	var x = RemoteRequestObject();
+ 	
+ 	oForm.onsubmit = function()
+ 	{
+ 		showMessage(oDiv,2);
+ 		var usr=oForm.elements['usr'].value;
+ 		var url = "ajax.php?usr="+usr;
+ 		x.open("GET",url,true);
+ 		x.onreadystatechange=function()
+ 		{
+ 			if(x.readyState == 4 && x.status == 200)
+ 			{
+ 				var r = x.responseText;
+ 				if(r.indexOf("+OK") == 0)
+ 				{
+ 					oForm.submit();
+ 				}
+ 				else
+ 				{
+ 		 	alert("The chosen username is already in use!\nPlease try another!");
+ 				}
+ 			}
+ 		};
+ 		x.send(null);
+ 		return false;
+ 	}
+ 
+ }
+ </script>
+ </head>
+ <body>
+ <form name="usr_check" method="post">
+ Enter email : <input type="text" name="usr" />
+ 
+ <input type="submit" value="Check & Submit" />
+ </form>
+ <script language="JavaScript">
+ new validateUser(document.forms['usr_check']);
+ </script>
+ </body>
+ </html>
+
+The PHP code:
+PHP Code:
+<?
+ require_once("../config.inc.php");
+ opendb();
+ header("Cache-Control: no-cache, no-store, must-revalidate");
+ if(isset($_GET['usr']))
+ {
+     $usr = trim($_GET['usr']);
+     $sql = "SELECT * FROM users WHERE usr = '$usr'";
+     $result = mysql_query($sql) or die(mysql_error());
+ 
+     if(mysql_num_rows($result)>0)
+     {
+         echo "+OK";
+     }
+     else
+     {
+         echo "-ERR";
+     }
+ }
+ ?>
+Hope this code snippet is useful.
+shabbir like this
+Related Articles
+
+    PHP On-The-Fly!, by Kings in PHP
+    File Version Management in PHP, by Sanskruti in PHP
+
+0
+perrohunter's Avatar, Join Date: May 2006
+perrohunter
+Newbie Member
+7May2006,07:08
+#2
+Can you explain us ! !
+
+I dont know the opendb() function
+
+and its not working either :P
+
+thanks :P
+0
+pradeep's Avatar, Join Date: Apr 2005
+pradeep
+Team Leader
+8May2006,10:45
+#3
+I am really sorry not to include the code of the opendb() function. What the function does is opening a connection to the database. I am including the code below, in case you face any more problem please let me know.
+
+Code: php
+
+function opendb()
+ {
+   global $server,$user,$pass,$db;
+   mysql_connect($server,$user,$pass);
+   mysql_select_db($db);
+ }
+ 
+ function closedb()
+ {
+   mysql_close();
+ }
+
+0
+perrohunter's Avatar, Join Date: May 2006
+perrohunter
+Newbie Member
+9May2006,06:51
+#4
+You think its possible to make a onblur action that send the field over the thing and then send us back a response ?
+
+for example , (taken the idea from invison forums) , when im registering a new user, as soon as he/she release the field ( onblur ) i want to send the info and get a response back to see if the username is right :/
+
+any ideas ?
+0
+pradeep's Avatar, Join Date: Apr 2005
+pradeep
+Team Leader
+9May2006,10:29
+#5
+Yes, its possible to do that.
+Call the remote request function when the text field loses focus.
+Something like this..
+
+Code: JavaScript
+
+function CheckUser(username)
+ {
+    //... do the checking here..return true if exists
+ }
+ 
+ inputfield.onBlur=function()
+ {
+    if(CheckUser(this.value))
+    {
+       alter("This username already exists");
+     }
+ }
+
+
+Happy coding!
+0
+perrohunter's Avatar, Join Date: May 2006
+perrohunter
+Newbie Member
+10May2006,01:55
+#6
+this sounds strange
+
+inputfield.onBlur=function()
+
+
+checking the username would mean that u need java to deliver the username to php so php can check it and then give the answer to javascript right ?
+
+we could send the username trou the get so far, how can we get an answer ?
+
+or how could we only post/get the username with out submiting the whole script ?
+
+thanks XD
+0
+pradeep's Avatar, Join Date: Apr 2005
+pradeep
+Team Leader
+10May2006,11:22
+#7
+You need to use a XMLHttp request to send the data - using either GET or POST - and also receiving the answer.
+Have a look and the first post of this thread to get an idea how to use the XMLHttp object to validate data remotely, without submitting the current form. Also try googling
+
+Happy Coding!
+0
+perrohunter's Avatar, Join Date: May 2006
+perrohunter
+Newbie Member
+11May2006,01:16
+#8
+thanks for all ur answers !
+
+Ya I have already read something abourt xmlhttp on developer.apple.com :P
+
+So far it sounds scary :S
+
+I belife theres a way to halfpost the thing with java script , ill keep researching and post my results here ! ! !
+0
+jhon.312020's Avatar, Join Date: Jun 2007
+jhon.312020
+Newbie Member
+29Jun2007,19:26
+#9
+Hi pradeep..
+
+I read ur forums related to ajax php and ajax script..
+
+I have some doubts in your codings please help me out.
+
+I am new to it...
+
+what is meant by show message..
+
+whether i need any extra codings to run it ...
+
+Cheers
+
+jhon
+0
+shabbir's Avatar, Join Date: Jul 2004
+shabbir
+Go4Expert Founder
+29Jun2007,22:15
+#10
+jhon, Why not have the discussion of the other article in there only.
+Page 1 of 3
+1
+2
+3
+>
+Article Tools
+
+    Rate this Article
+
+    Printable Version
+
+Already a member?
+User Name: 		Save
+Password 		
+Forgot Username/Password?
+Not a member yet?
+Create Your Free Account Now.
+Search Go4Expert
+-----------------------------------------------------
+
+eturns a value of true).
+<script type="text/javascript"> function checkForm(form) { // validation fails if the input is blank if(form.inputfield.value == "") { alert("Error: Input is empty!"); form.inputfield.focus(); return false; } // regular expression to match only alphanumeric characters and spaces var re = /^[\w ]+$/; // validation fails if the input doesn't match our regular expression if(!re.test(form.inputfield.value)) { alert("Error: Input contains invalid characters!"); form.inputfield.focus(); return false; } // validation was successful return true; } </script>
+
+The pre-defined class \w represents any alphanumeric character or the '_' underscore.
+
+The regular expression ^[\w ]+$ will fail if the input is empty as it requires at least one character (because we used + instead of *). The first test in the example is therefore only necessary in order to provide a different error message when the input is blank.
+
+The purpose of a form validation script is to return a boolean value (true or false) to the onsubmit event handler. A value of true means that form will be submitted while a false value will block the form from being submitting. The focus() command is used to set the focus to the problem element.
+
+You can test the above script with different input values using this form:
+Input:
+
+The form is put together as follows:
+<form method="POST" action="form-handler" onsubmit="return checkForm(this);"> <p>Input: <input type="text" size="32" name="inputfield"> <input type="submit"></p> </form>
+
+The name attribute of the input field is used to reference that field from within the checkForm function. With the advent of DHTML it's tempting to use id's to reference form fields, but that can lead to namespace conflicts and why make things more complicated than necessary.
+
+When the form is submitted - either by hitting Enter or clicking on the Submit button - the onsubmit handler is triggered. This then calls our checkForm() function, passing a reference to itself (the form) as the only variable. This makes the value of the input box available within the function as form.input.value (the 'value' of the field called 'input' belonging to the form).
+
+Other form values are available using a similar syntax, although this becomes more complicated if you're using SELECT lists, checkboxes or radio buttons (see below for examples).
+
+The checkForm function tests the form input against our conditions, returning a value of true if the form is to be submitted (when all tests have been passed) or false to abort (cancel) the form submission. It's that simple.
+
+In a real-life situation you will most likely have more fields to check, and more complicated conditions, but the principle remains the same. All you need to do is extend the checkForm function to encompass the new fields and conditions:
+<script type="text/javascript"> function checkForm(form) { if(!condition1) { alert("Error: error message"); form.fieldname.focus(); return false; } if(!condition2) { alert("Error: error message"); form.fieldname.focus(); return false; } ... return true; } </script>
+
+When a return command is encountered, execution of the function is halted. In other words if the first condition fails, the second condition will not be tested and so forth. Only when all conditions have been satisfied do we reach the return true command, in which case the form will be submitted.
+
+You'll see that the all validation scripts presented on this and subsequent pages adhere to the same basic format.
+
+Most modern browsers now support HTML5 Form Validation making it possible to validate form elements without (or before) any JavaScript is triggered.
+2. Working with different types of FORM elements
+Text/Textarea/Password boxes
+
+The value of a text input box (or a textarea or password input) is available using the syntax form.fieldname.value. This is not the case for other input types.
+form.fieldname.value
+
+To check whether two inputs have the same is quite simple:
+if(form.field1.value == form.field2.value) { // values are identical }
+
+Make sure to always use == for comparisons. If you use = (the assignment operator) instead then it can take a long time to debug.
+
+and to see if they have different values we just reverse the logic:
+if(form.field1.value != form.field2.value) { // values are different }
+
+If you want to test numeric values (or add or subtract them) then you first have to convert them from strings to numbers. By default all form values are accessed as as strings.
+var field1 = parseInt(form.field1.value); var field2 = parseInt(form.field2.value); if(field1 > field2) { // field1 as a number is greater than field2 as a number }
+
+parseFloat is the same as parseInt except that it also works for floating point numbers.
+Select/Combo/Drop-down boxes
+
+The value of a SELECT input element is accessed using:
+var selectBox = form.fieldname; var selectedValue = selectBox.options[selectBox.selectedIndex].value var selectedText = selectBox.options[selectBox.selectedIndex].text
+
+where fieldname is the SELECT element, which has an array of options and a value selectedIndex that tells you which option has been selected. The illustration below shows this relationship:
+
+Note that the 'I' in selectedIndex needs to be capitalised - JavaScript functions and variables are always case-sensitive.
+
+If you define a value for the OPTION elements in your SELECT list, then .value will return that, while .text will return the text that is visible in the browser. Here's an example of what this refers to:
+<option value="value">text</option>
+
+Thanks to Internet Explorer you can now access the current SELECT value using selectBox.value, but this is not good practice.
+
+If you just want to check that an option has been chosen (ie. that the SELECT box is no longer in it's default state) then you can use:
+if(form.fieldname.selectedIndex > 0) { // an option has been selected } else { // no option selected }
+Checkboxes
+
+These really are simple:
+form.checkboxfield.checked
+
+will return a boolean value (true or false) indicating whether the checkbox is in a 'checked' state.
+function checkForm(form) { if(form.checkboxfield.checked) { alert("The checkbox IS checked"); } else { alert("The checkbox IS NOT checked"); } return false; }
+
+You don't need to test using form.checkboxfield.checked == true as the value is already boolean.
+Check me!
+
+Read more about the humble checkbox in our HTML5 Checkbox Validation article.
+Radio buttons
+
+Radio buttons are implemented as if they were an array of checkboxes. To find out which value (if any) has been selected, you need to loop through the array until you find which one has been selected:
+<script type="text/javascript"> function checkRadio(field) { for(var i=0; i < field.length; i++) { if(field[i].checked) return field[i].value; } return false; } </script>
+
+The form handler function is then the following:
+function checkForm(form) { if(radioValue = checkRadio(form.radiofield)) { alert("You selected " + radioValue); return true; } else { alert("Error: No value was selected!"); return false; } }
+Red Green Blue
+3. Checkbox arrays
+
+If you're working with arrays of checkboxes to submit data to a server-side script then you might already have some grey hairs from trying to figure out how to validate the input using JavaScript.
+
+The problem is that, to have the data submitted in a 'nice' format to the server, the name attributes of all the checkboxes in the array are often set to the same value: a name ending with []. This makes it difficult to address them directly using JavaScript.
+
+In this example, the checkboxes are defined as:
+<input type="checkbox" name="pref[]" value="value"> label
+Example: checkbox array
+
+Which of the following pastimes do you enjoy?
+Art /Antiques
+Camping/Hiking
+Cooking
+Computer games
+Dining Out
+Fishing
+Gardening
+Going to Pubs/Clubs
+Internet/Computers
+Music
+Photography
+Reading
+Television/Videos
+Theatre/Cinema
+Sports/Fitness
+
+When you submit the form you will be notified through an alert message how many items you checked, and what they were. This is calculated using a new function:
+<script type="text/javascript"> // Original JavaScript code by Chirp Internet: www.chirp.com.au // Please acknowledge use of this code by including this header. function checkArray(form, arrayName) { var retval = new Array(); for(var i=0; i < form.elements.length; i++) { var el = form.elements[i]; if(el.type == "checkbox" && el.name == arrayName && el.checked) { retval.push(el.value); } } return retval; } </script>
+
+The form handler that calls this function and displays the alert is as follows:
+function checkForm(form) { var itemsChecked = checkArray(form, "pref[]"); alert("You selected " + itemsChecked.length + " items"); if(itemsChecked.length > 0) { alert("The items selected were:\n\t" + itemsChecked); } return false; }
+
+The checkArray function returns an array containing all the selected checkbox values.
+
+Normally you would modify this so that you could submit or not submit the form based on the number of items selected. For example "at least two" or "no more than five". This should be a simple exercise.
+4. Combining Form Elements in Conditions
+
+In more complicated forms you will want to set conditions on the form that combine multiple elements. For example, a text input that only needs to have a value if a checkbox is checked:
+<script type="text/javascript"> function checkForm(form) { ... if(form.checkboxname.checked && (form.textinputname.value == "")) { alert("Error: error message"); form.textinputname.focus(); return false; } ... return true; } </script>
+
+or conditions that vary according to a radio button selection:
+<script type="text/javascript"> function checkRadio(field) { for(var i=0; i < field.length; i++) { if(field[i].checked) return field[i].value; } return false; } function checkForm(form) { ... var radioValue = checkRadio(radiofield); switch(radioValue) { case "Red": <conditions to apply if 'Red' is selected> break; case "Blue": <conditions to apply if 'Blue' is selected> break; default: <conditions to apply in all other cases> } ... return true; } </script>
+
+Using simple logical operators and the functions supplied above you can do all sorts of client-side form validation. To take things a step further you can even explore Ajax Form Validation which lets you supply real-time feedback using server-side scripts triggered by JavaScript events.
+5. Video Tutorial
+
+The team at Webucator.com have made a video based on this article as a part of their JavaScript training lessons which you can view below. It explains some of the code examples above as well as introducing more advanced concepts:
+6. References
+
+    Core JavaScript 1.5 Reference:Global Objects:RegExp
+    Core JavaScript 1.5 Reference:Global Objects:Array
+
+7. Related Articles - Form Validation
+
+    HTML5 Form Validation Examples [HTML]
+    Validating a checkbox with HTML5 [HTML]
+    Password Validation using regular expressions and HTML5 [JAVASCRIPT]
+    Date and Time [JAVASCRIPT]
+    Preventing Double Form Submission [JAVASCRIPT]
+    Form Validation [JAVASCRIPT]
+    Credit Card numbers [JAVASCRIPT]
+    A simple modal feedback form with no plugins [JAVASCRIPT]
+    Protecting forms using a CAPTCHA [PHP]
+    Basic Form Handling in PHP [PHP]
+
+< JavaScript
+
+8. User Comments
+
+Rama 16 July, 2013
+
+Hi !
+
+nice work nice tutorial!
+Could you just give the code that change the "!" to "v" when the captcha is correct?
+
+Thx a lot !
+
+This is done using HTML5 form validation techniques and CSS, but it only validates the input format (pattern) and not the actual values. That could be done using Ajax, but would make the CAPTCHA much easier to break.
+
+JackLloyd, 27 October, 2010
+
+Very handy, everything else I found was rubbish but this gave me exactly what I wanted with minor modification (removed '+' character) - needed to alert user if 'username' contained a space /anywhere/ in the field. Hope the following tags help S

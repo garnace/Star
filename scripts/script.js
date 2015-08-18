@@ -3695,7 +3695,18 @@ function getListDel(dbId)
 }
 //--End getListDel
 
+function sendM()
+{
+	$.getJSON("http://"+hostUrl+"/StarAdvisor/smail.php?callback=?"),function(data)
+        {
+	$.each(data.users,function(i,item)
+ 	   {
+		$('#espanEmail').html(item.message);
+           });
+	    
+        });
 
+}
 
 /*************loadDBB
 *Function to load database contact entry by way of

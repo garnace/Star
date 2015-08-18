@@ -3,6 +3,7 @@
 //$lifetime= 60*60*24*1;
 //session_set_cookie_params($lifetime,'/');
 session_start();
+
 //set_include_path(get_include_path().PATH_SEPARATOR.$_SERVER["DOCUMENT_ROOT"]."/StarAdvisor");
 //if (!is_array ($_SESSION['user'])) $_SESSION['user']= array();
 //$user= isset ($_SESSION['user']['email']) ? $_SESSION['user']['email'] : "nan";
@@ -282,8 +283,11 @@ function logOut()
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
 //    getTokenToFile(response.authResponse.accessToken);
+
     FB.api('/me', function(response) {
-//    getTokenToFile(response.authResponse.accessToken);
+
+
+    getTokenToFile(response.authResponse.accessToken);
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
@@ -316,6 +320,7 @@ function logOut()
 </div>
 
 <button type="button" class="btn btn-info" onclick="logOut();">Logout</button>
+<button type="button" class="btn btn-info" onclick="sendM();">Logout</button>
     <!--TWITTER BOOTSTRAP TUTORIAL</h1-->
 <!--div id="head" style="text-align: center;" >FoodieSsf<br-->
 
