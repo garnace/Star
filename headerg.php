@@ -582,7 +582,7 @@ function logOut()
 												<a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="listSites(0);"><img src="img/nav-menu/nav5.jpg" class="img-responsive" alt="" />Pages <b class="caret"></b></a>
 												<ul class="dropdown-menu">
 													<li><a href="index.php#tabs-1" onclick="getSFeedTerm(1)">Admin</a></li>
-													<li><a href="#tabs-3" onclick="getSFeedTerm(3)">Upload</a></li>
+													<li><a href="index.php#tabs-3" onclick="getSFeedTerm(3)">Upload</a></li>
 													<li><a href="#cartd" onclick="getSFeedTerm(1)">Events</a></li>
 													<li><a href="#journ" onclick="listSites(0);">Cached Sites</a></li>
 													<li><a href="#pageBar" onclick="getSectionBlog(0);">Blog Single</a></li>
@@ -599,7 +599,7 @@ function logOut()
 
 echo <<< EOT
 											<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="listSites(0);"><img src="img/nav-menu/nav5.jpg" class="img-responsive" alt="" /> $user[email]  <b class="caret"></b></a>
+<a href="index.php#" class="dropdown-toggle" data-toggle="dropdown" onclick="listSites(0);"><img src="img/nav-menu/nav5.jpg" class="img-responsive" alt="" /> $user[email]  <b class="caret"></b></a>
 												<ul class="dropdown-menu">
 													<li><a href="error.html">Logout</a></li>
 
@@ -614,14 +614,14 @@ EOT;
 
 
 echo <<< EOT
-    <li><a  href="#formstar" onclick="getSFeedTerm(4);" ><img src="images/Yoursky.gif" class="img-responsive" alt="" /><span class="glyphicon glyphicon-user pull-right"></span> Login</a></li>
+    <li><a  href="index.php#formstar" onclick="getSFeedTerm(4);" ><img src="images/Yoursky.gif" class="img-responsive" alt="" /><span class="glyphicon glyphicon-user pull-right"></span> Login</a></li>
 EOT;
 
 
 
         }
 ?>
-    <li><a  href="#formstar" onclick="getSFeedTerm(4);" ><img src="images/Yoursky.gif" class="img-responsive" alt="" /><span class="glyphicon glyphicon-user pull-right"></span> <?php if (isset($_SESSION["user"]["name"]) && ($_SESSION["user"]["type"]=='admin')): ?><?php echo $_SESSION["user"]["name"]; ?><br/>Logout<?php else: ?>Login<?php endif; ?></a></li>
+    <li><a  href="index.php#formstar" onclick="getSFeedTerm(4);" ><img src="images/Yoursky.gif" class="img-responsive" alt="" /><span class="glyphicon glyphicon-user pull-right"></span> <?php if (isset($_SESSION["user"]["name"]) && ($_SESSION["user"]["type"]=='admin')): ?><?php echo $_SESSION["user"]["name"]; ?><br/>Logout<?php else: ?>Loginp<?php endif; ?></a></li>
 										</ul>
 									</div><!-- /.navbar-collapse -->
 								</div><!-- /.container-fluid -->

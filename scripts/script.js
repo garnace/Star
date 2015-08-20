@@ -3697,7 +3697,7 @@ function getListDel(dbId)
 
 function sendM()
 {
-	$.getJSON("http://"+hostUrl+"/StarAdvisor/smail.php?callback=?"),function(data)
+	$.getJSON("http://"+hostUrl+"/StarAdvisor/smail.php?callback=?",function(data)
         {
 	$.each(data.users,function(i,item)
  	   {

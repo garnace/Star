@@ -1,9 +1,12 @@
 <?php   #axtok.php -- retrieve access token and write to file
 include('Mail.php');
+include('authU.php');
 
 $options = array();
 //$options['host']='mail.example.com'
-$options['host']='ssl://mail.google.com'
+//$options['host']='ssl://mail.google.com';
+$options['host']='ssl://smtp.gmail.com';
+//$options['host']='https://mail.google.com';
     $options['port']=465;
     $options['auth']= true;
 $options['username']='farnacee@gmail.com'; 
@@ -16,16 +19,17 @@ $headers['To']='farnace@rogers.com';
 $headers['Subject'] ='Using PEAR use case';
 //$headers['Content-type']='text/html';
 
-$rec='farnace@rogers.com'
+$rec='farnace@rogers.com';
     $body="My first php use case is attached.";
 
-$rez=$mailer->send($rec,$headers,$body);
+/*$rez=$mailer->send($rec,$headers,$body);
 
-if (PEAR::isError($rez)){
+if (PEAR::isError($rez))
+{
     $error = 'Error sending mail:'.$rez->getMessage();
     echo htmlspecialchars($error);
 }
-
+*/
 //header("Content-type:application/json");
 
 //isset ($_GET["sName"])? $sname = "" : $sname= $_GET["sName"]
@@ -40,8 +44,17 @@ $iB['users']= array("hi");
 $iB['users']= $SERVER['DOCUMENT_ROOT'];
 $iB['users']= array("bye");
 
+//if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_SERVER['HTTP_X_REQUEST_WITH']))
+if ( isset($_SERVER['HTTP_X_REQUEST_WITH']))
+    {
+        header('Content-type: application/json');
+
 $callback = (empty($_GET["callback"])) ? 'callback' : $_GET["callback"];
 
 $jsonData= $callback.'('.json_encode($iB).');';
 echo $jsonData;
+
+    }
+
+
 ?>
