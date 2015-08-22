@@ -1,4 +1,4 @@
-<?php   #axtok.php -- retrieve access token and write to file
+<?php   #axtok.php -- To retrieve access token and write to file
 include('Mail.php');
 include('authU.php');
 //echo "hi";
