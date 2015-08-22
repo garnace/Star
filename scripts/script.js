@@ -3697,16 +3697,49 @@ function getListDel(dbId)
 
 function sendM()
 {
-	$.getJSON("http://"+hostUrl+"/StarAdvisor/smail.php?callback=?",function(data)
+//	$(function(){
+var dbId=0;
+	alert("hit");
+//	$.getJSON("http://"+hostUrl+"/StarAdvisor/read.php?emaild="+dbId+"&callback=?",	
+	$.getJSON("http://"+hostUrl+"/StarAdvisor/smail.php?emaild="+dbId+"&callback=?",
+        function(data)
         {
-	$.each(data.users,function(i,item)
+//	alert("hi");
+//		$('#espanEmail').html("hi");
+	$.each(data.admins,function(i,item)
+
  	   {
-		$('#espanEmail').html(item.message);
+		$('#espanEmail').html("hi"+item[1]+item[4]);
            });
 	    
         });
 
+//	});
 }
+
+function Xlogout()
+{
+//	$(function(){
+var dbId=0;
+	alert("hit");
+//	$.getJSON("http://"+hostUrl+"/StarAdvisor/read.php?emaild="+dbId+"&callback=?",	
+	$.getJSON("http://"+hostUrl+"/StarAdvisor/Xlogout.php?emaild="+dbId+"&callback=?",
+        function(data)
+        {
+//	alert("hi");
+//		$('#espanEmail').html("hi");
+	$.each(data.sessions,function(i,item)
+
+ 	   {
+		$('#espanEmail').html("hi"+item.message);
+           });
+	    
+        });
+
+//	});
+}
+
+
 
 /*************loadDBB
 *Function to load database contact entry by way of

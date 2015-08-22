@@ -2,24 +2,23 @@
 session_start();
 include("classes/user.php");
 include("./database.php");
-//header('Content-type: application/json');
 
 
-
-//    $email=isset($_GET["emaild"]) ? check_input($_GET["emaild"],"write email adress".$_GET["emaild"]): (isset($_POST["yourle"]) ? check_input($_POST["yourle"],"write ema address") : "");
 
 //$pass=isset($_GET["pass"]) ? check_input($_GET["pass"],"write email") : (isset($_POST["yourlps"]) ? check_input($_POST["yourlps"],"write password") : "");
 
 //$query ="SELECT u.email,u.accounthandle FROM uaccount u WHERE (u.accountpass = :pass)";
-$query ="SELECT u.email,u.accounthandle FROM uaccount u WHERE (u.accountpass = :pass AND u.email=:email)";
+
 
 function authUser($email,$pass){
 
 
+$query ="SELECT * FROM uaccount u WHERE (u.accountpass = :pass AND u.email=:email)";
+
 try{
     $pdo= Database::getDB();
-//    $pdo= new PDO('mysql:dbname=mysql;host=localhost','root','Spasskydb8080');
-//    echo 'hi'.$pass.$email;
+
+
 //$pdo= new PDO('mysql:dbname=mysql;host=localhost','root','Spasskydb8080');
     //  echo 'li';
     $stmt = $pdo->prepare($query);
@@ -85,6 +84,10 @@ $_SESSION["user"]["email"]=$iB["admins"][0][0];
 $_SESSION["user"]["name"]=$iB["admins"][0][1];
 //$_SESSION["user"]["type"]="admin";
 $_SESSION["user"]["type"]=$iB["admins"][0][4];
+
+//return ($iB["admins"][0][4]);
+return ($iB);
+//return (array('1','2','3'));
 //session_write_close();
 }
 

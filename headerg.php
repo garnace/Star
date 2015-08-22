@@ -320,7 +320,7 @@ function logOut()
 </div>
 
 <button type="button" class="btn btn-info" onclick="logOut();">Logout</button>
-<button type="button" class="btn btn-info" onclick="sendM();">Logout</button>
+<button type="button" class="btn btn-info" onclick="sendM();">Mail</button>
     <!--TWITTER BOOTSTRAP TUTORIAL</h1-->
 <!--div id="head" style="text-align: center;" >FoodieSsf<br-->
 
@@ -621,7 +621,7 @@ EOT;
 
         }
 ?>
-    <li><a  href="index.php#formstar" onclick="getSFeedTerm(4);" ><img src="images/Yoursky.gif" class="img-responsive" alt="" /><span class="glyphicon glyphicon-user pull-right"></span> <?php if (isset($_SESSION["user"]["name"]) && ($_SESSION["user"]["type"]=='admin')): ?><?php echo $_SESSION["user"]["name"]; ?><br/>Logout<?php else: ?>Loginp<?php endif; ?></a></li>
+<li><a  href="index.php#formstar" onclick=<?php if (isset($_SESSION["user"]["name"])){echo "Xlogout();"; }else{echo "getSFeedTerm(4);";  } ?> ><img src="images/Yoursky.gif" class="img-responsive" alt="" /><span class="glyphicon glyphicon-user pull-right"></span> <?php if (isset($_SESSION["user"]["name"]) && ($_SESSION["user"]["type"]=='admin')): ?><?php echo $_SESSION["user"]["name"]; ?><br/>Logout<?php else: ?>Loginp<?php endif; ?></a></li>
 										</ul>
 									</div><!-- /.navbar-collapse -->
 								</div><!-- /.container-fluid -->
