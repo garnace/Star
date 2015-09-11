@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" id="viewport" content="width=device-width, height=device-height, user-scalable=no" />
+<title>Should This Bird Be Loaded? Calculator</title>
+<link href="css/forms.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/calc.js"></script>
+<script type="text/javascript" src="scripts/jquery.tools.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+function onLoad(){
+document.addEventListener("deviceready", onDeviceReady, true);
+}
+function onDeviceReady(){
+Geolocation.usePhoneGap();
+navigator.notification.alert("PhoneGap is working");
+}
+</script>
+
+</head>
+<body onload="onLoad();">
+<div id="container">
+	<div id="title">
+		<center><img src = "images/title.png"></center>
+		<center><img src = "images/titlec.png"></center>
+	</div>
+	<div id="formdiv">
+		<form id="calcform" name="calcform" action="/posts/new">
+			<fieldset>
+				<legend>Calculator Input</legend>
+				<div class="inline">
+				  <label for="birdtype">
+					<strong>Bird Type</strong>
+				  </label>
+				  <select id="birdtype" name="birdtype">
+					<option value="null">---Bird Type---</option>
+					<option value="chicken">Broiler Chickens</option>
+					<option value="hen">End-of-lay Hens</option>
+					<option value="turkey">Turkeys</option>
+				  </select>
+				</div>
+				<div class="inline">
+					<label for="loadtype">
+						<strong>Load Type</strong>
+					</label>
+					<select id="loadtype" name="loadtype">
+						<option value="null">---Load Type---</option>
+						<option value="anglia">Anglia Modules Drawers</option>
+						<option value="linco">Linco Module Drawers</option>
+						<option value="crate">Chicken Crates</option>
+						<option value="basket">End-of-lay Hen Baskets</option>
+						<option value="lliner">Large Liners</option>
+						<option value="sliner">Small Liners</option>
+					</select>
+				</div>
+				<div>
+				  <label for="temperature">
+					<strong>Temperature (C&deg;)</strong>
+				  </label>
+				  <input id="temperature" name="temperature" type="text">
+				</div>
+				<div>
+				  <label for="humidity">
+					<strong>Humidity (%)</strong>
+				  </label>
+				  <input id="humidity" name="humidity" type="text">
+				</div>
+				<div>
+				  <label for="weight">
+					<strong>Weight (kg)</strong>
+				  </label>
+				  <input id="weight" name="weight" type="text">
+				</div>	
+			</fieldset>
+		</form>
+		<!--change the onclick property from test() to the relevant function call-->
+		<center><input type='button' onclick='getPosition();' value='Auto Fill'/> <input type='button' onclick='calculate();' value='Calculate'/> <input type='button' onclick="location.href='book.html?key=4';" value='View Charts'/> <input type='button' value='Home' onclick="location.href='index.html';"></center>
+	</div>
+	<div id="logo">
+		<BR>
+		<BR>
+		<center><a href="http://www.poultryindustrycouncil.ca/"><img src = "images/icon.png"></a></center>
+	</div>
+</div>
+</body>
+</html>

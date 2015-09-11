@@ -305,22 +305,29 @@ function logOut()
 
 </script>
 
+ <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" >
+ </fb:login-button>
+ <!--div id="status" class="col-md-4 col-sm-6"-->
+ <div id="status" >
 
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
 
-<div id="status">
-</div>
+ </div>
 
-<div
+
+
+  <div 
   class="fb-like"
   data-share="true"
   data-width="450"
   data-show-faces="true">
-</div>
+  </div>
 
-<button type="button" class="btn btn-info" onclick="logOut();">Logout</button>
+
+
+
+<button type="button" class="btn btn-info" onclick="logOut();">Logout FB</button>
 <button type="button" class="btn btn-info" onclick="sendM();">Mail</button>
+
     <!--TWITTER BOOTSTRAP TUTORIAL</h1-->
 <!--div id="head" style="text-align: center;" >FoodieSsf<br-->
 
@@ -600,6 +607,7 @@ function logOut()
 echo <<< EOT
 											<li class="dropdown">
 <a href="index.php#" class="dropdown-toggle" data-toggle="dropdown" onclick="listSites(0);"><img src="img/nav-menu/nav5.jpg" class="img-responsive" alt="" /> $user[email]  <b class="caret"></b></a>
+
 												<ul class="dropdown-menu">
 													<li><a href="error.html">Logout</a></li>
 
@@ -614,7 +622,24 @@ EOT;
 
 
 echo <<< EOT
-    <li><a  href="index.php#formstar" onclick="getSFeedTerm(4);" ><img src="images/Yoursky.gif" class="img-responsive" alt="" /><span class="glyphicon glyphicon-user pull-right"></span> Login</a></li>
+    <li class="dropdown hidden-xs"><a  href="index.php#formstar" onclick="getSFeedTerm(4);" class="dropdown-toggle" data-toggle="dropdown"><img src="images/Yoursky.gif" class="img-responsive" alt="" /><span class="glyphicon glyphicon-user pull-right"></span> Login <b class="caret"></b></a>
+<ul class="dropdown-menu dropdown-md" >
+<li>
+<div class="row">
+
+
+
+
+
+
+
+
+</div>  <!--/.row-->
+
+</li> <!--  /.inner li-->
+</ul> <!-- /. fb login ul-->
+
+</li>
 EOT;
 
 

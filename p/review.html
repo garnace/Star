@@ -1,0 +1,92 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" id="viewport" content="width=device-width, height=device-height, user-scalable=no" />
+<title>Should This Bird Be Loaded? Quiz</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/quiz.js"></script>
+<script type="text/javascript" src="scripts/jquery.tools.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var html = "<center>\n";
+		html += "<table border=\"1\" width=\"90%\" style=\"border:3px dashed black;\">\n";
+		html += "<tr>\n";
+		html += "<td bgcolor=\"#8B795E\"><center><p style=\"font-family:courier;font-size:150%;\">Question #1</p></center></td>\n";
+
+		if(localStorage.getItem("question0") == "correct")
+		{
+			html += "<td bgcolor=\"green\" width=\"30\"></td>\n"
+		}
+		else if(localStorage.getItem("question0") == "incorrect")
+		{
+			html += "<td bgcolor=\"red\" width=\"30\"></td>\n";
+		}
+		else
+		{
+			html += "<td bgcolor=\"grey\" width=\"30\"></td>\n";
+		}
+
+		html += "</tr>\n";
+		html += "<tr>\n";
+		html += "<td bgcolor=\"#8B795E\"><center><p style=\"font-family:courier;font-size:150%;\">Question #2</p></center></td>\n";
+
+		if(localStorage.getItem("question1") == "correct")
+		{
+			html += "<td bgcolor=\"green\" width=\"30\"></td>\n"
+		}
+		else if(localStorage.getItem("question1") == "incorrect")
+		{
+			html += "<td bgcolor=\"red\" width=\"30\"></td>\n";
+		}
+		else
+		{
+			html += "<td bgcolor=\"grey\" width=\"30\"></td>\n";
+		}
+
+		html += "</tr>\n";
+		html += "<tr>\n";
+		html += "<td bgcolor=\"#8B795E\"><center><p style=\"font-family:courier;font-size:150%;\">Question #3</p></center></td>\n";
+
+		if(localStorage.getItem("question2") == "correct")
+		{
+			html += "<td bgcolor=\"green\" width=\"30\"></td>\n"
+		}
+		else if(localStorage.getItem("question2") == "incorrect")
+		{
+			html += "<td bgcolor=\"red\" width=\"30\"></td>\n";
+		}
+		else
+		{
+			html += "<td bgcolor=\"grey\" width=\"30\"></td>\n";
+		}
+
+		html += "</tr>\n";
+		html += "</table>\n";
+		html += "</center>\n";
+		
+		document.getElementById('questionlist').innerHTML = html;
+	});
+</script>
+</head>
+<body>
+<div id="container">
+	<div id="title">
+		<center><img src = "images/title.png"></center>
+		<center><img src = "images/titleq.png"></center>
+	</div>
+	<BR>
+	<div id="questionlist">
+		<!--Table of questions goes here.-->
+	</div>
+	<BR>
+	<div id="button">
+		<center><input type="button" onclick="resetQuiz()" value="Reset Quiz"></center>
+	</div>
+	<div id="logo">
+		<BR>
+		<BR>
+		<center><a href="http://www.poultryindustrycouncil.ca/"><img src = "images/icon.png"></a></center>
+	</div>
+</body>
+</html>

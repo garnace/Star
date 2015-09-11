@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" id="viewport" content="width=device-width, height=device-height, user-scalable=no" />
+<title>Should This Bird Be Loaded? Handbook</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/script.js"></script>
+<script type="text/javascript" src="scripts/jquery.tools.min.js"></script>
+<!--script type="text/javascript" src="scripts/geo.js"></script-->
+	<!--script type="text/javascript">   var dbb; var clatitude=2; var clongitude=2; getPosition(''); </script-->
+	<!--script type="text/javascript">   arrAllPages=generatePages(); </script-->
+	
+<!--**********script to  get query key from sect.html for sectionSelection
+and then immediately set first page of section-->
+<script type="text/javascript">
+var key;
+//try query
+var query = window.location.href.split('?')[1];
+ 
+  //query won't be set if ? isn't in the URL
+  
+ 
+  var params = query.split('&');
+ 
+  var pairs = {};
+  for(var i = 0, len = params.length; i < len; i++) {
+    var pair = params[i].split('=');
+    pairs[pair[0]] = pair[1];
+  }
+//alert ("paired" +pair[0]+","+pair[1]);
+
+//end query
+key=pair[1];
+sectionSelect=key;
+
+//set section based on url key
+$(document).ready(function(){
+
+sectionSelect=key;
+//alert("key="+key);
+arrpicNames=listSections[sectionSelect];
+totalpicNames=arrpicNames.length;
+totalpic=totalpicNames;
+
+ht=pagebyNames(arrpicNames[position]);
+	document.getElementById("page").innerHTML=ht;
+	
+	});
+
+ ht=pagebyNames(arrpicNames[position]);document.getElementById("page").innerHTML = "hi"; </script>
+ 
+ <!--****************end scripts-->
+ 
+</head>
+<body >
+<div id="container">
+	<div id="title">
+		<center><img src = "images/title.png"></center>
+		<center><img src = "images/titleh.png"></center>
+	</div>
+	<BR>
+	<div id="page">
+		<!--center><a href="images/page4.png"><img src = "images/page4.png" height="300" width="229" style="border:3px solid black"></a><center-->
+	</div>
+	<div id="buttons">
+		<!--center><input type='button' onclick='pagebyName("icon");' value='Icon page'/> <input type='button' onclick='nextpage(position);' value='Next Page'/><center-->
+		<center><i>Click the image to enlarge</i></center>
+		<center><input type='button' onclick='prevSectionPage(position);' value='Prev Page'/> <input type='button' onclick='nextSectionPage(position);' value='Next Page'/><center>
+	</div>
+	<div id="logo">
+		<BR>
+		<BR>
+		<center><a href="http://www.poultryindustrycouncil.ca/"><img src = "images/icon.png"></a></center>
+	</div>
+</div>
+</body>
+</html>

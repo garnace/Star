@@ -1,0 +1,36 @@
+var sectionNames = ["Decision Tree",
+"Welfare Definition",
+"Federal Regulations",
+"Identify - Cull - Dispose",
+"Handling Guidelines for Catching Crews",
+"DO NOT LOAD Conditions",
+"CAUTION Conditions",
+"Definitions",
+"References",
+"Contacts"];
+
+var allPages=["page1.png",
+"page2.png","page3.png",
+"page4.png","page5.png"
+"page6.png",
+"page7.png",
+"page8.png","page9.png",
+"page10.png",
+"page11.png","page12.png",
+"18,
+28,
+30,
+31];
+
+];
+
+var sectionPages=[4,
+6,
+7,
+8,
+10,
+12,
+18,
+28,
+30,
+31];

@@ -1,0 +1,74 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" id="viewport" content="width=device-width, height=device-height, user-scalable=no" />
+<title>Should This Bird Be Loaded? Quiz</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/quiz.js"></script>
+<script type="text/javascript" src="scripts/jquery.tools.min.js"></script>
+<script type="text/javascript">
+	var key;
+	
+	key = window.location.href.split('?')[1];
+	
+	/*Update the question interface given the requested question*/
+	$(document).ready(function(){
+		if(key == 0)
+		{
+			var quesText = "<p style=\"font-family:courier;font-size:120%;\">This is the first sample question. The answer is B.</p>";
+			var options = "<center><input type=\"radio\" name=\"answer\" value=\"0\" />Answer A <input type=\"radio\" name=\"answer\" value=\"1\" /> Answer B</center>\n<center><input type=\"radio\" name=\"answer\" value=\"2\" />Answer C <input type=\"radio\" name=\"answer\" value=\"3\" /> Answer D</center>";
+			var buttons = "<center><input type=\"button\" onclick=\"checkAnswer(0)\" value=\"Submit\"></center>\n<center><input type=\"button\" onclick=\"location.href=\'sect.html\'\" value=\"Handbook\"><input type=\"button\" onclick=\"location.href=\'calc.html\'\" value=\"Calculator\"></center>";
+			
+			document.getElementById('questionbox').innerHTML = quesText;
+			document.getElementById('options').innerHTML = options;
+			document.getElementById('buttons').innerHTML = buttons;
+		}
+		else if(key == 1)
+		{
+			var quesText = "<p style=\"font-family:courier;font-size:120%;\">This is the second sample question. The answer is A.</p>";
+			var options = "<center><input type=\"radio\" name=\"answer\" value=\"0\" />Answer A <input type=\"radio\" name=\"answer\" value=\"1\" /> Answer B</center>\n<center><input type=\"radio\" name=\"answer\" value=\"2\" />Answer C <input type=\"radio\" name=\"answer\" value=\"3\" /> Answer D</center>";
+			var buttons = "<center><input type=\"button\" onclick=\"checkAnswer(1)\" value=\"Submit\"></center>\n<center><input type=\"button\" onclick=\"location.href=\'sect.html\'\" value=\"Handbook\"><input type=\"button\" onclick=\"location.href=\'calc.html\'\" value=\"Calculator\"></center>";
+			
+			document.getElementById('questionbox').innerHTML = quesText;
+			document.getElementById('options').innerHTML = options;
+			document.getElementById('buttons').innerHTML = buttons;
+		}
+		else if(key == 2)
+		{
+			var quesText = "<p style=\"font-family:courier;font-size:120%;\">This is the first sample question. The answer is D.</p>";
+			var options = "<center><input type=\"radio\" name=\"answer\" value=\"0\" />Answer A <input type=\"radio\" name=\"answer\" value=\"1\" /> Answer B</center>\n<center><input type=\"radio\" name=\"answer\" value=\"2\" />Answer C <input type=\"radio\" name=\"answer\" value=\"3\" /> Answer D</center>";
+			var buttons = "<center><input type=\"button\" onclick=\"checkAnswer(2)\" value=\"Submit\"></center>\n<center><input type=\"button\" onclick=\"location.href=\'sect.html\'\" value=\"Handbook\"><input type=\"button\" onclick=\"location.href=\'calc.html\'\" value=\"Calculator\"></center>";
+			
+			document.getElementById('questionbox').innerHTML = quesText;
+			document.getElementById('options').innerHTML = options;
+			document.getElementById('buttons').innerHTML = buttons;
+		}
+	});
+
+</script>
+</head>
+<body>
+<div id="container">
+	<div id="title">
+		<center><img src = "images/title.png"></center>
+		<center><img src = "images/titleq.png"></center>
+	</div>
+	<BR>
+	<div id="questionbox" border="1" style="border:3px dashed black;">
+		<!--Question text goes here.-->
+	</div>
+	<BR>
+	<div id="options">
+		<!--Question options go here-->
+	</div>
+	<div id="buttons">
+		<!--Question buttons go here-->
+	</div>
+	<div id="logo">
+		<BR>
+		<BR>
+		<center><a href="http://www.poultryindustrycouncil.ca/"><img src = "images/icon.png"></a></center>
+	</div>
+</body>
+</html>
