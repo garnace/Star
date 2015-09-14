@@ -402,7 +402,7 @@ function logOut()
 									<span><i class="fa fa-phone red"></i> 888-888-8888</span>
 								</div>
 							</div>
-							<div class="col-md-4 col-sm-4">
+							<div class="col-md-3 col-sm-3">
 								<!-- Header top right content search box -->
 								<div class=" header-search">
 									<form class="form" role="form">
@@ -415,69 +415,41 @@ function logOut()
 									</form>
 								</div>
 							</div>
-							<div class="col-md-4 col-sm-4">
+							<div class="col-md-5 col-sm-5">
 								<!-- Button Kart -->
-								<div class="btn-cart-md">
-									<a class="cart-link" href="#">
+								<!--div class="btn-cart-md"-->
+									<!--a class="cart-link" href="#"-->
 										<!-- Image -->
-										<img class="img-responsive" src="images/Yoursky.gif" alt="" />
+										<img class="img-responsive" src="images/Yoursky.gif" alt="" width="50" height="50" />
 										<!-- Heading -->
 										<h4>Shopping Cart</h4>
+
+
+ <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" >
+ </fb:login-button>
+ <!--div id="status" class="col-md-4 col-sm-6"-->
+										<div class="clearfix"></div>
+ <div id="status" >
+
+
+ </div>
+										<div class="clearfix"></div>
+
+  <div 
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+  </div>
+
+
+
+
 										<span>3 items $489/-</span>
 										<div class="clearfix"></div>
-									</a>
-									<ul class="cart-dropdown" role="menu">
-										<li>
-											<!-- Cart items for shopping list -->
-											<div class="cart-item">
-												<!-- Item remove icon -->
-												<a href="#"><i class="fa fa-times"></i></a>
-												<!-- Image -->
-												<img class="img-responsive img-rounded" src="img/nav-menu/nav1.jpg" alt="" />
-												<!-- Title for purchase item -->
-												<span class="cart-title"><a href="#">Exception Reins Evocative</a></span>
-												<!-- Cart item price -->
-												<span class="cart-price pull-right red">$200/-</span>
-												<div class="clearfix"></div>
-											</div>
-										</li>
-										<li>
-											<!-- Cart items for shopping list -->
-											<div class="cart-item">
-												<!-- Item remove icon -->
-												<a href="#"><i class="fa fa-times"></i></a>
-												<!-- Image -->
-												<img class="img-responsive img-rounded" src="img/nav-menu/nav2.jpg" alt="" />
-												<!-- Title for purchase item -->
-												<span class="cart-title"><a href="#">Taut Mayoress Alias Appendicitis</a></span>
-												<!-- Cart item price -->
-												<span class="cart-price pull-right red">$190/-</span>
-												<div class="clearfix"></div>
-											</div>
-										</li>
-										<li>
-											<!-- Cart items for shopping list -->
-											<div class="cart-item">
-												<!-- Item remove icon -->
-												<a href="#"><i class="fa fa-times"></i></a>
-												<!-- Image -->
-												<img class="img-responsive img-rounded" src="img/nav-menu/nav3.jpg" alt="" />
-												<!-- Title for purchase item -->
-												<span class="cart-title"><a href="#">Sinter et Molests Perfectionist</a></span>
-												<!-- Cart item price -->
-												<span class="cart-price pull-right red">$99/-</span>
-												<div class="clearfix"></div>
-											</div>
-										</li>
-										<li>
-											<!-- Cart items for shopping list -->
-											<div class="cart-item">
-												<a class="btn btn-danger" data-toggle="modal" href="#shoppingcart1">Checkout</a>
-											</div>
-										</li>
-									</ul>
+									<!--/a-->
 									<div class="clearfix"></div>
-								</div>
+								<!--/div-->
 								<div class="clearfix"></div>
 							</div>
 						</div>
