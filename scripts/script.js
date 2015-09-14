@@ -3733,6 +3733,8 @@ var dbId=0;
  	   {
 		$('#espanEmail').html("hi"+item.message);
            });
+        location.href="index.php";
+	
 	    
         });
 
@@ -4750,7 +4752,11 @@ function getSectionSky(dId)
 }
 //---end getSectionSky--------------------
 
+function getLoginphp (lId)
+{
+	$('#tabs').tabs({selected:1});
 
+}
 /*****************************************
 Function: getMatchSky:
 

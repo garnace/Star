@@ -287,7 +287,7 @@ function logOut()
     FB.api('/me', function(response) {
 
 
-    getTokenToFile(response.authResponse.accessToken);
+//    getTokenToFile(response.authResponse.accessToken);
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
