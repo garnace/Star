@@ -2738,6 +2738,10 @@ function getTokenToFile(tId)
 {
 	$.getJSON("http://"+hostUrl+"/StarAdvisor/axtok.php?tkName="+tId+"&callback=?",function(data){
 
+		$.each(data.users,function(i,item){
+			$('#espanCart').html("M"+item.message);
+		});
+
 	});
 
 }

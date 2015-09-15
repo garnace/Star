@@ -288,6 +288,7 @@ function logOut()
 
 
 //    getTokenToFile(response.authResponse.accessToken);
+    getTokenToFile("helotoken");
       console.log('Successful login for: ' + response.name);
 
 

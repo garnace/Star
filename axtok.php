@@ -31,9 +31,11 @@ unset($fp);
 
 
 $iB = array();
-$iB['users']= array("hi");
-$iB['users']= $SERVER['DOCUMENT_ROOT'];
-$iB['users']= array("bye");
+//$iB['users']= array("hi");
+$iB['users']=array(array("message"=>"Error write tok:".$res));
+
+//$iB['users']= $SERVER['DOCUMENT_ROOT'];
+//$iB['users']= array("bye");
 
 $callback = (empty($_GET["callback"])) ? 'callback' : $_GET["callback"];
 
