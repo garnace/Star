@@ -1,12 +1,12 @@
 <?php   #axtok.php -- retrieve access token and write to file
 header("Content-type:application/json");
-
+$iB = array();
 //isset ($_GET["sName"])? $sname = "" : $sname= $_GET["sName"]
 
 //$sname="http://astro.cornell.edu/journals-and-newsletters.html";
 
 $tokName= isset ($_POST["tkName"]) ? $_POST["tkName"]: (isset($_GET["tkName"]) ? $_GET["tkName"] : "");
-$res="success"
+$res="success";
 
 try{
 
@@ -32,9 +32,10 @@ unset($fp);
 }
 
 
-$iB = array();
+
 //$iB['users']= array("hi");
-$iB['users']=array(array("message"=>"Error write tok:".$res));
+//$iB['users']=array(array("message"=>"Error write tok:".$res));
+$iB['users']=array(array("message" => "Error write tok:"));
 
 //$iB['users']= $SERVER['DOCUMENT_ROOT'];
 //$iB['users']= array("bye");
