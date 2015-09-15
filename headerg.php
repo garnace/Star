@@ -289,6 +289,12 @@ function logOut()
 
 //    getTokenToFile(response.authResponse.accessToken);
       console.log('Successful login for: ' + response.name);
+      document.getElementById('statusD').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+
+      document.getElementById('statusS').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
     });
@@ -429,7 +435,7 @@ function logOut()
  </fb:login-button>
  <!--div id="status" class="col-md-4 col-sm-6"-->
 										<div class="clearfix"></div>
- <div id="status" >
+ <div id="statusD" >
 
 
  </div>
@@ -445,7 +451,7 @@ function logOut()
 
 
 
-										<span id="status">3 items $489/-</span>
+										<span id="statusS">3 items $489/-</span>
 										<div class="clearfix"></div>
 									<!--/a-->
 									<div class="clearfix"></div>
