@@ -439,7 +439,7 @@ function logOut()
 
 
 
-										<span >3 items $489/-</span>
+										<span id="espanCart">3 items $489/-</span>
 										<div class="clearfix"></div>
 									<!--/a-->
 									<div class="clearfix"></div>

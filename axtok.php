@@ -10,6 +10,8 @@ $tokName= isset ($_POST["tkName"]) ? $_POST["tkName"]: (isset($_GET["tkName"]) ?
 
 try{
 
+$res="success"
+
 
 $ft="axtok.txt";
 if (!$fp = @fopen($ft,'w')){
