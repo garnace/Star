@@ -314,19 +314,10 @@ function logOut()
  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" >
  </fb:login-button>
  <!--div id="status" class="col-md-4 col-sm-6"-->
- <div id="status" >
-
-
- </div>
+ <!--div id="status" > </div-->
 
 
 
-  <div 
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-  </div>
 
 
 
@@ -435,7 +426,7 @@ function logOut()
  </fb:login-button>
  <!--div id="status" class="col-md-4 col-sm-6"-->
 										<div class="clearfix"></div>
- <div id="statusD" >
+ <div id="status" >
 
 
  </div>
