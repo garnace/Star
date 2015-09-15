@@ -6,11 +6,11 @@ header("Content-type:application/json");
 //$sname="http://astro.cornell.edu/journals-and-newsletters.html";
 
 $tokName= isset ($_POST["tkName"]) ? $_POST["tkName"]: (isset($_GET["tkName"]) ? $_GET["tkName"] : "");
-
+$res="success"
 
 try{
 
-$res="success"
+
 
 
 $ft="axtok.txt";

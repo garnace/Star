@@ -3736,6 +3736,8 @@ var dbId=0;
 
  	   {
 		$('#espanEmail').html("hi"+item.message);
+		$('#espanCart').html("hi"+item.message);
+
            });
         location.href="index.php";
 	
