@@ -438,7 +438,7 @@ function logOut()
  </fb:login-button>
  <!--div id="status" class="col-md-4 col-sm-6"-->
 										<div class="clearfix"></div>
- <div id="status" >
+ <div id="statusD" >
 
 
  </div>
