@@ -3739,7 +3739,7 @@ var dbId=0;
 		$('#espanCart').html("hi"+item.message);
 
            });
-        location.href="index.php";
+//        location.href="index.php";
 	
 	    
         });
