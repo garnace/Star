@@ -447,7 +447,7 @@ hlhklh
 		<div class="controls">
         <p>
 		<input type="hidden" name="action" value="showres">
-		<input  class="btn btn-large btn-info hidy qin-1" type="button" value="Mars" />
+		<input  class="btn btn-large btn-info qin-1" type="button" value="Mars" />
 
 
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
