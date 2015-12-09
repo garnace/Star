@@ -670,5 +670,6 @@ EOT;
     <div id='content' class='main-content'>
   <div class='container'>
     <!--div id='content' class='row row-offcanvas row-offcanvas-right'-->
-      <div class='col-sm-9 main'>
+      <!--div class='col-sm-9 main'-->
+      <div class='col-sm-12 main'>
         <!--h2>Main Content Section</h2-->

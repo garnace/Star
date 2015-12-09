@@ -2462,7 +2462,7 @@ function getQuizTimer()
 	var qb = $('input[class*=qin]');
 
 	//input framed in div
-	var qbd= $('div[class*=regTRadx1]');
+	var qbd= $('div[class*=regTRadx99]');
 	var qs= $('.spinn');
 //	var qso= $('.spout');
 

@@ -209,7 +209,7 @@ include ('./headerg.php');
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfjtDBB('co.txt');"-->
 		<!--input class="btn btn-large btn-success col-sm-12" value="htref res" onclick="getLoc();"-->
 		<!--input class="btn btn-large btn-success col-sm-12"  value="get quiz" onclick="getQuiz();"-->
-		<input class="btn btn-large btn-success col-sm-12" id="gQ" value="get quiz">
+		<!--input class="btn btn-large btn-success col-sm-12" id="gQ" value="get quiz"-->
 								<!--div class="clearfix"></div-->
     <br/>
     <br/>
@@ -238,7 +238,7 @@ hlhklh
           <div class="controls">
 <p class="tblb">
 		<!--input class="btn btn-large btn-success col-sm-12" value="get quiz" onclick="getQuiz();"-->
-           <span class="spinn">bar</span><span class="spoutt"><span class="spouti">hlhklh</span></span><!--span class="spinn">bar</span><span class="spoutt">hhhhh</span-->&nbsp;
+           <span class="spinn">bur</span><span class="spoutt"><span class="spouti">hlhklh</span></span><!--span class="spinn">bar</span><span class="spoutt">hhhhh</span-->&nbsp;
 
            </p>
 
@@ -247,9 +247,10 @@ hlhklh
          </div><!-- /.row inner-->
              <div class="row">
 
-//----
 
-	<div class="regTRadx1">
+
+	<div class="regTRadx99 form-group col-sm-3">
+    <div class="controls no-width">
 	  <p  class="tbl">
 		<input type="radio" id="regTRad2" name="regTable" value="yellow"  />
 		<label for="regTRad2" style="display:inline;" id="lblTR2">Table 3(2 seats left)</label>
@@ -272,10 +273,11 @@ hlhklh
 
 
 
+     </div><!-- /.controls-->
+	</div><!-- /.regRadx1-->
 
-	</div><!-- .regRadx1-->
-
-	<div class="regTRadx9">
+	<div class="regTRadx9 form-group col-sm-3">
+    <div class="controls">
 	  <p  class="tbl">
 		<input type="radio" id="regTRad2" name="regTable" value="yellow"  />
 		<label for="regTRad2" style="display:inline;" id="lblTR2">Table 3(2 seats left)</label>
@@ -284,16 +286,16 @@ hlhklh
 </br>
 	</p>
 
-
+		<input class="btn btn-large btn-info spluto" type="button" value="Pluto" />
 <span class="spoutt"><span class="spouti">hlhklh</span></span>
 <br/>
 <br/>
 									<div class="clearfix"></div>
 
 	  <p  class="tbl">
-		<input class="btn btn-large btn-info" type="button" value="Mars" />
+		<input class="btn btn-large btn-info spluto" type="button" value="Mars" />
 		<input type="radio" id="regTRad3" name="regTable" value="orange" />
-		<label for="regTRad3" style="display:inline;" id="lblTR3">Table 4 (3 Seats Left)</label>
+		<label for="regTRad3"  id="lblTR3">Table 4 (3 Seats Left)</label>
 
 		<br/>
 		<br/>
@@ -305,7 +307,7 @@ hlhklh
 
 
 
-
+</div><!-- /.controls-->
 
 	</div><!-- .regRadx11-->
 
@@ -416,11 +418,26 @@ hlhklh
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfjtDBB('co.txt');"-->
 		<input class="btn btn-large btn-success col-sm-12" value="htref res" onclick="getLoc();">
+		<input class="btn btn-large btn-success col-sm-12" value="start res" onclick="getLoc();">
 
 
 		</div><!--controls-->
 	</div><!--form-group-->
 
+	<div  class="form-group col-sm-3"  >
+
+		<div class="controls">
+		<input type="hidden" name="action" value="showres">
+		<!--input class="btn btn-large btn-success" type="submit" value="Show res" /-->
+
+		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
+		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfjtDBB('co.txt');"-->
+		<!--input class="btn btn-large btn-success col-sm-12" value="start quiz" id="gQ"  onclick="getQuiz();"-->
+		<input class="btn btn-large btn-success col-sm-12" value="tart quiz" id="gQ" >
+
+
+		</div><!--controls-->
+	</div><!--form-group-->
 
 
 	</div><!--row-->

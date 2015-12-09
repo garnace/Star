@@ -1107,7 +1107,7 @@ background-image:url('../images/ss054.gif');
 //	width:200px;
 	width:20%;
 //	width:auto;
-//	background-color:blue;
+	background-color:blue;
 //	margin: 0 5px 5px 20px;
 	margin: 0 auto 0 20%;
 	padding:10px 5px 15px 10px;
@@ -1118,7 +1118,7 @@ background-image:url('../images/ss054.gif');
 	float:left;
 	display:inline;
 //	width:200px;
-	width:100px;
+	width:150px;
 	height:auto;
 	background-color:yellow;
 //	margin: 0 5px 5px 20px;
@@ -1133,15 +1133,40 @@ background-image:url('../images/ss054.gif');
 {
 	float:left;
 	display:inline;
-	width:100px;
+	width:150px;
+//	width:auto;
+//	width-right:auto;
 	height:auto;
 //	width:20%;
 //	width:auto;
 	background-color:yellow;
 //	margin: 0 5px 5px 20px;
+//	margin: 0 auto 0 0;
 	margin: 0 auto 0 0;
 //	margin: 0 auto 0 auto;
 //	padding:10px 25px 15px 10px;
+//	padding:10px 10px 15px 19px;
+	padding:10px 10px 15px 19px;
+//	padding: 0 5px 0 5px;
+}
+
+.regTRadx99
+{
+	float:left;
+	display:inline;
+	width:150px;
+//	width:auto;
+//	width-right:auto;
+	height:auto;
+//	width:20%;
+//	width:auto;
+	background-color:yellow;
+//	margin: 0 5px 5px 20px;
+//	margin: 0 auto 0 0;
+	margin: 0 auto 0 0;
+//	margin: 0 auto 0 auto;
+//	padding:10px 25px 15px 10px;
+//	padding:10px 10px 15px 19px;
 	padding:10px 10px 15px 19px;
 //	padding: 0 5px 0 5px;
 }
@@ -1162,10 +1187,28 @@ background-image:url('../images/ss054.gif');
 //	padding: 0 5px 0 5px;
 }
 
+#lblTR3
+{
+	display:inline;
+	background:#22ff22;
+}
 
 
+#lblTR3:after
+{
+	width:0;
+	height:0;
+	content:"";
+	position:absolute;
+	right:70%;	
+	top:50%;
+	margin-top:-35px;
+	border-right:18px solid #00aaFF;
+	border-top:24px solid transparent;
+	border-bottom:18px solid transparent;
+	
 
-
+}
 
 .regDRadx0
 {
@@ -1414,6 +1457,20 @@ http://www.richardshepherd.com/flickr.html
 //	padding: 3px 3px 3px 0;
 
 }
+.spluto:after{
+	width:0;
+	height:0;
+	content:"";
+	position:absolute;
+	right:100%;	
+	top:50%;
+	margin-top:-35px;
+	border-right:18px solid #FFaa00;
+	border-top:24px solid transparent;
+	border-bottom:18px solid transparent;
+	
+}
+
 
 
 .spoutt:after{
@@ -1550,6 +1607,15 @@ p label
 //	font-size:120%;
 //	text-align:bottom;
 }
+.no-width p label
+{
+	vertical-align:top;
+//	font-size:120%;
+//	text-align:bottom;
+}
+
+
+
 #son ul li p{
 //    color:blue;
 //    color:blue;
@@ -2379,6 +2445,17 @@ a .tooltip:hover span
 //	height:100%;
 	position:relative;
 	margin-bottom:20px;
+	bottom:0px;
+//	margin: 0 0 40% 0;
+	color:#770000;
+}
+.form-group .controls .tbl input 
+{
+	width:auto;
+//	width:100%;
+//	height:100%;
+	position:relative;
+//	margin-bottom:20px;
 	bottom:0px;
 //	margin: 0 0 40% 0;
 	color:#770000;
