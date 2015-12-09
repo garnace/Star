@@ -1312,9 +1312,12 @@ function setRP(pId)
 }
 function getLoc(tId)
 {
-// based on jquery game example: http://code.tutsplus.com/tutorials/jquery_android--mobile-4720
-//http://code.tutsplus.com/tutorials/use-jquery-mobile-to-build-a-native-android-news-reader-app-part-2--mobile-4775
-//http://code.tutsplus.com/tutorials/use-jquery-mobile-to-build-a-native-android-news-reader-app-part-3--mobile-4886
+/* ****************************************
+ based on jquery game example: http://code.tutsplus.com/tutorials/jquery_android--mobile-4720
+http://code.tutsplus.com/tutorials/use-jquery-mobile-to-build-a-native-android-news-reader-app-part-2--mobile-4775
+http://code.tutsplus.com/tutorials/use-jquery-mobile-to-build-a-native-android-news-reader-app-part-3--mobile-4886
+
+********************************************/
 //	alert("hello");
 
 	$(function (){
