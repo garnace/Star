@@ -1310,6 +1310,12 @@ function setRP(pId)
 
 
 }
+
+function siteQuiz()
+{
+	window.location.href="quiz.php?action=showQ";
+}
+
 function getLoc(tId)
 {
 /* ****************************************

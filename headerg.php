@@ -148,11 +148,18 @@ function getM()
          echo("<script type=\"text/javascript\">");
 //         echo("alert (\"hi\");");
          echo("$(function(){");
-         echo("hideQuiz();");
+//         echo("hideQuiz();");
          echo("$('#tabs').tabs({selected:2});");
          echo("location.href=\"#chkRes\";");
          echo("});");
          echo("</script>");
+         }
+     else if ($action == "showQ")
+         {
+             echo("$(function(){");
+             echo("alert('quiz time!!');");
+             echo("hideQuiz();");
+             echo("});");
          }
      else if ($action == "showTab")
          {
@@ -561,7 +568,7 @@ function logOut()
 													<li><a href="#journ" onclick="listSites(0);">Cached Sites</a></li>
 													<li><a href="#pageBar" onclick="getSectionBlog(0);">Blog Single</a></li>
 													<li><a href="#pageBar" onclick="getSectionSky(0);">Sky for Area</a></li>
-													<li><a href="quiz.php">Quiz</a></li>
+													<li><a href="quiz.php" onclick="siteQuiz();" >Quiz</a></li>
 													<li><a href="nutrition-info.html">Nutrition Info</a></li>
 													<li><a href="recipe.html">Recipes</a></li>
 												</ul>
