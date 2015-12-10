@@ -156,10 +156,12 @@ function getM()
          }
      else if ($action == "showQ")
          {
+             echo("<script>");
              echo("$(function(){");
              echo("alert('quiz time!!');");
              echo("hideQuiz();");
              echo("});");
+             echo("</script>");
          }
      else if ($action == "showTab")
          {
