@@ -158,7 +158,7 @@ function getM()
          {
              echo("<script>");
              echo("$(function(){");
-             echo("alert('quiz time!!');");
+//             echo("alert('quiz time!!');");
              echo("hideQuiz();");
              echo("});");
              echo("</script>");

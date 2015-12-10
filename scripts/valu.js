@@ -378,7 +378,7 @@ $("#gQ").click(function(){
 	var l=0;
 	var th;
 	alert('length'+qblen+':'+$(this).val());
-	hideQuiz();
+//	hideQuiz();
 	for (i=0;i<qblen;i++)
 	{
 
