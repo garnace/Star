@@ -2439,16 +2439,19 @@ function hideQuiz()
 
 	for (i=0;i<qblen;i++)
 	{
+		if (!$((qb)[i]).hasClass('inDeck'))
+		{
 		$((qb)[i]).animate({left:'+=700'},function(){
 //			if (!$((qb)[i]).hasClass('hidy'))
 			if (!$(this).hasClass('hidy'))
 				{
 //					$((qb)[i]).addClass('hidy');			
-					$(this).addClass('hidy');			
+					$(this).addClass('hidy');							$(this).addClass('inDeck');	
 				}
 		
 		});
-	}
+		}//deck
+	}//for
 
 }
 
