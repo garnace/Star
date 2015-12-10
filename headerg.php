@@ -148,6 +148,7 @@ function getM()
          echo("<script type=\"text/javascript\">");
 //         echo("alert (\"hi\");");
          echo("$(function(){");
+         echo("hideQuiz();");
          echo("$('#tabs').tabs({selected:2});");
          echo("location.href=\"#chkRes\";");
          echo("});");
