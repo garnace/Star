@@ -1316,6 +1316,11 @@ function siteQuiz()
 	window.location.href="quiz.php?action=showQ";
 }
 
+function getNextQuest()
+{
+
+}
+
 function getLoc(tId)
 {
 /* ****************************************
@@ -4145,6 +4150,25 @@ function tableFill(i,item)
 
 
 //--readfDBB
+
+function readFood(dbId)
+{
+	var m=2,t=2,e=1;
+
+	var ranInput="mood="+m+"&time="+t+"&expertise="+e;
+
+//	$.ajax({url:"http://"+hostUrl+"/api/v1/recipes?"+ranInput, dataType:'json'}).done(function(data){
+	$.ajax({url:"http://"+hostUrl+"/model/recipeStar.json?"+ranInput, dataType:'json'}).done(function(data){
+		$.each(data,function(i,item){
+			alert(item.ingredients[0]+"hi"+JSON.stringify(item)+"");
+		});//each json
+
+	}).fail(function(data){
+		alert('fail');
+
+	});
+}
+
 function readfDBB(dbId)
 {
 

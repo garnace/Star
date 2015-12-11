@@ -9,6 +9,7 @@ session_start();
 //$user= isset ($_SESSION['user']['email']) ? $_SESSION['user']['email'] : "nan";
 //$user= isset ($_SESSION['email']) ? $_SESSION['email'] : "nane";
 $user= !empty ($_SESSION['user']) ? $_SESSION['user'] : array();
+
     if (isset($_POST['action']))
         {
             $action=$_POST['action'];

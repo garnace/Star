@@ -418,7 +418,7 @@ hlhklh
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfjtDBB('co.txt');"-->
 		<input class="btn btn-large btn-success col-sm-12" value="htref res" onclick="getLoc();">
-		<!--input class="btn btn-large btn-success col-sm-12" value="start res" onclick="getLoc();"-->
+		<input class="btn btn-large btn-success col-sm-12" value="start res" onclick="getNextQuest();">
 
 
 		</div><!--controls-->
