@@ -4158,7 +4158,7 @@ function readFooStar(dbId)
 	var ranInput="mood="+m+"&time="+t+"&expertise="+e;
 
 //	$.ajax({url:"http://"+hostUrl+"/api/v1/recipes?"+ranInput, dataType:'json'}).done(function(data){
-	$.ajax({url:"http://"+hostUrl+"/model/recipeStar.json?"+ranInput, dataType:'json'}).done(function(data){
+	$.ajax({url:"http://"+hostUrl+"/model/recipeStar.json?", dataType:'json'}).done(function(data){
 		$.each(data,function(i,item){
 			alert(item.ingredients[0]+"hi"+JSON.stringify(item)+"");
 		});//each json
