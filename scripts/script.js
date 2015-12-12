@@ -4164,7 +4164,7 @@ function readFooStar(dbId)
 		});//each json
 
 	}).fail(function(data){
-		alert('fail');
+		alert('fail'+hostUrl+"/model/recipeStar.json");
 
 	});
 }
