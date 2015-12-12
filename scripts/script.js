@@ -4173,7 +4173,7 @@ function readFooStar(dbId)
 	$.getJSON("http://"+hostUrl+"/StarAdvisor/recipeStar.json?callback=?",
 	function(data){
 
-		$.each(data,function(i,item){//should only show error item
+		$.each(data.recipes,function(i,item){//should only show error item
 
 
 			alert(item.ingredients[0]+"hi"+JSON.stringify(item)+"");
