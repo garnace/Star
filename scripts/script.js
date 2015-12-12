@@ -4151,7 +4151,7 @@ function tableFill(i,item)
 
 //--readfDBB
 
-function readFood(dbId)
+function readFooStar(dbId)
 {
 	var m=2,t=2,e=1;
 
