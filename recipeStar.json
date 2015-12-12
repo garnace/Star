@@ -1,0 +1,61 @@
+{
+	"recipes": [
+		{
+			"tags": [""],
+			"moods": ["lazy"],
+			"time": 2, 
+			"expertise": 1,
+			"ingredients": ["4 slices White Bread","2 slices Cheddar Cheese","3 tbsp Butter, divided"], 
+			"steps": ["Preheat skillet","Melt butter in skillet","Assemble bread, cheese, bread into sandwich","Place sandwich in pan","Flip sandwich after 2-3 minutes or until golden brown","Repeat for 2nd sandwich"],
+			"name": "Grilled Cheese Sandwich",
+			"imageUrl": "https://farm5.staticflickr.com/4017/4541489084_968537a08f_b.jpg"
+		},
+		{
+			"tags": [""],
+			"moods": ["lazy"],
+			"time": 2, 
+			"expertise": 1,
+			"ingredients": ["2 lbs Lean Ground Beef", "1 Onion, Chopped", "2 Red Bell Peppers, Seeded and Diced","2 Jalapeno Peppers, Seeded and Diced","4 Cloves Garlic, Minced","1/2 Cup Chili Powder","1/4 Cup Ground Cumin","1 tsp Salt","1 sp Ground Black Pepper", "1 Can Tomato Paste (6 oz)", "4 Cans Kidney Beans with Liquid (15 oz)", "1 can Italian-style Stewed Tomatoes (14.5 oz)", "1 Can Chipotle Peppers in Adobo Sauce (7 oz)", "1 quart water, divided", "1/4 cup All-purpose Flour", "1 tbsp Rice Vinegar"], 
+			"steps": ["Cook beef in large pot over medium heat until brown, drain", "Return beef to pot and stir in onions, bell peppers and jalapenos. Cook until tender", "Add garlic and cook 1 minute more", "Season with chili powder, cumin, satl and pepper. Add in tomato paste and kidney beans with liquid", "Puree tomatoes and chipotle peppers in food processor until smooth", "Add mixture to pot with 3 cups water", "Combine remaining 1 cup water with floud in a jar and shake to combine", "Pour flour mixture into chili and stir in vinegar", "Simmer 45 minutes and serve."],
+			"name": "Chilli",
+			"imageUrl": "https://farm6.staticflickr.com/5536/11517840353_4081b7a6e5_b.jpg"
+		},
+		{
+			"name": "Broccoli Cheddar", 
+			"moods": ["lazy"],
+			"time": 2, 
+			"expertise": 1,
+			"ingredients": ["6 tbsp butter, divided", " 2/4 cup onion, chopped", "1 cup carrot, chopped or shredded", "4 cups small broccoli florets", "3 cups low-sodium chicken broth", "1/2 tsp. onion salt", "1/2 tsp. garlic powder", "4 tbsp flour", "2 cups milk", "2 cups shredded sharp cheddar cheese", "freshly ground pepper"],
+			"steps": ["Melt 2 tbsp butter over medium heat in a large stockpot", "Saute onion until tender (5-7 minutes).", "Add carrots to the pan and cook a few minutes longer.", "Stir in broccoli, chicken broth, onion salt and garlic pwoder.", "Bring the mixture to a boil, then reduce the heat to a simmer.", "Melt the remaining butter in a medium saucepan.", "Add the flour and cook for 1-2 minutes until golden brown, whisking constantly.", "Whisk in milk and cook until mixture thickens and bubbles (5 mins).", "Wisk in cheese until completely melted.", "Remove from heat and add cheese sauce to the soup pot.", "Allow to simmer until warmed through and broccoli is tender.", "Season with salt and freshly ground pepper to taste. Serve."],
+			"imageUrl": "https://farm4.staticflickr.com/3520/4053940421_390d3583f0_o.jpg"
+		},
+		{
+			"name": "Buffalo Chicken Wrap", 
+			"moods": ["adventurous"],
+			"time": 2, 
+			"expertise": 1,
+			"ingredients": ["1 tbsp vegetable oil", "1 tbsp butter", " 1 lbs skinless, boneless chicken breasts, cut into bite-size pieces", "1/4 cup hot sauce", "4 flour tortillas", "2 cups shredded lettuce", "1 celery stalk, diced", "1/2 cup blue cheese dressing"],
+			"steps": ["Heat vegetable oil and butter in a large skillet over medium-high heat.", "Cook chicken in pan until it is no longer pink in the center and juices run clear (10 minutes).", "Remove the pan from the heat and pour hot sauce over cooked chicken. Toss to coat.", "Lay out tortillas and divide chicken evenly.", "Top chicken with lettuce, celery andblue cheese dressing.", "Fold in the sides of the tortilla and roll the wrap burrito-style. Serve."],
+			"imageUrl": "https://farm4.staticflickr.com/3335/3658680122_a4c7eed708_o.jpg"
+		},
+		{
+			"name": "Chicken Stir Fry", 
+			"moods": ["stressed"],
+			"time": 2, 
+			"expertise": 1,
+			"ingredients": ["4 boneless skinless chicken breast halves", "3 tbsp cornstarch", "2 tbsp soy sauce", "1/2 tsp ground giner", "1/4 garlic powder", "3 tbsp cooking oil, divided", "2 cups broccoli florets", "1 cup sliced celery", "1 cup thinly sliced carrot", "1 small onion cut into wedges", "1 cup water1 tsp chicken bouillon granule"],
+			"steps": ["Cut chicken into 1/2 inch strips and place in resealable plastic bag", "Add cornstarch and toss to coat", "Combine soy sauce, ginger, and garlic powder and add to bag. Shake well.", "Refrigerate for 30 minutes.", "Heat 2 tnsp oil in a large skillet or wok. Stirfry chicken until no longer pink (3-5 minutes). Remove and keep warm.", "Add remaining oil stir fry broccoli, celery, carrots and onion fr 4-5 minutes or until crisp/tender.", "Add water and bouillon and return chicken to pan. Cook and stir until thickened and bubbly. Serve"],
+			"imageUrl": "https://farm3.staticflickr.com/2859/9178082694_1b9ea5c462_b.jpg"
+		},
+		{
+			"name": "Chicken Salad", 
+			"moods": ["lazy"],
+			"time": 2, 
+			"expertise": 1,
+			"ingredients": ["4 boneless skinless chicken breast halves", "3 tbsp cornstarch", "2 tbsp soy sauce", "1/2 tsp ground giner", "1/4 garlic powder", "3 tbsp cooking oil, divided", "2 cups broccoli florets", "1 cup sliced celery", "1 cup thinly sliced carrot", "1 small onion cut into wedges", "1 cup water1 tsp chicken bouillon granule"],
+			"steps": ["Cut chicken into 1/2 inch strips and place in resealable plastic bag", "Add cornstarch and toss to coat", "Combine soy sauce, ginger, and garlic powder and add to bag. Shake well.", "Refrigerate for 30 minutes.", "Heat 2 tnsp oil in a large skillet or wok. Stirfry chicken until no longer pink (3-5 minutes). Remove and keep warm.", "Add remaining oil stir fry broccoli, celery, carrots and onion fr 4-5 minutes or until crisp/tender.", "Add water and bouillon and return chicken to pan. Cook and stir until thickened and bubbly. Serve"],
+			"imageUrl": "http://cdn-image.myrecipes.com/sites/default/files/styles/420x420/public/image/recipes/sl/03142008/chicken-salad-sl-521176-x.jpg"
+		}
+	]
+	
+}
