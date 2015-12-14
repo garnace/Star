@@ -4159,7 +4159,7 @@ function readFooStar(dbId)
 
 //	$.ajax({url:"http://"+hostUrl+"/api/v1/recipes?"+ranInput, dataType:'json'}).done(function(data){
 
-	$.ajax({url:"http://"+hostUrl+"/StarAdvisor/recipeStar.json", dataType:'json'}).done(function(data){
+	$.ajax({url:"http://"+hostUrl+"/StarAdvisor/recipeStar.son", dataType:'json'}).done(function(data){
 		alert("data:"+data.length+"items");
 		$.each(data,function(i,item){
 			alert(item.ingredients[0]+"hi"+JSON.stringify(item)+"");
