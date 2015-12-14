@@ -145,7 +145,7 @@ function getM()
 <!--   -------------------------------------------->
 <?php
      if ($action == "showres")
-         {
+     {
          echo("<script type=\"text/javascript\">");
 //         echo("alert (\"hi\");");
          echo("$(function(){");
@@ -154,31 +154,33 @@ function getM()
          echo("location.href=\"#chkRes\";");
          echo("});");
          echo("</script>");
-         }
-     else if ($action == "showQ")
-         {
-             echo("<script>");
-             echo("$(function(){");
-//             echo("alert('quiz time!!');");
-             echo("hideQuiz();");
-             echo("});");
-             echo("</script>");
-         }
-     else if ($action == "showTab")
-         {
-         echo("<script type=\"text/javascript\">");
-         echo("$(function(){");
-                echo("alert (\"hi\");");
+     }
+    else if ($action == "showQ")
+    {
+        echo("<script>");
+        echo("$(function(){");
 
-         echo("$('#tabs').tabs({selected:2});");
-         echo("location.href=\"#fieldT1\";");
-                echo("});");
-         echo("</script>");
-         }
-     else 
-         {
-             echo ("alert(\"no action\")");
-         }
+        echo("alert('quiz time!!');");
+
+        echo("hideQuiz();");
+        echo("});");
+        echo("</script>");
+    }
+    else if ($action == "showTab")
+    {
+       echo("<script type=\"text/javascript\">");
+       echo("$(function(){");
+       echo("alert (\"hi\");");
+
+       echo("$('#tabs').tabs({selected:2});");
+       echo("location.href=\"#fieldT1\";");
+       echo("});");
+       echo("</script>");
+    }
+    else 
+    {
+        echo ("alert(\"no action\")");
+    }
 
 ?>
 <!--   -------------Make tabs------>
