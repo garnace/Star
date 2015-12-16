@@ -202,6 +202,10 @@ include ('./headerg.php');
 	<div  class="form-group col-sm-3"  >
 
 		<div class="controls">
+
+         echo "<h3>".$_SERVER["DOCUMENT_ROOT"].PATH_SEPARATOR."showzroot".$user."i::".print_r($user,1)."</h3>";
+
+
 		<!--input type="hidden" name="action" value="showres"-->
 
 		<!--input class="btn btn-large btn-success" type="submit" value="Show res" /-->
