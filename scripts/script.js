@@ -4162,7 +4162,7 @@ function readFooStar(dbId)
 	$.ajax({url:"http://"+hostUrl+"/StarAdvisor/recipeStar.json", dataType:'json'}).done(function(data){
 		alert("data:"+data.recipes.length+"items");
 		$.each(data.recipes,function(i,item){
-			alert(item.ingredients[0]+"hi"+JSON.stringify(item.steps)+"");
+			alert(item.ingredients[0]+"hi"+JSON.stringify(item.steps).slice(0,10)+"");
 		});
 
 	}).fail(function(data){
