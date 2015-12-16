@@ -189,7 +189,7 @@ include ('./headerg.php');
 	<div  class="form-group col-sm-3"  >
 
 		<div class="controls">
-		<input type="hidden" name="action" value="startq">
+		<!--input type="hidden" name="action" value="startq"-->
 		<!--input class="btn btn-large btn-success" type="submit" value="Start Quiz" /-->
 
 		<input class="btn btn-large btn-success col-sm-12" value="hide" onclick="hideQuiz();">
@@ -202,7 +202,8 @@ include ('./headerg.php');
 	<div  class="form-group col-sm-3"  >
 
 		<div class="controls">
-		<input type="hidden" name="action" value="showres">
+		<!--input type="hidden" name="action" value="showres"-->
+
 		<!--input class="btn btn-large btn-success" type="submit" value="Show res" /-->
 
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
