@@ -183,9 +183,9 @@ function getM()
     }
     else 
     {
-        echo("<script type=\"text/javascript\">");
+//        echo("<script type=\"text/javascript\">");
         echo ("alert(\"no action\")");
-        echo("</script>");
+        //      echo("</script>");
     }
 
 ?>
