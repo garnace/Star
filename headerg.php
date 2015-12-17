@@ -8,9 +8,12 @@ session_start();
 //if (!is_array ($_SESSION['user'])) $_SESSION['user']= array();
 //$user= isset ($_SESSION['user']['email']) ? $_SESSION['user']['email'] : "nan";
 //$user= isset ($_SESSION['email']) ? $_SESSION['email'] : "nane";
-if ($_SERVER['SCRIPT_NAME'] == 'quiz.php')
+
+$scripNameR=explode('/',$_SERVER['SCRIPT_NAME']);
+//if (substr($_SERVER['SCRIPT_NAME'],-9,-1) == 'quiz.php')
+if ($scripNamrR[1] == 'quiz.php')
     {
-        $action='showQ';
+        $action='showQQ';
     }
 $user= !empty ($_SESSION['user']) ? $_SESSION['user'] : array();
 
@@ -170,6 +173,18 @@ function getM()
         echo("});");
         echo("</script>");
     }
+    else if ($action == "showQQ")
+    {
+        echo("<script>");
+        echo("$(function(){");
+
+        echo("alert('Qquiz time!!');");
+
+        echo("hideQuiz();");
+        echo("});");
+        echo("</script>");
+    }
+
     else if ($action == "showTab")
     {
        echo("<script type=\"text/javascript\">");
