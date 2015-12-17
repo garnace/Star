@@ -1313,8 +1313,10 @@ function setRP(pId)
 
 function siteQuiz()
 {
+	$(function(){
 	alert('add url');
 	window.location.href="quiz.php?action=showQ";
+	});
 }
 
 function getNextQuest()
