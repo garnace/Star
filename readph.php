@@ -1,7 +1,7 @@
 <?php # Script to read csv files from database
 
 /*
- *@param fName name of file
+ *@param fName name of file from get
 
  *
  *
