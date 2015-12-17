@@ -1313,6 +1313,7 @@ function setRP(pId)
 
 function siteQuiz()
 {
+	alert('add url');
 	window.location.href="quiz.php?action=showQ";
 }
 
