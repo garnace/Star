@@ -8,6 +8,10 @@ session_start();
 //if (!is_array ($_SESSION['user'])) $_SESSION['user']= array();
 //$user= isset ($_SESSION['user']['email']) ? $_SESSION['user']['email'] : "nan";
 //$user= isset ($_SESSION['email']) ? $_SESSION['email'] : "nane";
+if ($_SERVER['SCRIPT_NAME'] == quiz.php)
+    {
+        $action='showQ';
+    }
 $user= !empty ($_SESSION['user']) ? $_SESSION['user'] : array();
 
     if (isset($_POST['action']))
