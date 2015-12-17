@@ -203,7 +203,7 @@ include ('./headerg.php');
 
 		<div class="controls">
 <?php
-         echo "<h3>".$_SERVER["DOCUMENT_ROOT"].PATH_SEPARATOR."showzroot".$user."i::".print_r($user,1)."</h3>";
+         echo "<h3>".$_SERVER["DOCUMENT_ROOT"].PATH_SEPARATOR."showzroot".$_SERVER['SCRIPT_NAME'].$user."i::".print_r($user,1)."</h3>";
 ?>
 
 		<!--input type="hidden" name="action" value="showres"-->
