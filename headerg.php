@@ -15,9 +15,12 @@ $scripNameR=explode('/',$_SERVER['SCRIPT_NAME']);
 //if (substr($_SERVER['SCRIPT_NAME'],-9,-1) == 'quiz.php')
 $sRes= '';
 $xRes= '';
-while ($sRes =(strstr($getNameR,'.')) !== FALSE)
+$xName=$getNameR;
+//while ($sRes =(strstr($getNameR,'.')) !== FALSE)
+while (($sRes =strstr($xName,'.')) !== FALSE)
     {
-        $xRes=$sRes;
+        $xName=$sRes;
+        $xRes = $sRes;
     }
 if ($xRes =='quiz.php')
     {
