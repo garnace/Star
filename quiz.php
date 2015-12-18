@@ -425,7 +425,7 @@ hlhklh
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfjtDBB('co.txt');"-->
 		<input class="btn btn-large btn-success col-sm-12" value="htref res" onclick="getLoc();">
 		<!--input class="btn btn-large btn-success col-sm-12" value="start nexs" onclick="getNextQuest();"-->
-		<input class="btn btn-large btn-success col-sm-12" value="start nexs" onclick="readFooStar(1);">
+		<input class="btn btn-large btn-success col-sm-12" value="start nexs" onclick="hideQuiza(); readFooStar(1);">
 
 
 		</div><!--controls-->
