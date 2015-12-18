@@ -13,20 +13,37 @@ $getNameR=$_SERVER['SCRIPT_NAME'];
 $scripNameR=explode('/',$_SERVER['SCRIPT_NAME']);
 //if ($scripNamrR[1] == 'quiz.php')
 //if (substr($_SERVER['SCRIPT_NAME'],-9,-1) == 'quiz.php')
-$sRes= '';
+$sRes= 0;
 $xRes= '';
 $xName=$getNameR;
 //while ($sRes =(strstr($getNameR,'.')) !== FALSE)
 //while (($sRes =strstr($xName,'.')) !== FALSE)
-while (($sRes =strpos($xName,'.')) !== FALSE)
+//while (($sRes =strpos($xName,'.')) !== FALSE)
+
+//check file name in case script_name doesnt work
+/*
+while (($sRes =strpos($xName,'/')) !== FALSE)
     {
         $xName=substr($xName,$sRes+1);
-        $xRes = $sRes;
+        $xRes = $xName;
     }
 if ($xRes =='quiz.php')
     {
         $action='showQx';
     }
+*/
+
+while (($sRes =strstr($xName,'/')) !== FALSE)
+    {
+        $xName=substr($sRes,1);
+        $xRes = $xName;
+    }
+if ($xRes =='quiz.php')
+    {
+        $action='showQz';
+    }
+
+
 if (substr($_SERVER['SCRIPT_NAME'],strpos($getNameR,'.'),-1) == 'quiz.php')
     {
         $action='showQQ';
@@ -42,7 +59,8 @@ $user= !empty ($_SESSION['user']) ? $_SESSION['user'] : array();
             $action=$_GET['action'];
         } else
         {
-            $action='shwres';
+            if(empty($action))
+                $action='shwres';
         }
     //(isset($_POST['action'])) ? $action=$_POST['action']: $action=$_p
 /*    if (($_SERVER[REQUEST_METHOD]=="POST") && ($action == "showres"))
@@ -211,6 +229,17 @@ function getM()
         echo("});");
         echo("</script>");
     }
+    else if ($action == "showQz")
+    {
+        echo("<script>");
+        echo("$(function(){");
+
+        echo("alert('z time!!');");
+
+        echo("hideQuiz();");
+        echo("});");
+        echo("</script>");
+    }
 
     else if ($action == "showTab")
     {
@@ -226,7 +255,7 @@ function getM()
     else 
     {
 //        echo("<script type=\"text/javascript\">");
-        echo ("alert(\"no action\")");
+        echo ("alert(\"no action\"".$xRes.")");
         //      echo("</script>");
     }
 
