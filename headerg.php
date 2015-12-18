@@ -203,7 +203,7 @@ function getM()
 
         echo("alert('quiz time!!');");
 
-        echo("hideQuiz();");
+        echo("hideQuiza();");
         echo("});");
         echo("</script>");
     }
@@ -214,7 +214,7 @@ function getM()
 
         echo("alert('Qquiz time!!');");
 
-        echo("hideQuiz();");
+        echo("hideQuiza();");
         echo("});");
         echo("</script>");
     }
@@ -225,7 +225,7 @@ function getM()
 
         echo("alert('x time!!');");
 
-        echo("hideQuiz();");
+        echo("hideQuiza();");
         echo("});");
         echo("</script>");
     }
@@ -236,7 +236,7 @@ function getM()
 
         echo("alert('z time!!');");
 
-        echo("hideQuiz();");
+        echo("hideQuiza();");
         echo("});");
         echo("</script>");
     }

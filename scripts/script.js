@@ -2464,6 +2464,42 @@ function hideQuiz()
 
 }
 
+function hideQuiza()
+{
+	var qb = $('input[class*=qin]');
+	var qblen = $(qb).length;
+
+	var i=0,j=0;
+
+	for (i=0;i<qblen;i++)
+	{
+		if (!$((qb)[i]).hasClass('inDeck'))
+		{
+
+        	        if (!$(this).hasClass('hidy'))
+	        	{
+//					$((qb)[i]).addClass('hidy');			
+					$(this).addClass('hidy');							$(this).addClass('inDeck');	
+			}
+		
+
+		$((qb)[i]).animate({left:'+=700'},function(){
+//			if (!$((qb)[i]).hasClass('hidy'))
+			if (!$(this).hasClass('hidy'))
+				{
+//					$((qb)[i]).addClass('hidy');			
+					$(this).addClass('hidy');							$(this).addClass('inDeck');	
+				}
+		
+		});
+		}//deck
+	}//for
+
+}
+
+
+
+
 /**getQuizTimer
 *
 *Function to initialize quiz with timer

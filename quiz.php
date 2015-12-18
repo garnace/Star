@@ -454,7 +454,7 @@ hlhklh
 		<div class="controls">
         <p>
 		<input type="hidden" name="action" value="showres">
-		<input  class="btn btn-large btn-info qin-1" type="button" value="Mars" />
+		<input  class="btn btn-large btn-info qin-1 hidy" type="button" value="Mars" />
 
 
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
@@ -474,7 +474,7 @@ hlhklh
         <p>
 		<input type="hidden" name="action" value="showres">
 
-		<input class="btn btn-large btn-info qin-2" type="button" value="Mercury" />
+		<input class="btn btn-large btn-info qin-2 hidy" type="button" value="Mercury" />
 
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfjtDBB('co.txt');"-->
@@ -493,7 +493,7 @@ hlhklh
         <p>
 		<input type="hidden" name="action" value="showres">
 
-		<input class="btn btn-large btn-info qin-3" type="button" value="Pluto" />
+		<input class="btn btn-large btn-info qin-3 hidy" type="button" value="Pluto" />
 
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfjtDBB('co.txt');"-->
