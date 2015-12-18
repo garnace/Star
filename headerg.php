@@ -8,10 +8,22 @@ session_start();
 //if (!is_array ($_SESSION['user'])) $_SESSION['user']= array();
 //$user= isset ($_SESSION['user']['email']) ? $_SESSION['user']['email'] : "nan";
 //$user= isset ($_SESSION['email']) ? $_SESSION['email'] : "nane";
+$getNameR=$_SERVER['SCRIPT_NAME'];
 
 $scripNameR=explode('/',$_SERVER['SCRIPT_NAME']);
+//if ($scripNamrR[1] == 'quiz.php')
 //if (substr($_SERVER['SCRIPT_NAME'],-9,-1) == 'quiz.php')
-if ($scripNamrR[1] == 'quiz.php')
+$sRes= '';
+$xRes= '';
+while ($sRes =(strstr($getNameR,'.')) !== FALSE)
+    {
+        $xRes=$sRes;
+    }
+if ($xRes =='quiz.php')
+    {
+        $action='showQx';
+    }
+if (substr($_SERVER['SCRIPT_NAME'],strpos($getNameR,'.'),-1) == 'quiz.php')
     {
         $action='showQQ';
     }
@@ -179,6 +191,17 @@ function getM()
         echo("$(function(){");
 
         echo("alert('Qquiz time!!');");
+
+        echo("hideQuiz();");
+        echo("});");
+        echo("</script>");
+    }
+    else if ($action == "showQx")
+    {
+        echo("<script>");
+        echo("$(function(){");
+
+        echo("alert('x time!!');");
 
         echo("hideQuiz();");
         echo("});");
