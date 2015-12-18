@@ -17,9 +17,10 @@ $sRes= '';
 $xRes= '';
 $xName=$getNameR;
 //while ($sRes =(strstr($getNameR,'.')) !== FALSE)
-while (($sRes =strstr($xName,'.')) !== FALSE)
+//while (($sRes =strstr($xName,'.')) !== FALSE)
+while (($sRes =strpos($xName,'.')) !== FALSE)
     {
-        $xName=$sRes;
+        $xName=substr($xName,$sRes+1);
         $xRes = $sRes;
     }
 if ($xRes =='quiz.php')
