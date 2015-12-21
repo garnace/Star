@@ -261,7 +261,7 @@ function getM()
     else 
     {
 //        echo("<script type=\"text/javascript\">");
-        echo ("alert(\"no action\"".$xRes.":".substr($xRes,strpos('.'),-1).")");
+        echo ("alert(\"no action\"".strpos($xRes,'.')."-".$xRes.":".substr($xRes,strpos($xRes,'.')+1).")");
         //      echo("</script>");
     }
 
