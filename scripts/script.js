@@ -2497,7 +2497,66 @@ function hideQuiza()
 
 }
 
+function getQuizDataTimer(dId)
+{
 
+
+	var qb = $('input[class*=qin]');
+
+	var qblen= $(qb).length;	
+//	var qblen= qb.length;	
+
+	var i=0;
+	var j=0;
+	var t=0;
+	var l=0;
+	var th;
+	alert('length'+qblen+':'+$(this).val());
+//	hideQuiz();
+	for (i=0;i<qblen;i++)
+	{
+
+		if ($((qb)[i]).hasClass('hidy'))
+		{
+			$((qb)[i]).removeClass('hidy');
+		}
+	}
+
+	// reset counter
+
+	i=0;
+	th=this;
+//	$(th).timer =setInterval(function(){
+//	$('#gQ').timer =setInterval(function(){
+//	$('#gQ').dataset.timer =setInterval(function(){
+	$('#gQ').data('timer',setInterval(function(){
+
+			l=$(qb).length;
+
+			//elongate to place then set size to normal width
+			$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});
+
+			//check mod count of list length of inputs reaches 0
+			i= ((i+1)%(l));
+			if (i==0) 
+			{
+//				clearInterval($(th).timer);
+//				clearInterval($('#gQ').timer);
+				clearInterval($('#gQ').data('timer'));
+				getQuizTimer();
+			}
+//		},500);
+		},500));
+
+
+//	});
+
+//});  --.gQ
+
+
+
+
+}
 
 
 /**getQuizTimer

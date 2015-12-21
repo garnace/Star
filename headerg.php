@@ -33,6 +33,8 @@ if ($xRes =='quiz.php')
     }
 */
 
+//check file name in case script_name doesnt work
+
 while (($sRes =strstr($xName,'/')) !== FALSE)
     {
         $xName=substr($sRes,1);
@@ -44,10 +46,14 @@ if ($xRes =='quiz.php')
     }
 
 
-if (substr($_SERVER['SCRIPT_NAME'],strpos($getNameR,'.'),-1) == 'quiz.php')
+/*if (substr($_SERVER['SCRIPT_NAME'],strpos($getNameR,'.'),-1) == 'quiz.php')
     {
         $action='showQQ';
     }
+*/
+
+
+
 $user= !empty ($_SESSION['user']) ? $_SESSION['user'] : array();
 
     if (isset($_POST['action']))
@@ -255,7 +261,7 @@ function getM()
     else 
     {
 //        echo("<script type=\"text/javascript\">");
-        echo ("alert(\"no action\"".$xRes.")");
+        echo ("alert(\"no action\"".$xRes.":".substr($xRes,strpos('.'),-1).")");
         //      echo("</script>");
     }
 
@@ -323,7 +329,9 @@ function getM()
 
 function logOut()
 {
-    FB.logout(function(response){document.getElementById('status').innerHTML="Please log in";console.log("Please log in");});
+    FB.logout(function(response){
+        document.getElementById('status').innerHTML="Please log in";
+        console.log("Please log in");});
 }
   window.fbAsyncInit = function() {
     FB.init({
