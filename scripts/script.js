@@ -2511,7 +2511,8 @@ function getQuizDataTimer(dId)
 	var t=0;
 	var l=0;
 	var th;
-	alert('length'+qblen+':'+$(this).val());
+//	alert('length'+qblen+':'+$(this).val());
+	alert('length'+qblen+':'+$("#gQDT").val());
 //	hideQuiz();
 	for (i=0;i<qblen;i++)
 	{
@@ -2525,7 +2526,8 @@ function getQuizDataTimer(dId)
 	// reset counter
 
 	i=0;
-	th=this;
+//	th=this;
+	th=$('#gQDT');
 //	$(th).timer =setInterval(function(){
 //	$('#gQ').timer =setInterval(function(){
 //	$('#gQ').dataset.timer =setInterval(function(){
@@ -2542,7 +2544,7 @@ function getQuizDataTimer(dId)
 			{
 //				clearInterval($(th).timer);
 //				clearInterval($('#gQ').timer);
-				clearInterval($('#gQ').data('timer'));
+				clearInterval($('#gQDT').data('timer'));
 				getQuizTimer();
 			}
 //		},500);
@@ -2572,6 +2574,120 @@ function getQuizDataTimer(dId)
 
 
 function getQuizTimer()
+{
+
+	//input button
+	var qb = $('input[class*=qin]');
+
+	//input framed in div
+	var qbd= $('div[class*=regTRadx99]');
+	var qs= $('.spinn');
+//	var qso= $('.spout');
+
+
+	var qso= $('.spoutt');
+	var qsoi= $('.spouti'); //spouti class within spoutt
+
+	var qblen= $(qb).length;	
+//	var qblen= qb.length;	
+	var dne=0;
+	var i=0;
+	var ij=0;
+	var j=0;
+	var t=0;
+	var l=0;
+	var lj=5;
+	var cd = 0;
+
+//	alert('length'+qblen);
+//	hideQuiz();
+	for (i=0;i<qblen;i++)
+	{
+
+		if ($((qb)[i]).hasClass('hidy'))
+		{
+			$((qb)[i]).removeClass('hidy');
+		}
+	}
+//	$(qb).lenth=qblen;
+//		$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});
+//		$((qb)[i]).timer= setTimeout(function(){$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'})},500);
+//		t= setTimeout(function(){$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'})},500);
+//		t= setInterval(function(){$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});i= (i+1) %lblen;if (i==0) clearInterval(t);},500);
+		i=0;
+
+		//30 seconds
+//		l=$(qb).length *10;
+		l=$(qb).length *50;
+
+		//count down to be 30
+		cd = (l/10);
+
+
+//		t= setInterval(function(){i= (i+1) %lblen; if (i==0){clearInterval(t);exit();}$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});},500);
+		t= setInterval(function(){
+			
+			//elongate to place then set size to normal width
+//			$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});
+//			$(qs).animate({width: '-=5'},200).animate({width:'-=20'},200);
+//			$(qs).animate({width: '-=5'},200);
+			if (dne ==0)
+				$(qbd).animate({width: '-=2'});
+//				$(qs).animate({width: '-=2'});
+
+
+			// check mod count of list length of inputs reaches 0
+			// every 30 (or 150) pseudoseconds
+			i= ((i+1)%(l));
+			
+			// counter decrements every 5 seconds.
+			ij = ( i % lj);
+//			$(qs).html(i.toString());
+			if (ij == 0)
+			{
+//				$(qso).html(i.toString()).wrapInner("<center></center>");
+//				$(qso).html(cd.toString()).wrapInner("<center></center>");
+			$(qsoi).html(cd.toString()).wrapInner("<center></center>");
+
+				cd--;
+			}
+//			$(qsoi).html(i.toString()).wrapInner("<center></center>");
+			if (i==0) 
+			{
+//			$(qs).animate({width: '-=5'},200).animate({width:'+=20'},200);
+				dne=1;
+				alert("done");
+
+				clearInterval(t);
+			}
+			if (dne == 1)
+			{
+				alert("dne");
+			}
+//		},500);
+		},100);
+//t=setTimeout(2200);
+//	if (t) t=clearTimeout(t);
+
+//	wait(20);
+//	}
+
+}
+
+
+/**getQuizTimerUData
+*
+*Function to initialize quiz with timer using data() accessor fn.
+*
+*Adds 'hiddy class with animation for list of input buttons.
+*
+*@param dbId -- text file name to read from
+*
+*@var qb list of inputs for question
+*/
+
+
+function getQuizTimerUData()
 {
 
 	//input button
