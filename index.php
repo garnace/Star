@@ -437,7 +437,7 @@ include ('./headerg.php');
 
 <div id="tabs-2">
 
-<a href="#" class="tooltipe"><strong>--Days Available next 2 weeks </strong><span>Tools and tippppppppptidds</span></a>
+<a href="#" class="tooltipe"><strong>--Days Available next 2 weeks </strong><span>Tools and tip and other information</span></a>
 </br>
 <!--div class="dih"><div class="img-frame"> <img src="images/Yoursky.gif" class="img-responsive" /><div class="img-frame-hover"><a href="#"><i class="fa fa-cutlery"></i></a></div> </div> </div-->
 

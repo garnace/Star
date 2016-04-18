@@ -241,9 +241,11 @@ hlhklh
          </div><!-- /.row inner-->
          <div class="row">
           <div class="controls">
+
 <p class="tblb">
 		<!--input class="btn btn-large btn-success col-sm-12" value="get quiz" onclick="getQuiz();"-->
-           <span class="spinn">bur</span><span class="spoutt"><span class="spouti">hlhklh</span></span><!--span class="spinn">bar</span><span class="spoutt">hhhhh</span-->&nbsp;
+           <!--span class="spinn">bur</span><span class="spoutt"><span class="spouti">hlhklh</span></span-->
+<!--span class="spinn">bar</span><span class="spoutt">hhhhh</span-->&nbsp;
 
            </p>
 
@@ -282,10 +284,10 @@ hlhklh
 	</div><!-- /.regRadx1-->
 
 	<div class="regTRadx9 form-group col-sm-3">
-    <div class="controls">
+    <div class="controls no-width">
 	  <p  class="tbl">
 		<input type="radio" id="regTRad2" name="regTable" value="yellow"  />
-		<label for="regTRad2" style="display:inline;" id="lblTR2">Table 3(2 seats left)</label>
+		<label for="regTRad2" class="qsti" style="display:inline;" id="lblTR2">Table 3(2q seats left)</label>
 
 </br>
 </br>
@@ -396,14 +398,44 @@ hlhklh
 <fieldset>
 <legend style="text-align:center;">Take Quiz</legend>
     <div class="row">
-<p><a href="#">this is for callout timer</a></p>
+<p><a href="#">this is for callout timer</a>
+
+
+</p>
+<div class="form-group col-sm-2"></div>
+        <div class="form-group col-sm-8">
+         <div class="row">
+           <p class="tbl">
+hlhklh
+           </p>
+         </div><!-- /.row inner-->
+         <div class="row">
+          <div class="controls">
+
+<p class="tblb">
+		<!--input class="btn btn-large btn-success col-sm-12" value="get quiz" onclick="getQuiz();"-->
+           <span class="spinn">bur</span><span class="spoutt"><span class="spouti">hlhklh</span></span><!--span class="spinn">bar</span><span class="spoutt">hhhhh</span-->&nbsp;
+
+           </p>
+
+
+          </div> <!-- /.controls-->
+         </div><!-- /.row inner-->
+             <div class="row">
+
+        </div>
+									<div class="clearfix"></div>
+
+
     </div> <!-- /.row-->
+									<div class="clearfix"></div>
+
 	<div class="row">
 
 	<div  class="form-group col-sm-3"  >
 
 		<div class="controls">
-        <p>What planet did Russian probes visit in 1977?
+        <p id='questHead'>What planet did Russian probes visit in 1977?
 		<input type="hidden" name="action" value="showres">
 
 
@@ -441,7 +473,8 @@ hlhklh
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfjtDBB('co.txt');"-->
 		<!--input class="btn btn-large btn-success col-sm-12" value="start quiz" id="gQ"  onclick="getQuiz();"-->
-		<input class="btn btn-large btn-success col-sm-12" value="tart quiz" id="gQDT" onclick="getQuizDataTimer();">
+		<!--input class="btn btn-large btn-success col-sm-12" value="tart quiz" id="gQDT" onclick="checkDeck(); getQuizDataTimer(1);"-->
+		<input class="btn btn-large btn-success col-sm-12" value="tart quiz" id="gQDT" onclick="checkDeck(); getQuizDataTimer(1);">
 
 
 		</div><!--controls-->
@@ -455,7 +488,7 @@ hlhklh
 		<div class="controls">
         <p>
 		<input type="hidden" name="action" value="showres">
-		<input  class="btn btn-large btn-info qin-1 hidy" type="button" value="Mars" />
+		<input  class="btn btn-large btn-info qin-1 " type="button" value="Mars" />
 
 
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
@@ -475,7 +508,7 @@ hlhklh
         <p>
 		<input type="hidden" name="action" value="showres">
 
-		<input class="btn btn-large btn-info qin-2 hidy" type="button" value="Mercury" />
+		<input class="btn btn-large btn-info qin-2" type="button" value="Mercury" />
 
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfjtDBB('co.txt');"-->
@@ -494,7 +527,7 @@ hlhklh
         <p>
 		<input type="hidden" name="action" value="showres">
 
-		<input class="btn btn-large btn-info qin-3 hidy" type="button" value="Pluto" />
+		<input class="btn btn-large btn-info qin-3" type="button" value="Pluto" />
 
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfDBB('co.txt');"-->
 		<!--input class="btn btn-large btn-success col-sm-12" value="ReadFF!" onclick="readfjtDBB('co.txt');"-->

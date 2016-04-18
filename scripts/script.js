@@ -2439,6 +2439,13 @@ function getAniMPos(sId)
 //--	getCachM(htReal);
 }
 
+
+/************
+hideQuiz
+
+hides quiz the first time.
+
+*************/
 function hideQuiz()
 {
 	var qb = $('input[class*=qin]');
@@ -2473,35 +2480,179 @@ function hideQuiza()
 
 	for (i=0;i<qblen;i++)
 	{
+/*		if (!$((qb)[i]).hasClass('inDeck'))
+		{
+
+
+        	        if (!$((qb)[i]).hasClass('hidy'))
+	        	{
+					$((qb)[i]).addClass('hidy');			
+					$((qb)[i]).addClass('inDeck');			
+
+			}
+			else
+			{
+				$((qb)[i]).addClass('inDeck');			
+			}
+*/
+//		$((qb)[i]).animate({left:'+=700'},function(){
+
+			
+			//check each case for next question
+			if (!$(this).hasClass('hidy'))
+//			if (!$((qb)[i]).hasClass('hidy'))
+				{
+
+					$(this).addClass('hidy');		
+				//	$((qb)[i]).addClass('hidy');		
+
+
+				}
+			//check each case for next question
+			if (!$(this).hasClass('inDeck'))
+//			if (!$((qb)[i]).hasClass('inDeck'))
+				{
+//					$((qb)[i]).addClass('hidy');			
+
+
+					$(this).addClass('inDeck');	
+//					$((qb)[i]).addClass('inDeck');	
+				}
+
+		
+//		});
+		//}deck
+	}//for
+//	exit();
+}
+
+function moveQuiza()
+{
+	var qb = $('input[class*=qin]');
+	var qblen = $(qb).length;
+
+	var i=0,j=0;
+
+	for (i=0;i<qblen;i++)
+	{
+/*		if (!$((qb)[i]).hasClass('inDeck'))
+		{
+
+
+        	        if (!$((qb)[i]).hasClass('hidy'))
+	        	{
+					$((qb)[i]).addClass('hidy');			
+					$((qb)[i]).addClass('inDeck');			
+
+			}
+			else
+			{
+				$((qb)[i]).addClass('inDeck');			
+			}
+*/
+		$((qb)[i]).animate({left:'+=700'},function(){});
+		//}deck
+	}//for
+//	exit();
+}
+
+
+function hideQuizb()
+{
+	var qb = $('input[class*=qin]');
+	var qblen = $(qb).length;
+
+	var i=0,j=0;
+
+	for (i=0;i<qblen;i++)
+	{
 		if (!$((qb)[i]).hasClass('inDeck'))
 		{
 
-        	        if (!$(this).hasClass('hidy'))
+        	        if (!$(this).hasClass('fad'))
 	        	{
 //					$((qb)[i]).addClass('hidy');			
-					$(this).addClass('hidy');							$(this).addClass('inDeck');	
+		//			$(this).addClass('hidy');		
+					$(this).addClass('fad');		
+
+			$(this).fadeOut(function(){},200);		
+			$(this).addClass('inDeck');	
 			}
 		
 
 		$((qb)[i]).animate({left:'+=700'},function(){
-//			if (!$((qb)[i]).hasClass('hidy'))
+
+			
+			//check each case for next question
 			if (!$(this).hasClass('hidy'))
 				{
-//					$((qb)[i]).addClass('hidy');			
-					$(this).addClass('hidy');							$(this).addClass('inDeck');	
+
+//					$(this).addClass('hidy');		
+					$(this).addClass('fad');		
+					$(this).fadeOut(function(){},200);
+
 				}
+			//check each case for next question
+			if (!$(this).hasClass('inDeck'))
+				{
+//					$((qb)[i]).addClass('hidy');			
+
+
+					$(this).addClass('inDeck');	
+				}
+
 		
 		});
 		}//deck
 	}//for
-
+//	exit();
 }
 
+
+function checkDeck()
+{
+$(function(){
+	var qb = $('input[class*=qin]');
+
+
+	if (!$((qb)[0]).hasClass('inDeck'))
+	{
+		alert("hide");
+//		hideQuiza();
+		moveQuiza();
+		
+	}
+
+});
+}
+
+
+/***************
+*getQuizDataTimer
+****************
+*
+*Function to get questions with helper function
+*readFooStarQuiz as well as setting up animations and buttons in the style of
+*online astronomy quiz.
+*
+*Uses button tag #gQDT to keep track of button timer and question set number
+*and then function getQuizTimeOutUData starts the countdown.
+ 
+*****************************
+*@param dId -- determines location (html or recursion) of
+*of function call (0 for recursion, 1 for html).
+*
+*@var gdata   -- stores #gQDT data question set num 	 
+*
+*****************************/
 function getQuizDataTimer(dId)
 {
 
 
 	var qb = $('input[class*=qin]');
+	var gdata = $('#gQDT').data('questSet');
+//	var questNum = readtFooStarByNum(dId);
+	var questNum= '';
 
 	var qblen= $(qb).length;	
 //	var qblen= qb.length;	
@@ -2510,18 +2661,67 @@ function getQuizDataTimer(dId)
 	var j=0;
 	var t=0;
 	var l=0;
+	var firstFlag= 0;
 	var th;
 //	alert('length'+qblen+':'+$(this).val());
 	alert('length'+qblen+':'+$("#gQDT").val());
-//	hideQuiz();
+
+/* put in checkDeck
+	if (!$((qb)[0]).hasClass('inDeck'))
+	{
+		alert("hide");
+		hideQuiza();
+		
+	}
+*/
+
+//	hideQuiza();
+//	alert('dek');
+	var toWait = setTimeout(function(){},100);
+
+	if (typeof(gdata) === 'undefined')
+	{
+		//init and increment already
+
+//		alert('define quesst'+$('#gQDT').data('questSet'));
+		gdata = 1;
+		$('#gQDT').data('questSet',gdata+1);
+	}
+	else{
+		//increment
+
+//		alert('quesst'+$('#gQDT').data('questSet'));
+		$('#gQDT').data('questSet',gdata+1);
+
+	}
+
+
+
+
+//	questNum= readFooStarByNum(gdata,'qin-1');
+	for (j = 0;j<qblen;j++)
+	{
+		questNum= readFooStarByNum(gdata,j);
+	}
+
+	alert(questNum+"::");
 	for (i=0;i<qblen;i++)
 	{
 
-		if ($((qb)[i]).hasClass('hidy'))
-		{
+//		if ($((qb)[i]).hasClass('hidy') || $((qb)[i]).hasClass('inDeck') )
+//		{
+	//		firstFlag = 1;
+//			alert('rem'+questNum['name']);
+			if (i == 1)
+			{
+//				$((qb)[i]).val("##"+questNum['name']+':');
+			}
 			$((qb)[i]).removeClass('hidy');
-		}
+			$((qb)[i]).removeClass('fad');
+			$((qb)[i]).removeClass('inDeck');
+//		}
 	}
+	
 
 	// reset counter
 
@@ -2531,7 +2731,9 @@ function getQuizDataTimer(dId)
 //	$(th).timer =setInterval(function(){
 //	$('#gQ').timer =setInterval(function(){
 //	$('#gQ').dataset.timer =setInterval(function(){
-	$('#gQ').data('timer',setInterval(function(){
+
+
+	$('#gQDT').data('timer',setInterval(function(){
 
 			l=$(qb).length;
 
@@ -2545,17 +2747,33 @@ function getQuizDataTimer(dId)
 //				clearInterval($(th).timer);
 //				clearInterval($('#gQ').timer);
 				clearInterval($('#gQDT').data('timer'));
-				getQuizTimer();
+//				getQuizTimer();
+//				getQuizTimerUData();
+
+
+//				test ani by commenting out function below
+
+				getQuizTimeOutUData(0,1);
+
 			}
 //		},500);
-		},500));
+		},500));    //data timer interval
 
 
 //	});
 
 //});  --.gQ
 
+/*	if (typeof(gdata) === 'undefined')
+	{
+		alert('define quesst'+$('#gQDT').data('questSet'));
+		$('#gQDT').data('questSet',1);
+	}
+	else{
+		alert('quesst'+$('#gQDT').data('questSet'));
 
+	}
+*/
 
 
 }
@@ -2600,7 +2818,7 @@ function getQuizTimer()
 	var cd = 0;
 
 //	alert('length'+qblen);
-//	hideQuiz();
+//	hideQuiza();
 	for (i=0;i<qblen;i++)
 	{
 
@@ -2715,6 +2933,7 @@ function getQuizTimerUData()
 
 //	alert('length'+qblen);
 //	hideQuiz();
+	clearInterval($('#gQDT').data('timer'));
 	for (i=0;i<qblen;i++)
 	{
 
@@ -2739,7 +2958,7 @@ function getQuizTimerUData()
 
 
 //		t= setInterval(function(){i= (i+1) %lblen; if (i==0){clearInterval(t);exit();}$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});},500);
-		t= setInterval(function(){
+		$('#gQDT').data('timer', setInterval(function(){
 			
 			//elongate to place then set size to normal width
 //			$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});
@@ -2772,14 +2991,225 @@ function getQuizTimerUData()
 				dne=1;
 				alert("done");
 
-				clearInterval(t);
+//				clearInterval(t);
+				clearInterval($('#gQDT').data('timer'));
 			}
 			if (dne == 1)
 			{
 				alert("dne");
 			}
 //		},500);
-		},100);
+		},100));
+//t=setTimeout(2200);
+//	if (t) t=clearTimeout(t);
+
+//	wait(20);
+//	}
+
+}
+
+function replaceHTMLTimer()
+{
+
+var htn="<div class=\"regTRadx99 form-group col-sm-3\">"+
+    "<div class=\"controls no-width\">"+
+  "<p  class=\"tbl\">"+
+		"<input type=\"radio\" id=\"regTRad2\" name=\"regTable\" value=\"yellow\"  /><label for=\"regTRad2\" style=\"display:inline;\" id=\"lblTR2\">Table 3(2 seats left)</label></br></br></p><p  class=\"tbl\"><input type=\"radio\" id=\"regTRad3\" name=\"regTable\" value=\"orange\" /><label for=\"regTRad3\" style=\"display:inline;\" id=\"lblTR3\">Table 4 (3 Seats Left)</label>"+
+
+		+"<br/><br/></p></div><!-- /.controls-->"+
+	+"</div><!-- /.regRadx1-->";
+
+
+
+}
+
+
+/**getQuizTimeOutUData(recId,countId)
+*
+*Function to initialize quiz with timer using data() accessor fn.
+*
+*Adds 'hiddy class with animation for list of input buttons.
+*
+*@param recId -- 0,1 recur flags if being called from html(0) form 
+*@param countId -- count (cd) variable pass by value
+*
+*@var qb list of inputs for question
+*/
+
+
+function getQuizTimeOutUData(recId,countId)
+{
+
+	//input button
+	var qb = $('input[class*=qin]');
+	var gqdt = $('#gQDT');
+	//input framed in div
+	var qbd= $('div[class*=regTRadx99]');
+	var qs= $('.spinn');
+//	var qso= $('.spout');
+	var qspin = $('.spinn');
+
+	var qso= $('.spoutt');
+	var qsoi= $('.spouti'); //spouti class within spoutt
+	var qsti= $('.qsti');
+
+	var qblen= $(qb).length;	
+//	var qblen= qb.length;	
+	var dne=0;
+	var i;
+	var ij;
+	var j=0;
+	var t=0;
+	var l=0;
+	var lj=5;
+	var cd = 0;
+
+//	alert('LLlength'+qblen);
+//	hideQuiz();
+//	clearInterval($('#gQDT').data('timer'));
+
+
+/******* probably not needed
+	for (i=0;i<qblen;i++)
+	{
+
+		if ($((qb)[i]).hasClass('hidy'))
+		{
+			$((qb)[i]).removeClass('hidy');
+		}
+	}
+
+*/
+
+
+
+
+
+		//30 seconds
+//		l=$(qb).length *10;
+		l=$(qb).length *50;
+
+		//count down to be 30
+		if (recId === 0)
+		{
+			i=0;
+			cd = (l/10);
+			
+		}
+		else  if (recId !== 0  && i != 0)
+		{
+//			cd = $(qbd).data('cd');
+//			i = $(qbd).data('i');
+
+			cd = $(gqdt).data('cd');
+			i = $(gqdt).data('i');
+
+			i= ((i+1)%(l));
+//			cd--;
+
+		}
+//			if (i < 2 && recId !== 0) 
+			//check not first call(recursion) and at end of count
+			if ( recId !== 0 && cd < 2 ) 
+			{
+//			$(qs).animate({width: '-=5'},200).animate({width:'+=20'},200);
+				dne=1;
+				alert(cd+"done"+recId+"&"+i);
+
+//				clearInterval(t);
+//				clearInterval($('#gQDT').data('timer'));
+//				clearInterval($(qbd).data('timer'));
+
+
+//				clearTimeout($(qbd).data('timer'));
+
+				clearTimeout($(gqdt).data('timer'));
+				$(gqdt.data('i',0))
+
+				$(gqdt.data('cd',0))
+
+				//try to return width to normal
+				$(qbd).css({width: 'inherit'});
+
+				exit();
+			}
+
+
+//			if (dne ==0)
+//				$(qbd).animate({width: '-=2'});
+
+
+
+			// counter decrements every 5 seconds.
+			ij = ( i % lj);
+
+
+//		t= setInterval(function(){i= (i+1) %lblen; if (i==0){clearInterval(t);exit();}$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});},500);
+//		$('#gQDT').data('timer', setInterval(function(){
+//		$('#gQDT').data('timer', setTimeout(function(){
+			
+			//elongate to place then set size to normal width
+//			$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});
+//			$(qs).animate({width: '-=5'},200).animate({width:'-=20'},200);
+//			$(qs).animate({width: '-=5'},200);
+
+			// check mod count of list length of inputs reaches 0
+			// every 30 (or 150) pseudoseconds
+
+			
+//			$(qs).html(i.toString());
+			if (ij == 0)
+			{
+//				$(qso).html(i.toString()).wrapInner("<center></center>");
+//				$(qso).html(cd.toString()).wrapInner("<center></center>");
+				if (cd < 2)
+				{
+					alert('two');
+				}
+				$(qsoi).html(cd.toString()+"hit"+$(qspin).width().toString()).wrapInner("<center></center>");
+				$(qsti).html(cd.toString()+"hit").wrapInner("<center></center>");
+
+				cd--;
+			}
+//			$(qsoi).html(i.toString()).wrapInner("<center></center>");
+//			if (i==0 && recId !== 0) 
+
+
+//CLEAR			if (cd < 1 && recId !== 0) 
+			if (dne == 1)
+
+			{
+				alert("dne");
+			}
+//**************animate
+			else if (dne ==0)
+//				$(qbd).animate({width: '-=2'},100,function(){
+				$(qspin).animate({width: '-=2'},100,function(){
+//Block			{
+// ************recursion?			
+
+//					$(qbd).data('timer',setTimeout(function(){					
+//alert('get');
+					$(gqdt).data('timer',setTimeout(function(){					
+//			 $(qbd).data('cd') = cd;
+//			 $(qbd).data('i') = i;
+
+			 $(gqdt).data('cd',cd);
+			 $(gqdt).data('i',i);
+
+//alert('get');
+			//recursion recId =1
+    			 getQuizTimeOutUData(1,cd);},100));//data
+				});//animate
+// END BLOCK			}
+// ************/recursion?			
+
+
+//				$(qs).animate({width: '-=2'});
+
+
+//		},500);
+//		},100));
 //t=setTimeout(2200);
 //	if (t) t=clearTimeout(t);
 
@@ -4375,9 +4805,9 @@ function readFooStar(dbId)
 //	$.ajax({url:"http://"+hostUrl+"/api/v1/recipes?"+ranInput, dataType:'json'}).done(function(data){
 	alert("status");
 	$.ajax({url:"http://"+hostUrl+"/StarAdvisor/recipeStar.json", dataType:'json'}).done(function(data){
-		alert("data:"+data.recipes.length+"items");
+		alert("data:"+data.recipes.length+"items: Name:"+data.recipes.name);
 		$.each(data.recipes,function(i,item){
-			alert(item.ingredients[0]+"hi"+JSON.stringify(item.steps).slice(0,10)+"");
+			alert(item.name+"<>"+item.ingredients[0]+"hi"+JSON.stringify(item.steps).slice(0,10)+"");
 		});
 
 	}).fail(function(data){
@@ -4404,6 +4834,83 @@ function readFooStar(dbId)
 
 
 }
+
+/*
+***********************
+*readFooStarByNum
+*********************
+*
+*Function to read json stored recipes
+*
+*
+*
+*/
+
+function readFooStarByNum(dbId,qId)
+{
+	var m=2,t=2,e=1;
+
+	var qb = $('input[class*=qin]');
+	var qh = $('#questHead');
+	var ranInput="mood="+m+"&time="+t+"&expertise="+e;
+//	var questionName='';
+	var questionName=new Object();
+	var questionNameArr='';
+	
+	
+	
+//	$.ajax({url:"http://"+hostUrl+"/api/v1/recipes?"+ranInput, dataType:'json'}).done(function(data){
+//xclud	alert("status");
+	$.ajax({url:"http://"+hostUrl+"/StarAdvisor/recipeStar.json", dataType:'json'}).done(function(data){
+		dbId = dbId % data.recipes.length;
+//xclud		alert("data:"+data.recipes.length+"items");
+		$.each(data.recipes,function(i,item){
+//			alert(item.name+"each");
+			if (i == 0)
+			{
+				//xclud alert ("title"+item.name);
+				qh.text("Q"+dbId+": "+item.name);
+			}
+			if (dbId == i)
+			{
+			//xclud alert(item.name+"Cch");
+//			questionName = {'name',item.name};
+			questionName['name']=item.name;
+//			$((qb)[0]).val("@#"+questionName+':');
+			$((qb)[qId]).val("@#"+item.ingredients[qId]+':');
+
+			}
+//			alert(item.ingredients[0]+"hi"+JSON.stringify(item.steps).slice(0,10)+"");
+		});
+	return questionName;
+	}).fail(function(data){
+//ignore		alert('fail'+hostUrl+"/model/recipeStar.json");
+
+	});
+
+/*	$.getJSON("http://"+hostUrl+"/StarAdvisor/recipeStar.json?callback=?",
+	function(data){
+
+		$.each(data.recipes,function(i,item){
+
+
+
+			alert(item.ingredients[0]+"hi"+JSON.stringify(item)+"");
+		
+		});
+*/
+			
+
+
+
+//	});
+
+
+}
+
+
+
+
 
 function readfDBB(dbId)
 {
