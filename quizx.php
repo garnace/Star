@@ -404,7 +404,7 @@ hlhklh
 </p>
 <div class="form-group col-sm-2">
 <div class="row"><p class="tblb">score</p></div>
-<div class="row"><p><span >10/10</span></p></div>
+<div class="row"><p><span class="spinn">10/10</span></p></div>
 
 </div>
         <div class="form-group col-sm-8">
@@ -442,7 +442,7 @@ hlhklh
 
 <div class="form-group col-sm-2">
 <div class="row"><center><p>score</p></center></div>
-<div class="row"><center><p></p></center></div>
+<div class="row"><center><p><span class="spinn">10/10</span></p></center></div>
 <div class="row"><center><p>score</p></center></div>
 <div class="row"><center><p class="tblbl">10/10</p></center></div>
 
@@ -455,7 +455,7 @@ hlhklh
 	<div  class="form-group col-sm-3"  >
 
 		<div class="controls">
-        <p >What planet did Russian probes visit in 1977?
+        <p id='questHead'>What planet did Russian probes visit in 1977?
 		<input type="hidden" name="action" value="showres">
 
 
@@ -506,18 +506,6 @@ hlhklh
 
 
 	</div><!--row-->
-
-    <div class="row" id="rowQuest">
-       <p style="text-align:center;" id='questHead'>
-          What was the answer?
-          What was the second?
-       </p>
-       <p id="questHeadb">
-          What was the ?
-          What was the second?
-       </p>
-
-    </div>  <!-- /.row -->
     <div class="row">
 	<div  class="form-group col-sm-3"  >
 

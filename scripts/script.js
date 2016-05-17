@@ -2650,6 +2650,7 @@ function getQuizDataTimer(dId)
 
 
 	var qb = $('input[class*=qin]');
+	var rq = $('#rowQuest');
 	var gdata = $('#gQDT').data('questSet');
 //	var questNum = readtFooStarByNum(dId);
 	var questNum= '';
@@ -2657,12 +2658,14 @@ function getQuizDataTimer(dId)
 	var qblen= $(qb).length;	
 //	var qblen= qb.length;	
 
+	var preI=0;
 	var i=0;
 	var j=0;
 	var t=0;
 	var l=0;
 	var firstFlag= 0;
 	var th;
+	var iniB=1;
 //	alert('length'+qblen+':'+$(this).val());
 	alert('length'+qblen+':'+$("#gQDT").val());
 
@@ -2705,6 +2708,10 @@ function getQuizDataTimer(dId)
 	}
 
 	alert(questNum+"::");
+
+//	%%%%%%CHANGE THIS INCREMENT AS NEEDED
+
+//	for (i=0;i<qblen+1;i++)
 	for (i=0;i<qblen;i++)
 	{
 
@@ -2735,7 +2742,30 @@ function getQuizDataTimer(dId)
 
 	$('#gQDT').data('timer',setInterval(function(){
 
+		if (iniB == 1)
+		{		
+//			$(rq).animate({height :'+=80'});				
+			$(rq).animate({marginTop :'+=80'});				
+			iniB= 2;
+		}
+		else if (iniB==2)
+		{
 			l=$(qb).length;
+
+			preI= ((preI+1)%(l));
+			if (preI == 0) 
+			{
+//			$(rq).animate({height :'-=80'});				
+			$(rq).animate({marginTop :'-=80'});				
+				iniB = 3;
+			}
+		}
+		else
+		{		
+//			l=$(qb).length+1;
+			l=$(qb).length;
+			
+
 
 			//elongate to place then set size to normal width
 			$((qb)[i]).animate({left :'+=8'}).animate({marginLeft : '-=700',width: '+=700'},200).animate({width: '-=700'});
@@ -2757,6 +2787,9 @@ function getQuizDataTimer(dId)
 
 			}
 //		},500);
+
+		  }//iniB
+
 		},500));    //data timer interval
 
 
@@ -3130,7 +3163,8 @@ function getQuizTimeOutUData(recId,countId)
 
 				//try to return width to normal
 				$(qbd).css({width: 'inherit'});
-
+				//$(qs).css({width: 'auto'});
+				$(qspin).css({width:'60%'});
 				exit();
 			}
 

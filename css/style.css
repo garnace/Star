@@ -1383,8 +1383,18 @@ http://www.richardshepherd.com/flickr.html
 //	indentation:5px;
 	padding-left:5pt;
 	padding-right:5pt;
-	padding-bottom:5pt;
+//	padding-bottom:5pt;
+//	margin-bottom:1px;
 	background-color:#F0FF00;
+}
+.tblbl
+{
+	color:#000000;
+//	indentation:5px;
+	padding-left:5pt;
+	padding-right:5pt;
+	padding-bottom:5pt;
+	background-color:#00aaFF;
 }
 
 .spout{
