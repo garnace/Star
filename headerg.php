@@ -658,6 +658,7 @@ function logOut()
 													<li><a href="#journ" onclick="listSites(0);">Cached Sites</a></li>
 													<li><a href="#pageBar" onclick="getSectionBlog(0);">Blog Single</a></li>
 													<li><a href="#pageBar" onclick="getSectionSky(0);">Sky for Area</a></li>
+													<li><a href="#pageBar" onclick="getSFeedTerm(0);">Look for Area</a></li>
 													<li><a href="#" onclick="siteQuiz();" >Quiz</a></li>
 													<li><a href="nutrition-info.html">Nutrition Info</a></li>
 													<li><a href="recipe.html">Recipes</a></li>
