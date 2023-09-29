@@ -1,0 +1,81 @@
+
+DTo create a bare/shared repository, go to your desired location. In your case:
+
+$ cd /Volumes/500gb/   
+$ git init --bare myproject.git
+
+See here for more info on creating bare repository
+
+Once you have a bare repository set up in your desired location you can now add it to your working copy as a remote.
+
+$ git remote add origin /Volumes/500gb/myproject.git
+
+And now you can push your changes to your repository
+
+$ git push origin master
+
+
+Amment
+37
+
+Here are the instructions from github:
+
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/tqisjim/google-oauth.git
+git push -u origin master
+
+Here's what actually worked:
+
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/tqisjim/google-oauth.git
+git clone origin master
+
+pository, and then repeatedly push all new changes there (no need to delete the old backup).
+
+Ok, let's start by creating your repo
+
+$ cd /tmp
+$ mkdir myrepo && cd myrepo
+$ touch hi && git add . && git commit -m "bla" 
+
+So, this is your repository. Now we create the clone:
+
+$ cd /tmp
+$ mkdir backup && cd backup 
+$ git --bare init
+Initialized empty Git repository in /tmp/backup/
+
+Now, let's set up your repo for regular backups \u2026
+
+$ cd /tmp/myrepo
+$ git remote add backup /tmp/backup
+$ git config remote.backup.mirror true
+
+Then copy everything to the backup:
+
+$ git push backup
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 206 bytes, done.
+Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+To /tmp/backup
+ * °new branch§      master -> master
+
+And see if it worked:
+
+$ cd /tmp/backup
+$ git log
+commit d027b125166ff3a5be2d7f7416893a012f218f82
+Author: Niko Schwarz <niko.schwarzàail.com>
+Date:   Fri Dec 11 12:24:03 2009 +0100
+
+    hi
+
+Tada, you're set. 
+
